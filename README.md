@@ -20,7 +20,7 @@ pnpm dev
 
 - `data/knowledge.json`：完整树状知识库和段落图片关系；
 - `data/catalog.json`：目录、文章标题与摘要组成的轻量目录；
-- `data/vector-index.json`：逐节点向量缓存，只为新增或变化的节点重新生成向量；
+- `data/vector-index.json`：逐节点向量缓存，只为新增或变化的节点重新生成向量；向量使用 int16/base64 压缩，降低部署体积；
 - `public/kb-images/`：按飞书文件 token 去重的本地图片缓存。
 
 问答接口按“目录 → 文章 → 段落”逐级缩小候选范围，再对精确段落进行关键词与向量混合排序。命中的段落带图时，响应会强制包含对应图片标记。同步目前仍由 `pnpm sync:feishu` 手动触发。

@@ -15,23 +15,49 @@ const assignmentViewId = process.env.FEISHU_ASSIGNMENT_VIEW_ID || 'vewRZe7CUJ';
 const openRouterKey = process.env.OPENROUTER_API_KEY;
 const embeddingModel = process.env.OPENROUTER_EMBEDDING_MODEL || 'openai/text-embedding-3-small';
 const embeddingDimensions = Number(process.env.OPENROUTER_EMBEDDING_DIMENSIONS || 256);
+const syncConcurrency = Math.max(1, Number(process.env.FEISHU_SYNC_CONCURRENCY || 1));
+const requestIntervalMs = Math.max(0, Number(process.env.FEISHU_REQUEST_INTERVAL_MS || 450));
+let nextRequestAt = 0;
 
 if (!appId || !appSecret) throw new Error('缺少 FEISHU_APP_ID 或 FEISHU_APP_SECRET');
 
-async function requestJson(url, token, options = {}) {
+function sleep(milliseconds) {
+  return new Promise(resolve => setTimeout(resolve, milliseconds));
+}
+
+async function throttleRequest() {
+  const wait = Math.max(0, nextRequestAt - Date.now());
+  nextRequestAt = Math.max(nextRequestAt, Date.now()) + requestIntervalMs;
+  if (wait) await sleep(wait);
+}
+
+async function requestJson(url, token, options = {}, attempt = 0) {
+  await throttleRequest();
   const response = await fetch(url, {
     ...options,
     headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json', ...options.headers },
   });
   const json = await response.json().catch(() => ({}));
+  const rateLimited = response.status === 429 || /frequency limit|rate limit|too many requests/i.test(json.msg || '');
+  if (rateLimited && attempt < 7) {
+    const retryAfter = Number(response.headers.get('retry-after') || 0) * 1000;
+    await sleep(Math.max(retryAfter, Math.min(12000, 1200 * (2 ** attempt))));
+    return requestJson(url, token, options, attempt + 1);
+  }
   if (!response.ok || (typeof json.code === 'number' && json.code !== 0)) {
     throw new Error(`飞书请求失败 ${response.status}: ${json.msg || url}`);
   }
   return json;
 }
 
-async function requestBinary(url, token) {
+async function requestBinary(url, token, attempt = 0) {
+  await throttleRequest();
   const response = await fetch(url, { headers: { authorization: `Bearer ${token}` } });
+  if (response.status === 429 && attempt < 7) {
+    const retryAfter = Number(response.headers.get('retry-after') || 0) * 1000;
+    await sleep(Math.max(retryAfter, Math.min(12000, 1200 * (2 ** attempt))));
+    return requestBinary(url, token, attempt + 1);
+  }
   if (!response.ok) throw new Error(`飞书图片下载失败 ${response.status}`);
   return Buffer.from(await response.arrayBuffer());
 }
@@ -337,6 +363,13 @@ function searchContent(entry) {
   return [entry.title, entry.summary, entry.text, `路径：${entry.path.join(' / ')}`].filter(Boolean).join('\n');
 }
 
+function encodeEmbedding(vector) {
+  if (!Array.isArray(vector)) return vector;
+  const buffer = Buffer.allocUnsafe(vector.length * 2);
+  vector.forEach((value, index) => buffer.writeInt16LE(Math.round(Math.max(-1, Math.min(1, value)) * 32767), index * 2));
+  return buffer.toString('base64');
+}
+
 async function embed(texts) {
   if (!openRouterKey || !texts.length) return null;
   const vectors = [];
@@ -357,7 +390,7 @@ async function embed(texts) {
 const wikiNodes = await listWikiNodes().catch(error => { console.warn(`帮助知识库同步跳过：${error.message}`); return []; });
 const prdFiles = await listDriveFolder(prdFolderToken).catch(error => { console.warn(`PRD 同步跳过：${error.message}`); return []; });
 const docMetas = [...wikiNodes, ...prdFiles].filter(item => item.objType === 'docx');
-const loadedDocs = (await mapPool(docMetas, 5, loadDocx)).filter(Boolean);
+const loadedDocs = (await mapPool(docMetas, syncConcurrency, loadDocx)).filter(Boolean);
 const assignment = await loadAssignmentTable().catch(error => { console.warn(`分工表同步跳过：${error.message}`); return null; });
 const documents = [...loadedDocs, ...(assignment ? [assignment] : [])]
   .filter((doc, index, list) => list.findIndex(other => other.url === doc.url) === index)
@@ -390,11 +423,12 @@ let newVectors = null;
 try { newVectors = await embed(missing.map(item => searchContent(flatEntries[item.index]))); }
 catch (error) { console.warn(`向量生成跳过：${error.message}`); }
 if (newVectors) missing.forEach((item, index) => { item.entry.embedding = newVectors[index] || null; });
+const storedEntries = indexEntries.map(entry => ({ ...entry, embedding: encodeEmbedding(entry.embedding) }));
 const vectorIndexBase = {
-  version: 2, sourceHash,
-  model: indexEntries.some(entry => entry.embedding) ? embeddingModel : null,
-  dimensions: indexEntries.find(entry => entry.embedding)?.embedding.length || 0,
-  entries: indexEntries,
+  version: 2, sourceHash, encoding: 'int16-base64', scale: 32767,
+  model: storedEntries.some(entry => entry.embedding) ? embeddingModel : null,
+  dimensions: newVectors?.[0]?.length || previousIndex?.dimensions || 0,
+  entries: storedEntries,
 };
 const previousComparable = previousIndex ? { ...previousIndex, generatedAt: undefined } : null;
 const indexUnchanged = JSON.stringify(previousComparable) === JSON.stringify(vectorIndexBase);

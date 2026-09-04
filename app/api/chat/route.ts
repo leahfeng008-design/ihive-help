@@ -7,14 +7,15 @@ type Paragraph = { id: string; type: 'paragraph'; kind?: string; order: number; 
 type Article = { id: string; type: 'article'; sourceType: SourceType; title: string; summary: string; url: string; path: string[]; directories?: Directory[]; articles: Article[]; paragraphs: Paragraph[] };
 type Directory = { id: string; type: 'directory'; sourceType: SourceType; title: string; summary: string; path: string[]; directories: Directory[]; articles: Article[] };
 type KnowledgeTree = { version: number; generatedAt?: string | null; sourceHash?: string; roots: Directory[] };
-type IndexEntry = { id: string; nodeType: NodeType; contentHash?: string; embedding?: number[] | null };
-type VectorIndex = { version?: number; model?: string | null; dimensions?: number; entries?: IndexEntry[] };
+type StoredEmbedding = number[] | string;
+type IndexEntry = { id: string; nodeType: NodeType; contentHash?: string; embedding?: StoredEmbedding | null };
+type VectorIndex = { version?: number; model?: string | null; dimensions?: number; encoding?: 'int16-base64'; scale?: number; entries?: IndexEntry[] };
 type Message = { role: 'user' | 'assistant'; content: string };
 type SourceType = 'help' | 'prd' | 'assignment';
 type NodeType = 'directory' | 'article' | 'paragraph';
 type SearchNode = {
   id: string; nodeType: NodeType; sourceType: SourceType; title: string; summary?: string; text?: string;
-  url?: string; path: string[]; images: Image[]; directoryIds: string[]; articleIds: string[]; embedding?: number[] | null;
+  url?: string; path: string[]; images: Image[]; directoryIds: string[]; articleIds: string[]; embedding?: StoredEmbedding | null;
 };
 type RankedNode = { node: SearchNode; lexical: number; semantic: number; hierarchy: number; score: number };
 type RetrievalResult = { directories: RankedNode[]; articles: RankedNode[]; paragraphs: RankedNode[]; confidence: 'high' | 'medium' | 'low'; method: 'hierarchical-hybrid-vector' | 'hierarchical-lexical' };
@@ -76,11 +77,18 @@ function lexicalScore(question: string, node: SearchNode) {
   return Math.min(1, matched / possible + exact);
 }
 
-function cosine(a: number[], b: number[]) {
-  if (!a.length || a.length !== b.length) return 0;
+function cosine(a: number[], b: StoredEmbedding) {
+  const encoded = typeof b === 'string' ? atob(b) : null;
+  const length = encoded ? encoded.length / 2 : b.length;
+  if (!a.length || a.length !== length) return 0;
   let dot = 0, normA = 0, normB = 0;
   for (let index = 0; index < a.length; index++) {
-    dot += a[index] * b[index]; normA += a[index] ** 2; normB += b[index] ** 2;
+    let value = typeof b === 'string' ? encoded!.charCodeAt(index * 2) | (encoded!.charCodeAt(index * 2 + 1) << 8) : b[index];
+    if (typeof b === 'string') {
+      if (value & 0x8000) value -= 0x10000;
+      value /= storedIndex.scale || 32767;
+    }
+    dot += a[index] * value; normA += a[index] ** 2; normB += value ** 2;
   }
   return dot / (Math.sqrt(normA) * Math.sqrt(normB) || 1);
 }
