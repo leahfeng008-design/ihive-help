@@ -237,15 +237,41 @@ function requiredImages(matches: RankedNode[]) {
 function ensureImageMarkers(answer: string, images: Image[]) {
   const missing = images.filter(image => !answer.includes(`[[IMAGE:${image.imageId}]]`));
   if (!missing.length) return answer;
-  return `${answer.trim()}\n\n相关操作截图：\n${missing.map(image => `[[IMAGE:${image.imageId}]]`).join('\n')}`;
+  return `${answer.trim()}\n\n${missing.map(image => `[[IMAGE:${image.imageId}]]`).join('\n')}`;
 }
 
-async function generate(question: string, retrieval: Awaited<ReturnType<typeof retrieve>>) {
+function answerMatches(question: string, retrieval: Awaited<ReturnType<typeof retrieve>>) {
+  const proceduralQuery = /如何|怎么|怎样|步骤|操作|设置|修改|配置/.test(question);
+  if (proceduralQuery) {
+    const procedure = retrieval.paragraphs.filter(match =>
+      /使用过程|操作步骤|操作方法|具体步骤|配置步骤/.test(match.node.sectionPath?.[0] || ''),
+    );
+    if (procedure.some(match => match.node.role === 'instruction')) {
+      const articleIds = new Set(procedure.flatMap(match => match.node.articleIds));
+      const platformContext = searchNodes.filter(node =>
+        node.nodeType === 'paragraph' &&
+        node.articleIds.some(id => articleIds.has(id)) &&
+        /客户端|移动端/.test(node.text || '') &&
+        (node.isMetadata || /前置条件|适用端/.test(node.sectionPath?.[0] || '')),
+      ).map(node => ({ node, lexical: 0, semantic: 0, hierarchy: 1, score: 1 }));
+      return [...new Map([...platformContext, ...procedure].map(match => [match.node.id, match])).values()]
+        .sort((a, b) => (a.node.order || 0) - (b.node.order || 0));
+    }
+  }
+  const yesNoQuery = /是否|能否|可否|会不会|有没有|是不是|需不需要|要不要|吗[？?]?$/.test(question);
+  if (yesNoQuery) {
+    const faq = retrieval.paragraphs.filter(match => /常见问题|问答|FAQ/i.test(match.node.sectionPath?.[0] || ''));
+    if (faq.length) return faq;
+  }
+  return retrieval.paragraphs;
+}
+
+async function generate(question: string, matches: RankedNode[], confidence: RetrievalResult['confidence']) {
   const key = process.env.OPENROUTER_API_KEY;
   if (!key) return null;
-  const context = retrieval.paragraphs.map((match, index) => {
+  const context = matches.map((match, index) => {
     const node = match.node;
-    return `[${index + 1}] 来源：${sourceLabel(node.sourceType)}\n目录路径：${node.path.join(' / ')}\n文章：${node.title}\n精确段落：${node.text}\n本段图片：${node.images.map(image => `${image.imageId}（${image.alt}）`).join('、') || '无'}\n匹配分：${match.score.toFixed(3)}`;
+    return `[${index + 1}] 来源：${sourceLabel(node.sourceType)}\n目录路径：${node.path.join(' / ')}\n文章：${node.title}\n章节：${node.sectionPath?.join(' / ') || '正文'}\n段落类型：${node.role || node.kind || '正文'}\n精确段落：${node.text}\n本段图片：${node.images.map(image => image.imageId).join('、') || '无'}\n匹配分：${match.score.toFixed(3)}`;
   }).join('\n\n');
   const response = await fetch(`${openRouterEndpoint}/chat/completions`, {
     method: 'POST',
@@ -253,8 +279,16 @@ async function generate(question: string, retrieval: Awaited<ReturnType<typeof r
     body: JSON.stringify({
       model: process.env.OPENROUTER_MODEL || 'openai/gpt-5-mini', temperature: .1,
       messages: [
-        { role: 'system', content: '你是 iHive 帮助助手。资料已经按“目录 → 文章 → 精确段落”逐级检索。只能依据提供的精确段落作答：帮助文档用于操作步骤，PRD 用于产品规则，分工表用于负责人和归属。先直接回答，再按需要归纳为简洁步骤；保留原文中的端类型、前提和限制，禁止补充资料之外的事实。引用到带图片的段落时，必须紧跟相关步骤输出该段的 [[IMAGE:图片ID]]，不得遗漏、改写 ID 或集中解释图片。如果匹配置信度低或段落不足，明确说未找到完整说明，只给最接近的内容。' },
-        { role: 'user', content: `检索置信度：${retrieval.confidence}\n\n精确资料：\n${context}\n\n用户问题：${question}` },
+        { role: 'system', content: `你是 iHive 帮助助手。资料已经按“目录 → 文章 → 精确段落”逐级检索。只能依据提供的精确段落作答：帮助文档用于操作步骤，PRD 用于产品规则，分工表用于负责人和归属，禁止补充资料之外的事实。
+
+回答格式：
+1. 是非问题的第一句话必须直接以“是。”或“否。”开头，再补充必要条件。
+2. 操作类问题直接给操作方法，不要使用“直接回答”“简洁步骤”“补充”“原文内容”等套话，不要重复用户问题或文章标题。
+3. 原文包含不同客户端时，严格按客户端分组，格式为“**Mac 客户端**：”“**iPhone 客户端**：”等；各客户端下使用短横线列出步骤和限制。不得把某一客户端的步骤推断给另一客户端，也不得漏掉原文已有的客户端步骤。
+4. 没有客户端分组时，按自然顺序简洁列点。优先保留具体路径、按钮、输入限制、保存/取消行为和展示规则；操作问题不要加入无关的使用场景或常见问题。
+5. 引用到带图片的段落时，必须在对应步骤之后单独输出该段的 [[IMAGE:图片ID]]；不得遗漏、改写 ID、重复图片说明或输出“操作截图”等占位文字。
+6. 只有检索置信度低或资料确实不足时，才说明未找到完整说明，并只给最接近的原文信息。` },
+        { role: 'user', content: `检索置信度：${confidence}\n\n精确资料：\n${context}\n\n用户问题：${question}` },
       ],
     }),
   });
@@ -280,10 +314,11 @@ export async function POST(request: Request) {
     if (!question) return Response.json({ error: '请输入问题' }, { status: 400 });
     if (!searchNodes.some(node => node.nodeType === 'paragraph')) return Response.json({ error: '知识库暂无可检索段落' }, { status: 503 });
     const retrieval = await retrieve(question);
-    const images = requiredImages(retrieval.paragraphs);
-    const generated = retrieval.paragraphs.length ? await generate(question, retrieval) : null;
-    const answer = ensureImageMarkers(generated || fallbackAnswer(retrieval), images);
-    const sources = [...new Map(retrieval.paragraphs.map(match => [match.node.url, {
+    const matches = answerMatches(question, retrieval);
+    const images = requiredImages(matches);
+    const generated = matches.length ? await generate(question, matches, retrieval.confidence) : null;
+    const answer = ensureImageMarkers(generated || fallbackAnswer({ ...retrieval, paragraphs: matches }), images);
+    const sources = [...new Map(matches.map(match => [match.node.url, {
       title: match.node.title, url: match.node.url, path: match.node.path, sourceType: match.node.sourceType,
     }])).values()].filter(source => source.url).slice(0, 5);
     return Response.json({

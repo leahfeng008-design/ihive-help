@@ -14,10 +14,18 @@ function SuggestionGrid({ onSelect, compact = false }: { onSelect: (value: strin
   return <div className={compact ? 'suggestions compact' : 'suggestions'}>{suggestions.map((item) => <button type="button" onClick={() => onSelect(item)} key={item}>{item}</button>)}</div>;
 }
 
+function FormattedText({ text }: { text: string }) {
+  return <>{text.split(/(\*\*[^*]+\*\*)/g).map((part, index) =>
+    part.startsWith('**') && part.endsWith('**')
+      ? <strong key={index}>{part.slice(2, -2)}</strong>
+      : <span key={index}>{part}</span>,
+  )}</>;
+}
+
 function Answer({ message }: { message: Message }) {
   const images = new Map((message.images || []).map((image) => [image.imageId, image]));
   const parts = message.content.split(/\[\[IMAGE:([^\]]+)\]\]/g);
-  return <><div className="answer-copy">{parts.map((part, index) => { if (index % 2 === 0) return <span key={index}>{part}</span>; const image = images.get(part); return image ? <figure className="inline-help-image" key={image.imageId}><a href={image.src} target="_blank" rel="noreferrer"><img src={image.src} alt={image.alt || '帮助文档关联图片'} /></a>{image.alt && <figcaption>{image.alt}</figcaption>}</figure> : null; })}</div>{!!message.sources?.length && <section className="references" aria-label="参考资料"><h2>为你找到 {message.sources.length} 篇参考资料</h2>{message.sources.map((source, index) => <a href={source.url} target="_blank" rel="noreferrer" key={`${source.url}-${index}`}><span>{index + 1}</span><strong>{source.title}</strong><ExternalLink size={15} /></a>)}</section>}</>;
+  return <><div className="answer-copy">{parts.map((part, index) => { if (index % 2 === 0) return <FormattedText text={part} key={index} />; const image = images.get(part); return image ? <figure className="inline-help-image" key={image.imageId}><a href={image.src} target="_blank" rel="noreferrer"><img src={image.src} alt={image.alt || '帮助文档关联图片'} /></a>{image.alt && !/操作截图$/.test(image.alt) && <figcaption>{image.alt}</figcaption>}</figure> : null; })}</div>{!!message.sources?.length && <section className="references" aria-label="参考资料"><h2>为你找到 {message.sources.length} 篇参考资料</h2>{message.sources.map((source, index) => <a href={source.url} target="_blank" rel="noreferrer" key={`${source.url}-${index}`}><span>{index + 1}</span><strong>{source.title}</strong><ExternalLink size={15} /></a>)}</section>}</>;
 }
 
 export default function Home() {
