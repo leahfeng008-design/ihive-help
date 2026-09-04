@@ -9,9 +9,13 @@ export async function GET(request: Request) {
     authorize.searchParams.set('redirect_uri', feishuRedirectUri(request));
     authorize.searchParams.set('scope', 'wiki:wiki:readonly docx:document:readonly bitable:app:readonly');
     authorize.searchParams.set('state', state);
-    const response = Response.redirect(authorize.toString(), 302);
-    response.headers.append('set-cookie', createStateCookie(state));
-    return response;
+    return new Response(null, {
+      status: 302,
+      headers: {
+        location: authorize.toString(),
+        'set-cookie': createStateCookie(state),
+      },
+    });
   } catch (error) {
     const target = new URL('/?auth_error=config', request.url);
     target.searchParams.set('detail', error instanceof Error ? error.message : '飞书登录配置不完整');

@@ -15,9 +15,13 @@ function failed(request: Request, reason: string, detail?: string) {
   const target = new URL('/', request.url);
   target.searchParams.set('auth_error', reason);
   if (detail) target.searchParams.set('detail', detail.slice(0, 180));
-  const response = Response.redirect(target.toString(), 302);
-  response.headers.append('set-cookie', clearStateCookie());
-  return response;
+  return new Response(null, {
+    status: 302,
+    headers: {
+      location: target.toString(),
+      'set-cookie': clearStateCookie(),
+    },
+  });
 }
 
 export async function GET(request: Request) {
@@ -55,16 +59,17 @@ export async function GET(request: Request) {
     const spaceJson = await spaceResponse.json() as { code?: number; msg?: string };
     if (!spaceResponse.ok || spaceJson.code) return failed(request, 'knowledge_access', spaceJson.msg || '当前账号无法读取该知识库');
 
-    const response = Response.redirect(new URL('/', request.url).toString(), 302);
-    response.headers.append('set-cookie', clearStateCookie());
-    response.headers.append('set-cookie', await createSessionCookie({
+    const sessionCookie = await createSessionCookie({
       openId: profile.open_id,
       unionId: profile.union_id,
       userId: profile.user_id,
       name: profile.name || '飞书用户',
       avatarUrl: profile.avatar_url,
-    }));
-    return response;
+    });
+    const headers = new Headers({ location: new URL('/', request.url).toString() });
+    headers.append('set-cookie', clearStateCookie());
+    headers.append('set-cookie', sessionCookie);
+    return new Response(null, { status: 302, headers });
   } catch (error) {
     return failed(request, 'oauth', error instanceof Error ? error.message : '飞书登录失败');
   }
