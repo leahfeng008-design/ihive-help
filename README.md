@@ -12,8 +12,15 @@ pnpm dev
 
 ## 飞书知识库
 
-同步范围包括帮助知识库、PRD 文件夹和模块分工表。同步器递归读取目录、按来源与父级目录分类、把正文分块、下载关联图片，并通过 OpenRouter Embeddings 建立向量索引。不要提交 `FEISHU_APP_SECRET`。
+同步范围包括帮助知识库、PRD 文件夹和模块分工表。同步器把内容写成“目录 → 子目录/文章 → 子文章/段落”的本地知识树：目录和文章都有摘要，段落保留原始正文块，关联图片直接挂在对应段落下。随后为目录、文章和段落分别建立 OpenRouter 向量索引。不要提交 `FEISHU_APP_SECRET`。
 
 线上入口支持飞书 OAuth 登录。登录成功后会先验证当前飞书账号是否能读取目标知识库，只有验证通过才会创建加密登录会话。生产环境需设置 `FEISHU_AUTH_REQUIRED=true`、`FEISHU_REDIRECT_URI` 和 `FEISHU_COOKIE_SECRET`。
 
-执行 `pnpm sync:feishu` 可增量刷新 `data/knowledge.json`、`data/catalog.json` 和 `data/vector-index.json`。内容未变化时不会重复生成向量。
+执行 `pnpm sync:feishu` 可增量刷新：
+
+- `data/knowledge.json`：完整树状知识库和段落图片关系；
+- `data/catalog.json`：目录、文章标题与摘要组成的轻量目录；
+- `data/vector-index.json`：逐节点向量缓存，只为新增或变化的节点重新生成向量；
+- `public/kb-images/`：按飞书文件 token 去重的本地图片缓存。
+
+问答接口按“目录 → 文章 → 段落”逐级缩小候选范围，再对精确段落进行关键词与向量混合排序。命中的段落带图时，响应会强制包含对应图片标记。同步目前仍由 `pnpm sync:feishu` 手动触发。

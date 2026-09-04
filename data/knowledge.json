@@ -1,8 +1,49 @@
-[
-  {
-    "title": "登录和退出账号",
-    "url": "https://pcnpuds47gj5.feishu.cn/wiki/GfCbwRLb8iVkLFk8YfJcVHLEnMa",
-    "text": "成员在开始使用应用进行沟通与协作前，需要先登录应用账号。当成员暂时不再使用当前设备，或需要切换账号、交接设备时，可通过退出账号来保障账号与企业信息安全。适用 Mac 客户端和 iPhone 客户端。登录时打开客户端并选择邮箱验证码登录。",
-    "images": []
-  }
-]
+{
+  "version": 2,
+  "generatedAt": null,
+  "sourceHash": "seed-v2",
+  "roots": [
+    {
+      "id": "directory-help-root",
+      "type": "directory",
+      "sourceType": "help",
+      "title": "帮助知识库",
+      "summary": "1 篇内容，涵盖：下载和登录",
+      "path": ["帮助知识库"],
+      "directories": [
+        {
+          "id": "directory-help-login",
+          "type": "directory",
+          "sourceType": "help",
+          "title": "下载和登录",
+          "summary": "1 篇内容，涵盖：登录和退出账号",
+          "path": ["帮助知识库", "下载和登录"],
+          "directories": [],
+          "articles": [
+            {
+              "id": "article-seed-login",
+              "type": "article",
+              "sourceType": "help",
+              "title": "登录和退出账号",
+              "summary": "介绍登录、退出账号及适用客户端；登录时可选择邮箱验证码登录。",
+              "url": "https://pcnpuds47gj5.feishu.cn/wiki/GfCbwRLb8iVkLFk8YfJcVHLEnMa",
+              "path": ["下载和登录", "登录和退出账号"],
+              "articles": [],
+              "paragraphs": [
+                {
+                  "id": "paragraph-seed-login-0",
+                  "type": "paragraph",
+                  "kind": "text",
+                  "order": 0,
+                  "text": "成员在开始使用应用进行沟通与协作前，需要先登录应用账号。当成员暂时不再使用当前设备，或需要切换账号、交接设备时，可通过退出账号来保障账号与企业信息安全。适用 Mac 客户端和 iPhone 客户端。登录时打开客户端并选择邮箱验证码登录。",
+                  "images": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "articles": []
+    }
+  ]
+}

@@ -63,10 +63,10 @@ export default function Home() {
     setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: '正在查找官方帮助文档…', pending: true }]);
     try {
       const response = await fetch('/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: [...history, { role: 'user', content: question }] }), signal: controller.signal });
-      const result = await response.json();
+      const result = await response.json() as { answer?: string; error?: string; sources?: Source[]; images?: ChatImage[] };
       if (response.status === 401) { window.location.replace('/api/auth/feishu/start'); return; }
       if (!response.ok) throw new Error(result.error || '请求失败');
-      setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: result.answer, sources: result.sources, images: result.images }]);
+      setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: result.answer || '知识库暂时没有返回内容。', sources: result.sources, images: result.images }]);
     } catch (error) {
       if (controller.signal.aborted) return;
       setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: `暂时无法回答：${error instanceof Error ? error.message : '请求失败'}` }]);

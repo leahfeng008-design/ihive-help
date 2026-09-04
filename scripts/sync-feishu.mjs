@@ -21,7 +21,7 @@ if (!appId || !appSecret) throw new Error('缺少 FEISHU_APP_ID 或 FEISHU_APP_S
 async function requestJson(url, token, options = {}) {
   const response = await fetch(url, {
     ...options,
-    headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json', ...(options.headers || {}) },
+    headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json', ...options.headers },
   });
   const json = await response.json().catch(() => ({}));
   if (!response.ok || (typeof json.code === 'number' && json.code !== 0)) {
@@ -46,7 +46,7 @@ if (!tokenResponse.ok || !tokenResult.tenant_access_token) throw new Error('无�
 const token = tokenResult.tenant_access_token;
 
 async function mapPool(items, limit, worker) {
-  const output = new Array(items.length);
+  const output = Array.from({ length: items.length });
   let cursor = 0;
   await Promise.all(Array.from({ length: Math.min(limit, items.length) }, async () => {
     while (cursor < items.length) {
@@ -126,7 +126,11 @@ function richText(block) {
   ).join('').replace(/\u200b/g, '').trim();
 }
 
-async function downloadImage(fileToken, documentTitle, lastText) {
+function stableId(prefix, value) {
+  return `${prefix}-${crypto.createHash('sha1').update(value).digest('hex').slice(0, 16)}`;
+}
+
+async function downloadImage(fileToken, documentTitle) {
   const imageId = `img-${crypto.createHash('sha1').update(fileToken).digest('hex').slice(0, 12)}`;
   const fileName = `${imageId}.png`;
   const directory = path.join(root, 'public', 'kb-images');
@@ -134,7 +138,30 @@ async function downloadImage(fileToken, documentTitle, lastText) {
   await fs.mkdir(directory, { recursive: true });
   try { await fs.access(destination); }
   catch { await fs.writeFile(destination, await requestBinary(`${api}/drive/v1/medias/${fileToken}/download`, token)); }
-  return { imageId, src: `/kb-images/${fileName}`, alt: `${documentTitle} 操作截图`, after: lastText };
+  return { imageId, src: `/kb-images/${fileName}`, alt: `${documentTitle} 操作截图` };
+}
+
+function paragraphKind(block) {
+  for (let level = 1; level <= 9; level++) if (block[`heading${level}`]) return `heading${level}`;
+  if (block.bullet) return 'bullet';
+  if (block.ordered) return 'ordered';
+  if (block.code) return 'code';
+  if (block.quote) return 'quote';
+  if (block.todo) return 'todo';
+  return 'text';
+}
+
+function splitParagraph(text, maxLength = 1200) {
+  if (text.length <= maxLength) return [text];
+  const sentences = text.split(/(?<=[。！？；.!?;])\s*/).filter(Boolean);
+  const output = [];
+  let current = '';
+  for (const sentence of sentences) {
+    if (current && current.length + sentence.length > maxLength) { output.push(current); current = sentence; }
+    else current += sentence;
+  }
+  if (current) output.push(current);
+  return output.length ? output : [text];
 }
 
 async function loadDocx(meta) {
@@ -150,16 +177,31 @@ async function loadDocx(meta) {
   } while (pageToken);
 
   const paragraphs = [];
-  const images = [];
-  let lastText = meta.title;
+  let activeParagraph = null;
   for (const block of blocks) {
     const value = richText(block);
-    if (value) { paragraphs.push(value); lastText = value; }
-    if (block.image?.token) images.push(await downloadImage(block.image.token, meta.title, lastText));
+    if (value) {
+      for (const part of splitParagraph(value)) {
+        activeParagraph = {
+          id: stableId('paragraph', `${meta.url}:${block.block_id || paragraphs.length}:${part}`),
+          type: 'paragraph', kind: paragraphKind(block), order: paragraphs.length,
+          text: part, images: [],
+        };
+        paragraphs.push(activeParagraph);
+      }
+    }
+    if (block.image?.token) {
+      const image = await downloadImage(block.image.token, meta.title);
+      if (!activeParagraph) {
+        activeParagraph = { id: stableId('paragraph', `${meta.url}:lead`), type: 'paragraph', kind: 'text', order: 0, text: meta.title, images: [] };
+        paragraphs.push(activeParagraph);
+      }
+      activeParagraph.images.push(image);
+    }
   }
-  const text = paragraphs.join('\n').trim();
+  const text = paragraphs.map(paragraph => paragraph.text).join('\n').trim();
   if (!text) return null;
-  return { ...meta, text, images };
+  return { ...meta, text, paragraphs };
 }
 
 function fieldText(value) {
@@ -184,38 +226,115 @@ async function loadAssignmentTable() {
     pageToken = json.data?.has_more ? json.data?.page_token || '' : '';
   } while (pageToken);
   if (!rows.length) return null;
+  const paragraphs = rows.map((text, index) => ({
+    id: stableId('paragraph', `assignment:${index}:${text}`), type: 'paragraph', kind: 'record', order: index, text, images: [],
+  }));
   return {
     sourceType: 'assignment', category: '模块分工', path: ['分工表', '按照模块分'], title: '按照模块分',
     url: 'https://pcnpuds47gj5.feishu.cn/share/base/view/shrcnVOvM7mw8YQW2SXrk61pa4f',
-    text: rows.join('\n'), images: [],
+    text: rows.join('\n'), paragraphs,
   };
 }
 
-function splitText(text, maxLength = 900, overlap = 120) {
-  const paragraphs = text.split(/\n+/).map(value => value.trim()).filter(Boolean);
-  const chunks = [];
-  let current = '';
-  for (const paragraph of paragraphs) {
-    if (current && current.length + paragraph.length + 1 > maxLength) {
-      chunks.push(current);
-      current = `${current.slice(-overlap)}\n${paragraph}`;
-    } else current += `${current ? '\n' : ''}${paragraph}`;
-  }
-  if (current) chunks.push(current);
-  return chunks;
+function shortSummary(text, maxLength = 220) {
+  const compact = String(text || '').replace(/\s+/g, ' ').trim();
+  if (compact.length <= maxLength) return compact;
+  return `${compact.slice(0, maxLength).replace(/[，、；：\s]+$/u, '')}…`;
 }
 
-function createChunks(documents) {
-  return documents.flatMap((doc, documentIndex) => splitText(doc.text).map((text, chunkIndex) => ({
-    id: `chunk-${crypto.createHash('sha1').update(`${doc.url}:${chunkIndex}:${text}`).digest('hex').slice(0, 16)}`,
-    documentIndex,
-    sourceType: doc.sourceType,
-    category: doc.category,
-    title: doc.title,
-    url: doc.url,
-    text,
-    imageIds: (doc.images || []).filter(image => image.after && text.includes(image.after)).map(image => image.imageId),
-  })));
+const sourceLabels = { help: '帮助知识库', prd: 'PRD', assignment: '模块分工表' };
+const sourcePathPrefixes = { help: null, prd: 'PRD', assignment: '分工表' };
+
+function createDirectory(sourceType, title, pathParts) {
+  return { id: stableId('directory', `${sourceType}:${pathParts.join('/')}`), type: 'directory', sourceType, title, summary: '', path: pathParts, directories: [], articles: [] };
+}
+
+function createArticle(doc) {
+  return {
+    id: stableId('article', doc.url), type: 'article', sourceType: doc.sourceType,
+    title: doc.title, summary: shortSummary(doc.text), url: doc.url, path: doc.path,
+    directories: [], articles: [], paragraphs: doc.paragraphs,
+  };
+}
+
+function buildKnowledgeTree(documents) {
+  const grouped = new Map();
+  for (const doc of documents) {
+    const list = grouped.get(doc.sourceType) || [];
+    list.push(doc); grouped.set(doc.sourceType, list);
+  }
+  const roots = [];
+  for (const sourceType of ['help', 'prd', 'assignment']) {
+    const sourceDocs = grouped.get(sourceType) || [];
+    if (!sourceDocs.length) continue;
+    const root = createDirectory(sourceType, sourceLabels[sourceType], [sourceLabels[sourceType]]);
+    const docsByPath = new Map(sourceDocs.map(doc => [`${sourceType}:${doc.path.join('/')}`, doc]));
+    for (const doc of [...sourceDocs].sort((a, b) => a.path.length - b.path.length || a.title.localeCompare(b.title, 'zh-CN'))) {
+      let parts = [...doc.path];
+      if (parts[0] === sourcePathPrefixes[sourceType]) parts = parts.slice(1);
+      if (!parts.length) parts = [doc.title];
+      let container = root;
+      const walked = sourcePathPrefixes[sourceType] ? [sourcePathPrefixes[sourceType]] : [];
+      for (const segment of parts.slice(0, -1)) {
+        walked.push(segment);
+        const parentDoc = docsByPath.get(`${sourceType}:${walked.join('/')}`);
+        if (parentDoc) {
+          let article = container.articles.find(item => item.url === parentDoc.url);
+          if (!article) { article = createArticle(parentDoc); container.articles.push(article); }
+          container = article;
+        } else {
+          let directory = container.directories?.find(item => item.title === segment);
+          if (!directory) {
+            directory = createDirectory(sourceType, segment, [...container.path, segment]);
+            container.directories ??= [];
+            container.directories.push(directory);
+          }
+          container = directory;
+        }
+      }
+      let article = container.articles.find(item => item.url === doc.url);
+      if (!article) { article = createArticle(doc); container.articles.push(article); }
+      else Object.assign(article, createArticle(doc), { directories: article.directories, articles: article.articles });
+    }
+
+    const summarizeDirectory = directory => {
+      for (const child of directory.directories) summarizeDirectory(child);
+      const names = [...directory.directories.map(item => item.title), ...directory.articles.map(item => item.title)];
+      const articleCount = countArticles(directory);
+      directory.summary = `${articleCount} 篇内容${names.length ? `，涵盖：${names.slice(0, 10).join('、')}${names.length > 10 ? '等' : ''}` : ''}`;
+    };
+    summarizeDirectory(root);
+    roots.push(root);
+  }
+  return roots;
+}
+
+function countArticles(container) {
+  return (container.articles || []).reduce((sum, article) => sum + 1 + countArticles(article), 0)
+    + (container.directories || []).reduce((sum, directory) => sum + countArticles(directory), 0);
+}
+
+function flattenKnowledge(roots) {
+  const entries = [];
+  const visitDirectory = (directory, directoryIds = [], articleIds = []) => {
+    const nextDirectoryIds = [...directoryIds, directory.id];
+    entries.push({ id: directory.id, nodeType: 'directory', sourceType: directory.sourceType, title: directory.title, path: directory.path, summary: directory.summary, directoryIds: nextDirectoryIds, articleIds });
+    for (const child of directory.directories) visitDirectory(child, nextDirectoryIds, articleIds);
+    for (const article of directory.articles) visitArticle(article, nextDirectoryIds, articleIds);
+  };
+  const visitArticle = (article, directoryIds, articleIds) => {
+    const nextArticleIds = [...articleIds, article.id];
+    entries.push({ id: article.id, nodeType: 'article', sourceType: article.sourceType, title: article.title, path: article.path, summary: article.summary, url: article.url, directoryIds, articleIds: nextArticleIds });
+    for (const directory of article.directories || []) visitDirectory(directory, directoryIds, nextArticleIds);
+    for (const paragraph of article.paragraphs) entries.push({ id: paragraph.id, nodeType: 'paragraph', sourceType: article.sourceType, title: article.title, path: article.path, text: paragraph.text, kind: paragraph.kind, url: article.url, images: paragraph.images, directoryIds, articleIds: nextArticleIds });
+    for (const child of article.articles) visitArticle(child, directoryIds, nextArticleIds);
+  };
+  for (const root of roots) visitDirectory(root);
+  return entries;
+}
+
+function searchContent(entry) {
+  return [entry.title, entry.summary, entry.text, `路径：${entry.path.join(' / ')}`].filter(Boolean).join('\n');
 }
 
 async function embed(texts) {
@@ -249,45 +368,61 @@ const knowledgeTarget = path.join(root, 'data', 'knowledge.json');
 const indexTarget = path.join(root, 'data', 'vector-index.json');
 const catalogTarget = path.join(root, 'data', 'catalog.json');
 await fs.mkdir(path.dirname(knowledgeTarget), { recursive: true });
-const knowledgeJson = `${JSON.stringify(documents, null, 2)}\n`;
+const roots = buildKnowledgeTree(documents);
+const flatEntries = flattenKnowledge(roots);
+const sourceHash = crypto.createHash('sha256').update(JSON.stringify(roots)).digest('hex');
+const knowledge = { version: 2, generatedAt: new Date().toISOString(), sourceHash, roots };
+const knowledgeJson = `${JSON.stringify(knowledge, null, 2)}\n`;
 let previousKnowledge = '';
 try { previousKnowledge = await fs.readFile(knowledgeTarget, 'utf8'); } catch {}
-const sourceHash = crypto.createHash('sha256').update(knowledgeJson).digest('hex');
 let previousIndex = null;
 try { previousIndex = JSON.parse(await fs.readFile(indexTarget, 'utf8')); } catch {}
 
-let vectorIndex = previousIndex;
-if (!previousIndex || previousIndex.sourceHash !== sourceHash) {
-  const chunks = createChunks(documents);
-  let vectors = null;
-  try { vectors = await embed(chunks.map(chunk => `${chunk.title}\n类目：${chunk.category}\n${chunk.text}`)); }
-  catch (error) { console.warn(`向量生成跳过：${error.message}`); }
-  vectorIndex = {
-    generatedAt: new Date().toISOString(), sourceHash, model: vectors ? embeddingModel : null,
-    dimensions: vectors?.[0]?.length || 0,
-    chunks: chunks.map((chunk, index) => ({ ...chunk, embedding: vectors?.[index] || null })),
-  };
-}
+const previousEmbeddings = new Map((previousIndex?.entries || []).map(entry => [entry.id, entry]));
+const indexEntries = flatEntries.map(entry => {
+  const contentHash = crypto.createHash('sha256').update(searchContent(entry)).digest('hex');
+  const previous = previousEmbeddings.get(entry.id);
+  const reusable = previousIndex?.model === embeddingModel && previous?.contentHash === contentHash && previous.embedding?.length;
+  return { id: entry.id, nodeType: entry.nodeType, contentHash, embedding: reusable ? previous.embedding : null };
+});
+const missing = indexEntries.map((entry, index) => ({ entry, index })).filter(item => !item.entry.embedding);
+let newVectors = null;
+try { newVectors = await embed(missing.map(item => searchContent(flatEntries[item.index]))); }
+catch (error) { console.warn(`向量生成跳过：${error.message}`); }
+if (newVectors) missing.forEach((item, index) => { item.entry.embedding = newVectors[index] || null; });
+const vectorIndexBase = {
+  version: 2, sourceHash,
+  model: indexEntries.some(entry => entry.embedding) ? embeddingModel : null,
+  dimensions: indexEntries.find(entry => entry.embedding)?.embedding.length || 0,
+  entries: indexEntries,
+};
+const previousComparable = previousIndex ? { ...previousIndex, generatedAt: undefined } : null;
+const indexUnchanged = JSON.stringify(previousComparable) === JSON.stringify(vectorIndexBase);
+const vectorIndex = indexUnchanged ? previousIndex : { ...vectorIndexBase, generatedAt: new Date().toISOString() };
 
-const catalog = [
-  ...wikiNodes.map(item => ({ source: 'help', category: item.category, title: item.title, nodeToken: item.nodeToken, url: item.url, level: item.path.length, path: item.path })),
-  ...prdFiles.map(item => ({ source: 'prd', category: item.category, title: item.title, url: item.url, level: item.path.length, path: item.path })),
-  { source: 'assignment', category: '模块分工', title: '按照模块分', url: 'https://pcnpuds47gj5.feishu.cn/share/base/view/shrcnVOvM7mw8YQW2SXrk61pa4f', level: 1, path: ['分工表', '按照模块分'] },
-];
+const catalog = flatEntries.filter(entry => entry.nodeType !== 'paragraph').map(entry => ({
+  id: entry.id, type: entry.nodeType, source: entry.sourceType, title: entry.title,
+  summary: entry.summary, url: entry.url, path: entry.path,
+  parentId: entry.nodeType === 'article' ? entry.articleIds.at(-2) || entry.directoryIds.at(-1) : entry.directoryIds.at(-2) || null,
+}));
 const indexJson = `${JSON.stringify(vectorIndex, null, 2)}\n`;
 const catalogJson = `${JSON.stringify(catalog, null, 2)}\n`;
 let previousCatalog = '';
 try { previousCatalog = await fs.readFile(catalogTarget, 'utf8'); } catch {}
-if (previousKnowledge !== knowledgeJson) await fs.writeFile(knowledgeTarget, knowledgeJson);
-if (!previousIndex || previousIndex.sourceHash !== sourceHash) await fs.writeFile(indexTarget, indexJson);
+let previousSourceHash = null;
+try { previousSourceHash = JSON.parse(previousKnowledge).sourceHash; } catch {}
+if (previousSourceHash !== sourceHash) await fs.writeFile(knowledgeTarget, knowledgeJson);
+if (!indexUnchanged) await fs.writeFile(indexTarget, indexJson);
 if (previousCatalog !== catalogJson) await fs.writeFile(catalogTarget, catalogJson);
 
 console.log(JSON.stringify({
-  changed: previousKnowledge !== knowledgeJson || !previousIndex || previousIndex.sourceHash !== sourceHash || previousCatalog !== catalogJson,
+  changed: previousSourceHash !== sourceHash || !indexUnchanged || previousCatalog !== catalogJson,
   documents: documents.length,
-  categories: new Set(documents.map(doc => `${doc.sourceType}/${doc.category}`)).size,
-  chunks: vectorIndex.chunks.length,
-  vectors: vectorIndex.chunks.filter(chunk => chunk.embedding).length,
-  images: documents.reduce((sum, doc) => sum + (doc.images?.length || 0), 0),
+  directories: flatEntries.filter(entry => entry.nodeType === 'directory').length,
+  articles: flatEntries.filter(entry => entry.nodeType === 'article').length,
+  paragraphs: flatEntries.filter(entry => entry.nodeType === 'paragraph').length,
+  vectors: vectorIndex.entries.filter(entry => entry.embedding).length,
+  reusedVectors: indexEntries.filter(entry => previousEmbeddings.get(entry.id)?.embedding === entry.embedding).length,
+  images: flatEntries.filter(entry => entry.nodeType === 'paragraph').reduce((sum, entry) => sum + (entry.images?.length || 0), 0),
   sources: documents.reduce((result, doc) => ({ ...result, [doc.sourceType]: (result[doc.sourceType] || 0) + 1 }), {}),
 }));

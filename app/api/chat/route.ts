@@ -2,13 +2,24 @@ import knowledgeJson from '../../../data/knowledge.json';
 import vectorIndexJson from '../../../data/vector-index.json';
 import { isFeishuAuthRequired, readFeishuSession } from '../../../lib/feishu-auth';
 
-type Image = { imageId: string; src: string; alt: string; after?: string };
-type Source = { sourceType?: 'help' | 'prd' | 'assignment'; category?: string; title: string; url: string; text: string; images?: Image[] };
-type Chunk = { id: string; documentIndex?: number; sourceType?: string; category?: string; title: string; url: string; text: string; imageIds?: string[]; embedding?: number[] | null };
+type Image = { imageId: string; src: string; alt: string };
+type Paragraph = { id: string; type: 'paragraph'; kind?: string; order: number; text: string; images: Image[] };
+type Article = { id: string; type: 'article'; sourceType: SourceType; title: string; summary: string; url: string; path: string[]; directories?: Directory[]; articles: Article[]; paragraphs: Paragraph[] };
+type Directory = { id: string; type: 'directory'; sourceType: SourceType; title: string; summary: string; path: string[]; directories: Directory[]; articles: Article[] };
+type KnowledgeTree = { version: number; generatedAt?: string | null; sourceHash?: string; roots: Directory[] };
+type IndexEntry = { id: string; nodeType: NodeType; contentHash?: string; embedding?: number[] | null };
+type VectorIndex = { version?: number; model?: string | null; dimensions?: number; entries?: IndexEntry[] };
 type Message = { role: 'user' | 'assistant'; content: string };
-type VectorIndex = { model?: string | null; dimensions?: number; chunks?: Chunk[] };
+type SourceType = 'help' | 'prd' | 'assignment';
+type NodeType = 'directory' | 'article' | 'paragraph';
+type SearchNode = {
+  id: string; nodeType: NodeType; sourceType: SourceType; title: string; summary?: string; text?: string;
+  url?: string; path: string[]; images: Image[]; directoryIds: string[]; articleIds: string[]; embedding?: number[] | null;
+};
+type RankedNode = { node: SearchNode; lexical: number; semantic: number; hierarchy: number; score: number };
+type RetrievalResult = { directories: RankedNode[]; articles: RankedNode[]; paragraphs: RankedNode[]; confidence: 'high' | 'medium' | 'low'; method: 'hierarchical-hybrid-vector' | 'hierarchical-lexical' };
 
-const docs = knowledgeJson as Source[];
+const knowledge = knowledgeJson as KnowledgeTree;
 const storedIndex = vectorIndexJson as VectorIndex;
 const openRouterEndpoint = 'https://openrouter.ai/api/v1';
 const aliases: Array<[RegExp, string]> = [
@@ -30,31 +41,39 @@ function normalize(value: string) {
   return text.replace(/[\p{P}\p{S}\s]+/gu, ' ').trim();
 }
 
-function terms(value: string) {
+function queryTokens(value: string) {
   const normalized = normalize(value);
-  const output = new Set(normalized.split(' ').filter(Boolean));
-  const compact = normalized.replace(/\s/g, '');
-  for (let index = 0; index < compact.length; index++) {
-    output.add(compact[index]);
-    if (index + 1 < compact.length) output.add(compact.slice(index, index + 2));
-    if (index + 2 < compact.length) output.add(compact.slice(index, index + 3));
+  const output = new Set<string>();
+  for (const segment of normalized.split(' ').filter(Boolean)) {
+    if (/^[a-z\d]+$/i.test(segment)) output.add(segment);
+    else {
+      if (segment.length <= 6) output.add(segment);
+      for (let size = 2; size <= Math.min(4, segment.length); size++) {
+        for (let index = 0; index + size <= segment.length; index++) output.add(segment.slice(index, index + size));
+      }
+    }
   }
-  return output;
+  return [...output];
 }
 
-function lexicalScore(question: string, chunk: Chunk) {
-  const query = normalize(question);
-  const title = normalize(`${chunk.category || ''} ${chunk.title}`);
-  const body = normalize(chunk.text);
-  const queryTerms = terms(question);
-  if (!queryTerms.size) return 0;
+function lexicalScore(question: string, node: SearchNode) {
+  const tokens = queryTokens(question);
+  if (!tokens.length) return 0;
+  const title = normalize(`${node.title} ${node.path.join(' ')}`);
+  const summary = normalize(node.summary || '');
+  const body = normalize(node.text || '');
   let matched = 0;
-  for (const term of queryTerms) {
-    if (title.includes(term)) matched += term.length >= 2 ? 3.2 : .45;
-    else if (body.includes(term)) matched += term.length >= 2 ? 1.5 : .22;
+  let possible = 0;
+  for (const token of tokens) {
+    const weight = Math.min(4, Math.max(1, token.length - 1));
+    possible += weight;
+    if (title.includes(token)) matched += weight;
+    else if (summary.includes(token)) matched += weight * .72;
+    else if (body.includes(token)) matched += weight * .5;
   }
-  const exact = title.includes(query) ? 8 : body.includes(query) ? 5 : 0;
-  return Math.min(1, (matched + exact) / Math.max(8, queryTerms.size * 1.8));
+  const phrase = normalize(question);
+  const exact = phrase.length > 1 && title.includes(phrase) ? .32 : phrase.length > 1 && (summary.includes(phrase) || body.includes(phrase)) ? .2 : 0;
+  return Math.min(1, matched / possible + exact);
 }
 
 function cosine(a: number[], b: number[]) {
@@ -74,9 +93,7 @@ async function embeddings(input: string[], dimensions?: number, inputType?: 'sea
     headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json', 'HTTP-Referer': 'https://ihive-help-assistant-rebuilt.leahfeng008.chatgpt.site', 'X-Title': 'iHive Help Assistant' },
     body: JSON.stringify({
       model: process.env.OPENROUTER_EMBEDDING_MODEL || storedIndex.model || 'openai/text-embedding-3-small',
-      input,
-      ...(dimensions ? { dimensions } : {}),
-      ...(inputType ? { input_type: inputType } : {}),
+      input, ...(dimensions ? { dimensions } : {}), ...(inputType ? { input_type: inputType } : {}),
     }),
   });
   if (!response.ok) return null;
@@ -84,67 +101,104 @@ async function embeddings(input: string[], dimensions?: number, inputType?: 'sea
   return [...(json.data || [])].sort((a, b) => a.index - b.index).map(item => item.embedding);
 }
 
-function baseChunks(): Chunk[] {
-  if (storedIndex.chunks?.length) return storedIndex.chunks;
-  return docs.map((doc, index) => ({ id: `document-${index}`, documentIndex: index, sourceType: doc.sourceType, category: doc.category, title: doc.title, url: doc.url, text: doc.text, imageIds: doc.images?.map(image => image.imageId) || [], embedding: null }));
+function flattenKnowledge(tree: KnowledgeTree) {
+  const nodes: SearchNode[] = [];
+  const visitDirectory = (directory: Directory, directoryIds: string[] = [], articleIds: string[] = []) => {
+    const nextDirectoryIds = [...directoryIds, directory.id];
+    nodes.push({ id: directory.id, nodeType: 'directory', sourceType: directory.sourceType, title: directory.title, summary: directory.summary, path: directory.path, images: [], directoryIds: nextDirectoryIds, articleIds });
+    for (const child of directory.directories || []) visitDirectory(child, nextDirectoryIds, articleIds);
+    for (const article of directory.articles || []) visitArticle(article, nextDirectoryIds, articleIds);
+  };
+  const visitArticle = (article: Article, directoryIds: string[], articleIds: string[]) => {
+    const nextArticleIds = [...articleIds, article.id];
+    nodes.push({ id: article.id, nodeType: 'article', sourceType: article.sourceType, title: article.title, summary: article.summary, url: article.url, path: article.path, images: [], directoryIds, articleIds: nextArticleIds });
+    for (const directory of article.directories || []) visitDirectory(directory, directoryIds, nextArticleIds);
+    for (const paragraph of article.paragraphs || []) nodes.push({ id: paragraph.id, nodeType: 'paragraph', sourceType: article.sourceType, title: article.title, text: paragraph.text, url: article.url, path: article.path, images: paragraph.images || [], directoryIds, articleIds: nextArticleIds });
+    for (const child of article.articles || []) visitArticle(child, directoryIds, nextArticleIds);
+  };
+  for (const root of tree.roots || []) visitDirectory(root);
+  const embeddingById = new Map((storedIndex.entries || []).map(entry => [entry.id, entry.embedding]));
+  for (const node of nodes) node.embedding = embeddingById.get(node.id);
+  return nodes;
 }
 
-async function retrieve(question: string) {
-  const chunks = baseChunks();
-  const lexical = chunks.map(chunk => ({ chunk, lexical: lexicalScore(question, chunk), semantic: 0 }));
-  const indexed = lexical.filter(item => item.chunk.embedding?.length);
+const searchNodes = flattenKnowledge(knowledge);
 
-  if (indexed.length) {
-    const queryVector = (await embeddings([question], indexed[0].chunk.embedding?.length || storedIndex.dimensions, 'search_query'))?.[0];
-    if (queryVector) for (const item of lexical) if (item.chunk.embedding) item.semantic = Math.max(0, cosine(queryVector, item.chunk.embedding));
-  } else {
-    const candidates = [...lexical].sort((a, b) => b.lexical - a.lexical).slice(0, 40);
-    const vectors = await embeddings([question, ...candidates.map(item => `${item.chunk.title}\n类目：${item.chunk.category || '其他'}\n${item.chunk.text}`)], Number(process.env.OPENROUTER_EMBEDDING_DIMENSIONS || 256));
-    if (vectors?.length === candidates.length + 1) for (let index = 0; index < candidates.length; index++) candidates[index].semantic = Math.max(0, cosine(vectors[0], vectors[index + 1]));
-  }
-
-  const ranked = lexical.map(item => {
-    const categoryMatch = normalize(question).includes(normalize(item.chunk.category || '')) ? 1 : 0;
-    const titleMatch = normalize(item.chunk.title).includes(normalize(question)) || normalize(question).includes(normalize(item.chunk.title)) ? 1 : 0;
-    const score = item.semantic * .68 + item.lexical * .24 + Math.max(categoryMatch, titleMatch) * .08;
-    return { ...item, score };
+function rankNodes(question: string, nodes: SearchNode[], queryVector: number[] | null, hierarchyScore: (node: SearchNode) => number = () => 0) {
+  return nodes.map(node => {
+    const lexical = lexicalScore(question, node);
+    const semantic = queryVector && node.embedding?.length ? Math.max(0, cosine(queryVector, node.embedding)) : 0;
+    const hierarchy = hierarchyScore(node);
+    const score = semantic * .58 + lexical * .34 + hierarchy * .08;
+    return { node, lexical, semantic, hierarchy, score };
   }).sort((a, b) => b.score - a.score);
-
-  const selected: typeof ranked = [];
-  const perDocument = new Map<string, number>();
-  for (const item of ranked) {
-    const count = perDocument.get(item.chunk.url) || 0;
-    if (count >= 2) continue;
-    selected.push(item); perDocument.set(item.chunk.url, count + 1);
-    if (selected.length === 8) break;
-  }
-  return selected;
 }
 
-function sourceLabel(sourceType?: string) {
+async function retrieve(question: string): Promise<RetrievalResult> {
+  const hasVectors = searchNodes.some(node => node.embedding?.length);
+  const queryVector = hasVectors ? (await embeddings([question], storedIndex.dimensions, 'search_query'))?.[0] || null : null;
+  const directories = rankNodes(question, searchNodes.filter(node => node.nodeType === 'directory'), queryVector).slice(0, 4);
+  const directoryScores = new Map(directories.map(item => [item.node.id, item.score]));
+  const articles = rankNodes(question, searchNodes.filter(node => node.nodeType === 'article'), queryVector, node =>
+    Math.max(0, ...node.directoryIds.map(id => directoryScores.get(id) || 0)),
+  ).slice(0, 8);
+  const articleScores = new Map(articles.map(item => [item.node.id, item.score]));
+  const rankedParagraphs = rankNodes(question, searchNodes.filter(node => node.nodeType === 'paragraph'), queryVector, node =>
+    Math.max(0, ...node.articleIds.map(id => articleScores.get(id) || 0)),
+  );
+  const best = rankedParagraphs[0]?.score || 0;
+  if (best < .015) return {
+    directories, articles, paragraphs: [], confidence: 'low',
+    method: queryVector ? 'hierarchical-hybrid-vector' : 'hierarchical-lexical',
+  };
+  const limit = best >= .12 ? Math.max(.06, best * .52) : 0;
+  const selected: RankedNode[] = [];
+  const perArticle = new Map<string, number>();
+  for (const item of rankedParagraphs) {
+    if (selected.length >= 6 || (selected.length >= 2 && item.score < limit)) break;
+    const articleId = item.node.articleIds.at(-1) || item.node.url || item.node.id;
+    const count = perArticle.get(articleId) || 0;
+    if (count >= 3) continue;
+    selected.push(item); perArticle.set(articleId, count + 1);
+  }
+  return {
+    directories, articles, paragraphs: selected,
+    confidence: best >= .48 ? 'high' : best >= .22 ? 'medium' : 'low',
+    method: queryVector ? 'hierarchical-hybrid-vector' : 'hierarchical-lexical',
+  };
+}
+
+function sourceLabel(sourceType: SourceType) {
   if (sourceType === 'prd') return 'PRD';
   if (sourceType === 'assignment') return '分工表';
   return '帮助文档';
 }
 
-async function generate(question: string, matches: Awaited<ReturnType<typeof retrieve>>) {
+function requiredImages(matches: RankedNode[]) {
+  return [...new Map(matches.flatMap(match => match.node.images).map(image => [image.imageId, image])).values()];
+}
+
+function ensureImageMarkers(answer: string, images: Image[]) {
+  const missing = images.filter(image => !answer.includes(`[[IMAGE:${image.imageId}]]`));
+  if (!missing.length) return answer;
+  return `${answer.trim()}\n\n相关操作截图：\n${missing.map(image => `[[IMAGE:${image.imageId}]]`).join('\n')}`;
+}
+
+async function generate(question: string, retrieval: Awaited<ReturnType<typeof retrieve>>) {
   const key = process.env.OPENROUTER_API_KEY;
   if (!key) return null;
-  const sourceDocs = new Map(docs.map(doc => [doc.url, doc]));
-  const context = matches.map((match, index) => {
-    const doc = sourceDocs.get(match.chunk.url);
-    const images = (doc?.images || []).filter(image => !match.chunk.imageIds?.length || match.chunk.imageIds.includes(image.imageId));
-    return `[${index + 1}] 来源：${sourceLabel(match.chunk.sourceType)} / ${match.chunk.category || '其他'}\n标题：${match.chunk.title}\n原文片段：${match.chunk.text}\n可用图片：${images.map(image => `${image.imageId}（${image.alt}，放在“${image.after || '对应步骤'}”之后）`).join('；') || '无'}`;
+  const context = retrieval.paragraphs.map((match, index) => {
+    const node = match.node;
+    return `[${index + 1}] 来源：${sourceLabel(node.sourceType)}\n目录路径：${node.path.join(' / ')}\n文章：${node.title}\n精确段落：${node.text}\n本段图片：${node.images.map(image => `${image.imageId}（${image.alt}）`).join('、') || '无'}\n匹配分：${match.score.toFixed(3)}`;
   }).join('\n\n');
   const response = await fetch(`${openRouterEndpoint}/chat/completions`, {
     method: 'POST',
     headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json', 'HTTP-Referer': 'https://ihive-help-assistant-rebuilt.leahfeng008.chatgpt.site', 'X-Title': 'iHive Help Assistant' },
     body: JSON.stringify({
-      model: process.env.OPENROUTER_MODEL || 'openai/gpt-5-mini',
-      temperature: .15,
+      model: process.env.OPENROUTER_MODEL || 'openai/gpt-5-mini', temperature: .1,
       messages: [
-        { role: 'system', content: '你是 iHive 帮助助手。只能依据给定的飞书帮助文档、PRD 和分工表回答。操作方法优先采用帮助文档，产品规则与设计意图可采用 PRD，负责人和模块归属采用分工表。不要补充资料中没有的事实。回答要直接、分步骤，并保持原文中的端类型和限制条件。只要存在与某一步骤直接相关的可用图片，就必须在该步骤之后单独插入 [[IMAGE:图片ID]]；图片要穿插在正文中，不能集中堆在结尾；没有相关图片时直接不展示，也不要提“缺少关联图片”。如果检索片段仍不足以回答，说明在三处知识源中未找到明确说明，并给出最接近的参考文档。' },
-        { role: 'user', content: `检索资料：\n${context}\n\n用户问题：${question}` },
+        { role: 'system', content: '你是 iHive 帮助助手。资料已经按“目录 → 文章 → 精确段落”逐级检索。只能依据提供的精确段落作答：帮助文档用于操作步骤，PRD 用于产品规则，分工表用于负责人和归属。先直接回答，再按需要归纳为简洁步骤；保留原文中的端类型、前提和限制，禁止补充资料之外的事实。引用到带图片的段落时，必须紧跟相关步骤输出该段的 [[IMAGE:图片ID]]，不得遗漏、改写 ID 或集中解释图片。如果匹配置信度低或段落不足，明确说未找到完整说明，只给最接近的内容。' },
+        { role: 'user', content: `检索置信度：${retrieval.confidence}\n\n精确资料：\n${context}\n\n用户问题：${question}` },
       ],
     }),
   });
@@ -153,21 +207,38 @@ async function generate(question: string, matches: Awaited<ReturnType<typeof ret
   return result.choices?.[0]?.message?.content || null;
 }
 
+function fallbackAnswer(retrieval: Awaited<ReturnType<typeof retrieve>>) {
+  if (!retrieval.paragraphs.length) return '本地知识库中没有找到相关段落。';
+  const prefix = retrieval.confidence === 'low' ? '未找到完全匹配的说明，最接近的知识库内容是：\n\n' : '';
+  return prefix + retrieval.paragraphs.slice(0, 3).map(match => {
+    const markers = match.node.images.map(image => `\n[[IMAGE:${image.imageId}]]`).join('');
+    return `${match.node.text}${markers}`;
+  }).join('\n\n');
+}
+
 export async function POST(request: Request) {
   try {
-    if (isFeishuAuthRequired() && !(await readFeishuSession(request))) {
-      return Response.json({ error: '请先登录飞书账号' }, { status: 401 });
-    }
+    if (isFeishuAuthRequired() && !(await readFeishuSession(request))) return Response.json({ error: '请先登录飞书账号' }, { status: 401 });
     const body = await request.json() as { messages?: Message[] };
     const question = body.messages?.at(-1)?.content?.trim();
     if (!question) return Response.json({ error: '请输入问题' }, { status: 400 });
-    const matches = await retrieve(question);
-    if (!matches.length) return Response.json({ error: '知识库暂无可检索内容' }, { status: 503 });
-    const uniqueSources = [...new Map(matches.map(match => [match.chunk.url, { title: match.chunk.title, url: match.chunk.url, category: match.chunk.category, sourceType: match.chunk.sourceType }])).values()].slice(0, 5);
-    const sourceDocs = new Map(docs.map(doc => [doc.url, doc]));
-    const images = uniqueSources.flatMap(source => sourceDocs.get(source.url)?.images || []);
-    const answer = await generate(question, matches) || matches.slice(0, 3).map(match => match.chunk.text).join('\n\n');
-    return Response.json({ answer, sources: uniqueSources, images, retrieval: { method: matches.some(match => match.semantic > 0) ? 'hybrid-vector' : 'lexical', categories: [...new Set(matches.map(match => match.chunk.category).filter(Boolean))] } });
+    if (!searchNodes.some(node => node.nodeType === 'paragraph')) return Response.json({ error: '知识库暂无可检索段落' }, { status: 503 });
+    const retrieval = await retrieve(question);
+    const images = requiredImages(retrieval.paragraphs);
+    const generated = retrieval.paragraphs.length ? await generate(question, retrieval) : null;
+    const answer = ensureImageMarkers(generated || fallbackAnswer(retrieval), images);
+    const sources = [...new Map(retrieval.paragraphs.map(match => [match.node.url, {
+      title: match.node.title, url: match.node.url, path: match.node.path, sourceType: match.node.sourceType,
+    }])).values()].filter(source => source.url).slice(0, 5);
+    return Response.json({
+      answer, sources, images,
+      retrieval: {
+        method: retrieval.method, confidence: retrieval.confidence,
+        directories: retrieval.directories.map(item => ({ title: item.node.title, score: item.score })),
+        articles: retrieval.articles.map(item => ({ title: item.node.title, score: item.score })),
+        paragraphIds: retrieval.paragraphs.map(item => item.node.id),
+      },
+    });
   } catch (error) {
     return Response.json({ error: error instanceof Error ? error.message : '服务暂时不可用' }, { status: 500 });
   }
