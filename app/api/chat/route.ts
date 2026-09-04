@@ -3,7 +3,7 @@ import vectorIndexJson from '../../../data/vector-index.json';
 import { isFeishuAuthRequired, readFeishuSession } from '../../../lib/feishu-auth';
 
 type Image = { imageId: string; src: string; alt: string };
-type Paragraph = { id: string; type: 'paragraph'; kind?: string; order: number; text: string; images: Image[] };
+type Paragraph = { id: string; type: 'paragraph'; kind?: string; order: number; text: string; images: Image[]; sectionPath?: string[]; role?: 'metadata' | 'heading' | 'instruction' | 'content'; isMetadata?: boolean };
 type Article = { id: string; type: 'article'; sourceType: SourceType; title: string; summary: string; url: string; path: string[]; directories?: Directory[]; articles: Article[]; paragraphs: Paragraph[] };
 type Directory = { id: string; type: 'directory'; sourceType: SourceType; title: string; summary: string; path: string[]; directories: Directory[]; articles: Article[] };
 type KnowledgeTree = { version: number; generatedAt?: string | null; sourceHash?: string; roots: Directory[] };
@@ -16,6 +16,7 @@ type NodeType = 'directory' | 'article' | 'paragraph';
 type SearchNode = {
   id: string; nodeType: NodeType; sourceType: SourceType; title: string; summary?: string; text?: string;
   url?: string; path: string[]; images: Image[]; directoryIds: string[]; articleIds: string[]; embedding?: StoredEmbedding | null;
+  sectionPath?: string[]; kind?: string; order?: number; role?: Paragraph['role']; isMetadata?: boolean;
 };
 type RankedNode = { node: SearchNode; lexical: number; semantic: number; hierarchy: number; score: number };
 type RetrievalResult = { directories: RankedNode[]; articles: RankedNode[]; paragraphs: RankedNode[]; confidence: 'high' | 'medium' | 'low'; method: 'hierarchical-hybrid-vector' | 'hierarchical-lexical' };
@@ -63,18 +64,29 @@ function lexicalScore(question: string, node: SearchNode) {
   const title = normalize(`${node.title} ${node.path.join(' ')}`);
   const summary = normalize(node.summary || '');
   const body = normalize(node.text || '');
+  const section = normalize((node.sectionPath || []).join(' '));
   let matched = 0;
   let possible = 0;
   for (const token of tokens) {
     const weight = Math.min(4, Math.max(1, token.length - 1));
     possible += weight;
-    if (title.includes(token)) matched += weight;
+    if (node.nodeType === 'paragraph') {
+      if (body.includes(token)) matched += weight;
+      else if (section.includes(token)) matched += weight * .78;
+      else if (title.includes(token)) matched += weight * .14;
+    } else if (title.includes(token)) matched += weight;
     else if (summary.includes(token)) matched += weight * .72;
     else if (body.includes(token)) matched += weight * .5;
   }
   const phrase = normalize(question);
-  const exact = phrase.length > 1 && title.includes(phrase) ? .32 : phrase.length > 1 && (summary.includes(phrase) || body.includes(phrase)) ? .2 : 0;
+  const exact = node.nodeType === 'paragraph'
+    ? phrase.length > 1 && body.includes(phrase) ? .3 : phrase.length > 1 && section.includes(phrase) ? .22 : 0
+    : phrase.length > 1 && title.includes(phrase) ? .32 : phrase.length > 1 && (summary.includes(phrase) || body.includes(phrase)) ? .2 : 0;
   return Math.min(1, matched / possible + exact);
+}
+
+function intentKey(value: string) {
+  return value.toLowerCase().normalize('NFKC').replace(/[\p{P}\p{S}\s]/gu, '').replace(/^(请问|麻烦|我想知道|我想|如何|怎么|怎样|请)/, '').replace(/[吗呢吧]$/u, '');
 }
 
 function cosine(a: number[], b: StoredEmbedding) {
@@ -121,7 +133,7 @@ function flattenKnowledge(tree: KnowledgeTree) {
     const nextArticleIds = [...articleIds, article.id];
     nodes.push({ id: article.id, nodeType: 'article', sourceType: article.sourceType, title: article.title, summary: article.summary, url: article.url, path: article.path, images: [], directoryIds, articleIds: nextArticleIds });
     for (const directory of article.directories || []) visitDirectory(directory, directoryIds, nextArticleIds);
-    for (const paragraph of article.paragraphs || []) nodes.push({ id: paragraph.id, nodeType: 'paragraph', sourceType: article.sourceType, title: article.title, text: paragraph.text, url: article.url, path: article.path, images: paragraph.images || [], directoryIds, articleIds: nextArticleIds });
+    for (const paragraph of article.paragraphs || []) nodes.push({ id: paragraph.id, nodeType: 'paragraph', sourceType: article.sourceType, title: article.title, text: paragraph.text, url: article.url, path: article.path, images: paragraph.images || [], directoryIds, articleIds: nextArticleIds, sectionPath: paragraph.sectionPath, kind: paragraph.kind, order: paragraph.order, role: paragraph.role, isMetadata: paragraph.isMetadata });
     for (const child of article.articles || []) visitArticle(child, directoryIds, nextArticleIds);
   };
   for (const root of tree.roots || []) visitDirectory(root);
@@ -147,15 +159,28 @@ async function retrieve(question: string): Promise<RetrievalResult> {
   const queryVector = hasVectors ? (await embeddings([question], storedIndex.dimensions, 'search_query'))?.[0] || null : null;
   const directories = rankNodes(question, searchNodes.filter(node => node.nodeType === 'directory'), queryVector).slice(0, 4);
   const directoryScores = new Map(directories.map(item => [item.node.id, item.score]));
-  const articles = rankNodes(question, searchNodes.filter(node => node.nodeType === 'article'), queryVector, node =>
+  const queryIntent = intentKey(question);
+  const articlePool = searchNodes.filter(node => node.nodeType === 'article');
+  const exactArticleIds = new Set(articlePool.filter(node => {
+    const articleIntent = intentKey(node.title);
+    return queryIntent.length >= 2 && articleIntent.length >= 2 && (articleIntent.includes(queryIntent) || queryIntent.includes(articleIntent));
+  }).map(node => node.id));
+  const articles = rankNodes(question, articlePool, queryVector, node =>
     Math.max(0, ...node.directoryIds.map(id => directoryScores.get(id) || 0)),
-  ).slice(0, 8);
+  ).map(item => exactArticleIds.has(item.node.id) ? { ...item, score: Math.min(1, item.score + .48) } : item)
+    .sort((a, b) => b.score - a.score).slice(0, 8);
   const articleScores = new Map(articles.map(item => [item.node.id, item.score]));
-  const rankedParagraphs = rankNodes(question, searchNodes.filter(node => node.nodeType === 'paragraph'), queryVector, node =>
+  const allParagraphs = searchNodes.filter(node => node.nodeType === 'paragraph');
+  const paragraphPool = exactArticleIds.size
+    ? allParagraphs.filter(node => node.articleIds.some(id => exactArticleIds.has(id)))
+    : allParagraphs;
+  const metadataQuery = /负责人|产品经理|更新时间|更新版本|适用客户端/.test(question);
+  const rankedParagraphs = rankNodes(question, paragraphPool, queryVector, node =>
     Math.max(0, ...node.articleIds.map(id => articleScores.get(id) || 0)),
-  );
+  ).map(item => item.node.isMetadata && !metadataQuery ? { ...item, score: item.score * .12 } : item)
+    .sort((a, b) => b.score - a.score);
   const best = rankedParagraphs[0]?.score || 0;
-  if (best < .015) return {
+  if (best < .015 && !exactArticleIds.size) return {
     directories, articles, paragraphs: [], confidence: 'low',
     method: queryVector ? 'hierarchical-hybrid-vector' : 'hierarchical-lexical',
   };
@@ -163,15 +188,38 @@ async function retrieve(question: string): Promise<RetrievalResult> {
   const selected: RankedNode[] = [];
   const perArticle = new Map<string, number>();
   for (const item of rankedParagraphs) {
-    if (selected.length >= 6 || (selected.length >= 2 && item.score < limit)) break;
+    if (selected.length >= 6 || (selected.length >= 2 && item.score < limit && !exactArticleIds.size)) break;
+    if (item.node.isMetadata && !metadataQuery) continue;
     const articleId = item.node.articleIds.at(-1) || item.node.url || item.node.id;
     const count = perArticle.get(articleId) || 0;
-    if (count >= 3) continue;
+    if (count >= (exactArticleIds.has(articleId) ? 6 : 3)) continue;
     selected.push(item); perArticle.set(articleId, count + 1);
   }
+  const selectedById = new Map(selected.map(item => [item.node.id, item]));
+  const rankedById = new Map(rankedParagraphs.map(item => [item.node.id, item]));
+  const proceduralQuery = /如何|怎么|怎样|步骤|操作|设置|修改|配置/.test(question);
+  if (exactArticleIds.size) {
+    for (const anchor of selected) {
+      const articleId = anchor.node.articleIds.at(-1);
+      const sectionRoot = anchor.node.sectionPath?.[0];
+      for (const candidate of paragraphPool) {
+        if (candidate.articleIds.at(-1) !== articleId || candidate.isMetadata) continue;
+        const isNeighbor = Math.abs((candidate.order || 0) - (anchor.node.order || 0)) <= 1 && candidate.sectionPath?.[0] === sectionRoot;
+        const isProcedureStep = proceduralQuery && /使用过程|操作步骤|操作方法|具体步骤|配置步骤/.test(candidate.sectionPath?.[0] || '') && candidate.role !== 'metadata';
+        if (isNeighbor || isProcedureStep) {
+          const ranked = rankedById.get(candidate.id);
+          if (ranked) selectedById.set(candidate.id, ranked);
+        }
+      }
+    }
+  }
+  const expanded = [...selectedById.values()].sort((a, b) => {
+    const articleCompare = (a.node.articleIds.at(-1) || '').localeCompare(b.node.articleIds.at(-1) || '');
+    return articleCompare || (a.node.order || 0) - (b.node.order || 0);
+  }).slice(0, 10);
   return {
-    directories, articles, paragraphs: selected,
-    confidence: best >= .48 ? 'high' : best >= .22 ? 'medium' : 'low',
+    directories, articles, paragraphs: expanded,
+    confidence: exactArticleIds.size && expanded.length ? 'high' : best >= .48 ? 'high' : best >= .22 ? 'medium' : 'low',
     method: queryVector ? 'hierarchical-hybrid-vector' : 'hierarchical-lexical',
   };
 }

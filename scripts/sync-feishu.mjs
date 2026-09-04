@@ -190,6 +190,29 @@ function splitParagraph(text, maxLength = 1200) {
   return output.length ? output : [text];
 }
 
+function annotateParagraphs(paragraphs, defaultSection = '') {
+  const headings = [];
+  return paragraphs.map(paragraph => {
+    const headingMatch = /^heading(\d+)$/.exec(paragraph.kind || '');
+    if (headingMatch) {
+      const level = Number(headingMatch[1]);
+      headings.length = level - 1;
+      headings[level - 1] = paragraph.text;
+      return { ...paragraph, sectionPath: headings.filter(Boolean), role: 'heading', isMetadata: false };
+    }
+    const sectionPath = headings.filter(Boolean);
+    if (!sectionPath.length && defaultSection) sectionPath.push(defaultSection);
+    const isMetadata = paragraph.order < 10 && /^(更新时间|文档负责人|产品经理|更新版本|适用客户端)[：:]/.test(paragraph.text);
+    const section = sectionPath.join(' / ');
+    const isInstruction = !isMetadata && (
+      paragraph.images.length > 0 ||
+      /使用过程|操作步骤|操作方法|具体步骤|配置步骤/.test(section) ||
+      /^(打开|进入|点击|选择|填写|输入|设置|确认|保存|返回|勾选|搜索|长按|滑动)/.test(paragraph.text)
+    );
+    return { ...paragraph, sectionPath, role: isMetadata ? 'metadata' : isInstruction ? 'instruction' : 'content', isMetadata };
+  });
+}
+
 async function loadDocx(meta) {
   if (meta.objType !== 'docx') return null;
   let pageToken = '';
@@ -227,7 +250,7 @@ async function loadDocx(meta) {
   }
   const text = paragraphs.map(paragraph => paragraph.text).join('\n').trim();
   if (!text) return null;
-  return { ...meta, text, paragraphs };
+  return { ...meta, text, paragraphs: annotateParagraphs(paragraphs) };
 }
 
 function fieldText(value) {
@@ -252,9 +275,9 @@ async function loadAssignmentTable() {
     pageToken = json.data?.has_more ? json.data?.page_token || '' : '';
   } while (pageToken);
   if (!rows.length) return null;
-  const paragraphs = rows.map((text, index) => ({
+  const paragraphs = annotateParagraphs(rows.map((text, index) => ({
     id: stableId('paragraph', `assignment:${index}:${text}`), type: 'paragraph', kind: 'record', order: index, text, images: [],
-  }));
+  })), '模块分工');
   return {
     sourceType: 'assignment', category: '模块分工', path: ['分工表', '按照模块分'], title: '按照模块分',
     url: 'https://pcnpuds47gj5.feishu.cn/share/base/view/shrcnVOvM7mw8YQW2SXrk61pa4f',
@@ -276,9 +299,14 @@ function createDirectory(sourceType, title, pathParts) {
 }
 
 function createArticle(doc) {
+  const summaryText = doc.paragraphs
+    .filter(paragraph => !paragraph.isMetadata && paragraph.role !== 'heading')
+    .slice(0, 8)
+    .map(paragraph => paragraph.text)
+    .join(' ');
   return {
     id: stableId('article', doc.url), type: 'article', sourceType: doc.sourceType,
-    title: doc.title, summary: shortSummary(doc.text), url: doc.url, path: doc.path,
+    title: doc.title, summary: shortSummary(summaryText || doc.text), url: doc.url, path: doc.path,
     directories: [], articles: [], paragraphs: doc.paragraphs,
   };
 }
@@ -352,7 +380,7 @@ function flattenKnowledge(roots) {
     const nextArticleIds = [...articleIds, article.id];
     entries.push({ id: article.id, nodeType: 'article', sourceType: article.sourceType, title: article.title, path: article.path, summary: article.summary, url: article.url, directoryIds, articleIds: nextArticleIds });
     for (const directory of article.directories || []) visitDirectory(directory, directoryIds, nextArticleIds);
-    for (const paragraph of article.paragraphs) entries.push({ id: paragraph.id, nodeType: 'paragraph', sourceType: article.sourceType, title: article.title, path: article.path, text: paragraph.text, kind: paragraph.kind, url: article.url, images: paragraph.images, directoryIds, articleIds: nextArticleIds });
+    for (const paragraph of article.paragraphs) entries.push({ id: paragraph.id, nodeType: 'paragraph', sourceType: article.sourceType, title: article.title, path: article.path, text: paragraph.text, kind: paragraph.kind, order: paragraph.order, sectionPath: paragraph.sectionPath, role: paragraph.role, isMetadata: paragraph.isMetadata, url: article.url, images: paragraph.images, directoryIds, articleIds: nextArticleIds });
     for (const child of article.articles) visitArticle(child, directoryIds, nextArticleIds);
   };
   for (const root of roots) visitDirectory(root);
@@ -360,6 +388,7 @@ function flattenKnowledge(roots) {
 }
 
 function searchContent(entry) {
+  if (entry.nodeType === 'paragraph') return [`章节：${(entry.sectionPath || []).join(' / ')}`, entry.text].filter(Boolean).join('\n');
   return [entry.title, entry.summary, entry.text, `路径：${entry.path.join(' / ')}`].filter(Boolean).join('\n');
 }
 
