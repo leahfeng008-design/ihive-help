@@ -1,0 +1,19 @@
+{
+  "generatedAt": null,
+  "sourceHash": "seed",
+  "model": null,
+  "dimensions": 0,
+  "chunks": [
+    {
+      "id": "seed-login-0",
+      "documentIndex": 0,
+      "sourceType": "help",
+      "category": "下载和登录",
+      "title": "登录和退出账号",
+      "url": "https://pcnpuds47gj5.feishu.cn/wiki/GfCbwRLb8iVkLFk8YfJcVHLEnMa",
+      "text": "成员在开始使用应用进行沟通与协作前，需要先登录应用账号。当成员暂时不再使用当前设备，或需要切换账号、交接设备时，可通过退出账号来保障账号与企业信息安全。适用 Mac 客户端和 iPhone 客户端。登录时打开客户端并选择邮箱验证码登录。",
+      "imageIds": [],
+      "embedding": null
+    }
+  ]
+}

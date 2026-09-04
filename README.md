@@ -8,10 +8,12 @@
 pnpm dev
 ```
 
-不配置密钥时，接口使用少量内置恢复文档验证问答流程。复制 `.env.example` 为 `.env.local` 并配置 `OPENAI_API_KEY` 后，会基于检索结果生成回答。
+不配置密钥时，接口使用少量内置恢复文档验证问答流程。配置 OpenRouter 和飞书应用凭证后，会使用关键词与语义向量的混合检索生成回答。
 
 ## 飞书知识库
 
-已定位 Space ID：`7631047892841581526`。完整恢复需要一个具有该空间读取权限的飞书自建应用，把 Wiki 节点和文档块同步到检索库。不要提交 `FEISHU_APP_SECRET`。
+同步范围包括帮助知识库、PRD 文件夹和模块分工表。同步器递归读取目录、按来源与父级目录分类、把正文分块、下载关联图片，并通过 OpenRouter Embeddings 建立向量索引。不要提交 `FEISHU_APP_SECRET`。
 
-同步器未默认启用，因为公开部署无法确认原项目采用实时查询、定时同步还是 Webhook。生产环境建议使用定时增量同步，并保留文档标题、URL、更新时间和正文分块。
+线上入口支持飞书 OAuth 登录。登录成功后会先验证当前飞书账号是否能读取目标知识库，只有验证通过才会创建加密登录会话。生产环境需设置 `FEISHU_AUTH_REQUIRED=true`、`FEISHU_REDIRECT_URI` 和 `FEISHU_COOKIE_SECRET`。
+
+执行 `pnpm sync:feishu` 可增量刷新 `data/knowledge.json`、`data/catalog.json` 和 `data/vector-index.json`。内容未变化时不会重复生成向量。

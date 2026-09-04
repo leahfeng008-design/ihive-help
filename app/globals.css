@@ -25,6 +25,41 @@ body {
 button, textarea { font: inherit; }
 .app-shell { min-height: 100dvh; }
 
+.auth-page {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100dvh;
+  padding: 24px;
+}
+.auth-card {
+  width: min(420px, 100%);
+  padding: 42px 34px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .96);
+  text-align: center;
+  box-shadow: 0 24px 70px rgba(30, 45, 76, .12);
+}
+.auth-card > img { width: 58px; height: 58px; object-fit: contain; }
+.auth-card h1 { margin: 14px 0 8px; font-size: 28px; letter-spacing: -.03em; }
+.auth-card p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.65; }
+.feishu-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 24px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  color: #fff;
+  background: var(--blue);
+  text-decoration: none;
+  font-weight: 650;
+}
+.auth-loader { width: 28px; height: 28px; margin: 24px auto 0; border: 3px solid #dbe3ff; border-top-color: var(--blue); border-radius: 50%; animation: spin .8s linear infinite; }
+
 .topbar {
   position: sticky;
   top: 0;
@@ -65,6 +100,8 @@ button, textarea { font: inherit; }
 }
 .topbar button:hover { border-color: #b9c8ff; background: #eef3ff; }
 .topbar a:hover { color: var(--blue); }
+.account-name { display: inline-flex; align-items: center; gap: 6px; color: #5d6470; font-size: 13px; }
+.account-name img { width: 24px; height: 24px; border-radius: 50%; object-fit: cover; }
 
 main {
   width: min(880px, calc(100% - 32px));
@@ -181,6 +218,7 @@ form {
 
 @keyframes rise { from { opacity: 0; transform: translateY(6px); } }
 @keyframes pulse { 50% { opacity: .25; transform: scale(.75); } }
+@keyframes spin { to { transform: rotate(360deg); } }
 
 @media (max-width: 760px) {
   .topbar { padding: 0 18px; }
@@ -193,6 +231,7 @@ form {
   .brand img { width: 24px; height: 24px; }
   .topbar nav { gap: 9px; }
   .topbar button, .topbar a { font-size: 12px; }
+  .account-name { display: none; }
   .topbar button { padding: 0 8px; }
   main { width: calc(100% - 24px); min-height: calc(100dvh - 56px); padding: 38px 0 125px; }
   .hero-title { gap: 8px; }
