@@ -34,7 +34,7 @@ for (const [id, step] of [
 ]) {
   const match = result.matches.find(m => m.images.some(image => image.imageId === id));
   assert.ok(match.text.startsWith(step), `${id} must follow its own method`);
-  assert.ok(result.answer.includes(`${match.text}\n[[IMAGE:${id}]]`));
+  assert.ok(result.answer.includes(`${match.text}\n\n[[IMAGE:${id}]]`));
 }
 console.log('PASS: original question returns all 4 existing images after the correct steps, including iPhone; missing/duplicate markers rejected.');
 const resolve = messages => vm.runInContext(`resolveConversation(${JSON.stringify(messages)})`, context);
@@ -58,3 +58,18 @@ assert.ok(context.shortAnswer.includes('iPhone 客户端操作'));
 assert.ok(!context.shortAnswer.includes('方法2'));
 assert.ok(context.shortAnswer.includes('[[IMAGE:img-c795f4ce174c]]'));
 console.log('PASS: follow-ups inherit topic; new topics reset; empty history asks for topic; concise response retains matching image.');
+await vm.runInContext(`(async () => {
+  const question = '忘记密码怎么办';
+  const retrieval = await retrieve(question);
+  const matches = conciseMatches(associateMethodImages(answerMatches(question, retrieval)));
+  globalThis.passwordResult = { titles: matches.map(m => m.node.title), answer: fallbackAnswer({ ...retrieval, paragraphs: matches }), images: requiredImages(matches) };
+})()`, context);
+assert.ok(context.passwordResult.titles.every(title => title === '如何修改登录密码'));
+assert.ok(context.passwordResult.answer.includes('重置密码'));
+assert.ok(context.passwordResult.answer.includes('邮箱验证码'));
+assert.ok(!context.passwordResult.answer.includes('输入旧密码'));
+assert.ok(!context.passwordResult.answer.includes('登录设备'));
+assert.ok(!context.passwordResult.answer.includes('使用过程'));
+assert.equal(context.passwordResult.images.length, 2);
+assert.ok(context.passwordResult.answer.length < 650);
+console.log('PASS: forgotten password uses only reset instructions, 2 relevant screenshots, no unrelated articles or full-document dump.');

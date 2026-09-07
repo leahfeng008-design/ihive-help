@@ -25,6 +25,7 @@ const knowledge = knowledgeJson as KnowledgeTree;
 const storedIndex = vectorIndexJson as VectorIndex;
 const openRouterEndpoint = 'https://openrouter.ai/api/v1';
 const aliases: Array<[RegExp, string]> = [
+  [/忘记密码|忘了密码|密码忘了|找回密码/g, '忘记密码 重置密码 修改登录密码'],
   [/登不上|无法登录|登入|登陆/g, '登录 账号 验证码 密码'],
   [/没声音|不提醒|静音|勿扰/g, '消息 通知 免打扰 声音'],
   [/@人|艾特|提醒某人/g, '群聊 @ 成员'],
@@ -202,6 +203,7 @@ async function retrieve(question: string): Promise<RetrievalResult> {
   const articlePool = searchNodes.filter(node => node.nodeType === 'article');
   const exactArticleIds = new Set(articlePool.filter(node => {
     const articleIntent = intentKey(node.title);
+    if (/忘记密码|忘了密码|密码忘了|找回密码/.test(question) && /修改登录密码|重置密码/.test(node.title)) return true;
     return queryIntent.length >= 2 && articleIntent.length >= 2 && (articleIntent.includes(queryIntent) || queryIntent.includes(articleIntent));
   }).map(node => node.id));
   const articles = rankNodes(question, articlePool, queryVector, node =>
@@ -308,11 +310,15 @@ function answerMatches(question: string, retrieval: Awaited<ReturnType<typeof re
   if (proceduralQuery) {
     // Retrieve complete procedure sections from the matched leaf articles, before
     // applying any answer limits, so later platforms and screenshots survive.
-    const matchedArticles = new Set(retrieval.paragraphs.map(match => match.node.articleIds.at(-1)));
-    const procedure = searchNodes.filter(node => node.nodeType === 'paragraph' &&
+    const bestArticle = retrieval.articles[0]?.node.id;
+    const matchedArticles = new Set(bestArticle ? [bestArticle] : retrieval.paragraphs.slice(0, 1).map(match => match.node.articleIds.at(-1)));
+    let procedure = searchNodes.filter(node => node.nodeType === 'paragraph' &&
       matchedArticles.has(node.articleIds.at(-1)) &&
       /使用过程|操作步骤|操作方法|具体步骤|配置步骤/.test(node.sectionPath?.[0] || ''),
     ).map(node => ({ node, lexical: 0, semantic: 0, hierarchy: 1, score: 1 }));
+    if (/忘记密码|忘了密码|密码忘了|找回密码/.test(question)) {
+      procedure = procedure.filter(match => /忘记密码|重置密码/.test((match.node.sectionPath || []).join(' ')));
+    }
     if (procedure.some(match => match.node.role === 'instruction')) {
       const articleIds = new Set(procedure.map(match => match.node.articleIds.at(-1)));
       const platformContext = searchNodes.filter(node =>
@@ -350,7 +356,7 @@ async function generate(question: string, matches: RankedNode[], confidence: Ret
 
 回答格式：
 1. 是非问题的第一句话必须直接以“是。”或“否。”开头，再补充必要条件。
-2. 操作类问题直接给操作方法，不要使用“直接回答”“简洁步骤”“补充”“原文内容”等套话，不要重复用户问题或文章标题。
+2. 默认先用一句话概括解决办法，再给3—5个必要步骤，不复述整篇文章，不输出‘使用过程’等文档结构标题。只有用户明确要求详细或全部方法时才展开。操作类问题直接给操作方法，不要使用“直接回答”“简洁步骤”“补充”“原文内容”等套话，不要重复用户问题或文章标题。
 3. 原文包含不同客户端时，严格按客户端分组，格式为“**Mac 客户端**：”“**iPhone 客户端**：”等；各客户端下使用短横线列出步骤和限制。不得把某一客户端的步骤推断给另一客户端，也不得漏掉原文已有的客户端步骤。
 4. 没有客户端分组时，按自然顺序简洁列点。优先保留具体路径、按钮、输入限制、保存/取消行为和展示规则；操作问题不要加入无关的使用场景或常见问题。
 5. 引用到带图片的段落时，必须在对应步骤之后单独输出该段的 [[IMAGE:图片ID]]；不得遗漏、改写 ID、重复图片说明或输出“操作截图”等占位文字。
@@ -368,11 +374,33 @@ async function generate(question: string, matches: RankedNode[], confidence: Ret
 
 function fallbackAnswer(retrieval: Awaited<ReturnType<typeof retrieve>>) {
   if (!retrieval.paragraphs.length) return '本地知识库中没有找到相关段落。';
-  const prefix = retrieval.confidence === 'low' ? '未找到完全匹配的说明，最接近的知识库内容是：\n\n' : '';
-  return prefix + retrieval.paragraphs.filter(match => !match.node.isMetadata && !/前置条件|适用端/.test(match.node.sectionPath?.[0] || '')).map(match => {
-    const markers = match.node.images.map(image => `\n[[IMAGE:${image.imageId}]]`).join('');
-    return `${match.node.role === 'heading' ? `**${match.node.text}**` : match.node.text}${markers}`;
-  }).join('\n\n');
+  const groups = new Map<string, RankedNode[]>();
+  for (const match of retrieval.paragraphs) {
+    const node = match.node;
+    if (node.isMetadata || /前置条件|适用端/.test(node.sectionPath?.[0] || '')) continue;
+    if (node.role === 'heading' && !node.images.length) continue;
+    const key = `${node.articleIds.at(-1)}:${JSON.stringify(node.sectionPath)}`;
+    groups.set(key, [...(groups.get(key) || []), match]);
+  }
+  const output: string[] = [];
+  const seenImages = new Set<string>();
+  for (const group of groups.values()) {
+    const label = group[0].node.sectionPath?.at(-1) || '';
+    const steps = group.filter(match => match.node.role !== 'heading');
+    if (!steps.length) continue;
+    if (/^通过/.test(label)) output.push(`可以${label.replace(/[（(].*?[）)]/g, '')}。`);
+    else if (label && !/^(使用过程|操作步骤|正文|常见问题)$/.test(label)) output.push(`**${label}**`);
+    const headingImages = group.filter(match => match.node.role === 'heading').flatMap(match => match.node.images);
+    steps.forEach((match, index) => {
+      output.push(`- ${(match.node.text || '').replace(/^问：[\s\S]*?答：/, '').trim()}`);
+      const images = [...match.node.images, ...(index === steps.length - 1 ? headingImages : [])];
+      for (const image of images) {
+        if (!seenImages.has(image.imageId)) output.push(`[[IMAGE:${image.imageId}]]`);
+        seenImages.add(image.imageId);
+      }
+    });
+  }
+  return output.join('\n\n') || '本地知识库中没有找到相关操作说明。';
 }
 
 export async function POST(request: Request) {
@@ -387,9 +415,10 @@ export async function POST(request: Request) {
     if (!searchNodes.some(node => node.nodeType === 'paragraph')) return Response.json({ error: '知识库暂无可检索段落' }, { status: 503 });
     const retrieval = await retrieve(question);
     const completeMatches = associateMethodImages(answerMatches(question, retrieval));
-    const matches = brief ? conciseMatches(completeMatches) : completeMatches;
+    const detailed = /详细|全部|所有|完整|展开/.test(latest);
+    const matches = detailed && !brief ? completeMatches : conciseMatches(completeMatches);
     const images = requiredImages(matches);
-    const generated = matches.length ? await generate(question, matches, retrieval.confidence, messages, brief) : null;
+    const generated = matches.length ? await generate(question, matches, retrieval.confidence, messages, brief).catch(() => null) : null;
     // If generation omits images, use complete source steps with inline images;
     // never append orphan screenshots to an unrelated final platform section.
     const answer = generated && hasCompleteImageMarkers(generated, images)
