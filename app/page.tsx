@@ -1,11 +1,11 @@
 'use client';
 
 import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from 'react';
-import { ExternalLink, LogIn, LogOut, Plus } from 'lucide-react';
+import { ExternalLink, LogIn, LogOut, Plus, Square } from 'lucide-react';
 
 type Source = { title: string; url: string };
 type ChatImage = { imageId: string; src: string; alt?: string };
-type Message = { role: 'user' | 'assistant'; content: string; sources?: Source[]; images?: ChatImage[]; pending?: boolean };
+type Message = { role: 'user' | 'assistant'; content: string; sources?: Source[]; images?: ChatImage[]; pending?: boolean; cancelled?: boolean };
 type WebMcpContext = { registerTool: (tool: { name: string; title: string; description: string; inputSchema: object; annotations: { readOnlyHint: boolean; untrustedContentHint: boolean }; execute: (input: unknown) => unknown }, options?: { signal?: AbortSignal }) => void | Promise<void> };
 type AuthState = { status: 'checking' | 'authenticated' | 'required' | 'error'; user?: { name: string; avatarUrl?: string | null }; message?: string };
 const suggestions = ['如何登录账号？','怎么设置消息免打扰？','如何在群里 @ 人？','群机器人怎么添加？','如何发起视频会议？','怎么给联系人修改备注？','如何置顶消息？','如何登录管理后台？'];
@@ -64,24 +64,34 @@ export default function Home() {
 
   async function ask(value: string) {
     const question = value.trim();
-    if (!question || loading) return;
-    const history = messages.filter((message) => !message.pending);
+    if (!question || controllerRef.current) return;
+    const history = messages.filter((message) => !message.pending && !message.cancelled);
     const controller = new AbortController();
     controllerRef.current = controller; setInput(''); setLoading(true);
     setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: '正在查找官方帮助文档…', pending: true }]);
     try {
       const response = await fetch('/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: [...history, { role: 'user', content: question }] }), signal: controller.signal });
       const result = await response.json() as { answer?: string; error?: string; sources?: Source[]; images?: ChatImage[] };
+      if (controller.signal.aborted || controllerRef.current !== controller) return;
       if (response.status === 401) { window.location.replace('/api/auth/feishu/start'); return; }
       if (!response.ok) throw new Error(result.error || '请求失败');
       setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: result.answer || '知识库暂时没有返回内容。', sources: result.sources, images: result.images }]);
     } catch (error) {
-      if (controller.signal.aborted) return;
+      if (controller.signal.aborted || controllerRef.current !== controller) return;
       setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: `暂时无法回答：${error instanceof Error ? error.message : '请求失败'}` }]);
-    } finally { if (!controller.signal.aborted) setLoading(false); }
+    } finally { if (controllerRef.current === controller) { controllerRef.current = null; setLoading(false); } }
   }
 
-  function reset() { controllerRef.current?.abort(); setMessages([]); setInput(''); setLoading(false); requestAnimationFrame(() => inputRef.current?.focus()); }
+  function stop() {
+    controllerRef.current?.abort(); controllerRef.current = null; setLoading(false);
+    setMessages(current => current.map((message, index) =>
+      message.pending ? { role: 'assistant', content: '已停止。修改问题后可以重新发送。', cancelled: true } :
+      index === current.length - 2 ? { ...message, cancelled: true } : message));
+    setInput(current => current || messages.filter(message => message.role === 'user').at(-1)?.content || '');
+    requestAnimationFrame(() => inputRef.current?.focus());
+  }
+  useEffect(() => () => controllerRef.current?.abort(), []);
+  function reset() { controllerRef.current?.abort(); controllerRef.current = null; setMessages([]); setInput(''); setLoading(false); requestAnimationFrame(() => inputRef.current?.focus()); }
   function submit(event: FormEvent) { event.preventDefault(); void ask(input); }
   function keyDown(event: KeyboardEvent<HTMLTextAreaElement>) { if (event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); void ask(input); } }
 
@@ -106,7 +116,7 @@ export default function Home() {
     <main>
       <section className={messages.length ? 'hero condensed' : 'hero'}><div className="hero-title"><img src="/bee-assistant.png" alt="iHive 蜜蜂机器人助手" /><h1>iHive 帮助助手</h1></div><p>你好，我是 iHive 专属知识库问答助手。<br />我只基于飞书知识库回答，有问题请直接提问。</p></section>
       <section className="chat" aria-live="polite">{!messages.length && <SuggestionGrid onSelect={ask} />}{messages.map((message, index) => <article className={`message ${message.role}`} key={`${message.role}-${index}`}>{message.role === 'assistant' && <img src="/bee-assistant.png" alt="" />}<div className={message.pending ? 'bubble pending' : 'bubble'}>{message.role === 'assistant' && !message.pending ? <Answer message={message} /> : message.content}</div></article>)}<div ref={endRef} /></section>
-      <form onSubmit={submit}>{messages.some((m) => m.role === 'assistant' && !m.pending) && <SuggestionGrid compact onSelect={ask} />}<div className="composer"><textarea ref={inputRef} rows={1} value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={keyDown} placeholder="输入你的问题…" aria-label="输入你的问题" /><button type="submit" aria-label="发送" disabled={loading || !input.trim()}><img src="/send-icon.png" alt="" /></button></div><p className="hint">AI 可能会出错，重要信息请以飞书原文为准</p></form>
+      <form onSubmit={submit}>{messages.some((m) => m.role === 'assistant' && !m.pending) && <SuggestionGrid compact onSelect={ask} />}<div className="composer"><textarea ref={inputRef} rows={1} value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={keyDown} placeholder="输入你的问题…" aria-label="输入你的问题" /><button type={loading ? "button" : "submit"} onClick={loading ? stop : undefined} aria-label={loading ? "停止思考" : "发送"} title={loading ? "停止思考，修改后重新发送" : "发送"} disabled={!loading && !input.trim()}>{loading ? <Square size={20} fill="currentColor" /> : <img src="/send-icon.png" alt="" />}</button></div><p className="hint">AI 可能会出错，重要信息请以飞书原文为准</p></form>
     </main>
   </div>;
 }

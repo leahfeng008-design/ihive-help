@@ -40,6 +40,11 @@ const aliases: Array<[RegExp, string]> = [
   [/文件|照片|截图/g, '文件 图片 收发'],
 ];
 
+function correctQuestion(text: string) {
+  // Only correct in a leave-request phrase; “情节” is also a legitimate word.
+  return text.replace(/(提交|申请|发起|办理)(\s*)(情节|请架|情假|清假)(?=申请|流程|手续|[？?。！!\s]|$)/g, '$1$2请假');
+}
+
 function resolveConversation(messages: Message[]) {
   let topic = '', followup = '', platform = '', method = '';
   let brief = false, detailed = false, needsContext = false, imageRequest = false;
@@ -47,7 +52,7 @@ function resolveConversation(messages: Message[]) {
   let previousAnswer = '';
   for (const message of messages) {
     if (message.role === 'assistant') { previousAnswer = message.content; continue; }
-    const text = message.content.trim();
+    const text = correctQuestion(message.content.trim());
     const compact = text.replace(/[\p{P}\p{S}\s]/gu, '').replace(/^(请|麻烦|能不能|可以帮我)/, '').replace(/(呢|吧|好吗)$/, '');
     const styleOnly = /^(再)?(简单|简短|简洁|精简|短|详细|具体|通俗|展开)(一?点|些)?(说|讲|解释|说明)?(一下|一点|点)?$/.test(compact) ||
       /^(说简单点|说详细点|太长了|太复杂了|没看懂|看不懂|什么意思|继续|举个例子|总结一下|一句话.*|只说重点)$/.test(compact);
@@ -167,11 +172,11 @@ function cosine(a: number[], b: StoredEmbedding) {
   return dot / (Math.sqrt(normA) * Math.sqrt(normB) || 1);
 }
 
-async function embeddings(input: string[], dimensions?: number, inputType?: 'search_query' | 'search_document') {
+async function embeddings(input: string[], dimensions?: number, inputType?: 'search_query' | 'search_document', signal?: AbortSignal) {
   const key = process.env.OPENROUTER_API_KEY;
   if (!key || !input.length) return null;
   const response = await fetch(`${openRouterEndpoint}/embeddings`, {
-    method: 'POST',
+    method: 'POST', signal,
     headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json', 'HTTP-Referer': 'https://ihive-help-assistant-rebuilt.leahfeng008.chatgpt.site', 'X-Title': 'iHive Help Assistant' },
     body: JSON.stringify({
       model: process.env.OPENROUTER_EMBEDDING_MODEL || storedIndex.model || 'openai/text-embedding-3-small',
@@ -216,15 +221,18 @@ function rankNodes(question: string, nodes: SearchNode[], queryVector: number[] 
   }).sort((a, b) => b.score - a.score);
 }
 
-async function retrieve(question: string): Promise<RetrievalResult> {
+async function retrieve(question: string, signal?: AbortSignal): Promise<RetrievalResult> {
   const hasVectors = searchNodes.some(node => node.embedding?.length);
-  const queryVector = hasVectors ? (await embeddings([question], storedIndex.dimensions, 'search_query').catch(() => null))?.[0] || null : null;
+  const queryVector = hasVectors ? (await embeddings([question], storedIndex.dimensions, 'search_query', signal).catch(() => null))?.[0] || null : null;
   const directories = rankNodes(question, searchNodes.filter(node => node.nodeType === 'directory'), queryVector).slice(0, 4);
   const directoryScores = new Map(directories.map(item => [item.node.id, item.score]));
   const queryIntent = intentKey(question);
-  const articlePool = searchNodes.filter(node => node.nodeType === 'article');
+  const leaveSubmission = /请假/.test(question) && /提交|申请|发起|办理/.test(question);
+  const articlePool = searchNodes.filter(node => node.nodeType === 'article' &&
+    (!leaveSubmission || (node.sourceType === 'help' && /请假/.test(node.title) && /提交请假/.test(node.summary || ''))));
   const exactArticleIds = new Set(articlePool.filter(node => {
     const articleIntent = intentKey(node.title);
+    if (leaveSubmission) return true;
     if (/忘记密码|忘了密码|密码忘了|找回密码/.test(question) && /修改登录密码|重置密码/.test(node.title)) return true;
     return queryIntent.length >= 2 && articleIntent.length >= 2 && (articleIntent.includes(queryIntent) || queryIntent.includes(articleIntent));
   }).map(node => node.id));
@@ -361,6 +369,9 @@ function answerMatches(question: string, retrieval: Awaited<ReturnType<typeof re
     if (/忘记密码|忘了密码|密码忘了|找回密码/.test(question)) {
       procedure = procedure.filter(match => /忘记密码|重置密码/.test((match.node.sectionPath || []).join(' ')));
     }
+    if (/请假/.test(question) && /提交|申请|发起|办理/.test(question) && !/撤回|重新|审批|记录/.test(question)) {
+      procedure = procedure.filter(match => /填写并提交申请/.test((match.node.sectionPath || []).join(' ')));
+    }
     if (procedure.some(match => match.node.role === 'instruction')) {
       const articleIds = new Set(procedure.map(match => match.node.articleIds.at(-1)));
       const platformContext = searchNodes.filter(node =>
@@ -491,7 +502,7 @@ function renderGeneratedAnswer(content: string, matches: RankedNode[], brief: bo
   } catch { return null; }
 }
 
-async function generate(question: string, matches: RankedNode[], confidence: RetrievalResult['confidence'], history: Message[] = [], brief = false, detailed = false) {
+async function generate(question: string, matches: RankedNode[], confidence: RetrievalResult['confidence'], history: Message[] = [], brief = false, detailed = false, signal?: AbortSignal) {
   const key = process.env.OPENROUTER_API_KEY;
   if (!key) return null;
   const context = matches.map((match, index) => {
@@ -499,7 +510,7 @@ async function generate(question: string, matches: RankedNode[], confidence: Ret
     return `[${index + 1}] 段落ID：${node.id}\n来源：${sourceLabel(node.sourceType)}\n目录路径：${node.path.join(' / ')}\n文章：${node.title}\n章节：${node.sectionPath?.join(' / ') || '正文'}\n段落类型：${node.role || node.kind || '正文'}\n精确段落：${node.text}\n本段图片：${node.images.map(image => image.imageId).join('、') || '无'}\n匹配分：${match.score.toFixed(3)}`;
   }).join('\n\n');
   const response = await fetch(`${openRouterEndpoint}/chat/completions`, {
-    method: 'POST',
+    method: 'POST', signal,
     headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json', 'HTTP-Referer': 'https://ihive-help-assistant-rebuilt.leahfeng008.chatgpt.site', 'X-Title': 'iHive Help Assistant' },
     body: JSON.stringify({
       model: process.env.OPENROUTER_MODEL || 'openai/gpt-5-mini', temperature: .1, response_format: { type: 'json_object' },
@@ -587,20 +598,29 @@ export async function POST(request: Request) {
     if (needsContext || !question) return Response.json({ answer: '你想了解哪项功能？告诉我主题后，我会接着说明。', sources: [], images: [] });
     if (!searchNodes.some(node => node.nodeType === 'paragraph')) return Response.json({ error: '知识库暂无可检索段落' }, { status: 503 });
     if (conversation.clarification) return Response.json({ answer: conversation.clarification, sources: [], images: [] });
-    const retrieval = await retrieve(conversation.baseQuestion);
+    const retrieval = await retrieve(conversation.baseQuestion, request.signal);
+    request.signal?.throwIfAborted();
+    const subject = normalize(conversation.baseQuestion).replace(/怎么|如何|怎样|提交|申请|发起|办理|请问|我要|我想|操作|步骤|流程|[ ?？]/g, '');
+    const topArticle = retrieval.articles[0]?.node;
+    if (subject.length >= 2 && topArticle &&
+        !queryTokens(subject).some(token => token.length >= 2 && normalize(`${topArticle.title} ${topArticle.summary}`).includes(token)) &&
+        retrieval.confidence === 'low') {
+      return Response.json({ answer: '我还不能确定你想办理哪项操作。你是指请假、审批还是汇报？请补充或更正功能名称。', sources: [], images: [] });
+    }
     const { matches, notice } = focusMatches(conversation, retrieval);
     if (notice) return Response.json({ answer: notice, sources: [], images: [] });
     const images = requiredImages(matches);
-    const generated = matches.length ? await generate(question, matches, retrieval.confidence, messages, brief, conversation.detailed).catch(() => null) : null;
+    const generated = matches.length ? await generate(question, matches, retrieval.confidence, messages, brief, conversation.detailed, request.signal).catch(() => null) : null;
     // If generation omits images, use complete source steps with inline images;
     // never append orphan screenshots to an unrelated final platform section.
     const answer = generated && hasCompleteImageMarkers(generated, images)
       ? generated : fallbackAnswer({ ...retrieval, paragraphs: matches }, brief);
+    request.signal?.throwIfAborted();
     const sources = [...new Map(matches.map(match => [match.node.url, {
       title: match.node.title, url: match.node.url, path: match.node.path, sourceType: match.node.sourceType,
     }])).values()].filter(source => source.url).slice(0, 5);
     return Response.json({
-      answer, sources, images,
+      answer: (correctQuestion(latest) !== latest ? '我猜你想问的是“请假”，下面按提交请假申请说明；如果理解有误，请直接纠正我。\n\n' : '') + answer, sources, images,
       retrieval: {
         method: retrieval.method, confidence: retrieval.confidence,
         directories: retrieval.directories.map(item => ({ title: item.node.title, score: item.score })),

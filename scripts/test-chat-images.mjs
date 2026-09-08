@@ -127,3 +127,16 @@ console.log('PASS: API model-path fixture, omitted-image fallback, and embedding
 const imagePolicy = vm.runInContext(`flattenKnowledge({roots:[{id:'root',type:'directory',sourceType:'help',title:'root',path:[],directories:[],articles:['help','prd','assignment'].map(sourceType=>({id:sourceType,type:'article',sourceType,title:sourceType,path:[],articles:[],paragraphs:[{id:sourceType+'-paragraph',text:'操作说明',images:[{imageId:sourceType+'-image',src:'/kb-images/'+sourceType+'.png'}]}]}))}]}).filter(n=>n.nodeType==='paragraph').map(n=>({source:n.sourceType,images:n.images.length}))`,context);
 assert.deepEqual(JSON.parse(JSON.stringify(imagePolicy)),[{source:'help',images:1},{source:'prd',images:0},{source:'assignment',images:0}]);
 console.log('PASS: only help-document images enter retrieval; cached PRD and assignment images are excluded.');
+
+for (const question of ['怎么提交情节', '怎么提交请假', '如何申请请架？']) {
+  context.testQuestion = question;
+  const response = await vm.runInContext(`POST({ json: async () => ({ messages: [{role: 'user', content: testQuestion}] }) })`, context);
+  const payload = await response.json();
+  assert.ok(payload.answer.includes('【提交】'), payload.answer);
+  assert.ok(payload.sources.every(source => source.title.includes('请假')));
+  assert.ok(!/上班打卡|全文评论|写汇报/.test(payload.answer));
+  assert.equal(payload.images.length, 6);
+  if (question.includes('情节')) assert.ok(payload.answer.includes('我猜你想问'));
+}
+assert.equal(resolve([user('怎么分析小说情节')]).question, '怎么分析小说情节');
+console.log('PASS: leave-request typos select only leave submission steps and six associated images; legitimate 情节 is unchanged.');
