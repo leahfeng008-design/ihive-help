@@ -619,7 +619,7 @@ function assignmentAnswer(messages: Message[]) {
   };
   const cell = (value?: string) => (value || '未填写').replace(/\|/g, '／').replace(/\n/g, ' ');
   return {
-    answer: '根据两张分工表分别列出，帮助文档维护人与问题负责人为不同字段：\n\n' +
+    answer: '查询到以下分工，帮助文档维护人与问题负责人分别列出：\n\n' +
       matches.map(({ fields: f }) => '问题负责人' in f
         ? `**${cell(f['一级模块'])} / ${cell(f['二级模块'])}（模块分工表）**\n问题负责人：${cell(f['问题负责人'])}`
         : `**${cell(f['一级模块'])} / ${cell(f['二级模块'])}（帮助文档维护表）**\n产品：${cell(f['产品经理'])}\n设计：${cell(f['设计师'])}\n帮助文档维护人：${cell(f['帮助文档负责人'])}`).join('\n\n'),

@@ -20,7 +20,7 @@ for (const row of ownerRows) {
   const r = await ask([`${f['二级模块']}谁负责？`]);
   assert.ok(r.retrieval.paragraphIds.includes(row.id), row.text);
   assert.ok(r.answer.includes(`问题负责人：${f['问题负责人']}`));
-  assert.ok(r.sources[0].url.includes('tblinkja1AwTvKno'));
+  assert.ok(r.sources.some(source => source.url.includes('tblinkja1AwTvKno')));
 }
 const help = await ask(['谁负责帮助中心']);
 assert.equal(help.retrieval.paragraphIds.length, 1);
@@ -39,7 +39,7 @@ for (const row of rows) {
   assert.equal(r.images.length, 0);
 }
 for (const question of ['消息免打扰的产品是谁', '消息免打扰是谁设计的']) {
-  const r = await ask([question]); assert.equal(r.retrieval.paragraphIds.length, 1); assert.ok(r.answer.includes('怡宝'));
+  const r = await ask([question]); assert.equal(r.retrieval.paragraphIds.length, 2); assert.ok(r.answer.includes('怡宝'));
 }
 const followup = await ask(['消息免打扰怎么设置？', '那设计师呢？', '维护人是谁？']);
 assert.ok(followup.answer.includes('怡宝'));
@@ -48,5 +48,14 @@ assert.ok(broad.retrieval.paragraphIds.length > 3);
 const unknown = await ask(['量子传送模块谁负责？']);
 assert.equal(unknown.sources.length, 0); assert.ok(unknown.answer.includes('没有匹配'));
 const ai = await ask(['AI周报谁负责？']);
-assert.equal(ai.retrieval.paragraphIds.length, 1); assert.ok(ai.answer.includes('可大力'));
+assert.equal(ai.retrieval.paragraphIds.length, 2); assert.ok(ai.answer.includes('可大力'));
 console.log(`PASS: ${ownerRows.length} module-owner rows and ${rows.length} documentation-role rows, all three roles, source links, follow-ups, parent modules, unknown modules and overlapping names.`);
+
+const files = await ask(['文件收发谁负责？']);
+for (const text of ['产品：秦汉', '设计：爱德', '帮助文档维护人：爱德', '问题负责人：爱德']) assert.ok(files.answer.includes(text), text);
+assert.equal(files.sources.length, 2);
+for (const table of ['tblG1Pi9DMfjY97O', 'tblinkja1AwTvKno']) assert.ok(files.sources.some(source => source.url.includes(table)));
+const quiet = await ask(['消息免打扰谁负责？']);
+assert.ok(quiet.answer.includes('帮助文档维护人：Yvonne'));
+assert.ok(quiet.answer.includes('问题负责人：爱德'));
+console.log('PASS: file transfer returns all four roles and both sources; different documentation and issue owners stay distinct.');
