@@ -6,7 +6,9 @@ import ts from 'typescript';
 const source = fs.readFileSync('app/api/chat/route.ts', 'utf8').replace(/^import .*;$/gm, '').replace('export async function POST', 'async function POST');
 const context = vm.createContext({
   knowledgeJson: JSON.parse(fs.readFileSync('data/knowledge.json')),
-  vectorIndexJson: { entries: [] }, process: { env: {} }, console,
+  imageContextJson: JSON.parse(fs.readFileSync('data/image-context.json')),
+  vectorIndexJson: { entries: [] }, process: { env: {} }, console, Response,
+  isFeishuAuthRequired: () => false, readFeishuSession: async () => null,
 });
 vm.runInContext(ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None }), context);
 await vm.runInContext(`(async () => {
@@ -70,6 +72,54 @@ assert.ok(context.passwordResult.answer.includes('邮箱验证码'));
 assert.ok(!context.passwordResult.answer.includes('输入旧密码'));
 assert.ok(!context.passwordResult.answer.includes('登录设备'));
 assert.ok(!context.passwordResult.answer.includes('使用过程'));
-assert.equal(context.passwordResult.images.length, 2);
+assert.equal(context.passwordResult.images.length, 1);
 assert.ok(context.passwordResult.answer.length < 650);
-console.log('PASS: forgotten password uses only reset instructions, 2 relevant screenshots, no unrelated articles or full-document dump.');
+console.log('PASS: forgotten password uses only reset instructions, 1 current reset screenshot, no unrelated articles or full-document dump.');
+const render = vm.runInContext('renderGeneratedAnswer',context);
+await vm.runInContext(`(async () => {
+  const state=resolveConversation([{role:'user',content:'怎么设置消息免打扰？'}]);
+  const retrieval=await retrieve(state.baseQuestion);
+  globalThis.focused=focusMatches(state,retrieval).matches;
+})()`,context);
+const focused=context.focused;
+const mac=focused.find(m=>m.node.images.some(i=>i.imageId==='img-c795f4ce174c'));
+const phone=focused.find(m=>m.node.images.some(i=>i.imageId==='img-2de03b5336cd'));
+const blocks=[{text:'**Mac**：右键点击会话，选择关闭消息通知提醒。',paragraphIds:[mac.node.id]},
+  {text:'**iPhone**：长按会话，选择关闭消息通知提醒。',paragraphIds:[phone.node.id]}];
+const rendered=render(JSON.stringify({blocks}),focused,true);
+assert.ok(rendered);
+assert.ok(rendered.indexOf('[[IMAGE:img-c795f4ce174c]]')<rendered.indexOf('**iPhone**'));
+assert.ok(rendered.indexOf('[[IMAGE:img-2de03b5336cd]]')>rendered.indexOf('**iPhone**'));
+assert.equal(render('not json',focused,true),null);
+assert.equal(render(JSON.stringify({blocks:blocks.slice(0,1)}),focused,true),null);
+assert.equal(render(JSON.stringify({blocks:[{text:'操作',paragraphIds:['unknown']},blocks[1]]}),focused,true),null);
+assert.equal(render(JSON.stringify({blocks:[{text:'操作 [[IMAGE:fake]]',paragraphIds:[mac.node.id]},blocks[1]]}),focused,true),null);
+assert.equal(render(JSON.stringify({blocks:[{text:'操作'.repeat(250),paragraphIds:[mac.node.id]},blocks[1]]}),focused,false),null);
+assert.equal(render(JSON.stringify({blocks:[{text:'客户端操作',paragraphIds:[mac.node.id,phone.node.id]}]}),focused,true),null);
+assert.ok(render(JSON.stringify({blocks:[blocks[0],blocks[0],blocks[1]]}),focused,true));
+console.log('PASS: structured model blocks place images after their steps; malformed, missing, unknown, fabricated, overlong and mixed-client blocks rejected; duplicate citations deduplicated.');
+const post=vm.runInContext('POST',context);
+const request={json:async()=>({messages:[{role:'user',content:'怎么设置消息免打扰？'}]})};
+context.process.env.OPENROUTER_API_KEY='local-test-fixture';
+let modelCalls=0;
+context.fetch=async (_url,options)=>{
+  modelCalls++;
+  const payload=JSON.parse(options.body);
+  assert.equal(payload.response_format.type,'json_object');
+  return Response.json({choices:[{message:{content:JSON.stringify({blocks})}}]});
+};
+let apiAnswer=await (await post(request)).json();
+assert.equal(apiAnswer.answer,rendered);
+context.fetch=async()=>Response.json({choices:[{message:{content:JSON.stringify({blocks:blocks.slice(0,1)})}}]});
+apiAnswer=await (await post(request)).json();
+assert.ok(apiAnswer.answer.includes('[[IMAGE:img-2de03b5336cd]]'));
+assert.ok(apiAnswer.answer.includes('[[IMAGE:img-c795f4ce174c]]'));
+context.fetch=async()=>{throw new Error('Simulated network failure');};
+vm.runInContext('searchNodes[0].embedding=[1];',context);
+const outage=await post(request);
+assert.equal(outage.status,200);
+apiAnswer=await outage.json();
+assert.equal(apiAnswer.retrieval.method,'hierarchical-lexical');
+assert.equal(apiAnswer.images.length,2);
+assert.ok(modelCalls>0);
+console.log('PASS: API model-path fixture, omitted-image fallback, and embedding/model outage fallback; no external requests made.');

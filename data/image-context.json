@@ -1,0 +1,25 @@
+{
+  "img-2de03b5336cd": {
+    "sharedSection": true,
+    "alt": "iPhone 消息免打扰：原文三种操作方式组合图",
+    "platform": "iPhone"
+  },
+  "img-f7ad23cb025e": {
+    "platform": "Mac",
+    "alt": "Mac 消息取消收藏操作"
+  },
+  "img-eaff568cc0ea": {
+    "platform": "iPhone",
+    "alt": "iPhone 消息取消收藏操作"
+  },
+  "img-3170f1ae30ca": {
+    "afterText": "在密码验证页面点击重置密码",
+    "alt": "密码登录页的重置密码入口"
+  },
+  "img-a1ad2e343f98": {
+    "afterText": "单条收藏消息支持三类操作",
+    "acrossSections": true,
+    "platform": "Mac",
+    "alt": "收藏列表中的消息定位入口"
+  }
+}

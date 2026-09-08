@@ -8,7 +8,7 @@ const api = 'https://open.feishu.cn/open-apis';
 const appId = process.env.FEISHU_APP_ID;
 const appSecret = process.env.FEISHU_APP_SECRET;
 const helpSpaceId = process.env.FEISHU_SPACE_ID || '7631047892841581526';
-const prdFolderToken = process.env.FEISHU_PRD_FOLDER_TOKEN || 'PR5PfctoSl0654dXZzzcZPaKnOb';
+const prdFolderToken = process.env.FEISHU_PRD_FOLDER_TOKEN || 'OdKWffbZXlnIYidQzIIc1jpknEf';
 const assignmentAppToken = process.env.FEISHU_ASSIGNMENT_APP_TOKEN || 'IQTIbgVvIa9thdsuOi0cbUXanRc';
 const assignmentTableId = process.env.FEISHU_ASSIGNMENT_TABLE_ID || 'tblinkja1AwTvKno';
 const assignmentViewId = process.env.FEISHU_ASSIGNMENT_VIEW_ID || 'vewRZe7CUJ';
@@ -18,6 +18,7 @@ const embeddingDimensions = Number(process.env.OPENROUTER_EMBEDDING_DIMENSIONS |
 const syncConcurrency = Math.max(1, Number(process.env.FEISHU_SYNC_CONCURRENCY || 1));
 const requestIntervalMs = Math.max(0, Number(process.env.FEISHU_REQUEST_INTERVAL_MS || 450));
 let nextRequestAt = 0;
+const failedSources = new Set();
 
 if (!appId || !appSecret) throw new Error('缺少 FEISHU_APP_ID 或 FEISHU_APP_SECRET');
 
@@ -78,7 +79,7 @@ async function mapPool(items, limit, worker) {
     while (cursor < items.length) {
       const index = cursor++;
       try { output[index] = await worker(items[index], index); }
-      catch (error) { console.warn(`跳过：${items[index]?.title || items[index]?.name || index} - ${error.message}`); output[index] = null; }
+      catch (error) { if (items[index]?.sourceType) failedSources.add(items[index].sourceType); console.warn(`跳过：${items[index]?.title || items[index]?.name || index} - ${error.message}`); output[index] = null; }
     }
   }));
   return output;
@@ -416,11 +417,11 @@ async function embed(texts) {
   return vectors;
 }
 
-const wikiNodes = await listWikiNodes().catch(error => { console.warn(`帮助知识库同步跳过：${error.message}`); return []; });
-const prdFiles = await listDriveFolder(prdFolderToken).catch(error => { console.warn(`PRD 同步跳过：${error.message}`); return []; });
+const wikiNodes = await listWikiNodes().catch(error => { failedSources.add('help'); console.warn(`帮助知识库同步跳过：${error.message}`); return []; });
+const prdFiles = await listDriveFolder(prdFolderToken).catch(error => { failedSources.add('prd'); console.warn(`PRD 同步跳过：${error.message}`); return []; });
 const docMetas = [...wikiNodes, ...prdFiles].filter(item => item.objType === 'docx');
 const loadedDocs = (await mapPool(docMetas, syncConcurrency, loadDocx)).filter(Boolean);
-const assignment = await loadAssignmentTable().catch(error => { console.warn(`分工表同步跳过：${error.message}`); return null; });
+const assignment = await loadAssignmentTable().catch(error => { failedSources.add('assignment'); console.warn(`分工表同步跳过：${error.message}`); return null; });
 const documents = [...loadedDocs, ...(assignment ? [assignment] : [])]
   .filter((doc, index, list) => list.findIndex(other => other.url === doc.url) === index)
   .sort((a, b) => `${a.sourceType}/${a.category}/${a.title}`.localeCompare(`${b.sourceType}/${b.category}/${b.title}`, 'zh-CN'));
@@ -430,7 +431,17 @@ const knowledgeTarget = path.join(root, 'data', 'knowledge.json');
 const indexTarget = path.join(root, 'data', 'vector-index.json');
 const catalogTarget = path.join(root, 'data', 'catalog.json');
 await fs.mkdir(path.dirname(knowledgeTarget), { recursive: true });
-const roots = buildKnowledgeTree(documents);
+let oldKnowledge = null;
+try { oldKnowledge = JSON.parse(await fs.readFile(knowledgeTarget, 'utf8')); } catch {}
+const freshRoots = buildKnowledgeTree(documents);
+const roots = ['help', 'prd', 'assignment'].flatMap(sourceType => {
+  const previous = oldKnowledge?.roots?.find(item => item.sourceType === sourceType);
+  if (failedSources.has(sourceType)) {
+    console.warn(previous ? `已保留 ${sourceType} 的上次完整内容，本次未覆盖` : `${sourceType} 同步不完整，暂不纳入知识库`);
+    return previous ? [previous] : [];
+  }
+  return freshRoots.filter(item => item.sourceType === sourceType);
+});
 const flatEntries = flattenKnowledge(roots);
 const sourceHash = crypto.createHash('sha256').update(JSON.stringify(roots)).digest('hex');
 const knowledge = { version: 2, generatedAt: new Date().toISOString(), sourceHash, roots };
@@ -479,6 +490,7 @@ if (!indexUnchanged) await fs.writeFile(indexTarget, indexJson);
 if (previousCatalog !== catalogJson) await fs.writeFile(catalogTarget, catalogJson);
 
 console.log(JSON.stringify({
+  preservedSources: [...failedSources],
   changed: previousSourceHash !== sourceHash || !indexUnchanged || previousCatalog !== catalogJson,
   documents: documents.length,
   directories: flatEntries.filter(entry => entry.nodeType === 'directory').length,

@@ -24,3 +24,16 @@ pnpm dev
 - `public/kb-images/`：按飞书文件 token 去重的本地图片缓存。
 
 问答接口按“目录 → 文章 → 段落”逐级缩小候选范围，再对精确段落进行关键词与向量混合排序。命中的段落带图时，响应会强制包含对应图片标记。同步目前仍由 `pnpm sync:feishu` 手动触发。
+
+## 问答回归检查
+
+```bash
+node scripts/test-chat-images.mjs
+node scripts/evaluate-chat.mjs --assert
+```
+
+默认不调用外部服务：使用真实本地知识库、关键词检索和实际问答接口，检查连续追问、客户端/方法选择、精简输出、段落图片以及模型故障兜底。模型返回结构化段落引用，后端把可信来源图片插在对应回答块之后。模拟模型响应测试不代表真实模型质量已验证。
+
+`data/image-context.json` 保存经过图片内容核对的关联修正（组合图共享范围、截图对应步骤、客户端）。它不修改飞书原文；重新同步后若正文变化，应复查这些关联。
+
+只有获得发送测试问题和知识库片段到现有 OpenRouter 服务的授权后，才运行 `node --env-file=.env.local scripts/evaluate-chat.mjs --live`。可用 `EVAL_SCENARIOS` 限定场景，用 `EVAL_OUTPUT` 指定本地报告路径。
