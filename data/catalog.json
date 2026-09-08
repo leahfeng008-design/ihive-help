@@ -2065,11 +2065,24 @@
     "type": "directory",
     "source": "assignment",
     "title": "模块分工表",
-    "summary": "1 篇内容，涵盖：帮助文档维护分工表",
+    "summary": "2 篇内容，涵盖：按照模块分、帮助文档维护分工表",
     "path": [
       "模块分工表"
     ],
     "parentId": null
+  },
+  {
+    "id": "article-33ed5ba4b1103804",
+    "type": "article",
+    "source": "assignment",
+    "title": "按照模块分",
+    "summary": "一级模块：IM会话列表；二级模块：会话列表；问题负责人：李静 一级模块：IM会话列表；二级模块：会话标签分组；问题负责人：李静 一级模块：IM会话列表；二级模块：会话置顶；问题负责人：李静 一级模块：IM消息收发和体验；二级模块：聊天窗口与消息收发；问题负责人：Crisley 一级模块：IM消息收发和体验；二级模块：文件收发；问题负责人：爱德 一级模块：IM消息收发和体验；二级模块：截图；问题负责人：Crisley 一级模块：IM消息收…",
+    "url": "https://pcnpuds47gj5.feishu.cn/base/IQTIbgVvIa9thdsuOi0cbUXanRc?table=tblinkja1AwTvKno",
+    "path": [
+      "分工表",
+      "按照模块分"
+    ],
+    "parentId": "directory-df7825d34afddcfd"
   },
   {
     "id": "article-14f55966c27ebef5",

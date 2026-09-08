@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-08T09:06:03.510Z",
-  "sourceHash": "ce7ce9076912aab119e99e27b4500fe3ed3bc36f8f9a892ab51230a1f04bb7f1",
+  "generatedAt": "2026-09-08T09:15:08.050Z",
+  "sourceHash": "0fc68d7f4381fc885c74bcf2762aff2ea95ecbe55bd8b123cc5d70a204727b4a",
   "roots": [
     {
       "id": "directory-b68bbf3f7bf70098",
@@ -89315,12 +89315,1237 @@
       "type": "directory",
       "sourceType": "assignment",
       "title": "模块分工表",
-      "summary": "1 篇内容，涵盖：帮助文档维护分工表",
+      "summary": "2 篇内容，涵盖：按照模块分、帮助文档维护分工表",
       "path": [
         "模块分工表"
       ],
       "directories": [],
       "articles": [
+        {
+          "id": "article-33ed5ba4b1103804",
+          "type": "article",
+          "sourceType": "assignment",
+          "title": "按照模块分",
+          "summary": "一级模块：IM会话列表；二级模块：会话列表；问题负责人：李静 一级模块：IM会话列表；二级模块：会话标签分组；问题负责人：李静 一级模块：IM会话列表；二级模块：会话置顶；问题负责人：李静 一级模块：IM消息收发和体验；二级模块：聊天窗口与消息收发；问题负责人：Crisley 一级模块：IM消息收发和体验；二级模块：文件收发；问题负责人：爱德 一级模块：IM消息收发和体验；二级模块：截图；问题负责人：Crisley 一级模块：IM消息收…",
+          "url": "https://pcnpuds47gj5.feishu.cn/base/IQTIbgVvIa9thdsuOi0cbUXanRc?table=tblinkja1AwTvKno",
+          "path": [
+            "分工表",
+            "按照模块分"
+          ],
+          "directories": [],
+          "articles": [],
+          "paragraphs": [
+            {
+              "id": "paragraph-b539b813a8efee03",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 0,
+              "text": "一级模块：IM会话列表；二级模块：会话列表；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-3b77cab9a44579b6",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 1,
+              "text": "一级模块：IM会话列表；二级模块：会话标签分组；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-03a74ddaa0b65649",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 2,
+              "text": "一级模块：IM会话列表；二级模块：会话置顶；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-fbb0f5cc7c2779b2",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 3,
+              "text": "一级模块：IM消息收发和体验；二级模块：聊天窗口与消息收发；问题负责人：Crisley",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-1386373ddf7f2f98",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 4,
+              "text": "一级模块：IM消息收发和体验；二级模块：文件收发；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-cd94ae1a7e09d740",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 5,
+              "text": "一级模块：IM消息收发和体验；二级模块：截图；问题负责人：Crisley",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-00bfb6bb4557c760",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 6,
+              "text": "一级模块：IM消息收发和体验；二级模块：消息已读状态；问题负责人：Crisley",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-d2187d4197524621",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 7,
+              "text": "一级模块：IM消息收发和体验；二级模块：消息加急；问题负责人：Crisley",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-a4161e6640f5d0cc",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 8,
+              "text": "一级模块：IM消息收发和体验；二级模块：消息阅读体验；问题负责人：Crisley",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-bce04ad941b24e1e",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 9,
+              "text": "一级模块：IM消息收发和体验；二级模块：消息置顶；问题负责人：Crisley",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-88fa5a5b4a86f441",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 10,
+              "text": "一级模块：IM消息收发和体验；二级模块：消息bot；问题负责人：Crisley",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-d58cc6bb5ba91040",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 11,
+              "text": "一级模块：IM消息互动与操作；二级模块：消息回复与引用；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-bab34dec723455b7",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 12,
+              "text": "一级模块：IM消息互动与操作；二级模块：消息转发；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-1b6e245ab71a83f8",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 13,
+              "text": "一级模块：IM消息互动与操作；二级模块：聊天中的@功能；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-512b064fe85b3359",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 14,
+              "text": "一级模块：IM消息互动与操作；二级模块：消息删除撤回重新编辑；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-cdc4f60403070d27",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 15,
+              "text": "一级模块：IM消息互动与操作；二级模块：拍照发图/视频；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-78148e9b9b55510c",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 16,
+              "text": "一级模块：IM消息互动与操作；二级模块：语音消息；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-f48e1b2f7d35eed4",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 17,
+              "text": "一级模块：IM消息互动与操作；二级模块：Pin消息；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-ef2921f9dd4b1c54",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 18,
+              "text": "一级模块：IM名片与通讯录；二级模块：选人组件；问题负责人：Crisley",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-9c742e8fa1feeabb",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 19,
+              "text": "一级模块：IM名片与通讯录；二级模块：头像与名字；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-2e31051d9b8e2381",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 20,
+              "text": "一级模块：IM名片与通讯录；二级模块：通讯录；问题负责人：Yvonne",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-e306e502ac3a6570",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 21,
+              "text": "一级模块：IM名片与通讯录；二级模块：个人名片与备注；问题负责人：Yvonne",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-1086bd096d65e37c",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 22,
+              "text": "一级模块：企业管理后台；二级模块：后台-组织架构；问题负责人：雨纯",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-3d8a2be6a2a6f5f1",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 23,
+              "text": "一级模块：企业管理后台；二级模块：后台-权限管理；问题负责人：雨纯",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-20c56a28c80fe094",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 24,
+              "text": "一级模块：企业管理后台；二级模块：后台-安全防护-IP围栏；问题负责人：雨纯",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-593857c84c02069b",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 25,
+              "text": "一级模块：企业管理后台；二级模块：后台-审计日志；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-a0d91ae6c30c45b9",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 26,
+              "text": "一级模块：SaaS管理后台；二级模块：SaaS管理后台；问题负责人：郭文博",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-cf917beba2aa155c",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 27,
+              "text": "一级模块：IM群组；二级模块：聊天设置页；问题负责人：Yvonne",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-7113c7f3205a1130",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 28,
+              "text": "一级模块：IM群组；二级模块：创建群组；问题负责人：Yvonne",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-f8a7ee234c39a5fd",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 29,
+              "text": "一级模块：IM群组；二级模块：群成员管理；问题负责人：Yvonne",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-f71a906232254aaa",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 30,
+              "text": "一级模块：IM群组；二级模块：部门群与全员群；问题负责人：Yvonne",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-a485d0f152931f59",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 31,
+              "text": "一级模块：IM群组；二级模块：共同群组；问题负责人：Yvonne",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-8f0d98d081196c03",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 32,
+              "text": "一级模块：IM搜索；二级模块：全局搜索；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-1e70cf9d9508cc5f",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 33,
+              "text": "一级模块：IM搜索；二级模块：会话搜索；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-5f5532c5f67f99b7",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 34,
+              "text": "一级模块：IM搜索；二级模块：基础搜索功能；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-c4de96c02e692e9b",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 35,
+              "text": "一级模块：IM消息通知；二级模块：消息通知；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-738ce7cf1af399c7",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 36,
+              "text": "一级模块：IM消息通知；二级模块：消息免打扰；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-039efef96eaf9954",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 37,
+              "text": "一级模块：IM设置；二级模块：暂停/离职相关逻辑；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-12c391b1b53e35ff",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 38,
+              "text": "一级模块：IM设置；二级模块：账号注册/登录；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-c53e9468f1477f13",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 39,
+              "text": "一级模块：IM设置；二级模块：双重验证；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-3de322427f417a10",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 40,
+              "text": "一级模块：IM设置；二级模块：多租户管理；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-4fde3fda4f47af8b",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 41,
+              "text": "一级模块：IM设置；二级模块：个人面板；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-d652375bbfc82ed8",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 42,
+              "text": "一级模块：IM设置；二级模块：设置-通知；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-0016166fa3124fa0",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 43,
+              "text": "一级模块：IM设置；二级模块：设置-隐私；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-8962827a52405d65",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 44,
+              "text": "一级模块：IM设置；二级模块：设置-账号与安全；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-10553a0d02a723b5",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 45,
+              "text": "一级模块：IM设置；二级模块：设置-登录设备与记录；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-c9b0fa53e0c2510e",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 46,
+              "text": "一级模块：IM设置；二级模块：设置-版本更新；问题负责人：郭文博",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-b0e00132a1e9fd05",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 47,
+              "text": "一级模块：IM设置；二级模块：设置-时区/24-12小时时制；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-09f8312fe05df257",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 48,
+              "text": "一级模块：IM设置；二级模块：设置-快捷键；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-7553d71582610f13",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 49,
+              "text": "一级模块：官网与帮助中心；二级模块：官网；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-35f3c96d5d967dfc",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 50,
+              "text": "一级模块：官网与帮助中心；二级模块：帮助中心；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-09c0d3ba4784a23a",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 51,
+              "text": "一级模块：企业管理后台；二级模块：后台-驾驶舱；问题负责人：雨纯",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-4052658d4e0a0df1",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 52,
+              "text": "一级模块：AI；二级模块：AI总结会话；问题负责人：苏宸",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-beb6c9f1fac06b46",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 53,
+              "text": "一级模块：周报；二级模块：周报；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-6f10edce5c945751",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 54,
+              "text": "一级模块：日历；二级模块：日历；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-2b25f1501a746af1",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 55,
+              "text": "一级模块：IM消息收发和体验；二级模块：iPhone端分享到蜂巢；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-93780fd3c951581a",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 56,
+              "text": "一级模块：安全与隐私保护；二级模块：自动删消息；问题负责人：郭文博",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-2b06d4efd5b47570",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 57,
+              "text": "一级模块：安全与隐私保护；二级模块：彻底删除会话；问题负责人：郭文博",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-1fc9c47be0e6a142",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 58,
+              "text": "一级模块：安全与隐私保护；二级模块：彻底删除消息；问题负责人：郭文博",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-df6d0f72360a4704",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 59,
+              "text": "一级模块：IM消息互动与操作；二级模块：消息收藏；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-e40fedf57db697ab",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 60,
+              "text": "一级模块：企业管理后台；二级模块：水印项目；问题负责人：雨纯",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-96c6cb4efce87f93",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 61,
+              "text": "一级模块：企业管理后台；二级模块：后台-企业设置；问题负责人：雨纯",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-72df0e65e66af0d2",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 62,
+              "text": "一级模块：IM群组；二级模块：群机器人；问题负责人：郭文博",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-f6bec54bf6ae7879",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 63,
+              "text": "一级模块：IM表情和富媒体；二级模块：表情；问题负责人：雨纯",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-d071f92fdbd97520",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 64,
+              "text": "一级模块：企业管理后台；二级模块：后台-部门负责人；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-749643d83af3080e",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 65,
+              "text": "一级模块：企业管理后台；二级模块：后台-直属虚线上下级；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-b9477f19bb3970bd",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 66,
+              "text": "一级模块：企业管理后台；二级模块：后台-资产转移；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-6dce5d075f84c088",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 67,
+              "text": "一级模块：企业管理后台；二级模块：后台-创建解散部门群；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-c8f50b4502408da9",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 68,
+              "text": "一级模块：企业管理后台；二级模块：后台-登录设备白名单；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-3d838cee2a8c0b0e",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 69,
+              "text": "一级模块：企业管理后台；二级模块：后台-企业负责人；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-f869adffef8ad8c0",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 70,
+              "text": "一级模块：企业管理后台；二级模块：后台-附件自动清理；问题负责人：唐炜",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-91892ac607f947e1",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 71,
+              "text": "一级模块：AI；二级模块：AI周报；问题负责人：可大力",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-2d965b4d3059dd98",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 72,
+              "text": "一级模块：空间；二级模块：任务空间-提醒；问题负责人：严光",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-aaa626a7b9d26c90",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 73,
+              "text": "一级模块：空间；二级模块：任务空间-动态；问题负责人：严光",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-1ab46d152cd2f73f",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 74,
+              "text": "一级模块：空间；二级模块：任务空间-Bot；问题负责人：严光",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-aa1c2c2454589404",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 75,
+              "text": "一级模块：空间；二级模块：任务空间-空间；问题负责人：严光",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-4d46edfa433345e4",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 76,
+              "text": "一级模块：空间；二级模块：任务空间-项目；问题负责人：严光",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-ec55b4aa780e0cb7",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 77,
+              "text": "一级模块：空间；二级模块：任务空间-任务；问题负责人：严光",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-b763112aa3195c5f",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 78,
+              "text": "一级模块：审批；二级模块：审批；问题负责人：郭文博",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-1b1a23296b8790d4",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 79,
+              "text": "一级模块：在线会议；二级模块：在线会议；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-ed9aa0d73f6675fe",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 80,
+              "text": "一级模块：多语言/国际化；二级模块：多语言/国际化；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-1f004e452393ec39",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 81,
+              "text": "一级模块：IM消息收发和体验；二级模块：在线状态；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-5e197ab31b249677",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 82,
+              "text": "一级模块：IM设置；二级模块：聊天背景设置；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-9792fec20d6d46db",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 83,
+              "text": "一级模块：多语言/国际化；二级模块：消息翻译；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-046369b63700e8bd",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 84,
+              "text": "一级模块：独立打开窗口；二级模块：独立打开窗口；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-dd96f3ce11830cc5",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 85,
+              "text": "一级模块：AI；二级模块：AI会议总结与任务转化；问题负责人：苏宸",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-53c6b2c86f32d0c1",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 86,
+              "text": "一级模块：招聘；二级模块：招聘；问题负责人：严光",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-836bce4e668a944f",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 87,
+              "text": "一级模块：绩效；二级模块：绩效；问题负责人：Yvonne",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-6e73bb8bd45ceab3",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 88,
+              "text": "一级模块：CoreHR；二级模块：CoreHR；问题负责人：Yvonne",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-b28d2cc439259f67",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 89,
+              "text": "一级模块：IM工作台；二级模块：IM工作台；问题负责人：秦汉",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-9e1a930c01b7b835",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 90,
+              "text": "一级模块：OPS后台；二级模块：OPS后台；问题负责人：郭文博",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-c7416eeaa3edba31",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 91,
+              "text": "一级模块：假勤系统；二级模块：假勤系统；问题负责人：李静",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            },
+            {
+              "id": "paragraph-0d8771e3b5399406",
+              "type": "paragraph",
+              "kind": "record",
+              "order": 92,
+              "text": "一级模块：全局UI；二级模块：全局UI；问题负责人：爱德",
+              "images": [],
+              "sectionPath": [
+                "模块分工"
+              ],
+              "role": "content",
+              "isMetadata": false
+            }
+          ]
+        },
         {
           "id": "article-14f55966c27ebef5",
           "type": "article",

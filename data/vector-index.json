@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "sourceHash": "ce7ce9076912aab119e99e27b4500fe3ed3bc36f8f9a892ab51230a1f04bb7f1",
+  "sourceHash": "0fc68d7f4381fc885c74bcf2762aff2ea95ecbe55bd8b123cc5d70a204727b4a",
   "encoding": "int16-base64",
   "scale": 32767,
   "model": "openai/text-embedding-3-small",
@@ -38325,7 +38325,571 @@
     {
       "id": "directory-df7825d34afddcfd",
       "nodeType": "directory",
-      "contentHash": "5d67050fad218413a282cf75308939d89c4b710aa182be220095dd05e63c4929",
+      "contentHash": "4c743c2b7fe901e05eeb39304256f2ab961213d8e4c5a8ce9da561fa2a400896",
+      "embedding": null
+    },
+    {
+      "id": "article-33ed5ba4b1103804",
+      "nodeType": "article",
+      "contentHash": "678c3ec42011ade377f727ee4ce0832f58d3b8968f796b84392dcfdb1bf14695",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-b539b813a8efee03",
+      "nodeType": "paragraph",
+      "contentHash": "d0f167f5c784d2cc1e1cc4bbba28e8a9619d259ed603a49f7959a95185ebc6f5",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-3b77cab9a44579b6",
+      "nodeType": "paragraph",
+      "contentHash": "04008195943a3ca6354a8db11d0b61ef5325fc122338b68f9f25b57362c9bbf2",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-03a74ddaa0b65649",
+      "nodeType": "paragraph",
+      "contentHash": "19ba7479ad5b571d5e6a92f098ae6157d2124422ca465795addddbbd9ab63dfb",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-fbb0f5cc7c2779b2",
+      "nodeType": "paragraph",
+      "contentHash": "b15656f7bd499f25f808b06e0375666e7000666bcea841d1188252a6332ca1a9",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-1386373ddf7f2f98",
+      "nodeType": "paragraph",
+      "contentHash": "562de5648e7dface87d45ffebf9ec85f044b2272e9f1d90c20ee0be08a8d6945",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-cd94ae1a7e09d740",
+      "nodeType": "paragraph",
+      "contentHash": "459a713f714a8b68a16860bc87de4af884f7412e2d55f5d995f2ae2f11412fcc",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-00bfb6bb4557c760",
+      "nodeType": "paragraph",
+      "contentHash": "74ef805060c77fa77f202d012001fc544f557ab4ee23893d4e425c0c827b8e1b",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-d2187d4197524621",
+      "nodeType": "paragraph",
+      "contentHash": "e19f5250251484fe541146f98460c4531f2fccc2a9b92695f8d79a88a3e0fd73",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-a4161e6640f5d0cc",
+      "nodeType": "paragraph",
+      "contentHash": "ae13d7f56473f8d744b2fbb06956db8c8f2724f750d7203c7beeb974e7c2a890",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-bce04ad941b24e1e",
+      "nodeType": "paragraph",
+      "contentHash": "70f80700edc4b1f769bb502c54792c4edaa414890b656ffe5cb29ecca1926147",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-88fa5a5b4a86f441",
+      "nodeType": "paragraph",
+      "contentHash": "d908e89d601dc5f9b6cc5c45bf2827d62a68b9cae75e1801a0c7e991ebec9a30",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-d58cc6bb5ba91040",
+      "nodeType": "paragraph",
+      "contentHash": "7b5330933f943711919ef80680e4953aeb594288a3743f9af63e6eb0404b861e",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-bab34dec723455b7",
+      "nodeType": "paragraph",
+      "contentHash": "7aad7e8a197fe5661b832f92f31f0e7de173590ab772243104aca3e2a0bbebe0",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-1b6e245ab71a83f8",
+      "nodeType": "paragraph",
+      "contentHash": "2e9ff3bfce1596560a55825a3196c2e2aaa6f54f6872b97ab44ec8a97cf4fe33",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-512b064fe85b3359",
+      "nodeType": "paragraph",
+      "contentHash": "30bee39058615a31cdde0e1b3bbda0c7a4c534214fa9b0e2b68531c3020c4070",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-cdc4f60403070d27",
+      "nodeType": "paragraph",
+      "contentHash": "047f3ed0d48828941ce92b147f3b652eb03e11f47879d40762c1bc799ae9f2bd",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-78148e9b9b55510c",
+      "nodeType": "paragraph",
+      "contentHash": "024dc3a1eb22d24fa08011211f9a9f5370a7b2492678c2b533bbefb3fcd94d4d",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-f48e1b2f7d35eed4",
+      "nodeType": "paragraph",
+      "contentHash": "8b157730c276a355601f9ebc6998df29d9e3aaaee9cf0755eda0d01ec8fffaca",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-ef2921f9dd4b1c54",
+      "nodeType": "paragraph",
+      "contentHash": "f4f69180e4bcfaf97ee48107f9d641e62edb16adf4aa41193d0b2e0cdffd77ff",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-9c742e8fa1feeabb",
+      "nodeType": "paragraph",
+      "contentHash": "7211abb3ff76a351ce91350e25a8cab80ac2ae239c35db3c12515edd31d35a46",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-2e31051d9b8e2381",
+      "nodeType": "paragraph",
+      "contentHash": "1c3bc3cffc20fd231c2169c5a49fdd13fa6ea8f039c6523d44da44ef76125668",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-e306e502ac3a6570",
+      "nodeType": "paragraph",
+      "contentHash": "11ca4a2681ac5842bb44179f3adb481c7f22009394abc7c813b06a58de38451c",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-1086bd096d65e37c",
+      "nodeType": "paragraph",
+      "contentHash": "6114f74d304a0fc66fb2a03f5d6439a09610afffe0866209ee10376b473630b4",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-3d8a2be6a2a6f5f1",
+      "nodeType": "paragraph",
+      "contentHash": "0a52f73c83c98d7807599ff62ed11657abedee0d9dfdacce41c4c761fe16b040",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-20c56a28c80fe094",
+      "nodeType": "paragraph",
+      "contentHash": "903db00ab9f81f75f3d2dc4f3a3feb0c1d04e228e13328de6d83c43ca4556fa8",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-593857c84c02069b",
+      "nodeType": "paragraph",
+      "contentHash": "2ada177cb26f051767cd23b6cac14a1189d4315d5f8d6919df2a342af3ce356f",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-a0d91ae6c30c45b9",
+      "nodeType": "paragraph",
+      "contentHash": "5f405a5b9ac9a22431239fe2227310c3e4484627ff699c75c3f056417988b9fe",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-cf917beba2aa155c",
+      "nodeType": "paragraph",
+      "contentHash": "14b328020f96123e44bf90e88ea9b57846928134e017e32522900ce99b3cea95",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-7113c7f3205a1130",
+      "nodeType": "paragraph",
+      "contentHash": "d6d611fc2d25a893bfe9b7ee64d096bd6e479ab1ba237fa49227b93dd61e50a7",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-f8a7ee234c39a5fd",
+      "nodeType": "paragraph",
+      "contentHash": "5160cf1daf30db0451938a0dc9c33538c9a693a80ae083825d1b741d53d2f1de",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-f71a906232254aaa",
+      "nodeType": "paragraph",
+      "contentHash": "fdddeb679ed084e026457756fb2c749304cb4a9ffecac7d893fa6872cbb321c5",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-a485d0f152931f59",
+      "nodeType": "paragraph",
+      "contentHash": "2d2c95f41f27bc579426381c08733fef61d112ad9a6826defb720c82cce163a8",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-8f0d98d081196c03",
+      "nodeType": "paragraph",
+      "contentHash": "64c8ff03eb9f3383ae9cd4f8c882a826439b34a026a461292ffbef000f4a2194",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-1e70cf9d9508cc5f",
+      "nodeType": "paragraph",
+      "contentHash": "054034c0e7183c0a61143532aaaebd5e2d0b7093ad298ae054c03eee6cd81f6c",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-5f5532c5f67f99b7",
+      "nodeType": "paragraph",
+      "contentHash": "1a164f16631d917ce53761a25a28dd64124c2c48ab1bba33539e7539d146231a",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-c4de96c02e692e9b",
+      "nodeType": "paragraph",
+      "contentHash": "16772ee829824529038c2e2d9c0e7db3379c4344b17063861fa0b3943709567c",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-738ce7cf1af399c7",
+      "nodeType": "paragraph",
+      "contentHash": "be82ce5aa2091e4e40bcc539f27baf5c2f313ae696aab18bcac17cfc3f717fc9",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-039efef96eaf9954",
+      "nodeType": "paragraph",
+      "contentHash": "bc0025bebb5e0e965fc434c6d4b3e40ef996f4de9aad1205b2769475f53d527d",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-12c391b1b53e35ff",
+      "nodeType": "paragraph",
+      "contentHash": "9bfa51e2b4a513120d388994d8cc2f3776d989e05f4a01a96db3b3b5d5695726",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-c53e9468f1477f13",
+      "nodeType": "paragraph",
+      "contentHash": "734076e1803a70c52551d39698c1c0351380fc3e71d8491fc427e64fb5d7535e",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-3de322427f417a10",
+      "nodeType": "paragraph",
+      "contentHash": "1aad535b79e4a0c560c3308b225a6978727dd05e0762b1e79aabe8da33278540",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-4fde3fda4f47af8b",
+      "nodeType": "paragraph",
+      "contentHash": "4b16b88925b8fe455d93a6d67d2ce94eb701b0b0b177937098631c7d15c68367",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-d652375bbfc82ed8",
+      "nodeType": "paragraph",
+      "contentHash": "4f45614264cf7fa99f6de64dfa7a8ff5a4677b130bae5721243ae8970e6d429b",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-0016166fa3124fa0",
+      "nodeType": "paragraph",
+      "contentHash": "37789709a2ab5fc21272944871ff08bef15d8e40fe606439d8cf6ebd3409ab51",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-8962827a52405d65",
+      "nodeType": "paragraph",
+      "contentHash": "95ee8a9405ed23035884eeaaf8bc19a01b26966c0a67375f81e96c008f9b2189",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-10553a0d02a723b5",
+      "nodeType": "paragraph",
+      "contentHash": "d0b6e3920e3cfa252fcc63414a42436eb8d0e3cbc591c9fa2c5912a8698886c0",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-c9b0fa53e0c2510e",
+      "nodeType": "paragraph",
+      "contentHash": "393a5ecb72a6df4e8b921da756ac31090c761a80074af2740eff971f317978d9",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-b0e00132a1e9fd05",
+      "nodeType": "paragraph",
+      "contentHash": "e471d5ce45923b5d52b85472bc6b9b098d5867e4eb38d92c5ed76ed433345cce",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-09f8312fe05df257",
+      "nodeType": "paragraph",
+      "contentHash": "4b78fdff9fb4095cc29f05cc08107a2f872b54c2ac58eed090deb04db8f37e14",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-7553d71582610f13",
+      "nodeType": "paragraph",
+      "contentHash": "4eff76d09434b24b6ee5b16d9c06dbe8fae6019587359073118ac950f860c9be",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-35f3c96d5d967dfc",
+      "nodeType": "paragraph",
+      "contentHash": "bb96f01a54f2d9cf9d0a6e121453b3b12388e7a707880f382bafdba01bf5988a",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-09c0d3ba4784a23a",
+      "nodeType": "paragraph",
+      "contentHash": "c0910d019328d653580a19d6e312276f1ea44395f3efee8fe93902cec019aabb",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-4052658d4e0a0df1",
+      "nodeType": "paragraph",
+      "contentHash": "803a3b6962695f490c606b33943de725328debf4f7c8e75b89a70724dd933a53",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-beb6c9f1fac06b46",
+      "nodeType": "paragraph",
+      "contentHash": "fb02f452de1ab0589d04d1e1a995005c3293af3314cf975b411ff1ac339c0fbb",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-6f10edce5c945751",
+      "nodeType": "paragraph",
+      "contentHash": "cbe05a116301dd3404bcded3ba1e5255c316add86d69105f9241338e79b6671b",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-2b25f1501a746af1",
+      "nodeType": "paragraph",
+      "contentHash": "ed7139d2f8a293fd3e8320301941d02f0ea1aeb66ad1a96d077e0620aef54bc8",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-93780fd3c951581a",
+      "nodeType": "paragraph",
+      "contentHash": "aaeb2d146e08b7441db24d9f996cde500c0bd5ea3aa2c8c3d1c29f5e9aa3c89c",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-2b06d4efd5b47570",
+      "nodeType": "paragraph",
+      "contentHash": "3a0d2b13abd1084a84d72a437d719a9a8e7e864ef75471a2d35e78455995d471",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-1fc9c47be0e6a142",
+      "nodeType": "paragraph",
+      "contentHash": "e6f03f376908f4f6343fc3a2d10c21327a3bc4796b2d987df8a095194d316be7",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-df6d0f72360a4704",
+      "nodeType": "paragraph",
+      "contentHash": "4a00fa82c4e34499e00cc3aca66a152f56743e60bf2895b6269b9979ef2b9700",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-e40fedf57db697ab",
+      "nodeType": "paragraph",
+      "contentHash": "060d9a5d3befff026d181847cfd8c2bbd94d4bb5b9334eb74324e97105d1a910",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-96c6cb4efce87f93",
+      "nodeType": "paragraph",
+      "contentHash": "3d7da3f5d9bc9cbce5378678bb8798b0e16ff9a1d1f94fd0e9e33aadfa432f3f",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-72df0e65e66af0d2",
+      "nodeType": "paragraph",
+      "contentHash": "01cfba3725a072e26eacd6e91d45f761e21c840772264c9651a55f08d2a932b1",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-f6bec54bf6ae7879",
+      "nodeType": "paragraph",
+      "contentHash": "8a090db2ffc963c51cdb5010274897f12443edf19049946c82f1e5b0fbcb2562",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-d071f92fdbd97520",
+      "nodeType": "paragraph",
+      "contentHash": "4da1f327effa55d50468a1692407aa04b2a5825a0f7ae602429ec9d54b051ccf",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-749643d83af3080e",
+      "nodeType": "paragraph",
+      "contentHash": "ac98af83c33cb0123c78f50bf1181834e5dde0be03ff7678c87a7dbdb2e90b7d",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-b9477f19bb3970bd",
+      "nodeType": "paragraph",
+      "contentHash": "d610b342921bbbd2abe50d0f5a799a17a4ccab92c00a58cccdb76d0f5cb9ffb4",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-6dce5d075f84c088",
+      "nodeType": "paragraph",
+      "contentHash": "5bf073de2f5c87e4d770239d17d24f3d6ed93eb499e822ce81d771fabc6b1081",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-c8f50b4502408da9",
+      "nodeType": "paragraph",
+      "contentHash": "51a06227541923b87348f810fa0baf9ea03543d9fcf4028f9efbd804a22a4b5a",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-3d838cee2a8c0b0e",
+      "nodeType": "paragraph",
+      "contentHash": "f6ea1edacb0bde7ec63d3673c8553b93fe6b0aaa100ae4e9388819450a6eb05e",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-f869adffef8ad8c0",
+      "nodeType": "paragraph",
+      "contentHash": "e093214bdec118c333176137ad0bdf5ff26d3f2afaf6a0088ba238d2e413f32b",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-91892ac607f947e1",
+      "nodeType": "paragraph",
+      "contentHash": "412305b6c88f8b86c254125995fdb1142dc1546d776402bf05dc62d2345303a0",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-2d965b4d3059dd98",
+      "nodeType": "paragraph",
+      "contentHash": "40cdab497d53adf023327cc07b25e7baea1b0526ac98ca4c8781a92f32b846b8",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-aaa626a7b9d26c90",
+      "nodeType": "paragraph",
+      "contentHash": "a9a878afb5b928b4d041b305b00f6bd0a66b16dc307eb40e3480428cc6ec3722",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-1ab46d152cd2f73f",
+      "nodeType": "paragraph",
+      "contentHash": "08271f925a045fe7f522ae6654ea69faa524691121b75a93b11e63b923be5892",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-aa1c2c2454589404",
+      "nodeType": "paragraph",
+      "contentHash": "bb5768cba80f9adf6523d6d66f949491bb389ce94a69000a274d4d3b2e4e1e18",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-4d46edfa433345e4",
+      "nodeType": "paragraph",
+      "contentHash": "544692d9e8b4d2a2a05a06179ffa31e5b373cf33c0907afa879b1ce8c2dd75ed",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-ec55b4aa780e0cb7",
+      "nodeType": "paragraph",
+      "contentHash": "d61a774dad8c7b75c735916ad0eb7690202547d05ae868052e0573552d309c5e",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-b763112aa3195c5f",
+      "nodeType": "paragraph",
+      "contentHash": "d70891f31ec324151fa39afdd1cd486fa4b729f473ca35b7efd0cd882bf72189",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-1b1a23296b8790d4",
+      "nodeType": "paragraph",
+      "contentHash": "72b34fb03c39585d716867d85cb267b80d3136a15ee849bf6cc57808b3fe544f",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-ed9aa0d73f6675fe",
+      "nodeType": "paragraph",
+      "contentHash": "60da9fb18f1ebe00321552818ae979fcc9c3cacb99f07e07745df4a314c4bf87",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-1f004e452393ec39",
+      "nodeType": "paragraph",
+      "contentHash": "c91617bfb338bbaf75641456a4d0542953135af232f5b2135aab216c83faa261",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-5e197ab31b249677",
+      "nodeType": "paragraph",
+      "contentHash": "88f4d752025829681f88cc974578a60fc481f648bf53ee5835b5b28a6636a1df",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-9792fec20d6d46db",
+      "nodeType": "paragraph",
+      "contentHash": "3d1c3b4ddd0c4ef5d21ff8d2fc72b1290297e2cc4e1f93859126b9f013a683ff",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-046369b63700e8bd",
+      "nodeType": "paragraph",
+      "contentHash": "e6ce6068deceff14181f29a9434282e89af37a72c65ddd8f459b2f2316743dbe",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-dd96f3ce11830cc5",
+      "nodeType": "paragraph",
+      "contentHash": "b621b261b8d5acd1dcfc5ec0c3e6899c7a93bd9278efb3898b2de629394559f4",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-53c6b2c86f32d0c1",
+      "nodeType": "paragraph",
+      "contentHash": "188540742bd47595f1fa4b3b0587cfe9b282562f2fc7676dc9e53f5f596e4e93",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-836bce4e668a944f",
+      "nodeType": "paragraph",
+      "contentHash": "121ff530006182a69075a1f442ccd4687aa52ad842bbb8a8fb0a907d5961e603",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-6e73bb8bd45ceab3",
+      "nodeType": "paragraph",
+      "contentHash": "bc1f8eedc0ad71d21ac92fc7a1efb265aae0909c36f0e9bc13dc0e6f52b6bcb3",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-b28d2cc439259f67",
+      "nodeType": "paragraph",
+      "contentHash": "0662098c25bb86be26af0e05896e3f322871e011778b35283262a18daad076ac",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-9e1a930c01b7b835",
+      "nodeType": "paragraph",
+      "contentHash": "4df5b42dee42dfc12de46eeb6ea938dc7943809c865ec0adf67e2b1e5a20dec5",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-c7416eeaa3edba31",
+      "nodeType": "paragraph",
+      "contentHash": "50f1c54627b27e923f60dbd70967241e021ea319fcf29e789add447cbf2635e5",
+      "embedding": null
+    },
+    {
+      "id": "paragraph-0d8771e3b5399406",
+      "nodeType": "paragraph",
+      "contentHash": "b56fb562f932c18f877f9c4eae9d61f23d4a90f76d42cbed5691ca4bb9a634b5",
       "embedding": null
     },
     {
@@ -38881,5 +39445,5 @@
       "embedding": null
     }
   ],
-  "generatedAt": "2026-09-08T09:06:03.550Z"
+  "generatedAt": "2026-09-08T09:15:08.091Z"
 }

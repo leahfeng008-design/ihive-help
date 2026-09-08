@@ -43,3 +43,5 @@ node scripts/evaluate-chat.mjs --assert
 只有获得发送测试问题和知识库片段到现有 OpenRouter 服务的授权后，才运行 `node --env-file=.env.local scripts/evaluate-chat.mjs --live`。可用 `EVAL_SCENARIOS` 限定场景，用 `EVAL_OUTPUT` 指定本地报告路径。
 
 图片来源限定为帮助知识库：PRD 只同步文字，不下载图片；问答检索会过滤已有缓存中的非帮助文档图片。
+
+负责人查询同时同步“按照模块分”（tblinkja1AwTvKno）的二级模块与问题负责人。一般负责人查询使用该表；产品、设计、维护人查询使用帮助文档维护分工表，各自保留来源链接，不混用角色。

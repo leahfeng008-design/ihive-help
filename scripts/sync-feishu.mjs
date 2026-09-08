@@ -262,27 +262,27 @@ function fieldText(value) {
   return '';
 }
 
-async function loadAssignmentTable() {
+async function loadAssignmentTable(tableId = assignmentTableId, moduleOwners = false) {
   const rows = [];
   let pageToken = '';
   do {
     const params = new URLSearchParams({ page_size: '500' });
     if (pageToken) params.set('page_token', pageToken);
-    const json = await requestJson(`${api}/bitable/v1/apps/${assignmentAppToken}/tables/${assignmentTableId}/records?${params}`, token);
+    const json = await requestJson(`${api}/bitable/v1/apps/${assignmentAppToken}/tables/${tableId}/records?${params}`, token);
     for (const item of json.data?.items || []) {
       if (!fieldText(item.fields?.['一级模块']) && !fieldText(item.fields?.['二级模块'])) continue;
-      const fields = ['一级模块', '二级模块', '产品经理', '设计师', '帮助文档负责人'].map(key => `${key}：${fieldText(item.fields?.[key]) || '未填写'}`);
+      const fields = (moduleOwners ? ['一级模块', '二级模块', '问题负责人'] : ['一级模块', '二级模块', '产品经理', '设计师', '帮助文档负责人']).map(key => `${key}：${fieldText(item.fields?.[key]) || '未填写'}`);
       rows.push({ id: item.record_id || item.id, text: fields.join('；') });
     }
     pageToken = json.data?.has_more ? json.data?.page_token || '' : '';
   } while (pageToken);
   if (!rows.length) throw new Error('分工表没有有效模块记录，保留上次完整内容');
   const paragraphs = annotateParagraphs(rows.map((row, index) => ({
-    id: stableId('paragraph', `assignment:${assignmentAppToken}:${assignmentTableId}:${row.id}`), type: 'paragraph', kind: 'record', order: index, text: row.text, images: [],
+    id: stableId('paragraph', `assignment:${assignmentAppToken}:${tableId}:${row.id}`), type: 'paragraph', kind: 'record', order: index, text: row.text, images: [],
   })), '模块分工');
   return {
-    sourceType: 'assignment', category: '模块分工', path: ['分工表', '帮助文档维护分工表'], title: '帮助文档维护分工表',
-    url: `https://pcnpuds47gj5.feishu.cn/base/${assignmentAppToken}?table=${assignmentTableId}`,
+    sourceType: 'assignment', category: '模块分工', path: ['分工表', moduleOwners ? '按照模块分' : '帮助文档维护分工表'], title: moduleOwners ? '按照模块分' : '帮助文档维护分工表',
+    url: `https://pcnpuds47gj5.feishu.cn/base/${assignmentAppToken}?table=${tableId}`,
     text: rows.map(row => row.text).join('\n'), paragraphs,
   };
 }
@@ -422,9 +422,9 @@ const wikiNodes = assignmentOnly ? [] : await listWikiNodes().catch(error => { f
 const prdFiles = assignmentOnly ? [] : await listDriveFolder(prdFolderToken).catch(error => { failedSources.add('prd'); console.warn(`PRD 同步跳过：${error.message}`); return []; });
 const docMetas = [...wikiNodes, ...prdFiles].filter(item => item.objType === 'docx');
 const loadedDocs = (await mapPool(docMetas, syncConcurrency, loadDocx)).filter(Boolean);
-const assignment = await loadAssignmentTable().catch(error => { failedSources.add('assignment'); console.warn(`分工表同步跳过：${error.message}`); return null; });
+const assignment = await Promise.all([loadAssignmentTable(), loadAssignmentTable('tblinkja1AwTvKno', true)]).catch(error => { failedSources.add('assignment'); console.warn(`分工表同步跳过：${error.message}`); return null; });
 if (assignmentOnly && !assignment) throw new Error('分工表同步失败，未修改知识库');
-const documents = [...loadedDocs, ...(assignment ? [assignment] : [])]
+const documents = [...loadedDocs, ...(assignment || [])]
   .filter((doc, index, list) => list.findIndex(other => other.url === doc.url) === index)
   .sort((a, b) => `${a.sourceType}/${a.category}/${a.title}`.localeCompare(`${b.sourceType}/${b.category}/${b.title}`, 'zh-CN'));
 if (!documents.length) throw new Error('三个飞书来源均不可读，已保留现有本地知识库');
