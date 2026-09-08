@@ -195,7 +195,7 @@ function flattenKnowledge(tree: KnowledgeTree) {
     const nextArticleIds = [...articleIds, article.id];
     nodes.push({ id: article.id, nodeType: 'article', sourceType: article.sourceType, title: article.title, summary: article.summary, url: article.url, path: article.path, images: [], directoryIds, articleIds: nextArticleIds });
     for (const directory of article.directories || []) visitDirectory(directory, directoryIds, nextArticleIds);
-    for (const paragraph of article.paragraphs || []) nodes.push({ id: paragraph.id, nodeType: 'paragraph', sourceType: article.sourceType, title: article.title, text: paragraph.text, url: article.url, path: article.path, images: paragraph.images || [], directoryIds, articleIds: nextArticleIds, sectionPath: paragraph.sectionPath, kind: paragraph.kind, order: paragraph.order, role: paragraph.role, isMetadata: paragraph.isMetadata });
+    for (const paragraph of article.paragraphs || []) nodes.push({ id: paragraph.id, nodeType: 'paragraph', sourceType: article.sourceType, title: article.title, text: paragraph.text, url: article.url, path: article.path, images: article.sourceType === 'help' ? paragraph.images || [] : [], directoryIds, articleIds: nextArticleIds, sectionPath: paragraph.sectionPath, kind: paragraph.kind, order: paragraph.order, role: paragraph.role, isMetadata: paragraph.isMetadata });
     for (const child of article.articles || []) visitArticle(child, directoryIds, nextArticleIds);
   };
   for (const root of tree.roots || []) visitDirectory(root);

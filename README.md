@@ -37,3 +37,5 @@ node scripts/evaluate-chat.mjs --assert
 `data/image-context.json` 保存经过图片内容核对的关联修正（组合图共享范围、截图对应步骤、客户端）。它不修改飞书原文；重新同步后若正文变化，应复查这些关联。
 
 只有获得发送测试问题和知识库片段到现有 OpenRouter 服务的授权后，才运行 `node --env-file=.env.local scripts/evaluate-chat.mjs --live`。可用 `EVAL_SCENARIOS` 限定场景，用 `EVAL_OUTPUT` 指定本地报告路径。
+
+图片来源限定为帮助知识库：PRD 只同步文字，不下载图片；问答检索会过滤已有缓存中的非帮助文档图片。

@@ -240,7 +240,7 @@ async function loadDocx(meta) {
         paragraphs.push(activeParagraph);
       }
     }
-    if (block.image?.token) {
+    if (meta.sourceType === 'help' && block.image?.token) {
       const image = await downloadImage(block.image.token, meta.title);
       if (!activeParagraph) {
         activeParagraph = { id: stableId('paragraph', `${meta.url}:lead`), type: 'paragraph', kind: 'text', order: 0, text: meta.title, images: [] };

@@ -123,3 +123,7 @@ assert.equal(apiAnswer.retrieval.method,'hierarchical-lexical');
 assert.equal(apiAnswer.images.length,2);
 assert.ok(modelCalls>0);
 console.log('PASS: API model-path fixture, omitted-image fallback, and embedding/model outage fallback; no external requests made.');
+
+const imagePolicy = vm.runInContext(`flattenKnowledge({roots:[{id:'root',type:'directory',sourceType:'help',title:'root',path:[],directories:[],articles:['help','prd','assignment'].map(sourceType=>({id:sourceType,type:'article',sourceType,title:sourceType,path:[],articles:[],paragraphs:[{id:sourceType+'-paragraph',text:'操作说明',images:[{imageId:sourceType+'-image',src:'/kb-images/'+sourceType+'.png'}]}]}))}]}).filter(n=>n.nodeType==='paragraph').map(n=>({source:n.sourceType,images:n.images.length}))`,context);
+assert.deepEqual(JSON.parse(JSON.stringify(imagePolicy)),[{source:'help',images:1},{source:'prd',images:0},{source:'assignment',images:0}]);
+console.log('PASS: only help-document images enter retrieval; cached PRD and assignment images are excluded.');
