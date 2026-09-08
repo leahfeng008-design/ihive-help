@@ -586,6 +586,43 @@ function fallbackAnswer(retrieval: Awaited<ReturnType<typeof retrieve>>, brief =
   return output.join('\n\n') || '本地知识库中没有找到相关操作说明。';
 }
 
+// Personnel answers come directly from table cells, without model inference.
+function assignmentAnswer(messages: Message[]) {
+  const latest = messages.at(-1)?.content || '';
+  const ownership = /负责人|谁负责|谁来负责|谁维护|维护人|维护者|产品经理|设计师|设计人|找谁|分工|谁.{0,4}(设计|产品|维护)|(?:产品|设计|维护).{0,4}(是谁|是哪个|找哪位)/;
+  if (!ownership.test(latest)) return null;
+  if (/怎么|如何|步骤|操作/.test(latest) && !/谁|找哪位|产品经理|设计师|维护人|帮助文档负责人/.test(latest)) return null;
+  const compact = (text: string) => text.toLowerCase().normalize('NFKC').replace(/[\p{P}\p{S}\s]/gu, '');
+  const rows = searchNodes.filter(node => node.sourceType === 'assignment' && node.nodeType === 'paragraph').map(node => {
+    const fields = Object.fromEntries((node.text || '').split('；').map(part => {
+      const at = part.indexOf('：'); return [part.slice(0, at), part.slice(at + 1)];
+    }));
+    return { node, fields, names: [fields['一级模块'], fields['二级模块']].filter(name => name && name !== '未填写') };
+  });
+  let query = compact(latest);
+  const roleOnly = /^(那|那么|这个|它|的|产品|产品经理|设计|设计师|设计人|维护|维护人|维护者|问题|负责人|谁|是|来|负责|找|呢|人|和|及|与|分别)+$/.test(query);
+  if (roleOnly) {
+    const previous = [...messages.slice(0, -1)].reverse().find(message => message.role === 'user' && !/^(那|那么)?(设计师|维护人|产品经理|负责人)/.test(message.content));
+    if (previous) query = compact(previous.content) + query;
+  }
+  const names = [...new Set(rows.flatMap(row => row.names))];
+  const matchedNames = names.filter(name => query.includes(compact(name)));
+  const specificNames = matchedNames.filter(name => !matchedNames.some(other => other !== name && compact(other).includes(compact(name))));
+  const matches = rows.filter(row => row.names.some(name => specificNames.includes(name)));
+  const sources = matches.length ? [...new Map(matches.map(({ node }) => [node.url, {
+    title: '帮助文档维护分工表', url: node.url, path: node.path, sourceType: 'assignment',
+  }])).values()] : [];
+  if (!matches.length) return {
+    answer: '分工表中没有匹配到明确的模块。请提供完整模块名（例如“消息免打扰”“会话置顶”）；我会查询对应的产品、设计和维护人。', sources, images: [],
+  };
+  const cell = (value?: string) => (value || '未填写').replace(/\|/g, '／').replace(/\n/g, ' ');
+  return {
+    answer: '根据帮助文档维护分工表（维护人对应“帮助文档负责人”）：\n\n' +
+      matches.map(({ fields: f }) => `**${cell(f['一级模块'])} / ${cell(f['二级模块'])}**\n产品：${cell(f['产品经理'])}\n设计：${cell(f['设计师'])}\n维护人：${cell(f['帮助文档负责人'])}`).join('\n\n'),
+    sources, images: [], retrieval: { method: 'assignment-exact', confidence: 'high', paragraphIds: matches.map(row => row.node.id) },
+  };
+}
+
 export async function POST(request: Request) {
   try {
     if (isFeishuAuthRequired() && !(await readFeishuSession(request))) return Response.json({ error: '请先登录飞书账号' }, { status: 401 });
@@ -593,6 +630,8 @@ export async function POST(request: Request) {
     const messages = (body.messages || []).filter(message => (message.role === 'user' || message.role === 'assistant') && typeof message.content === 'string');
     const latest = messages.at(-1)?.content?.trim();
     if (!latest) return Response.json({ error: '请输入问题' }, { status: 400 });
+    const assignment = assignmentAnswer(messages);
+    if (assignment) return Response.json(assignment);
     const conversation = resolveConversation(messages);
     const { question, brief, needsContext } = conversation;
     if (needsContext || !question) return Response.json({ answer: '你想了解哪项功能？告诉我主题后，我会接着说明。', sources: [], images: [] });

@@ -2065,22 +2065,22 @@
     "type": "directory",
     "source": "assignment",
     "title": "模块分工表",
-    "summary": "1 篇内容，涵盖：按照模块分",
+    "summary": "1 篇内容，涵盖：帮助文档维护分工表",
     "path": [
       "模块分工表"
     ],
     "parentId": null
   },
   {
-    "id": "article-4656b50d39a1c3d3",
+    "id": "article-14f55966c27ebef5",
     "type": "article",
     "source": "assignment",
-    "title": "按照模块分",
-    "summary": "一级模块：IM会话列表；临时字段：iPhone梦成；二级模块：会话列表；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：李静 一级模块：IM会话列表；临时字段：iPhone梦成；二级模块：会话标签分组；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：李静 一级模块：IM会话列表；临时字段：iPhone梦成；二级模块：会话置顶；产品经理：怡宝；父…",
-    "url": "https://pcnpuds47gj5.feishu.cn/share/base/view/shrcnVOvM7mw8YQW2SXrk61pa4f",
+    "title": "帮助文档维护分工表",
+    "summary": "一级模块：IM会话列表；二级模块：会话列表；产品经理：怡宝；设计师：爱德；帮助文档负责人：Yvonne 一级模块：IM会话列表；二级模块：会话标签分组；产品经理：李静；设计师：张梦成；帮助文档负责人：李静 一级模块：IM会话列表；二级模块：会话置顶；产品经理：怡宝；设计师：爱德；帮助文档负责人：李静 一级模块：IM消息收发和体验；二级模块：聊天窗口与消息收发；产品经理：爱德；设计师：爱德；帮助文档负责人：爱德 一级模块：IM消息收发和体…",
+    "url": "https://pcnpuds47gj5.feishu.cn/base/IQTIbgVvIa9thdsuOi0cbUXanRc?table=tblG1Pi9DMfjY97O",
     "path": [
       "分工表",
-      "按照模块分"
+      "帮助文档维护分工表"
     ],
     "parentId": "directory-df7825d34afddcfd"
   }

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-08T02:47:57.394Z",
-  "sourceHash": "662569f3eb4e85af9c623b14b8d1e1f08e192abde46bf2a89d35f669f741afbb",
+  "generatedAt": "2026-09-08T09:06:03.510Z",
+  "sourceHash": "ce7ce9076912aab119e99e27b4500fe3ed3bc36f8f9a892ab51230a1f04bb7f1",
   "roots": [
     {
       "id": "directory-b68bbf3f7bf70098",
@@ -89315,32 +89315,32 @@
       "type": "directory",
       "sourceType": "assignment",
       "title": "模块分工表",
-      "summary": "1 篇内容，涵盖：按照模块分",
+      "summary": "1 篇内容，涵盖：帮助文档维护分工表",
       "path": [
         "模块分工表"
       ],
       "directories": [],
       "articles": [
         {
-          "id": "article-4656b50d39a1c3d3",
+          "id": "article-14f55966c27ebef5",
           "type": "article",
           "sourceType": "assignment",
-          "title": "按照模块分",
-          "summary": "一级模块：IM会话列表；临时字段：iPhone梦成；二级模块：会话列表；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：李静 一级模块：IM会话列表；临时字段：iPhone梦成；二级模块：会话标签分组；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：李静 一级模块：IM会话列表；临时字段：iPhone梦成；二级模块：会话置顶；产品经理：怡宝；父…",
-          "url": "https://pcnpuds47gj5.feishu.cn/share/base/view/shrcnVOvM7mw8YQW2SXrk61pa4f",
+          "title": "帮助文档维护分工表",
+          "summary": "一级模块：IM会话列表；二级模块：会话列表；产品经理：怡宝；设计师：爱德；帮助文档负责人：Yvonne 一级模块：IM会话列表；二级模块：会话标签分组；产品经理：李静；设计师：张梦成；帮助文档负责人：李静 一级模块：IM会话列表；二级模块：会话置顶；产品经理：怡宝；设计师：爱德；帮助文档负责人：李静 一级模块：IM消息收发和体验；二级模块：聊天窗口与消息收发；产品经理：爱德；设计师：爱德；帮助文档负责人：爱德 一级模块：IM消息收发和体…",
+          "url": "https://pcnpuds47gj5.feishu.cn/base/IQTIbgVvIa9thdsuOi0cbUXanRc?table=tblG1Pi9DMfjY97O",
           "path": [
             "分工表",
-            "按照模块分"
+            "帮助文档维护分工表"
           ],
           "directories": [],
           "articles": [],
           "paragraphs": [
             {
-              "id": "paragraph-185501f863e6144e",
+              "id": "paragraph-adca23c193e81d6a",
               "type": "paragraph",
               "kind": "record",
               "order": 0,
-              "text": "一级模块：IM会话列表；临时字段：iPhone梦成；二级模块：会话列表；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：李静",
+              "text": "一级模块：IM会话列表；二级模块：会话列表；产品经理：怡宝；设计师：爱德；帮助文档负责人：Yvonne",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89349,11 +89349,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-40f4dee1c0ffdbef",
+              "id": "paragraph-133c693c832eee44",
               "type": "paragraph",
               "kind": "record",
               "order": 1,
-              "text": "一级模块：IM会话列表；临时字段：iPhone梦成；二级模块：会话标签分组；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：李静",
+              "text": "一级模块：IM会话列表；二级模块：会话标签分组；产品经理：李静；设计师：张梦成；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89362,11 +89362,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-a3087f1e9fb66f13",
+              "id": "paragraph-6a69b6d15834d33c",
               "type": "paragraph",
               "kind": "record",
               "order": 2,
-              "text": "一级模块：IM会话列表；临时字段：iPhone梦成；二级模块：会话置顶；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：李静",
+              "text": "一级模块：IM会话列表；二级模块：会话置顶；产品经理：怡宝；设计师：爱德；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89375,11 +89375,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-b9353aa25d97909b",
+              "id": "paragraph-17069b70711aa1a6",
               "type": "paragraph",
               "kind": "record",
               "order": 3,
-              "text": "一级模块：IM消息收发和体验；临时字段：iPhone梦成；二级模块：聊天窗口与消息收发；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Crisley",
+              "text": "一级模块：IM消息收发和体验；二级模块：聊天窗口与消息收发；产品经理：爱德；设计师：爱德；帮助文档负责人：爱德",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89388,11 +89388,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-1652c14458e08534",
+              "id": "paragraph-a2d29c5b7cce06d6",
               "type": "paragraph",
               "kind": "record",
               "order": 4,
-              "text": "一级模块：IM消息收发和体验；临时字段：iPhone梦成；二级模块：文件收发；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：爱德",
+              "text": "一级模块：IM消息收发和体验；二级模块：文件收发；产品经理：秦汉；设计师：爱德；帮助文档负责人：爱德",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89401,11 +89401,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-e17702fad7466dab",
+              "id": "paragraph-afd9138c2d72b08d",
               "type": "paragraph",
               "kind": "record",
               "order": 5,
-              "text": "一级模块：IM消息收发和体验；临时字段：iPhone梦成；二级模块：截图；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Crisley",
+              "text": "一级模块：IM消息收发和体验；二级模块：截图；产品经理：李静；设计师：爱德；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89414,11 +89414,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-09cc44235fe4382d",
+              "id": "paragraph-23fa7cea6bed824d",
               "type": "paragraph",
               "kind": "record",
               "order": 6,
-              "text": "一级模块：IM消息收发和体验；临时字段：iPhone梦成；二级模块：消息已读状态；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Crisley",
+              "text": "一级模块：IM消息收发和体验；二级模块：消息已读状态；产品经理：爱德；设计师：爱德；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89427,11 +89427,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-1bfea95a86706bad",
+              "id": "paragraph-f1da40c788b4bab6",
               "type": "paragraph",
               "kind": "record",
               "order": 7,
-              "text": "一级模块：IM消息收发和体验；临时字段：iPhone梦成；二级模块：消息加急；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Crisley",
+              "text": "一级模块：IM消息收发和体验；二级模块：消息加急；产品经理：怡宝；设计师：爱德；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89440,11 +89440,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-92cccfb58f794bc4",
+              "id": "paragraph-a29b238da28a0a5e",
               "type": "paragraph",
               "kind": "record",
               "order": 8,
-              "text": "一级模块：IM消息收发和体验；临时字段：iPhone梦成；二级模块：消息阅读体验；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Crisley",
+              "text": "一级模块：IM消息收发和体验；二级模块：消息阅读体验；产品经理：怡宝；设计师：爱德；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89453,11 +89453,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-e3c6c74ff3a4774b",
+              "id": "paragraph-b0779e7fe25a14c1",
               "type": "paragraph",
               "kind": "record",
               "order": 9,
-              "text": "一级模块：IM消息收发和体验；临时字段：iPhone梦成；二级模块：消息置顶；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Crisley",
+              "text": "一级模块：IM消息收发和体验；二级模块：消息置顶；产品经理：郭文博；设计师：爱德；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89466,11 +89466,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-94fda573abf94f25",
+              "id": "paragraph-f2952952d271381d",
               "type": "paragraph",
               "kind": "record",
               "order": 10,
-              "text": "一级模块：IM消息收发和体验；临时字段：iPhone梦成；二级模块：消息bot；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Crisley",
+              "text": "一级模块：IM消息收发和体验；二级模块：消息bot；产品经理：郭文博；设计师：爱德；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89479,11 +89479,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-86b3a516c974fe6e",
+              "id": "paragraph-3080feba2c91be4d",
               "type": "paragraph",
               "kind": "record",
               "order": 11,
-              "text": "一级模块：IM消息收发和体验；临时字段：ex：dengteng；二级模块：iPhone端分享到蜂巢；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：秦汉",
+              "text": "一级模块：IM消息互动与操作；二级模块：消息回复与引用；产品经理：秦汉；设计师：爱德；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89492,11 +89492,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-515cec4b0a3a17ad",
+              "id": "paragraph-8ea51266fc52fbfa",
               "type": "paragraph",
               "kind": "record",
               "order": 12,
-              "text": "一级模块：IM消息收发和体验；临时字段：iPhone梦成；二级模块：在线状态；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：爱德",
+              "text": "一级模块：IM消息互动与操作；二级模块：消息转发；产品经理：爱德；设计师：爱德；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89505,11 +89505,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-0c87ed21a1f02d01",
+              "id": "paragraph-05ef18355c548252",
               "type": "paragraph",
               "kind": "record",
               "order": 13,
-              "text": "一级模块：IM名片与通讯录；临时字段：iPhone梦成；二级模块：选人组件；产品经理：梦成；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：Crisley",
+              "text": "一级模块：IM消息互动与操作；二级模块：聊天中的@功能；产品经理：爱德；设计师：爱德；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89518,11 +89518,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-a3b98b3acabe7c19",
+              "id": "paragraph-4353b4d11107a1b3",
               "type": "paragraph",
               "kind": "record",
               "order": 14,
-              "text": "一级模块：IM名片与通讯录；临时字段：iPhone梦成；二级模块：头像与名字；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：爱德",
+              "text": "一级模块：IM消息互动与操作；二级模块：消息删除撤回重新编辑；产品经理：李静；设计师：爱德；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89531,11 +89531,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-6286f1125510cfdb",
+              "id": "paragraph-d0c24400bed442c1",
               "type": "paragraph",
               "kind": "record",
               "order": 15,
-              "text": "一级模块：IM名片与通讯录；临时字段：iPhone梦成；二级模块：通讯录；产品经理：梦成；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：Yvonne",
+              "text": "一级模块：IM消息互动与操作；二级模块：拍照发图/视频；产品经理：李静；设计师：爱德；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89544,11 +89544,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-fb2aeca1bc7713d4",
+              "id": "paragraph-1de2534bbaa06dfb",
               "type": "paragraph",
               "kind": "record",
               "order": 16,
-              "text": "一级模块：IM名片与通讯录；临时字段：iPhone梦成；二级模块：个人名片与备注；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Yvonne",
+              "text": "一级模块：IM消息互动与操作；二级模块：语音消息；产品经理：dengteng；设计师：张梦成；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89557,11 +89557,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-7abb957d7ca37a36",
+              "id": "paragraph-9d50c75ac6ea3648",
               "type": "paragraph",
               "kind": "record",
               "order": 17,
-              "text": "一级模块：企业管理后台；二级模块：后台-组织架构；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：雨纯",
+              "text": "一级模块：IM消息互动与操作；二级模块：Pin消息；产品经理：李静；设计师：张梦成；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89570,11 +89570,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-3f73b30b73e8b7a8",
+              "id": "paragraph-4c036cee1f1a32d8",
               "type": "paragraph",
               "kind": "record",
               "order": 18,
-              "text": "一级模块：企业管理后台；二级模块：后台-驾驶舱；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：雨纯",
+              "text": "一级模块：IM名片与通讯录；二级模块：选人组件；产品经理：梦成；设计师：张梦成；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89583,11 +89583,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-fb9d394ab3105385",
+              "id": "paragraph-acada9601951c929",
               "type": "paragraph",
               "kind": "record",
               "order": 19,
-              "text": "一级模块：企业管理后台；二级模块：后台-权限管理；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：雨纯",
+              "text": "一级模块：IM名片与通讯录；二级模块：头像与名字；产品经理：爱德；设计师：爱德；帮助文档负责人：爱德",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89596,11 +89596,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-48f9f5cd068ccb20",
+              "id": "paragraph-904be75f3a03788f",
               "type": "paragraph",
               "kind": "record",
               "order": 20,
-              "text": "一级模块：企业管理后台；二级模块：后台-安全防护-IP围栏；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：雨纯",
+              "text": "一级模块：IM名片与通讯录；二级模块：通讯录；产品经理：梦成；设计师：张梦成；帮助文档负责人：梦成",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89609,11 +89609,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-71c0520821d2d45f",
+              "id": "paragraph-89218916a30af2fd",
               "type": "paragraph",
               "kind": "record",
               "order": 21,
-              "text": "一级模块：企业管理后台；二级模块：后台-审计日志；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：唐炜",
+              "text": "一级模块：IM名片与通讯录；二级模块：个人名片与备注；产品经理：梦成；设计师：张梦成；帮助文档负责人：Yvonne",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89622,11 +89622,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-5b2eb71ae484e5ea",
+              "id": "paragraph-5a86dbd600194e47",
               "type": "paragraph",
               "kind": "record",
               "order": 22,
-              "text": "一级模块：企业管理后台；二级模块：水印项目；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：雨纯",
+              "text": "一级模块：企业管理后台；二级模块：后台-组织架构；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89635,11 +89635,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-6dd9c7d6cbdbdeb7",
+              "id": "paragraph-7721c834b463ea97",
               "type": "paragraph",
               "kind": "record",
               "order": 23,
-              "text": "一级模块：企业管理后台；二级模块：后台-企业设置；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：雨纯",
+              "text": "一级模块：企业管理后台；二级模块：后台-权限管理；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89648,11 +89648,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-6c7e839f934c5a71",
+              "id": "paragraph-cca7914e1c2a13e2",
               "type": "paragraph",
               "kind": "record",
               "order": 24,
-              "text": "一级模块：企业管理后台；二级模块：后台-部门负责人；产品经理：唐炜；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：唐炜",
+              "text": "一级模块：企业管理后台；二级模块：后台-安全防护-IP围栏；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89661,11 +89661,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-854696bdc31a62bc",
+              "id": "paragraph-affd05a359bb7e69",
               "type": "paragraph",
               "kind": "record",
               "order": 25,
-              "text": "一级模块：企业管理后台；二级模块：后台-直属虚线上下级；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：唐炜",
+              "text": "一级模块：企业管理后台；二级模块：后台-审计日志；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89674,11 +89674,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-dffecd272e8b6c45",
+              "id": "paragraph-23a7d07299bc21b1",
               "type": "paragraph",
               "kind": "record",
               "order": 26,
-              "text": "一级模块：企业管理后台；二级模块：后台-资产转移；产品经理：唐炜；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：唐炜",
+              "text": "一级模块：SaaS管理后台；二级模块：SaaS管理后台；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89687,11 +89687,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-18e098c199436ea8",
+              "id": "paragraph-ef3ab531d2099c0e",
               "type": "paragraph",
               "kind": "record",
               "order": 27,
-              "text": "一级模块：企业管理后台；二级模块：后台-创建解散部门群；产品经理：唐炜；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：唐炜",
+              "text": "一级模块：IM群组；二级模块：聊天设置页；产品经理：郭文博；设计师：爱德；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89700,11 +89700,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-a6597bf951511580",
+              "id": "paragraph-730ad4100efd7e83",
               "type": "paragraph",
               "kind": "record",
               "order": 28,
-              "text": "一级模块：企业管理后台；二级模块：后台-登录设备白名单；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：唐炜",
+              "text": "一级模块：IM群组；二级模块：创建群组；产品经理：郭文博；设计师：张梦成；帮助文档负责人：Yvonne",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89713,11 +89713,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-1a1e7f5cde190f6b",
+              "id": "paragraph-4ea9dd82721a4cd4",
               "type": "paragraph",
               "kind": "record",
               "order": 29,
-              "text": "一级模块：企业管理后台；二级模块：后台-附件自动清理；产品经理：唐炜；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：唐炜",
+              "text": "一级模块：IM群组；二级模块：群成员管理；产品经理：郭文博；设计师：张梦成；帮助文档负责人：Yvonne",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89726,11 +89726,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-653459227789b992",
+              "id": "paragraph-9a11055e7435506b",
               "type": "paragraph",
               "kind": "record",
               "order": 30,
-              "text": "一级模块：企业管理后台；二级模块：后台-企业负责人；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：唐炜",
+              "text": "一级模块：IM群组；二级模块：部门群与全员群；产品经理：郭文博；设计师：爱德；帮助文档负责人：Yvonne",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89739,11 +89739,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-bea9e119c1e2b808",
+              "id": "paragraph-3767317944bd091e",
               "type": "paragraph",
               "kind": "record",
               "order": 31,
-              "text": "一级模块：IM群组；二级模块：聊天设置页；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Yvonne",
+              "text": "一级模块：IM群组；二级模块：共同群组；产品经理：郭文博；设计师：爱德；帮助文档负责人：Yvonne",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89752,11 +89752,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-3a10a249d0d18165",
+              "id": "paragraph-42141b3cdef6f5a4",
               "type": "paragraph",
               "kind": "record",
               "order": 32,
-              "text": "一级模块：IM群组；二级模块：群成员管理；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：Yvonne",
+              "text": "一级模块：IM搜索；二级模块：全局搜索；产品经理：唐炜；设计师：张梦成；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89765,11 +89765,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-d882e43d9e286886",
+              "id": "paragraph-f5e7bedeb6c2a1a7",
               "type": "paragraph",
               "kind": "record",
               "order": 33,
-              "text": "一级模块：IM群组；二级模块：部门群与全员群；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Yvonne",
+              "text": "一级模块：IM搜索；二级模块：会话搜索；产品经理：唐炜；设计师：张梦成；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89778,11 +89778,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-061277f83ceeaf24",
+              "id": "paragraph-98a920cc65a6b769",
               "type": "paragraph",
               "kind": "record",
               "order": 34,
-              "text": "一级模块：IM群组；二级模块：共同群组；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Yvonne",
+              "text": "一级模块：IM搜索；二级模块：基础搜索功能；产品经理：唐炜；设计师：张梦成；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89791,11 +89791,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-76d9f5274c8418df",
+              "id": "paragraph-f2c85fd981cd9f46",
               "type": "paragraph",
               "kind": "record",
               "order": 35,
-              "text": "一级模块：IM群组；二级模块：创建群组；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：Yvonne",
+              "text": "一级模块：IM消息通知；二级模块：消息通知；产品经理：怡宝；设计师：张梦成；帮助文档负责人：Yvonne",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89804,11 +89804,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-d813e22614e98e49",
+              "id": "paragraph-d64b0be192f75aae",
               "type": "paragraph",
               "kind": "record",
               "order": 36,
-              "text": "一级模块：IM群组；二级模块：群机器人；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：郭文博",
+              "text": "一级模块：IM消息通知；二级模块：消息免打扰；产品经理：怡宝；设计师：爱德；帮助文档负责人：Yvonne",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89817,11 +89817,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-32970e3e856d5860",
+              "id": "paragraph-9f0657ba31faa6b3",
               "type": "paragraph",
               "kind": "record",
               "order": 37,
-              "text": "一级模块：IM搜索；二级模块：全局搜索；产品经理：唐炜；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：唐炜",
+              "text": "一级模块：IM设置；二级模块：暂停/离职相关逻辑；产品经理：秦汉；设计师：张梦成；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89830,11 +89830,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-26d9db04b099ed55",
+              "id": "paragraph-4faba649dea96eee",
               "type": "paragraph",
               "kind": "record",
               "order": 38,
-              "text": "一级模块：IM搜索；二级模块：会话搜索；产品经理：唐炜；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：唐炜",
+              "text": "一级模块：IM设置；二级模块：账号注册/登录；产品经理：秦汉；设计师：爱德；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89843,11 +89843,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-3111f0c9cb99c866",
+              "id": "paragraph-5ecbe0c5951e1b12",
               "type": "paragraph",
               "kind": "record",
               "order": 39,
-              "text": "一级模块：IM搜索；二级模块：基础搜索功能；产品经理：唐炜；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：唐炜",
+              "text": "一级模块：IM设置；二级模块：双重验证；产品经理：秦汉；设计师：张梦成；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89856,11 +89856,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-e8909116a46bc932",
+              "id": "paragraph-e2e9f1aaa4337dd4",
               "type": "paragraph",
               "kind": "record",
               "order": 40,
-              "text": "一级模块：IM消息通知；二级模块：消息通知；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：爱德",
+              "text": "一级模块：IM设置；二级模块：多租户管理；产品经理：秦汉；设计师：张梦成；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89869,11 +89869,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-257d7cc427e32c69",
+              "id": "paragraph-66a269750025117e",
               "type": "paragraph",
               "kind": "record",
               "order": 41,
-              "text": "一级模块：IM消息通知；二级模块：消息免打扰；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：爱德",
+              "text": "一级模块：IM设置；二级模块：个人面板；产品经理：怡宝；设计师：张梦成；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89882,11 +89882,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-5ec803cf18ccb38b",
+              "id": "paragraph-c3b423592d4460da",
               "type": "paragraph",
               "kind": "record",
               "order": 42,
-              "text": "一级模块：IM设置；二级模块：暂停/离职相关逻辑；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：唐炜",
+              "text": "一级模块：IM设置；二级模块：设置-通知；产品经理：怡宝；设计师：张梦成；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89895,11 +89895,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-acf174e78302c40f",
+              "id": "paragraph-39e8fb61361ed5c5",
               "type": "paragraph",
               "kind": "record",
               "order": 43,
-              "text": "一级模块：IM设置；二级模块：账号注册/登录；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：秦汉",
+              "text": "一级模块：IM设置；二级模块：设置-隐私；产品经理：怡宝；设计师：爱德；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89908,11 +89908,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-42330a8b4b2a0702",
+              "id": "paragraph-887258a79d0ec87a",
               "type": "paragraph",
               "kind": "record",
               "order": 44,
-              "text": "一级模块：IM设置；二级模块：双重验证；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：秦汉",
+              "text": "一级模块：IM设置；二级模块：设置-账号与安全；产品经理：秦汉；设计师：张梦成；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89921,11 +89921,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-89182321d33587b2",
+              "id": "paragraph-98c3f2db5ade11e3",
               "type": "paragraph",
               "kind": "record",
               "order": 45,
-              "text": "一级模块：IM设置；二级模块：多租户管理；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：秦汉",
+              "text": "一级模块：IM设置；二级模块：设置-登录设备与记录；产品经理：秦汉；设计师：张梦成；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89934,11 +89934,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-ca8a2562080c8b05",
+              "id": "paragraph-e9932b132fc41aa5",
               "type": "paragraph",
               "kind": "record",
               "order": 46,
-              "text": "一级模块：IM设置；二级模块：个人面板；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：秦汉",
+              "text": "一级模块：IM设置；二级模块：设置-版本更新；产品经理：郭文博；设计师：爱德；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89947,11 +89947,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-b2299b1e1c0438c3",
+              "id": "paragraph-e29b9176ebd29f28",
               "type": "paragraph",
               "kind": "record",
               "order": 47,
-              "text": "一级模块：IM设置；二级模块：设置-通知；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：秦汉",
+              "text": "一级模块：IM设置；二级模块：设置-时区/24-12小时时制；产品经理：怡宝；设计师：爱德；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89960,11 +89960,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-88df6b6706d91960",
+              "id": "paragraph-fd2079226df2ab61",
               "type": "paragraph",
               "kind": "record",
               "order": 48,
-              "text": "一级模块：IM设置；二级模块：设置-账号与安全；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：秦汉",
+              "text": "一级模块：IM设置；二级模块：设置-快捷键；产品经理：李静；设计师：张梦成；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89973,11 +89973,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-70beffe52fb7f7e1",
+              "id": "paragraph-cf8a5a8a8fe3b9fe",
               "type": "paragraph",
               "kind": "record",
               "order": 49,
-              "text": "一级模块：IM设置；二级模块：设置-登录设备与记录；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：秦汉",
+              "text": "一级模块：企业管理后台；二级模块：后台-驾驶舱；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89986,11 +89986,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-c481732f3546a572",
+              "id": "paragraph-804c2e0f79673fc1",
               "type": "paragraph",
               "kind": "record",
               "order": 50,
-              "text": "一级模块：IM设置；二级模块：设置-版本更新；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：郭文博",
+              "text": "一级模块：AI；二级模块：AI总结会话；产品经理：苏宸；设计师：爱德；帮助文档负责人：苏宸",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -89999,11 +89999,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-1849fb64389858a7",
+              "id": "paragraph-af30fade8e019dd3",
               "type": "paragraph",
               "kind": "record",
               "order": 51,
-              "text": "一级模块：IM设置；二级模块：设置-时区/24-12小时时制；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：秦汉",
+              "text": "一级模块：周报；二级模块：周报；产品经理：唐炜；设计师：爱德；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90012,11 +90012,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-b8932d0da2c6c040",
+              "id": "paragraph-25ed449fcbf82c7c",
               "type": "paragraph",
               "kind": "record",
               "order": 52,
-              "text": "一级模块：IM设置；二级模块：设置-隐私；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：秦汉",
+              "text": "一级模块：日历；二级模块：日历；产品经理：李静；设计师：张梦成；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90025,11 +90025,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-3713b6e369b56b15",
+              "id": "paragraph-56f2874918ae8c5f",
               "type": "paragraph",
               "kind": "record",
               "order": 53,
-              "text": "一级模块：IM设置；二级模块：设置-快捷键；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：秦汉",
+              "text": "一级模块：IM消息收发和体验；二级模块：iPhone端分享到蜂巢；产品经理：秦汉；设计师：爱德；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90038,11 +90038,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-25b1e0e5cfdbba83",
+              "id": "paragraph-78612d8dcfdbfbfa",
               "type": "paragraph",
               "kind": "record",
               "order": 54,
-              "text": "一级模块：IM设置；临时字段：iPhone梦成；二级模块：聊天背景设置；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：爱德",
+              "text": "一级模块：安全与隐私保护；二级模块：自动删消息；产品经理：李静；设计师：张梦成；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90051,11 +90051,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-b0f4db32d67ca3c4",
+              "id": "paragraph-f984b5f5f92d6341",
               "type": "paragraph",
               "kind": "record",
               "order": 55,
-              "text": "一级模块：空间；二级模块：任务空间-提醒；产品经理：Yvonne；父记录：tblinkja1AwTvKno、text；设计师：Crisley；问题负责人：严光",
+              "text": "一级模块：安全与隐私保护；二级模块：彻底删除会话；产品经理：怡宝；设计师：爱德；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90064,11 +90064,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-b67e8b278ffa534f",
+              "id": "paragraph-a3a69ed19f36f87c",
               "type": "paragraph",
               "kind": "record",
               "order": 56,
-              "text": "一级模块：空间；二级模块：任务空间-动态；产品经理：Yvonne；父记录：tblinkja1AwTvKno、text；设计师：Crisley；问题负责人：严光",
+              "text": "一级模块：安全与隐私保护；二级模块：彻底删除消息；产品经理：郭文博；设计师：张梦成；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90077,11 +90077,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-b037f3bd0ee0d43b",
+              "id": "paragraph-52e1a75c672709ad",
               "type": "paragraph",
               "kind": "record",
               "order": 57,
-              "text": "一级模块：空间；二级模块：任务空间-Bot；产品经理：Yvonne；父记录：tblinkja1AwTvKno、text；设计师：Crisley；问题负责人：严光",
+              "text": "一级模块：IM消息互动与操作；二级模块：消息收藏；产品经理：李静；设计师：张梦成；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90090,11 +90090,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-55005f69d8d45916",
+              "id": "paragraph-a5c43e94ff606a5e",
               "type": "paragraph",
               "kind": "record",
               "order": 58,
-              "text": "一级模块：空间；二级模块：任务空间-空间；产品经理：严光；父记录：tblinkja1AwTvKno、text；设计师：Crisley；问题负责人：严光",
+              "text": "一级模块：企业管理后台；二级模块：水印项目；产品经理：郭文博；设计师：爱德；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90103,11 +90103,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-bcbac0cf0419f6c3",
+              "id": "paragraph-bfebf1a14141ba5f",
               "type": "paragraph",
               "kind": "record",
               "order": 59,
-              "text": "一级模块：空间；二级模块：任务空间-项目；产品经理：严光；父记录：tblinkja1AwTvKno、text；设计师：Crisley；问题负责人：严光",
+              "text": "一级模块：企业管理后台；二级模块：后台-企业设置；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90116,11 +90116,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-483767c2033464f2",
+              "id": "paragraph-102b5d76995f30bb",
               "type": "paragraph",
               "kind": "record",
               "order": 60,
-              "text": "一级模块：空间；二级模块：任务空间-任务；产品经理：严光；父记录：tblinkja1AwTvKno、text；设计师：Crisley；问题负责人：严光",
+              "text": "一级模块：IM群组；二级模块：群机器人；产品经理：郭文博；设计师：爱德；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90129,11 +90129,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-5ecf2b94d9f6e236",
+              "id": "paragraph-74af76934f4ed1e0",
               "type": "paragraph",
               "kind": "record",
               "order": 61,
-              "text": "一级模块：官网与帮助中心；二级模块：官网；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：爱德",
+              "text": "一级模块：IM表情和富媒体；二级模块：表情；产品经理：李静；设计师：李雨纯；帮助文档负责人：雨纯",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90142,11 +90142,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-7c7291e509215095",
+              "id": "paragraph-f8a4e079bf0fa771",
               "type": "paragraph",
               "kind": "record",
               "order": 62,
-              "text": "一级模块：官网与帮助中心；二级模块：帮助中心；产品经理：唐炜；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：爱德",
+              "text": "一级模块：企业管理后台；二级模块：后台-部门负责人；产品经理：唐炜；设计师：李雨纯；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90155,11 +90155,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-7c52c1d48418f4cc",
+              "id": "paragraph-f0a6cf3c717ee7d4",
               "type": "paragraph",
               "kind": "record",
               "order": 63,
-              "text": "一级模块：AI；二级模块：AI总结会话；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：苏宸",
+              "text": "一级模块：企业管理后台；二级模块：后台-直属虚线上下级；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90168,11 +90168,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-2130d2eb92c4f057",
+              "id": "paragraph-4cb406b56d4c6f7d",
               "type": "paragraph",
               "kind": "record",
               "order": 64,
-              "text": "一级模块：AI；二级模块：AI周报；产品经理：可大力；父记录：tblinkja1AwTvKno、text；设计师：Crisley；问题负责人：可大力",
+              "text": "一级模块：企业管理后台；二级模块：后台-资产转移；产品经理：唐炜；设计师：李雨纯；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90181,11 +90181,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-6d190da39f32a894",
+              "id": "paragraph-eb57a8f3a98762fb",
               "type": "paragraph",
               "kind": "record",
               "order": 65,
-              "text": "一级模块：AI；二级模块：AI会议总结与任务转化；产品经理：苏宸；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：苏宸",
+              "text": "一级模块：企业管理后台；二级模块：后台-创建解散部门群；产品经理：唐炜；设计师：李雨纯；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90194,11 +90194,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-29ae80e92495e8d5",
+              "id": "paragraph-33693287b9e2b33b",
               "type": "paragraph",
               "kind": "record",
               "order": 66,
-              "text": "一级模块：周报；二级模块：周报；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：Crisley；问题负责人：唐炜",
+              "text": "一级模块：企业管理后台；二级模块：后台-登录设备白名单；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90207,11 +90207,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-f3dea1020d256e3c",
+              "id": "paragraph-d3b4e3d16df8334c",
               "type": "paragraph",
               "kind": "record",
               "order": 67,
-              "text": "一级模块：日历；二级模块：日历；产品经理：dengteng；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：李静",
+              "text": "一级模块：企业管理后台；二级模块：后台-企业负责人；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90220,11 +90220,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-a696ffd48bff4c3d",
+              "id": "paragraph-6b56f750eef56576",
               "type": "paragraph",
               "kind": "record",
               "order": 68,
-              "text": "一级模块：SaaS管理后台；二级模块：SaaS管理后台；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：郭文博",
+              "text": "一级模块：企业管理后台；二级模块：后台-附件自动清理；产品经理：唐炜；设计师：李雨纯；帮助文档负责人：唐炜",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90233,11 +90233,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-79105df2c3e4eb85",
+              "id": "paragraph-23c340feaa42cc08",
               "type": "paragraph",
               "kind": "record",
               "order": 69,
-              "text": "一级模块：安全与隐私保护；二级模块：自动删消息；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：郭文博",
+              "text": "一级模块：AI；二级模块：AI周报；产品经理：可大力；设计师：Crisley；帮助文档负责人：可大力",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90246,11 +90246,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-ca93c86dafe61cd2",
+              "id": "paragraph-f753933b4fa8cbb1",
               "type": "paragraph",
               "kind": "record",
               "order": 70,
-              "text": "一级模块：安全与隐私保护；二级模块：彻底删除会话；产品经理：怡宝；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：郭文博",
+              "text": "一级模块：空间；二级模块：任务空间-提醒；产品经理：Yvonne；设计师：Crisley；帮助文档负责人：严光",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90259,11 +90259,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-8c123764b68b9d3f",
+              "id": "paragraph-ba9da093c6a56930",
               "type": "paragraph",
               "kind": "record",
               "order": 71,
-              "text": "一级模块：安全与隐私保护；二级模块：彻底删除消息；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：郭文博",
+              "text": "一级模块：空间；二级模块：任务空间-动态；产品经理：严光；设计师：Crisley；帮助文档负责人：严光",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90272,11 +90272,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-c23153b2042699c3",
+              "id": "paragraph-e7d8ccddcec0c330",
               "type": "paragraph",
               "kind": "record",
               "order": 72,
-              "text": "一级模块：审批；二级模块：审批；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：郭文博",
+              "text": "一级模块：空间；二级模块：任务空间-Bot；产品经理：严光；设计师：Crisley；帮助文档负责人：严光",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90285,11 +90285,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-5f2aadf24200c433",
+              "id": "paragraph-981f493a28349717",
               "type": "paragraph",
               "kind": "record",
               "order": 73,
-              "text": "一级模块：在线会议；二级模块：在线会议；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：秦汉",
+              "text": "一级模块：空间；二级模块：任务空间-空间；产品经理：严光；设计师：Crisley；帮助文档负责人：严光",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90298,11 +90298,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-df700fe6f244cf81",
+              "id": "paragraph-e28404926fb8a4d0",
               "type": "paragraph",
               "kind": "record",
               "order": 74,
-              "text": "一级模块：招聘；二级模块：招聘；产品经理：严光；父记录：tblinkja1AwTvKno、text；设计师：Crisley；问题负责人：严光",
+              "text": "一级模块：空间；二级模块：任务空间-项目；产品经理：严光；设计师：Crisley；帮助文档负责人：严光",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90311,11 +90311,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-ea1f110bf31d3ee3",
+              "id": "paragraph-1f61fc37d9aad5ed",
               "type": "paragraph",
               "kind": "record",
               "order": 75,
-              "text": "一级模块：绩效；二级模块：绩效；产品经理：Yvonne；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：Yvonne",
+              "text": "一级模块：空间；二级模块：任务空间-任务；产品经理：Yvonne；设计师：Crisley；帮助文档负责人：严光",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90324,11 +90324,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-4ee5632c65c14c9e",
+              "id": "paragraph-59a363cdc9941c4b",
               "type": "paragraph",
               "kind": "record",
               "order": 76,
-              "text": "一级模块：CoreHR；二级模块：CoreHR；产品经理：Yvonne；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：Yvonne",
+              "text": "一级模块：审批；二级模块：审批；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90337,11 +90337,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-d7659dbbe013be03",
+              "id": "paragraph-0109ef3b306288fc",
               "type": "paragraph",
               "kind": "record",
               "order": 77,
-              "text": "一级模块：IM工作台；二级模块：IM工作台；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：秦汉",
+              "text": "一级模块：在线会议；二级模块：在线会议；产品经理：秦汉；设计师：李雨纯；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90350,11 +90350,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-f0a8bca47166248e",
+              "id": "paragraph-22fdea94f181fd13",
               "type": "paragraph",
               "kind": "record",
               "order": 78,
-              "text": "一级模块：OPS后台；二级模块：OPS后台；产品经理：郭文博；父记录：tblinkja1AwTvKno、text；设计师：李雨纯；问题负责人：郭文博",
+              "text": "一级模块：多语言/国际化；二级模块：多语言/国际化；产品经理：爱德；设计师：爱德；帮助文档负责人：爱德",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90363,11 +90363,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-c89cca35f508d242",
+              "id": "paragraph-81209acf780c6bbb",
               "type": "paragraph",
               "kind": "record",
               "order": 79,
-              "text": "一级模块：假勤系统；二级模块：假勤系统；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：李静",
+              "text": "一级模块：IM消息收发和体验；二级模块：在线状态；产品经理：爱德；设计师：爱德；帮助文档负责人：爱德",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90376,11 +90376,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-79f8d2795fa2411f",
+              "id": "paragraph-f61ecb3aada30bba",
               "type": "paragraph",
               "kind": "record",
               "order": 80,
-              "text": "一级模块：IM消息互动与操作；临时字段：iPhone梦成；二级模块：消息回复与引用；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：李静",
+              "text": "一级模块：IM设置；二级模块：聊天背景设置；产品经理：爱德；设计师：爱德；帮助文档负责人：爱德",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90389,11 +90389,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-10af250b748459d6",
+              "id": "paragraph-52938b5b9270bf6c",
               "type": "paragraph",
               "kind": "record",
               "order": 81,
-              "text": "一级模块：IM消息互动与操作；临时字段：iPhone梦成；二级模块：消息转发；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：李静",
+              "text": "一级模块：多语言/国际化；二级模块：消息翻译；产品经理：爱德；设计师：爱德；帮助文档负责人：爱德",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90402,11 +90402,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-226c2e826bb0b6c9",
+              "id": "paragraph-4fe4b2f999669e22",
               "type": "paragraph",
               "kind": "record",
               "order": 82,
-              "text": "一级模块：IM消息互动与操作；临时字段：iPhone梦成；二级模块：聊天中的@功能；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：李静",
+              "text": "一级模块：独立打开窗口；二级模块：独立打开窗口；产品经理：秦汉；设计师：未填写；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90415,11 +90415,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-3029f3d0ef1f3bc9",
+              "id": "paragraph-12725f3e749cb392",
               "type": "paragraph",
               "kind": "record",
               "order": 83,
-              "text": "一级模块：IM消息互动与操作；临时字段：iPhone梦成；二级模块：拍照发图/视频；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：李静",
+              "text": "一级模块：AI；二级模块：AI会议总结与任务转化；产品经理：苏宸；设计师：爱德；帮助文档负责人：苏宸",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90428,11 +90428,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-42bc8f74c62e10fe",
+              "id": "paragraph-0627d5816f5ee607",
               "type": "paragraph",
               "kind": "record",
               "order": 84,
-              "text": "一级模块：IM消息互动与操作；临时字段：iPhone梦成；二级模块：语音消息；产品经理：dengteng；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：李静",
+              "text": "一级模块：招聘；二级模块：招聘；产品经理：严光；设计师：Crisley；帮助文档负责人：严光",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90441,11 +90441,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-3c046ac7f2932fcb",
+              "id": "paragraph-3c9b99c6e1a0e97e",
               "type": "paragraph",
               "kind": "record",
               "order": 85,
-              "text": "一级模块：IM消息互动与操作；临时字段：iPhone梦成；二级模块：Pin消息；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：李静",
+              "text": "一级模块：绩效；二级模块：绩效；产品经理：Yvonne；设计师：爱德；帮助文档负责人：Yvonne",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90454,11 +90454,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-89e55add65abf299",
+              "id": "paragraph-80c31d3eb0ad0844",
               "type": "paragraph",
               "kind": "record",
               "order": 86,
-              "text": "一级模块：IM消息互动与操作；临时字段：iPhone梦成；二级模块：消息删除撤回重新编辑；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：李静",
+              "text": "一级模块：CoreHR；二级模块：CoreHR；产品经理：Yvonne；设计师：李雨纯；帮助文档负责人：Yvonne",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90467,11 +90467,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-46d51c933aca3390",
+              "id": "paragraph-b6df2a53cfc135b6",
               "type": "paragraph",
               "kind": "record",
               "order": 87,
-              "text": "一级模块：IM消息互动与操作；临时字段：iPhone梦成；二级模块：消息收藏；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：张梦成；问题负责人：李静",
+              "text": "一级模块：IM工作台；二级模块：IM工作台；产品经理：Orson；设计师：张梦成；帮助文档负责人：秦汉",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90480,11 +90480,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-49dfdda55293388b",
+              "id": "paragraph-aa8c6db53359502e",
               "type": "paragraph",
               "kind": "record",
               "order": 88,
-              "text": "一级模块：IM表情和富媒体；临时字段：iPhone梦成；二级模块：表情；产品经理：李静；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：雨纯",
+              "text": "一级模块：OPS后台；二级模块：OPS后台；产品经理：郭文博；设计师：李雨纯；帮助文档负责人：郭文博",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90493,11 +90493,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-9507eb533bf6ea35",
+              "id": "paragraph-503c28bb0aef4699",
               "type": "paragraph",
               "kind": "record",
               "order": 89,
-              "text": "一级模块：多语言/国际化；二级模块：多语言/国际化；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：爱德",
+              "text": "一级模块：假勤系统；二级模块：假勤系统；产品经理：李静；设计师：张梦成；帮助文档负责人：李静",
               "images": [],
               "sectionPath": [
                 "模块分工"
@@ -90506,37 +90506,11 @@
               "isMetadata": false
             },
             {
-              "id": "paragraph-9eda5254cab33dc0",
+              "id": "paragraph-6ba4d8cf10483bad",
               "type": "paragraph",
               "kind": "record",
               "order": 90,
-              "text": "一级模块：多语言/国际化；临时字段：iPhone梦成；二级模块：消息翻译；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：爱德",
-              "images": [],
-              "sectionPath": [
-                "模块分工"
-              ],
-              "role": "content",
-              "isMetadata": false
-            },
-            {
-              "id": "paragraph-7fb34ae09b83b637",
-              "type": "paragraph",
-              "kind": "record",
-              "order": 91,
-              "text": "一级模块：独立打开窗口；二级模块：独立打开窗口；产品经理：秦汉；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：秦汉",
-              "images": [],
-              "sectionPath": [
-                "模块分工"
-              ],
-              "role": "content",
-              "isMetadata": false
-            },
-            {
-              "id": "paragraph-1b15d365f5fb8240",
-              "type": "paragraph",
-              "kind": "record",
-              "order": 92,
-              "text": "一级模块：全局UI；二级模块：全局UI；产品经理：爱德；父记录：tblinkja1AwTvKno、text；设计师：爱德；问题负责人：爱德",
+              "text": "一级模块：未填写；二级模块：选人组件；产品经理：秦汉；设计师：Crisley；帮助文档负责人：Crisley",
               "images": [],
               "sectionPath": [
                 "模块分工"

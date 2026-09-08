@@ -14,12 +14,28 @@ function SuggestionGrid({ onSelect, compact = false }: { onSelect: (value: strin
   return <div className={compact ? 'suggestions compact' : 'suggestions'}>{suggestions.map((item) => <button type="button" onClick={() => onSelect(item)} key={item}>{item}</button>)}</div>;
 }
 
+function InlineText({ text }: { text: string }) {
+  const clean = text.replace(/\\([*#_`])/g, '$1');
+  return <>{clean.split(/(\*\*[^*]+\*\*|__[^_]+__|\*[^*]+\*|`[^`]+`)/g).map((part, index) => {
+    if ((part.startsWith('**') && part.endsWith('**')) || (part.startsWith('__') && part.endsWith('__'))) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+    if ((part.startsWith('*') && part.endsWith('*')) || (part.startsWith('`') && part.endsWith('`'))) {
+      return <span key={index}>{part.slice(1, -1)}</span>;
+    }
+    return <span key={index}>{part}</span>;
+  })}</>;
+}
+
 function FormattedText({ text }: { text: string }) {
-  return <>{text.split(/(\*\*[^*]+\*\*)/g).map((part, index) =>
-    part.startsWith('**') && part.endsWith('**')
-      ? <strong key={index}>{part.slice(2, -2)}</strong>
-      : <span key={index}>{part}</span>,
-  )}</>;
+  // Use explicit blocks so source blank lines cannot multiply visual spacing.
+  return <>{text.replace(/\r\n?/g, '\n').split('\n').map((line, index) => {
+    const trimmed = line.trim();
+    if (!trimmed || /^(?:[-*_]\s*){3,}$/.test(trimmed)) return null;
+    const content = trimmed.replace(/^#{1,6}\s+/, '').replace(/^(?:[-+*•]|\\\*)\s+/, '');
+    const heading = /^#{1,6}\s+/.test(trimmed) || /^(?:\*\*[^*]+\*\*|__[^_]+__)$/.test(content);
+    return <p className={heading ? 'answer-heading' : undefined} key={index}><InlineText text={content} /></p>;
+  })}</>;
 }
 
 function Answer({ message }: { message: Message }) {

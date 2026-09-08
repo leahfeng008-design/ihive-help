@@ -10,8 +10,8 @@ const appSecret = process.env.FEISHU_APP_SECRET;
 const helpSpaceId = process.env.FEISHU_SPACE_ID || '7631047892841581526';
 const prdFolderToken = process.env.FEISHU_PRD_FOLDER_TOKEN || 'OdKWffbZXlnIYidQzIIc1jpknEf';
 const assignmentAppToken = process.env.FEISHU_ASSIGNMENT_APP_TOKEN || 'IQTIbgVvIa9thdsuOi0cbUXanRc';
-const assignmentTableId = process.env.FEISHU_ASSIGNMENT_TABLE_ID || 'tblinkja1AwTvKno';
-const assignmentViewId = process.env.FEISHU_ASSIGNMENT_VIEW_ID || 'vewRZe7CUJ';
+const assignmentTableId = process.env.FEISHU_ASSIGNMENT_TABLE_ID || 'tblG1Pi9DMfjY97O';
+const assignmentOnly = process.argv.includes('--assignment-only');
 const openRouterKey = process.env.OPENROUTER_API_KEY;
 const embeddingModel = process.env.OPENROUTER_EMBEDDING_MODEL || 'openai/text-embedding-3-small';
 const embeddingDimensions = Number(process.env.OPENROUTER_EMBEDDING_DIMENSIONS || 256);
@@ -266,23 +266,24 @@ async function loadAssignmentTable() {
   const rows = [];
   let pageToken = '';
   do {
-    const params = new URLSearchParams({ page_size: '500', view_id: assignmentViewId });
+    const params = new URLSearchParams({ page_size: '500' });
     if (pageToken) params.set('page_token', pageToken);
     const json = await requestJson(`${api}/bitable/v1/apps/${assignmentAppToken}/tables/${assignmentTableId}/records?${params}`, token);
     for (const item of json.data?.items || []) {
-      const fields = Object.entries(item.fields || {}).map(([key, value]) => `${key}：${fieldText(value)}`).filter(line => !line.endsWith('：'));
-      if (fields.length) rows.push(fields.join('；'));
+      if (!fieldText(item.fields?.['一级模块']) && !fieldText(item.fields?.['二级模块'])) continue;
+      const fields = ['一级模块', '二级模块', '产品经理', '设计师', '帮助文档负责人'].map(key => `${key}：${fieldText(item.fields?.[key]) || '未填写'}`);
+      rows.push({ id: item.record_id || item.id, text: fields.join('；') });
     }
     pageToken = json.data?.has_more ? json.data?.page_token || '' : '';
   } while (pageToken);
-  if (!rows.length) return null;
-  const paragraphs = annotateParagraphs(rows.map((text, index) => ({
-    id: stableId('paragraph', `assignment:${index}:${text}`), type: 'paragraph', kind: 'record', order: index, text, images: [],
+  if (!rows.length) throw new Error('分工表没有有效模块记录，保留上次完整内容');
+  const paragraphs = annotateParagraphs(rows.map((row, index) => ({
+    id: stableId('paragraph', `assignment:${assignmentAppToken}:${assignmentTableId}:${row.id}`), type: 'paragraph', kind: 'record', order: index, text: row.text, images: [],
   })), '模块分工');
   return {
-    sourceType: 'assignment', category: '模块分工', path: ['分工表', '按照模块分'], title: '按照模块分',
-    url: 'https://pcnpuds47gj5.feishu.cn/share/base/view/shrcnVOvM7mw8YQW2SXrk61pa4f',
-    text: rows.join('\n'), paragraphs,
+    sourceType: 'assignment', category: '模块分工', path: ['分工表', '帮助文档维护分工表'], title: '帮助文档维护分工表',
+    url: `https://pcnpuds47gj5.feishu.cn/base/${assignmentAppToken}?table=${assignmentTableId}`,
+    text: rows.map(row => row.text).join('\n'), paragraphs,
   };
 }
 
@@ -417,11 +418,12 @@ async function embed(texts) {
   return vectors;
 }
 
-const wikiNodes = await listWikiNodes().catch(error => { failedSources.add('help'); console.warn(`帮助知识库同步跳过：${error.message}`); return []; });
-const prdFiles = await listDriveFolder(prdFolderToken).catch(error => { failedSources.add('prd'); console.warn(`PRD 同步跳过：${error.message}`); return []; });
+const wikiNodes = assignmentOnly ? [] : await listWikiNodes().catch(error => { failedSources.add('help'); console.warn(`帮助知识库同步跳过：${error.message}`); return []; });
+const prdFiles = assignmentOnly ? [] : await listDriveFolder(prdFolderToken).catch(error => { failedSources.add('prd'); console.warn(`PRD 同步跳过：${error.message}`); return []; });
 const docMetas = [...wikiNodes, ...prdFiles].filter(item => item.objType === 'docx');
 const loadedDocs = (await mapPool(docMetas, syncConcurrency, loadDocx)).filter(Boolean);
 const assignment = await loadAssignmentTable().catch(error => { failedSources.add('assignment'); console.warn(`分工表同步跳过：${error.message}`); return null; });
+if (assignmentOnly && !assignment) throw new Error('分工表同步失败，未修改知识库');
 const documents = [...loadedDocs, ...(assignment ? [assignment] : [])]
   .filter((doc, index, list) => list.findIndex(other => other.url === doc.url) === index)
   .sort((a, b) => `${a.sourceType}/${a.category}/${a.title}`.localeCompare(`${b.sourceType}/${b.category}/${b.title}`, 'zh-CN'));
@@ -436,6 +438,7 @@ try { oldKnowledge = JSON.parse(await fs.readFile(knowledgeTarget, 'utf8')); } c
 const freshRoots = buildKnowledgeTree(documents);
 const roots = ['help', 'prd', 'assignment'].flatMap(sourceType => {
   const previous = oldKnowledge?.roots?.find(item => item.sourceType === sourceType);
+  if (assignmentOnly && sourceType !== 'assignment') return previous ? [previous] : [];
   if (failedSources.has(sourceType)) {
     console.warn(previous ? `已保留 ${sourceType} 的上次完整内容，本次未覆盖` : `${sourceType} 同步不完整，暂不纳入知识库`);
     return previous ? [previous] : [];

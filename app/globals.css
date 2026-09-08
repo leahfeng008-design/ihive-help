@@ -177,7 +177,14 @@ main {
 .user .bubble { color: #fff; border-color: var(--blue); border-radius: 16px 16px 5px 16px; background: var(--blue); box-shadow: 0 8px 22px rgba(51, 112, 255, .18); }
 .bubble.pending { color: var(--muted); }
 .bubble.pending::after { content: ''; display: inline-block; width: 5px; height: 5px; margin-left: 7px; border-radius: 50%; background: var(--blue); animation: pulse 1s infinite; }
-.answer-copy { white-space: pre-wrap; }
+.answer-copy { white-space: normal; font-size: 1rem; line-height: 1.65; overflow-wrap: anywhere; }
+.answer-copy p { margin: 0; }
+.answer-copy p + p { margin-top: 8px; }
+.answer-copy .answer-heading { font-weight: 650; line-height: 1.5; }
+.answer-copy p + .answer-heading { margin-top: 16px; }
+.answer-copy strong { font-weight: 650; }
+.assistant .bubble { min-width: 0; white-space: normal; }
+.references { white-space: normal; }
 .inline-help-image { margin: 14px 0 16px; white-space: normal; }
 .inline-help-image img { display: block; width: 100%; max-height: 520px; object-fit: contain; border: 1px solid var(--line); border-radius: 12px; background: #f7f8fa; }
 .inline-help-image figcaption { margin-top: 6px; color: var(--muted); font-size: 12px; text-align: center; }
