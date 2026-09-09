@@ -37,7 +37,8 @@ const aliases: Array<[RegExp, string]> = [
   [/视频|开会|会议/g, '视频会议 发起会议'],
   [/拉人|加人|邀请人/g, '添加成员 邀请成员 通讯录'],
   [/机器人|bot/gi, '群机器人 BOT'],
-  [/后台|管理员/g, '企业管理后台 管理员'],
+  [/(?:添加|新增|设置|设为)群管理员|群管理员(?:怎么|如何)?(?:添加|新增|设置)/g, '群设置 添加管理员'],
+  [/后台/g, '企业管理后台'],
   [/找消息|消息在哪/g, '消息定位 搜索'],
   [/改备注|备注名/g, '联系人 备注 通讯录'],
   [/文件|照片|截图/g, '文件 图片 收发'],
@@ -231,6 +232,7 @@ async function retrieve(question: string, signal?: AbortSignal): Promise<Retriev
   const directoryScores = new Map(directories.map(item => [item.node.id, item.score]));
   const queryIntent = intentKey(question);
   const leaveSubmission = /请假/.test(question) && /提交|申请|发起|办理/.test(question);
+  const groupAdminSetup = /群管理员/.test(question) && /添加|新增|设置|设为/.test(question);
   const directFaqQuery = /怎么|怎么办|为什么|是否|能否|可否|会不会|有没有|是不是|收不到|未收到|没收到|无法|不能|不行|没效果|没有变化/.test(question);
   const rankedFaqQuestions = directFaqQuery ? searchNodes
     .filter(node => node.nodeType === 'paragraph' && /常见问题|FAQ|问答/i.test(node.sectionPath?.[0] || '') && /^(问[：:]|Q\d*[：:])/.test(node.text || ''))
@@ -246,6 +248,7 @@ async function retrieve(question: string, signal?: AbortSignal): Promise<Retriev
   const exactArticleIds = new Set(articlePool.filter(node => {
     const articleIntent = intentKey(node.title);
     if (leaveSubmission) return true;
+    if (groupAdminSetup) return node.sourceType === 'help' && /群设置/.test(node.path.join(' ')) && /添加管理员/.test(node.title);
     if (faqArticleIds.has(node.id)) return true;
     if (/忘记密码|忘了密码|密码忘了|找回密码/.test(question) && /修改登录密码|重置密码/.test(node.title)) return true;
     return queryIntent.length >= 2 && articleIntent.length >= 2 && (articleIntent.includes(queryIntent) || queryIntent.includes(articleIntent));
@@ -290,7 +293,7 @@ async function retrieve(question: string, signal?: AbortSignal): Promise<Retriev
       for (const candidate of paragraphPool) {
         if (candidate.articleIds.at(-1) !== articleId || candidate.isMetadata) continue;
         const isNeighbor = Math.abs((candidate.order || 0) - (anchor.node.order || 0)) <= 1 && candidate.sectionPath?.[0] === sectionRoot;
-        const isProcedureStep = proceduralQuery && /使用过程|操作步骤|操作方法|具体步骤|配置步骤/.test(candidate.sectionPath?.[0] || '') && candidate.role !== 'metadata';
+        const isProcedureStep = proceduralQuery && /使用过程|操作流程|操作步骤|操作方法|具体步骤|配置步骤/.test(candidate.sectionPath?.[0] || '') && candidate.role !== 'metadata';
         if (isNeighbor || isProcedureStep) {
           const ranked = rankedById.get(candidate.id);
           if (ranked) selectedById.set(candidate.id, ranked);
@@ -378,8 +381,11 @@ function answerMatches(question: string, retrieval: Awaited<ReturnType<typeof re
     const matchedArticles = new Set(bestArticle ? [bestArticle] : retrieval.paragraphs.slice(0, 1).map(match => match.node.articleIds.at(-1)));
     let procedure = searchNodes.filter(node => node.nodeType === 'paragraph' &&
       matchedArticles.has(node.articleIds.at(-1)) &&
-      /使用过程|操作步骤|操作方法|具体步骤|配置步骤/.test(node.sectionPath?.[0] || ''),
+      /使用过程|操作流程|操作步骤|操作方法|具体步骤|配置步骤/.test(node.sectionPath?.[0] || ''),
     ).map(node => ({ node, lexical: 0, semantic: 0, hierarchy: 1, score: 1 }));
+    if (/群管理员/.test(question) && /添加|新增|设置|设为/.test(question)) {
+      procedure = procedure.filter(match => !/移除群管理员|取消勾选对应的管理员/.test(match.node.text || ''));
+    }
     if (/忘记密码|忘了密码|密码忘了|找回密码/.test(question)) {
       procedure = procedure.filter(match => /忘记密码|重置密码/.test((match.node.sectionPath || []).join(' ')));
     }
@@ -388,17 +394,23 @@ function answerMatches(question: string, retrieval: Awaited<ReturnType<typeof re
     }
     if (procedure.some(match => match.node.role === 'instruction')) {
       const articleIds = new Set(procedure.map(match => match.node.articleIds.at(-1)));
+      const prerequisites = searchNodes.filter(node =>
+        node.nodeType === 'paragraph' &&
+        articleIds.has(node.articleIds.at(-1)) &&
+        /使用场景|前置条件/.test(node.sectionPath?.[0] || '') &&
+        /仅|必须|适用|最多/.test(node.text || ''),
+      ).map(node => ({ node, lexical: 0, semantic: 0, hierarchy: 1, score: 1 }));
       const platformContext = searchNodes.filter(node =>
         node.nodeType === 'paragraph' &&
         articleIds.has(node.articleIds.at(-1)) &&
         /客户端|移动端/.test(node.text || '') &&
         (node.isMetadata || /前置条件|适用端/.test(node.sectionPath?.[0] || '')),
       ).map(node => ({ node, lexical: 0, semantic: 0, hierarchy: 1, score: 1 }));
-      return [...new Map([...platformContext, ...procedure].map(match => [match.node.id, match])).values()]
+      return [...new Map([...platformContext, ...prerequisites, ...procedure].map(match => [match.node.id, match])).values()]
         .sort((a, b) => (a.node.order || 0) - (b.node.order || 0));
     }
   }
-  const yesNoQuery = /是否|能否|可否|会不会|有没有|是不是|需不需要|要不要|吗[？?]?$/.test(question);
+  const yesNoQuery = isYesNoQuestion(question);
   if (yesNoQuery) {
     const faq = retrieval.paragraphs.filter(match => /常见问题|问答|FAQ/i.test(match.node.sectionPath?.[0] || ''));
     if (faq.length) return faq;
@@ -488,7 +500,11 @@ function focusMatches(conversation: Conversation, retrieval: RetrievalResult) {
 }
 
 
-function renderGeneratedAnswer(content: string, matches: RankedNode[], brief: boolean, detailed = false) {
+function isYesNoQuestion(question: string) {
+  return !/如何|怎么|怎样|步骤|操作方法/.test(question) && /是否|能否|可否|会不会|有没有|是不是|需不需要|要不要|吗[？?]?$/.test(question);
+}
+
+function renderGeneratedAnswer(content: string, matches: RankedNode[], brief: boolean, detailed = false, yesNoQuestion = false) {
   try {
     const payload = JSON.parse(content) as { blocks?: Array<{ text?: unknown; paragraphIds?: unknown }> };
     if (!Array.isArray(payload.blocks) || !payload.blocks.length || payload.blocks.length > (detailed ? 40 : 8)) return null;
@@ -511,7 +527,9 @@ function renderGeneratedAnswer(content: string, matches: RankedNode[], brief: bo
     }
     const answer = output.join('\n\n');
     const length = answer.replace(/\[\[IMAGE:[^\]]+\]\]/g, '').length;
-    if (length > (detailed ? 2400 : brief ? 200 : 450) || !hasCompleteImageMarkers(answer, requiredImages(matches))) return null;
+    const leading = answer.trim().replace(/^[\s*_>#-]+/, '').replace(/^答[：:]\s*/, '');
+    if ((!yesNoQuestion && /^[是否][。！!]/.test(leading)) ||
+        length > (detailed ? 2400 : brief ? 200 : 450) || !hasCompleteImageMarkers(answer, requiredImages(matches))) return null;
     return answer;
   } catch { return null; }
 }
@@ -532,7 +550,7 @@ async function generate(question: string, matches: RankedNode[], confidence: Ret
         { role: 'system', content: `你是 iHive 帮助助手。资料已经按“目录 → 文章 → 精确段落”逐级检索。只能依据提供的精确段落作答：帮助文档用于操作步骤，PRD 用于产品规则，分工表用于负责人和归属，禁止补充资料之外的事实。
 
 回答格式：
-1. 是非问题的第一句话必须直接以“是。”或“否。”开头，再补充必要条件。
+1. 只有用户问题本身是明确的是非问法（如“是否”“能否”“可否”“……吗”）时，第一句话才以“是。”或“否。”开头，再补充必要条件。“怎么”“如何”“步骤”等操作问题直接给方法，禁止以“是。”或“否。”开头。
 2. 默认先用一句话概括解决办法，再给3—5个必要步骤，不复述整篇文章，不输出‘使用过程’等文档结构标题。只有用户明确要求详细或全部方法时才展开。操作类问题直接给操作方法，不要使用“直接回答”“简洁步骤”“补充”“原文内容”等套话，不要重复用户问题或文章标题。
 3. 原文包含不同客户端时，严格按客户端分组，格式为“**Mac 客户端**：”“**iPhone 客户端**：”等；各客户端下使用短横线列出步骤和限制。不得把某一客户端的步骤推断给另一客户端，也不得漏掉原文已有的客户端步骤。
 4. 没有客户端分组时，按自然顺序简洁列点。优先保留具体路径、按钮、输入限制、保存/取消行为和展示规则；操作问题不要加入无关的使用场景或常见问题。
@@ -546,7 +564,7 @@ async function generate(question: string, matches: RankedNode[], confidence: Ret
   });
   if (!response.ok) throw new Error('OpenRouter 服务暂时不可用');
   const result = await response.json() as { choices?: Array<{ message?: { content?: string } }> };
-  return renderGeneratedAnswer(result.choices?.[0]?.message?.content || '', matches, brief, detailed);
+  return renderGeneratedAnswer(result.choices?.[0]?.message?.content || '', matches, brief, detailed, isYesNoQuestion(question));
 }
 
 function cleanSourceText(text: string) {
@@ -574,7 +592,7 @@ function fallbackAnswer(retrieval: Awaited<ReturnType<typeof retrieve>>, brief =
     const usefulSteps = steps.filter(match => !/^(请尝试以下方式|你可以尝试以下解决方法)[：:]?$/.test(cleanSourceText(match.node.text || '')));
     if (!usefulSteps.length) continue;
     if (!brief && /^通过/.test(label)) output.push(`可以${label.replace(/[（(].*?[）)]/g, '')}。`);
-    else if (label && (!brief || /Mac|iPhone|Windows|Android/.test(label)) && !/^(使用过程|操作步骤|正文|常见问题|Q\d*[：:])/.test(label)) output.push(`**${label}**`);
+    else if (label && (!brief || /Mac|iPhone|Windows|Android/.test(label)) && !/^(使用场景|使用过程|操作流程|操作步骤|正文|常见问题|Q\d*[：:])/.test(label)) output.push(`**${label}**`);
     const headingImages = group.filter(match => match.node.role === 'heading').flatMap(match => match.node.images);
     if (brief) {
       const text = usefulSteps.filter(match => !/^方法\s*\d+[：:]/.test(match.node.text || '')).map(match =>

@@ -97,6 +97,9 @@ assert.equal(render(JSON.stringify({blocks:[{text:'操作 [[IMAGE:fake]]',paragr
 assert.equal(render(JSON.stringify({blocks:[{text:'操作'.repeat(250),paragraphIds:[mac.node.id]},blocks[1]]}),focused,false),null);
 assert.equal(render(JSON.stringify({blocks:[{text:'客户端操作',paragraphIds:[mac.node.id,phone.node.id]}]}),focused,true),null);
 assert.ok(render(JSON.stringify({blocks:[blocks[0],blocks[0],blocks[1]]}),focused,true));
+const falseNo = JSON.stringify({blocks:[{text:'否。资料中未提供该操作。',paragraphIds:[mac.node.id]},{text:blocks[1].text,paragraphIds:[phone.node.id]}]});
+assert.equal(render(falseNo,focused,true),null);
+assert.ok(render(falseNo,focused,true,false,true));
 console.log('PASS: structured model blocks place images after their steps; malformed, missing, unknown, fabricated, overlong and mixed-client blocks rejected; duplicate citations deduplicated.');
 const post=vm.runInContext('POST',context);
 const request={json:async()=>({messages:[{role:'user',content:'怎么设置消息免打扰？'}]})};
@@ -140,3 +143,17 @@ for (const question of ['怎么提交情节', '怎么提交请假', '如何申�
 }
 assert.equal(resolve([user('怎么分析小说情节')]).question, '怎么分析小说情节');
 console.log('PASS: leave-request typos select only leave submission steps and six associated images; legitimate 情节 is unchanged.');
+
+for (const question of ['怎么添加群管理员？', '群管理员怎么添加？', '如何设置群管理员？']) {
+  context.testQuestion = question;
+  const response = await vm.runInContext(`POST({ json: async () => ({ messages: [{role: 'user', content: testQuestion}] }) })`, context);
+  const payload = await response.json();
+  assert.equal(payload.sources.length, 1, question);
+  assert.equal(payload.sources[0].title, '添加管理员', question);
+  assert.ok(payload.answer.includes('仅群主可进行此操作'), question);
+  assert.ok(payload.answer.includes('添加群管理员'), question);
+  assert.ok(payload.answer.includes('设为群管理员'), question);
+  assert.ok(!payload.answer.includes('移除群管理员'), question);
+  assert.ok(!/^(是|否)[。！!]/.test(payload.answer), question);
+}
+console.log('PASS: group-admin wording selects the group settings article, returns both setup methods, and never starts procedural answers with yes/no.');

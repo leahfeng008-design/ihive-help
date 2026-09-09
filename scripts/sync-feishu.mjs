@@ -207,7 +207,7 @@ function annotateParagraphs(paragraphs, defaultSection = '') {
     const section = sectionPath.join(' / ');
     const isInstruction = !isMetadata && (
       paragraph.images.length > 0 ||
-      /使用过程|操作步骤|操作方法|具体步骤|配置步骤/.test(section) ||
+      /使用过程|操作流程|操作步骤|操作方法|具体步骤|配置步骤/.test(section) ||
       /^(打开|进入|点击|选择|填写|输入|设置|确认|保存|返回|勾选|搜索|长按|滑动)/.test(paragraph.text)
     );
     return { ...paragraph, sectionPath, role: isMetadata ? 'metadata' : isInstruction ? 'instruction' : 'content', isMetadata };
