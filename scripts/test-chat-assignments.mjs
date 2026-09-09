@@ -15,6 +15,7 @@ const allRows = root.articles.flatMap(article => article.paragraphs);
 const rows = allRows.filter(row => row.text.includes('帮助文档负责人：'));
 const ownerRows = allRows.filter(row => row.text.includes('问题负责人：'));
 assert.equal(ownerRows.length, 93);
+const parseFields = row => Object.fromEntries(row.text.split('；').map(part => part.split('：')));
 for (const row of ownerRows) {
   const f = Object.fromEntries(row.text.split('；').map(part => part.split('：')));
   const r = await ask([`${f['二级模块']}谁负责？`]);
@@ -72,3 +73,36 @@ assert.ok(admin.answer.includes('企业管理后台'));
 assert.ok(admin.retrieval.paragraphIds.length > 3);
 assert.ok(!admin.answer.includes('没有匹配'));
 console.log('PASS: reversed login/registration wording and the backend abbreviation resolve to assignment modules.');
+
+const shorthandCases = [
+  ['谁负责假勤', '假勤系统'],
+  ['考勤找谁', '假勤系统'],
+  ['请假的负责人是谁', '假勤系统'],
+  ['SaaS后台谁负责', 'SaaS管理后台'],
+  ['OPS找谁', 'OPS后台'],
+  ['工作台谁维护', 'IM工作台'],
+  ['群聊谁负责', 'IM群组'],
+  ['会议谁负责', '在线会议'],
+  ['国际化谁负责', '多语言/国际化'],
+  ['隐私保护谁负责', '安全与隐私保护'],
+  ['组织架构谁负责', '后台-组织架构'],
+  ['权限谁负责', '后台-权限管理'],
+  ['审计谁负责', '后台-审计日志'],
+  ['快捷键谁负责', '设置-快捷键'],
+  ['版本更新谁负责', '设置-版本更新'],
+];
+for (const [question, expected] of shorthandCases) {
+  const result = await ask([question]);
+  assert.ok(result.answer.includes(expected), `${question} should match ${expected}`);
+  assert.ok(!result.answer.includes('没有匹配'), question);
+  assert.ok(result.sources.length >= 1, `${question} should cite its assignment table`);
+}
+console.log(`PASS: ${shorthandCases.length} representative aliases and removable module prefixes/suffixes resolve correctly.`);
+
+const firstLevelModules = [...new Set(allRows.map(row => parseFields(row)['一级模块']).filter(name => name && name !== '未填写'))];
+for (const module of firstLevelModules) {
+  const result = await ask([`${module}谁负责？`]);
+  const expectedIds = allRows.filter(row => parseFields(row)['一级模块'] === module).map(row => row.id);
+  for (const id of expectedIds) assert.ok(result.retrieval.paragraphIds.includes(id), `${module} should include ${id}`);
+}
+console.log(`PASS: all ${firstLevelModules.length} first-level modules return every matching row from both tables.`);

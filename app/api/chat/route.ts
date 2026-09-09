@@ -596,20 +596,65 @@ function assignmentAnswer(messages: Message[]) {
   if (/怎么|如何|步骤|操作/.test(latest) && !/谁|找哪位|产品经理|设计师|维护人|帮助文档负责人/.test(latest)) return null;
   const compact = (text: string) => text.toLowerCase().normalize('NFKC').replace(/[\p{P}\p{S}\s]/gu, '');
   const expandedCompact = (text: string) => compact(text) + compact(normalize(text));
+  const assignmentAliases: Record<string, string[]> = {
+    '假勤系统': ['假勤', '考勤', '考勤系统', '请假'],
+    '账号注册登录': ['登录注册', '注册登录', '账号登录', '账号注册'],
+    '企业管理后台': ['后台', '企业后台'],
+    'saas管理后台': ['saas后台', 'saas'],
+    'ops后台': ['ops'],
+    '在线会议': ['会议', '视频会议', '开会'],
+    'im群组': ['群聊', '群组'],
+    'im工作台': ['工作台'],
+    'corehr': ['hr'],
+    '多语言国际化': ['多语言', '国际化'],
+    '安全与隐私保护': ['安全隐私', '隐私保护'],
+  };
+  const nameForms = (name: string) => {
+    const canonical = compact(name);
+    const forms = new Set([canonical, ...(assignmentAliases[canonical] || []).map(compact)]);
+    const add = (value: string) => { if (value.length >= 2) forms.add(value); };
+    for (const prefix of ['im', '后台', '设置', '任务空间']) {
+      if (canonical.startsWith(prefix)) add(canonical.slice(prefix.length));
+    }
+    for (const suffix of ['管理后台', '相关逻辑', '管理', '系统', '功能', '页面', '项目', '设置', '状态', '体验', '日志']) {
+      if (canonical.endsWith(suffix)) add(canonical.slice(0, -suffix.length));
+    }
+    for (const value of [...forms]) {
+      for (const suffix of ['管理', '系统', '功能', '页面', '项目', '设置', '状态', '体验', '日志']) {
+        if (value.endsWith(suffix)) add(value.slice(0, -suffix.length));
+      }
+    }
+    return [...forms];
+  };
   const rows = searchNodes.filter(node => node.sourceType === 'assignment' && node.nodeType === 'paragraph').map(node => {
     const fields = Object.fromEntries((node.text || '').split('；').map(part => {
       const at = part.indexOf('：'); return [part.slice(0, at), part.slice(at + 1)];
     }));
     return { node, fields, names: [fields['一级模块'], fields['二级模块']].filter(name => name && name !== '未填写') };
   });
-  let query = expandedCompact(latest);
-  const roleOnly = /^(那|那么|这个|它|的|产品|产品经理|设计|设计师|设计人|维护|维护人|维护者|问题|负责人|谁|是|来|负责|找|呢|人|和|及|与|分别)+$/.test(query);
+  let rawQuery = compact(latest);
+  let expandedQuery = expandedCompact(latest);
+  const roleOnly = /^(那|那么|这个|它|的|产品|产品经理|设计|设计师|设计人|维护|维护人|维护者|问题|负责人|谁|是|来|负责|找|呢|人|和|及|与|分别)+$/.test(rawQuery);
   if (roleOnly || sourceFollowup) {
     const previous = [...messages.slice(0, -1)].reverse().find(message => message.role === 'user' && !/^(那|那么)?(设计师|维护人|产品经理|负责人)/.test(message.content));
-    if (previous) query = expandedCompact(previous.content) + query;
+    if (previous) {
+      rawQuery = compact(previous.content) + rawQuery;
+      expandedQuery = expandedCompact(previous.content) + expandedQuery;
+    }
   }
   const names = [...new Set(rows.flatMap(row => row.names))];
-  const matchedNames = names.filter(name => query.includes(compact(name)));
+  let exactNames = names.filter(name => rawQuery.includes(compact(name)));
+  let aliasCandidates = exactNames.length ? [] : names.flatMap(name =>
+    nameForms(name).slice(1).filter(form => rawQuery.includes(form)).map(form => ({ name, length: form.length })),
+  );
+  if (!exactNames.length && !aliasCandidates.length) exactNames = names.filter(name => expandedQuery.includes(compact(name)));
+  if (!exactNames.length && !aliasCandidates.length) aliasCandidates = names.flatMap(name =>
+    nameForms(name).slice(1).filter(form => expandedQuery.includes(form)).map(form => ({ name, length: form.length })),
+  );
+  const bestAliasLength = Math.max(0, ...aliasCandidates.map(candidate => candidate.length));
+  const matchedNames = exactNames.length ? exactNames : [...new Set(aliasCandidates
+    .filter(candidate => candidate.length === bestAliasLength)
+    .map(candidate => candidate.name))];
   const specificNames = matchedNames.filter(name => !matchedNames.some(other => other !== name && compact(other).includes(compact(name))));
   const candidates = rows.filter(row => row.names.some(name => specificNames.includes(name)));
   const matches = candidates;
