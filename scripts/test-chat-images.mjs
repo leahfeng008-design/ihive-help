@@ -100,6 +100,9 @@ assert.ok(render(JSON.stringify({blocks:[blocks[0],blocks[0],blocks[1]]}),focuse
 const falseNo = JSON.stringify({blocks:[{text:'否。资料中未提供该操作。',paragraphIds:[mac.node.id]},{text:blocks[1].text,paragraphIds:[phone.node.id]}]});
 assert.equal(render(falseNo,focused,true),null);
 assert.ok(render(falseNo,focused,true,false,true));
+const requiredFacts = vm.runInContext('answerIncludesRequiredFacts',context);
+assert.equal(requiredFacts('怎么添加群管理员？','点击群设置添加群管理员。'),false);
+assert.equal(requiredFacts('怎么添加群管理员？','仅群主可添加，最多 20 个；可点击添加群管理员，或右键设为群管理员。'),true);
 console.log('PASS: structured model blocks place images after their steps; malformed, missing, unknown, fabricated, overlong and mixed-client blocks rejected; duplicate citations deduplicated.');
 const post=vm.runInContext('POST',context);
 const request={json:async()=>({messages:[{role:'user',content:'怎么设置消息免打扰？'}]})};
