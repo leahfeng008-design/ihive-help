@@ -59,3 +59,16 @@ const quiet = await ask(['消息免打扰谁负责？']);
 assert.ok(quiet.answer.includes('帮助文档维护人：Yvonne'));
 assert.ok(quiet.answer.includes('问题负责人：爱德'));
 console.log('PASS: file transfer returns all four roles and both sources; different documentation and issue owners stay distinct.');
+
+for (const question of ['谁负责登录注册', '注册登录找谁', '账号注册/登录谁负责']) {
+  const result = await ask([question]);
+  for (const text of ['IM设置 / 账号注册/登录', '产品：秦汉', '设计：爱德', '帮助文档维护人：秦汉', '问题负责人：秦汉']) {
+    assert.ok(result.answer.includes(text), `${question}: ${text}`);
+  }
+  assert.equal(result.retrieval.paragraphIds.length, 2);
+}
+const admin = await ask(['谁负责后台']);
+assert.ok(admin.answer.includes('企业管理后台'));
+assert.ok(admin.retrieval.paragraphIds.length > 3);
+assert.ok(!admin.answer.includes('没有匹配'));
+console.log('PASS: reversed login/registration wording and the backend abbreviation resolve to assignment modules.');

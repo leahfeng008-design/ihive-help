@@ -27,6 +27,7 @@ const storedIndex = vectorIndexJson as VectorIndex;
 const imageContext = imageContextJson as Record<string, { sharedSection?: boolean; alt?: string; platform?: string; afterText?: string; acrossSections?: boolean }>;
 const openRouterEndpoint = 'https://openrouter.ai/api/v1';
 const aliases: Array<[RegExp, string]> = [
+  [/登录注册|注册登录/g, '账号注册/登录'],
   [/忘记密码|忘了密码|密码忘了|找回密码/g, '忘记密码 重置密码 修改登录密码'],
   [/登不上|无法登录|登入|登陆/g, '登录 账号 验证码 密码'],
   [/没声音|不提醒|静音|勿扰/g, '消息 通知 免打扰 声音'],
@@ -594,17 +595,18 @@ function assignmentAnswer(messages: Message[]) {
   if (!ownership.test(latest) && !sourceFollowup) return null;
   if (/怎么|如何|步骤|操作/.test(latest) && !/谁|找哪位|产品经理|设计师|维护人|帮助文档负责人/.test(latest)) return null;
   const compact = (text: string) => text.toLowerCase().normalize('NFKC').replace(/[\p{P}\p{S}\s]/gu, '');
+  const expandedCompact = (text: string) => compact(text) + compact(normalize(text));
   const rows = searchNodes.filter(node => node.sourceType === 'assignment' && node.nodeType === 'paragraph').map(node => {
     const fields = Object.fromEntries((node.text || '').split('；').map(part => {
       const at = part.indexOf('：'); return [part.slice(0, at), part.slice(at + 1)];
     }));
     return { node, fields, names: [fields['一级模块'], fields['二级模块']].filter(name => name && name !== '未填写') };
   });
-  let query = compact(latest);
+  let query = expandedCompact(latest);
   const roleOnly = /^(那|那么|这个|它|的|产品|产品经理|设计|设计师|设计人|维护|维护人|维护者|问题|负责人|谁|是|来|负责|找|呢|人|和|及|与|分别)+$/.test(query);
   if (roleOnly || sourceFollowup) {
     const previous = [...messages.slice(0, -1)].reverse().find(message => message.role === 'user' && !/^(那|那么)?(设计师|维护人|产品经理|负责人)/.test(message.content));
-    if (previous) query = compact(previous.content) + query;
+    if (previous) query = expandedCompact(previous.content) + query;
   }
   const names = [...new Set(rows.flatMap(row => row.names))];
   const matchedNames = names.filter(name => query.includes(compact(name)));
