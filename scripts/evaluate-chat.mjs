@@ -11,6 +11,7 @@ const scenarios = [
   {name:'免打扰-指定方法',title:'如何为单个会话设置消息免打扰',turns:['怎么设置消息免打扰？','第二种呢？','给我对应的图']},
   {name:'密码-简化',title:'如何修改登录密码',turns:['忘记密码怎么办？','一句话说清楚','具体点呢？']},
   {name:'密码-验证码',title:'如何修改登录密码',turns:['忘记密码怎么办？','收不到呢？','还是不行呢？']},
+  {name:'邮箱验证码-收不到',title:'如何修改登录密码',turns:['收不到邮箱验证码怎么办？','邮箱验证码没收到','没收到验证邮件'],mustInclude:[['确认邮箱地址','垃圾邮箱','重新获取验证码'],['确认邮箱地址','垃圾邮箱','重新获取验证码'],['确认邮箱地址','垃圾邮箱','重新获取验证码']]},
   {name:'备注-追问',title:'如何给联系人修改备注',turns:['怎么给联系人修改备注？','在哪里？','能取消吗？']},
   {name:'主题-追问',title:'如何更换主题',turns:['怎么更换主题？','那手机端呢？','简单一点']},
   {name:'收藏-图片',title:'如何收藏消息',turns:['怎么收藏消息？','怎么取消？','有图吗？']},
@@ -46,6 +47,7 @@ for(const scenario of scenarios.filter(s=>!selection||selection.includes(s.name)
     const body=await response.json();
     const resolved=resolve(history);
     const expected=scenario.titles?.[index]||scenario.title;
+    const mustInclude=scenario.mustInclude?.[index]||[];
     const text=(body.answer||'').replace(/\[\[IMAGE:[^\]]+\]\]/g,'');
     const markers=[...(body.answer||'').matchAll(/\[\[IMAGE:([^\]]+)\]\]/g)].map(m=>m[1]);
     const noticeExpected = scenario.clarify ||
@@ -71,6 +73,7 @@ for(const scenario of scenarios.filter(s=>!selection||selection.includes(s.name)
       contextual:!expected || !resolved.needsContext,
       notice:!noticeExpected || !!text && !body.images?.length,
       noDocumentHeadings:!/^\*?\*?使用过程/m.test(text),
+      expectedText:mustInclude.every(value=>text.includes(value)),
     };
     const row={scenario:scenario.name,question,resolved,checks,characters:text.length,ms:Date.now()-start,...body};
     results.push(row);

@@ -27,6 +27,8 @@ const storedIndex = vectorIndexJson as VectorIndex;
 const imageContext = imageContextJson as Record<string, { sharedSection?: boolean; alt?: string; platform?: string; afterText?: string; acrossSections?: boolean }>;
 const openRouterEndpoint = 'https://openrouter.ai/api/v1';
 const aliases: Array<[RegExp, string]> = [
+  [/未收到|没收到|无法收到/g, '收不到'],
+  [/验证邮件|邮件验证码/g, '邮箱验证码'],
   [/登录注册|注册登录/g, '账号注册/登录'],
   [/忘记密码|忘了密码|密码忘了|找回密码/g, '忘记密码 重置密码 修改登录密码'],
   [/登不上|无法登录|登入|登陆/g, '登录 账号 验证码 密码'],
@@ -229,11 +231,22 @@ async function retrieve(question: string, signal?: AbortSignal): Promise<Retriev
   const directoryScores = new Map(directories.map(item => [item.node.id, item.score]));
   const queryIntent = intentKey(question);
   const leaveSubmission = /请假/.test(question) && /提交|申请|发起|办理/.test(question);
+  const directFaqQuery = /怎么|怎么办|为什么|是否|能否|可否|会不会|有没有|是不是|收不到|未收到|没收到|无法|不能|不行|没效果|没有变化/.test(question);
+  const rankedFaqQuestions = directFaqQuery ? searchNodes
+    .filter(node => node.nodeType === 'paragraph' && /常见问题|FAQ|问答/i.test(node.sectionPath?.[0] || '') && /^(问[：:]|Q\d*[：:])/.test(node.text || ''))
+    .map(node => ({ node, score: lexicalScore(question, { ...node, title: '', path: [], sectionPath: [] }) }))
+    .sort((a, b) => b.score - a.score) : [];
+  const bestFaqScore = rankedFaqQuestions[0]?.score || 0;
+  const faqArticleIds = new Set(bestFaqScore >= .55 ? rankedFaqQuestions
+    .filter(item => item.score >= Math.max(.55, bestFaqScore * .82))
+    .map(item => item.node.articleIds.at(-1))
+    .filter(Boolean) as string[] : []);
   const articlePool = searchNodes.filter(node => node.nodeType === 'article' &&
     (!leaveSubmission || (node.sourceType === 'help' && /请假/.test(node.title) && /提交请假/.test(node.summary || ''))));
   const exactArticleIds = new Set(articlePool.filter(node => {
     const articleIntent = intentKey(node.title);
     if (leaveSubmission) return true;
+    if (faqArticleIds.has(node.id)) return true;
     if (/忘记密码|忘了密码|密码忘了|找回密码/.test(question) && /修改登录密码|重置密码/.test(node.title)) return true;
     return queryIntent.length >= 2 && articleIntent.length >= 2 && (articleIntent.includes(queryIntent) || queryIntent.includes(articleIntent));
   }).map(node => node.id));
@@ -398,7 +411,7 @@ function focusMatches(conversation: Conversation, retrieval: RetrievalResult) {
   const articleId = retrieval.articles[0]?.node.id;
   const articleParagraphs = searchNodes.filter(node => node.nodeType === 'paragraph' && node.articleIds.at(-1) === articleId);
   const focus = conversation.followup || conversation.baseQuestion;
-  const faqIntent = /收不到|别人.*看到|对方.*看到|需要保存|没效果|没有变化/.test(focus);
+  const faqIntent = /收不到|未收到|没收到|无法收到|别人.*看到|对方.*看到|需要保存|没效果|没有变化/.test(focus);
   if (faqIntent) {
     const faqs: SearchNode[][] = [];
     for (const node of articleParagraphs.filter(node => /常见问题|FAQ|问答/i.test(node.sectionPath?.[0] || ''))) {
