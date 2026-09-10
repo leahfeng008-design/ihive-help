@@ -5,7 +5,8 @@ import { ExternalLink, LogIn, LogOut, Plus, Square } from 'lucide-react';
 
 type Source = { title: string; url: string };
 type ChatImage = { imageId: string; src: string; alt?: string };
-type Message = { role: 'user' | 'assistant'; content: string; sources?: Source[]; images?: ChatImage[]; pending?: boolean; cancelled?: boolean };
+type ChatVideo = { videoId: string; src: string; name: string; alt?: string };
+type Message = { role: 'user' | 'assistant'; content: string; sources?: Source[]; images?: ChatImage[]; videos?: ChatVideo[]; pending?: boolean; cancelled?: boolean };
 type WebMcpContext = { registerTool: (tool: { name: string; title: string; description: string; inputSchema: object; annotations: { readOnlyHint: boolean; untrustedContentHint: boolean }; execute: (input: unknown) => unknown }, options?: { signal?: AbortSignal }) => void | Promise<void> };
 type AuthState = { status: 'checking' | 'authenticated' | 'required' | 'error'; user?: { name: string; avatarUrl?: string | null }; message?: string };
 const suggestions = ['如何登录账号？','怎么设置消息免打扰？','如何在群里 @ 人？','群机器人怎么添加？','如何发起视频会议？','怎么给联系人修改备注？','如何置顶消息？','如何登录管理后台？'];
@@ -28,20 +29,54 @@ function InlineText({ text }: { text: string }) {
 }
 
 function FormattedText({ text }: { text: string }) {
-  // Use explicit blocks so source blank lines cannot multiply visual spacing.
-  return <>{text.replace(/\r\n?/g, '\n').split('\n').map((line, index) => {
+  const output = [];
+  let codeLanguage = '';
+  let codeLines: string[] | null = null;
+  const lines = text.replace(/\r\n?/g, '\n').split('\n');
+  for (let index = 0; index < lines.length; index++) {
+    const line = lines[index];
     const trimmed = line.trim();
-    if (!trimmed || /^(?:[-*_]\s*){3,}$/.test(trimmed)) return null;
+    const fence = /^```([^`]*)$/.exec(trimmed);
+    if (fence) {
+      if (codeLines) {
+        output.push(<pre className="answer-code" key={`code-${index}`}><code data-language={codeLanguage || undefined}>{codeLines.join('\n')}</code></pre>);
+        codeLines = null;
+        codeLanguage = '';
+      } else {
+        codeLines = [];
+        codeLanguage = fence[1].trim();
+      }
+      continue;
+    }
+    if (codeLines) { codeLines.push(line); continue; }
+    if (!trimmed || /^(?:[-*_]\s*){3,}$/.test(trimmed)) continue;
     const content = trimmed.replace(/^#{1,6}\s+/, '').replace(/^(?:[-+*•]|\\\*)\s+/, '');
     const heading = /^#{1,6}\s+/.test(trimmed) || /^(?:\*\*[^*]+\*\*|__[^_]+__)$/.test(content);
-    return <p className={heading ? 'answer-heading' : undefined} key={index}><InlineText text={content} /></p>;
-  })}</>;
+    output.push(<p className={heading ? 'answer-heading' : undefined} key={`line-${index}`}><InlineText text={content} /></p>);
+  }
+  if (codeLines) output.push(<pre className="answer-code" key="code-final"><code data-language={codeLanguage || undefined}>{codeLines.join('\n')}</code></pre>);
+  return <>{output}</>;
+}
+
+function InlineVideo({ video }: { video: ChatVideo }) {
+  // oxlint-disable-next-line jsx-a11y/media-has-caption -- Feishu source videos do not include a caption track.
+  return <figure className="inline-help-video"><video controls preload="metadata" playsInline aria-label={video.alt || video.name}><source src={video.src} />你的浏览器暂不支持播放该视频，可<a href={video.src}>打开原视频</a>。</video><figcaption>{video.name}</figcaption></figure>;
 }
 
 function Answer({ message }: { message: Message }) {
   const images = new Map((message.images || []).map((image) => [image.imageId, image]));
-  const parts = message.content.split(/\[\[IMAGE:([^\]]+)\]\]/g);
-  return <><div className="answer-copy">{parts.map((part, index) => { if (index % 2 === 0) return <FormattedText text={part} key={index} />; const image = images.get(part); return image ? <figure className="inline-help-image" key={image.imageId}><a href={image.src} target="_blank" rel="noreferrer"><img src={image.src} alt={image.alt || '帮助文档关联图片'} /></a>{image.alt && !/操作截图$/.test(image.alt) && <figcaption>{image.alt}</figcaption>}</figure> : null; })}</div>{!!message.sources?.length && <section className="references" aria-label="参考资料"><h2>为你找到 {message.sources.length} 篇参考资料</h2>{message.sources.map((source, index) => <a href={source.url} target="_blank" rel="noreferrer" key={`${source.url}-${index}`}><span>{index + 1}</span><strong>{source.title}</strong><ExternalLink size={15} /></a>)}</section>}</>;
+  const videos = new Map((message.videos || []).map((video) => [video.videoId, video]));
+  const parts = message.content.split(/(\[\[(?:IMAGE|VIDEO):[^\]]+\]\])/g);
+  return <><div className="answer-copy">{parts.map((part, index) => {
+    const marker = /^\[\[(IMAGE|VIDEO):([^\]]+)\]\]$/.exec(part);
+    if (!marker) return <FormattedText text={part} key={index} />;
+    if (marker[1] === 'IMAGE') {
+      const image = images.get(marker[2]);
+      return image ? <figure className="inline-help-image" key={image.imageId}><a href={image.src} target="_blank" rel="noreferrer"><img src={image.src} alt={image.alt || '帮助文档关联图片'} /></a>{image.alt && !image.alt.endsWith('操作截图') && <figcaption>{image.alt}</figcaption>}</figure> : null;
+    }
+    const video = videos.get(marker[2]);
+    return video ? <InlineVideo video={video} key={video.videoId} /> : null;
+  })}</div>{!!message.sources?.length && <section className="references" aria-label="参考资料"><h2>为你找到 {message.sources.length} 篇参考资料</h2>{message.sources.map((source, index) => <a href={source.url} target="_blank" rel="noreferrer" key={`${source.url}-${index}`}><span>{index + 1}</span><strong>{source.title}</strong><ExternalLink size={15} /></a>)}</section>}</>;
 }
 
 export default function Home() {
@@ -87,11 +122,11 @@ export default function Home() {
     setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: '正在查找官方帮助文档…', pending: true }]);
     try {
       const response = await fetch('/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: [...history, { role: 'user', content: question }] }), signal: controller.signal });
-      const result = await response.json() as { answer?: string; error?: string; sources?: Source[]; images?: ChatImage[] };
+      const result = await response.json() as { answer?: string; error?: string; sources?: Source[]; images?: ChatImage[]; videos?: ChatVideo[] };
       if (controller.signal.aborted || controllerRef.current !== controller) return;
       if (response.status === 401) { window.location.replace('/api/auth/feishu/start'); return; }
       if (!response.ok) throw new Error(result.error || '请求失败');
-      setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: result.answer || '知识库暂时没有返回内容。', sources: result.sources, images: result.images }]);
+      setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: result.answer || '知识库暂时没有返回内容。', sources: result.sources, images: result.images, videos: result.videos }]);
     } catch (error) {
       if (controller.signal.aborted || controllerRef.current !== controller) return;
       setMessages([...history, { role: 'user', content: question }, { role: 'assistant', content: `暂时无法回答：${error instanceof Error ? error.message : '请求失败'}` }]);

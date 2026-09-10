@@ -4,7 +4,7 @@
     "type": "directory",
     "source": "help",
     "title": "帮助知识库",
-    "summary": "135 篇内容，涵盖：全局设置和消息定位 @秦汉 @爱德 @Yv @Webb、下载和登录 @秦汉、企业管理后台 @webb@tangwei、空间 @严光、文件/图片 收发 @李静 @爱德、汇报 @tangwei、消息分组，PIN，收藏 @李静、消息定位 @李静、视频会议 @秦汉、会话列表@李静@秦汉等",
+    "summary": "134 篇内容，涵盖：全局设置和消息定位 @秦汉 @爱德 @Yv @Webb、下载和登录 @秦汉、企业管理后台 @webb@tangwei、空间 @严光、文件/图片 收发 @李静 @爱德、汇报 @tangwei、消息分组，PIN，收藏 @李静、消息定位 @李静、视频会议 @秦汉、会话列表@李静@秦汉等",
     "path": [
       "帮助知识库"
     ],
@@ -933,7 +933,7 @@
     "type": "article",
     "source": "help",
     "title": "如何为项目与任务添加评论",
-    "summary": "你需要跟踪项目和任务进展时，以评论的方式共享你的记录。 ✅ Mac 客户端 用户可见的项目与可见的任务，就可以发表评论 一、对项目评论 a）打开项目详情，在评论框中输入评论 图 b）点击发送按钮，或点击键盘回车，完成评论。 二、对任务评论",
+    "summary": "你需要跟踪项目和任务进展时，以评论的方式共享你的记录。 ✅ Mac 客户端 用户可见的项目与可见的任务，就可以发表评论 一、对项目评论 a）打开项目详情，在评论框中输入评论 b）点击发送按钮，或点击键盘回车，完成评论。 二、对任务评论 a）打开任务详情，在评论框中输入评论",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/X4BZwi3rSijbXWkssLIcNGNknWg",
     "path": [
       "空间 @严光",
@@ -1430,7 +1430,7 @@
     "type": "directory",
     "source": "help",
     "title": "审批 @webb",
-    "summary": "20 篇内容，涵盖：管理员 · 创建审批流与基础设置、管理员 · 系统配置、数据与权限管理、快速入门、管理员 · 表单设计、管理员 · 流程设计、成员 · 提交、处理审批",
+    "summary": "19 篇内容，涵盖：管理员 · 创建审批流与基础设置、管理员 · 数据管理、快速入门、管理员 · 表单设计、管理员 · 流程设计、成员 · 提交、处理审批",
     "path": [
       "帮助知识库",
       "审批 @webb"
@@ -1479,15 +1479,15 @@
     "parentId": "directory-36edcbaee0654c31"
   },
   {
-    "id": "directory-783f6cc1fe87b4d8",
+    "id": "directory-036c6fdb5758e05d",
     "type": "directory",
     "source": "help",
-    "title": "管理员 · 系统配置、数据与权限管理",
-    "summary": "2 篇内容，涵盖：管理员管理审批数据、管理员设置审批管理员",
+    "title": "管理员 · 数据管理",
+    "summary": "1 篇内容，涵盖：管理员管理审批数据",
     "path": [
       "帮助知识库",
       "审批 @webb",
-      "管理员 · 系统配置、数据与权限管理"
+      "管理员 · 数据管理"
     ],
     "parentId": "directory-98fe8186d15880e9"
   },
@@ -1496,28 +1496,14 @@
     "type": "article",
     "source": "help",
     "title": "管理员管理审批数据",
-    "summary": "谁能操作：超级管理员或拥有审批管理权限的管理员 管理员可以在审批管理后台管理企业中的审批，包括查看详情、转交、删除等。 进入 审批管理后台 > 数据管理 > 数据查看 页面，输入筛选条件，点击 查询。 注 ：在输入筛选条件时，提交时间为必填项，其它为选填项，可按需输入。 如需查看审批单据详情，有以下 2 种方式： 方式 1：在查询结果中，点击 详情 ，按需在桌面端或移动端查看。 桌面端：在“前往桌面端”标签下，点击 查看，即可跳转至本平…",
+    "summary": "谁能操作：超级管理员或拥有审批管理权限的管理员 管理员可以在审批管理后台管理企业中的审批，包括查看详情、转交、删除等。 进入 企业管理后台 > 审批工作台 > 数据管理页面，输入筛选条件，点击 查询。 注 ：在输入筛选条件时，提交时间为必填项，其它为选填项，可按需输入。 如需查看审批单据详情，有以下 2 种方式： 方式 1：在查询结果中，左右滑动查看。 方式 2：在查询结果中，点击 导出 ，在弹窗中点击 去下载 ，跳转至 导出记录 中…",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/S0kOwt1L9ih62wkIZiuchj70nPg",
     "path": [
       "审批 @webb",
-      "管理员 · 系统配置、数据与权限管理",
+      "管理员 · 数据管理",
       "管理员管理审批数据"
     ],
-    "parentId": "directory-783f6cc1fe87b4d8"
-  },
-  {
-    "id": "article-2d93d098b2bcf900",
-    "type": "article",
-    "source": "help",
-    "title": "管理员设置审批管理员",
-    "summary": "谁能操作：超级管理员或拥有审批管理权限的管理员 在审批中，审批管理员可以通过审批管理后台对企业中的审批进行管理，包括表单设计、流程设计、数据查看等。 审批管理员分为以下 3 类： 类型 说明 权限范围 操作权限 审批应用管理员 在本平台管理后台中，所设置的以下 2 类管理员： 超级管理员 权限范围包括了“审批”的管理员 全部审批 可以： 创建新的审批 编辑/停用/删除审批（全部） 查看/导出审批数据（全部） 添加/删除流程管理员（全部）…",
-    "url": "https://pcnpuds47gj5.feishu.cn/wiki/IZ7CwLmz0iHYtxkivrecSVlInbb",
-    "path": [
-      "审批 @webb",
-      "管理员 · 系统配置、数据与权限管理",
-      "管理员设置审批管理员"
-    ],
-    "parentId": "directory-783f6cc1fe87b4d8"
+    "parentId": "directory-036c6fdb5758e05d"
   },
   {
     "id": "directory-2126f295613c26af",
@@ -1537,7 +1523,7 @@
     "type": "article",
     "source": "help",
     "title": "管理员快速上手审批管理",
-    "summary": "审批管理员具有审批管理后台的操作权限，可以创建和管理企业中的审批，包括自定义设计表单、流程等规则。 审批管 理员通常是企业中负责业务流程管理的成员，比如行政负责人、HRBP 等。 在审批中，审批管理员有以下 3 类： 类型 说明 权限范围 审批应用管理员 在本平台管理后台中，所设置的以下 2 类管理员均为审批应用管理员： 超级管理员 权限范围包括了“审批”的管理员 审批管理后台的全部权限 审批子管理员 在审批管理后台中，所设置的子管理员…",
+    "summary": "审批管理员具有审批管理后台的操作权限，可以创建和管理企业中的审批，包括自定义设计表单、流程等规则。 审批管 理员通常是企业中负责业务流程管理的成员，比如行政负责人、HRBP 等。 在审批中，审批管理员有以下 2 类： 类型 说明 权限范围 审批应用管理员 在飞书管理后台中，所设置的以下 2 类管理员均为审批应用管理员：",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/Lah9wKejwiPRqAkPaDZcnXPonWa",
     "path": [
       "审批 @webb",
@@ -1565,7 +1551,7 @@
     "type": "article",
     "source": "help",
     "title": "审批成员手册",
-    "summary": "桌面端 移动端 更多 💡 推荐阅读人员： 提交人、审批人、抄送人、办理人等 审批是本平台科技提供的官方应用，帮助企业告别繁琐的线下审批方式，在线上轻松完成各类审批流程，提升企业审批效率。 快速了解审批 审批亮点功能 使用 本平台 桌面端，通过工作台或搜索，进入 审批 应用。",
+    "summary": "使用 本平台 桌面端，通过工作台 > 审批 进入应用。 审批中心： 和自己相关的 所有审批 都会汇总在该页面，包括需要我审批的、抄送给我的、我发起的等，均可以在当前页面查看、处理。 发起申请： 企业配置的 可用申请 都会汇总在该页面，可以选择所需申请进行发起。 在 审批 > 发起申请 页面，点击某个申请，按要求填写表单内容，最后点击 提交 。 提交后，可以在审批中心的“已发起”列表中，查看审批进度。 注： 在填写表单时，当必填信息填写完…",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/HY1Cws5zeib6IikSw2ccIdDrnsd",
     "path": [
       "审批 @webb",
@@ -1579,7 +1565,7 @@
     "type": "article",
     "source": "help",
     "title": "审批管理员手册",
-    "summary": "谁能操作：超级管理员或拥有审批管理权限的管理员 审批是本平台科技提供的官方应用，帮助企业告别繁琐的线下审批方式，在线上轻松完成各类审批流程，提升团队的审批及管理效率。 一个视频看懂审批 快速了解审批 审批亮点功能 一个视频看懂审批（视频） 3 分钟了解审批中心开放能力（视频） 5 分钟掌握审批管理（视频）",
+    "summary": "进入本平台企业管理后台 > 审批工作台（仅拥有审批管理权限的用户才能看到此入口）。 在 审批管理后台 > 审批管理 页面，点击 创建审批 ，可以 选择模板创建 （模板库已提供 10+ 个模板，覆盖考勤、财务、人事等 场景），也可以 创建自定义审批 。 设置审批的名称、说明、分组等基础信息。 设置项 说明 提示 图标 用以示意审批内容",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/NyB5wktBiimG62kTbpHcfKHanYd",
     "path": [
       "审批 @webb",
@@ -1593,7 +1579,7 @@
     "type": "article",
     "source": "help",
     "title": "审批人快速上手审批处理",
-    "summary": "桌面端 移动端 更多 在正式阅读本文前，欢迎你先阅读 快速上手 本平台 审批 。 如果你想了解审批中的其他角色及操作，请按需阅读： 管理员快速上手审批管理 、 提交人快速上手审批操作 。 在审批中，当企业成员提交审批申请后，审批申请会按照企业所设置的规则流转至对应的审批人，审批人可以对审批申请进行处理。 审批人通常是企业中具备一定角色的成员，比如上级、HR 等。 审批人是由企业管理员在后台所设置，如有疑问可联系企业管理员。 你可以通过以…",
+    "summary": "在审批中，当企业成员提交审批申请后，审批申请会按照企业所设置的规则流转至对应的审批人，审批人可以对审批申请进行处理。 审批人通常是企业中具备一定角色的成员，比如上级、HR 等。 审批人是由企业管理员在后台所设置，如有疑问可联系企业管理员。 你可以通过以下 2 个入口进入审批处理： 入口 1 审批机器人：当有审批需要处理时，审批机器人会给你发送消息提醒。你可以通过消息卡片进入处理。 入口 2 审批应用：进入 审批 应用 > 审批中心 页面…",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/MDwow0LWaicvKIk1ryFc1jyLnze",
     "path": [
       "审批 @webb",
@@ -1607,7 +1593,7 @@
     "type": "article",
     "source": "help",
     "title": "提交人快速上手审批操作",
-    "summary": "桌面端 移动端 更多 在正式阅读本文前，欢迎你先阅读 快速上手 本平台 审批 。 如果你想了解审批中的其他角色及操作，请按需阅读： 管理员快速上手审批管理 、 审批人快速上手审批处理 。 在审批中， 对于提交审批申请的成员，我们统一称之为提交人。 提交人可以按照企业所设置的规则，在审批应用中按需提交审批申请（例如请假、出差、报销等），并在审批过程中随时查看和跟进审批进度。 注 ：提交人所看到的审批表单、流程等内容，均是由所在企业的管理员…",
+    "summary": "在审批中， 对于提交审批申请的成员，我们统一称之为提交人。 提交人可以按照企业所设置的规则，在审批应用中按需提交审批申请（例如请假、出差、报销等），并在审批过程中随时查看和跟进审批进度。 注 ：提交人所看到的审批表单、流程等内容，均是由所在企业的管理员所配置，如有疑问可联系企业管理员。 使用 本平台 桌面端，通过工作台或审批菜单，进入 审批 应用。 在审批应用中，你可以进行如下操作： 发起申请 页面：这里会展示企业所设置的所有可用申请…",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/AmrRwCFCQiYcImkCbC4cPDnDnXd",
     "path": [
       "审批 @webb",
@@ -1676,7 +1662,7 @@
     "type": "directory",
     "source": "help",
     "title": "管理员 · 流程设计",
-    "summary": "6 篇内容，涵盖：管理员设计审批流程、管理员设置抄送人、管理员设置角色作为审批人、管理员设置审批人为空等特殊流转方式、管理员设置条件分支、管理员设置转交、加减签、回退审批",
+    "summary": "5 篇内容，涵盖：管理员设计审批流程、管理员设置抄送人、管理员设置角色作为审批人、管理员设置审批人为空等特殊流转方式、管理员设置条件分支",
     "path": [
       "帮助知识库",
       "审批 @webb",
@@ -1689,7 +1675,7 @@
     "type": "article",
     "source": "help",
     "title": "管理员设计审批流程",
-    "summary": "谁能操作：拥有审批管理权限的管理员 审批支持对审批流程的灵活设计。你可以设计各个审批节点的规则，比如该节点的审批人、审批方式、审批权限等。你还可以设计在不同的情况走不同的审批流程，例如：请假时长小于 2 天，直接主管审批即可；请假时长大于等于 2 天，则需要直接主管和部门 HR 共同审批。 进入 审批管理后台 ，点击 创建审批 或已有审批右侧的 编辑 图标，再点击 ③ 流程设计 ，即可开始设计审批流程。在没有设置任何审批流程的审批中，系…",
+    "summary": "谁能操作：拥有审批管理权限的管理员 支持对审批流程的灵活设计。你可以设计各个审批节点的规则，比如该节点的审批人、审批方式等。你还可以设计在不同的情况走不同的审批流程，例如：请假时长小于 2 天，直接主管审批即可；请假时长大于等于 2 天，则需要直接主管和部门 HR 共同审批。 进入 审批管理后台 ，点击 创建审批 或已有审批右侧的 编辑 图标，再点击 ③ 流程设计 ，即可开始设计审批流程。在没有设置任何审批流程的审批中，系统会默认设置一…",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/AmIiwsDsYiBFtWkEjFBcxhTinle",
     "path": [
       "审批 @webb",
@@ -1717,7 +1703,7 @@
     "type": "article",
     "source": "help",
     "title": "管理员设置角色作为审批人",
-    "summary": "谁能操作：超级管理员或拥有审批管理权限的管理员 在审批中，管理员可以设置角色作为审批人。角色指团队成员的专业分工类别，如人事、行政、财务等，每类角色可由一位或多位成员组成。设置角色作为审批人，当某角色中有成员离职变动时，该角色中的其他成员可继续完成审批，从而避免审批流程失效的情况。 进入审批管理后台 > 审批管理 页面，点击 + 创建审批 创建一个新的审批，或者点击已有审批右侧的编辑图标编辑已有审批。 进入 ③流程设计 页面，点击流程中…",
+    "summary": "谁能操作：拥有审批管理权限的管理员 在审批中，管理员可以设置角色作为审批人。角色指团队成员的专业分工类别，如人事、行政、财务等，每类角色可由一位或多位成员组成。设置角色作为审批人，当某角色中有成员离职变动时，该角色中的其他成员可继续完成审批，从而避免审批流程失效的情况。 进入企业管理后台 > 审批工作台 > 配置审批流 页面，点击 + 创建审批 创建一个新的审批，或者点击已有审批右侧的编辑图标编辑已有审批。 进入 ③流程设计 页面，点击…",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/PSkew1LXUilyDdkTbDactaRkneg",
     "path": [
       "审批 @webb",
@@ -1731,7 +1717,7 @@
     "type": "article",
     "source": "help",
     "title": "管理员设置审批人为空等特殊流转方式",
-    "summary": "谁能操作：超级管理员或拥有审批管理权限的管理员 企业审批在实际流转过程中会遇到一些特殊情况， 如审批人为空、审批人与发起人为同一人、同一审批人被重复配置、流程中有人员离职等 ，导致出现审批流程中断等各种问题。 审批 预设了一些默认的流转规则 ，同时还 支持管理员对部分特殊情况进行自定义设置 ，使得审批在遇到特殊情况时，也能高效进行流转。 下文将为你介绍 4 种特殊情况的出现原因及流转方式。 有以下几种： 流程设置了“上级”审批，但发起人…",
+    "summary": "谁能操作：拥有审批管理权限的管理员 企业审批在实际流转过程中会遇到一些特殊情况， 如审批人为空、审批人与发起人为同一人、同一审批人被重复配置、流程中有人员离职等 ，导致出现审批流程中断等各种问题。 审批 预设了一些默认的流转规则 ，同时还 支持管理员对部分特殊情况进行自定义设置 ，使得审批在遇到特殊情况时，也能高效进行流转。 下文将为你介绍 4 种特殊情况的出现原因及流转方式。 有以下几种： 流程设置了“上级”审批，但发起人在本平台管理…",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/McTXwWpEyiJXpTkaYhScDRFOn6d",
     "path": [
       "审批 @webb",
@@ -1755,25 +1741,11 @@
     "parentId": "directory-fbeb4b77a4bcfee2"
   },
   {
-    "id": "article-0a7c0f6a1074e561",
-    "type": "article",
-    "source": "help",
-    "title": "管理员设置转交、加减签、回退审批",
-    "summary": "谁能操作：超级管理员或拥有审批管理权限的管理员 管理员在设计审批人节点时，可以设置审批过程中是否可以进行转交、加签、减签、退回操作，以降低决策风险、提高审批效率。 转交：将当前审批转交给其他人审批，自己无需再审批。例如不方便处理当前审批时，可以转交给其他人。 加签：添加其他审批人来共同审批，自己仍需参与审批。例如不好判断当前审批时，可以添加其他人来共同审批。 减签：当以“并加签”的方式添加了其他审批人时，可以操作减签进行移除，对方无需再…",
-    "url": "https://pcnpuds47gj5.feishu.cn/wiki/Anxiw5TNei1q7Pk7aRvc1RxPnyd",
-    "path": [
-      "审批 @webb",
-      "管理员 · 流程设计",
-      "管理员设置转交、加减签、回退审批"
-    ],
-    "parentId": "directory-fbeb4b77a4bcfee2"
-  },
-  {
     "id": "directory-7692379d072673a9",
     "type": "directory",
     "source": "help",
     "title": "成员 · 提交、处理审批",
-    "summary": "1 篇内容，涵盖：在审批中评论",
+    "summary": "2 篇内容，涵盖：审批人转交审批、在审批中评论",
     "path": [
       "帮助知识库",
       "审批 @webb",
@@ -1782,11 +1754,25 @@
     "parentId": "directory-98fe8186d15880e9"
   },
   {
+    "id": "article-0a7c0f6a1074e561",
+    "type": "article",
+    "source": "help",
+    "title": "审批人转交审批",
+    "summary": "转交，是指审批人在处理审批的过程中，将当前审批转交给其他更合适的人员处理。转交后，该节点由原审批人处理变为由被转交人处理，原审批人无需再审批。 常见的使用场景： 你暂时无法处理（如休假、出差）； 你认为其他同事更了解情况、更适合做这个决策； 当前审批需要 someone 代你跟进。 本期说明：本期仅支持审批人在前台发起转交，不支持在管理后台统一配置转交权限，也不支持加签、减签、退回操作。 在「审批中心」>「待办」找到需要你处理的审批，进…",
+    "url": "https://pcnpuds47gj5.feishu.cn/wiki/Anxiw5TNei1q7Pk7aRvc1RxPnyd",
+    "path": [
+      "审批 @webb",
+      "成员 · 提交、处理审批",
+      "审批人转交审批"
+    ],
+    "parentId": "directory-7692379d072673a9"
+  },
+  {
     "id": "article-922052a943a9ca6a",
     "type": "article",
     "source": "help",
     "title": "在审批中评论",
-    "summary": "谁能操作：成员可评论自己提交的、审批的、被抄送的审批。 审批支持成员对审批单据进行评论。评论内容会展示在审批单据的底部或侧边，该审批相关的成员（例如审批人、抄送人等）可以看到、参与评论。 有 2 种评论方式： 评论方式 说明 图示 全文评论 适用于对整个审批单据进行评论，会平铺展示在审批底部 局部评论 适用于对局部内容进行评论，会折叠展示在侧边栏中 打开本平台，通过工作台或搜索进入审批应用，点击进入某条审批单据。 在底部的 全文评论 一…",
+    "summary": "谁能操作：成员可评论自己提交的、审批的、被抄送的审批。 审批支持成员对审批单据进行评论。评论内容会展示在审批单据的底部或侧边，该审批相关的成员（例如审批人、抄送人等）可以看到、参与评论。 打开本平台，通过工作台或搜索进入审批应用，点击进入某条审批单据。 在底部的 全文评论 一栏，可以查看、发送、回复评论。 发送评论：输入评论内容，点击 发送 即可。你可以 @ 其他成员，也可以上传附件、图片。 bot通知：被评论提及的人，以及该审批发起人…",
     "url": "https://pcnpuds47gj5.feishu.cn/wiki/GwrrwtshpifNG4kGoI7cqlrLnfb",
     "path": [
       "审批 @webb",
@@ -2059,6 +2045,3786 @@
       "SaaS运营后台操作手册-V1.0"
     ],
     "parentId": "directory-b68bbf3f7bf70098"
+  },
+  {
+    "id": "directory-08cb4e77b4a31adc",
+    "type": "directory",
+    "source": "prd",
+    "title": "PRD",
+    "summary": "260 篇内容，涵盖： 1.客户端-Mac（PRD）、 2.客户端-iPhone（PRD）、 4.企业管理后台（PRD）、5.应用管理后台（PRD）-OPS、 3. SaaS 管理平台（PRD）、5.基础功能、故事线、6.流程、、【PRD- Mac/iPhone端】假勤管理独立产品创建流程等",
+    "path": [
+      "PRD"
+    ],
+    "parentId": null
+  },
+  {
+    "id": "directory-1808f1d41f6a08a3",
+    "type": "directory",
+    "source": "prd",
+    "title": " 1.客户端-Mac（PRD）",
+    "summary": "121 篇内容，涵盖：【产品调研】日程管理、【技术调研】Telegram的表情包迁移至蜂巢、【水印功能】竞品调研报告、【需求调研】给标签和分组打颜色、【iPhone/Mac】会话列表排序逻辑、【Mac/iPhone】从不同地方进入消息里定位问题、【Mac/iPhone】会话删除功能（仅物理删除版本）、【Mac/iPhone】已暂停/已离职人员在系统各页面的状态与交互逻辑、【Mac/iPhone端】日历系统MVP版功能List、【PRD - mac 端】置顶与取消置顶会话等",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "article-b5fcfd12e83358f6",
+    "type": "article",
+    "source": "prd",
+    "title": "【产品调研】日程管理",
+    "summary": "背景：独立这个日程管理的东西也需要考虑，类似于Google Calendar，有一个独立的应用，用我们的账户登录，打开就是只看日程管理，能接受和发送提醒 功能 截图示意 功能介绍 日历查看 支持日、周、月、议程4种视图切换，可快速切换查看模式，适配不同查看习惯 日程创建 可新建单个/重复日程（支持按天/周/月/年重复），可添加标题、时间、地点，支持自然语言快速创建",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/JUk1d1u6dovkSQxk9aVcLsSsnYf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【产品调研】日程管理"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-b0a8e1ad2609f113",
+    "type": "article",
+    "source": "prd",
+    "title": "【技术调研】Telegram的表情包迁移至蜂巢",
+    "summary": "调研内容：如何实现用户将 Telegram 个人所有的表情完整迁移至蜂巢并正常使用 名词 名词解释 技术原理（iOS 侧重） Unicode Emoji 通用解释：统一码联盟制定的标准化表情符号，跨平台通用字符 大白话解释：手机、电脑都能通用的基础小表情，不会乱码 iOS 系统内置 Unicode 编码集，直接通过字符编码渲染，无需转码，原生控件（UILabel、UITextView）可直接展示",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Jwhxd7NuNovBsdxqp4ecZOWjnng",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【技术调研】Telegram的表情包迁移至蜂巢"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-780f78a455821ba4",
+    "type": "article",
+    "source": "prd",
+    "title": "【水印功能】竞品调研报告",
+    "summary": "名词术语 说明 截图示意 明水印 明水印是肉眼直接能看到的水印，叠在内容上的半透明文字 / 标识 技术原理：直接在原始图像的背景上，叠加半透明的水印图案 / 文字，不改变图像的核心像素结构，技术简单、直观可见。 透明水印（暗水印） 透明水印（按水印）是肉眼几乎看不见，藏在图片 / 文件里的隐形标识",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/WFpOdijmMomCK3xfOcuclRQ2nHh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【水印功能】竞品调研报告"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-d34e86d01b38a357",
+    "type": "article",
+    "source": "prd",
+    "title": "【需求调研】给标签和分组打颜色",
+    "summary": "当前左侧是消息分组/标签栏（包含「全部/未读/@我/单聊/群聊/Pin」等系统分组，以及「qqq/钱钱钱/sss」等自定义标签），目前只有纯文字+数字角标，没有视觉区分。 这个需求本质是： 视觉分层：用颜色帮用户快速识别不同类型/优先级的分组/标签 效率提升：减少用户阅读文字的时间，一眼定位到重要分组（比如「加急」用红色、「Pin」用黄色） 个性化管理：让用户可以给自定义标签（如「钱钱钱」「sss」）分配专属颜色，方便自己的消息分类管理…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/UD46dyFqJoGUaUx8pUdcsFfenNg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【需求调研】给标签和分组打颜色"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-f668cdec02600736",
+    "type": "article",
+    "source": "prd",
+    "title": "【iPhone/Mac】会话列表排序逻辑",
+    "summary": "企业员工 加急消息被忽略：已读的加急消息会随着时间下沉，用户可能看不到 草稿会话不易查找：正在撰写的消息可能被新消息挤到下方 重要信息不突出：只有时间排序，没有优先级区分 实现草稿会话自动置顶：用户开始输入内容时，该会话自动移至列表顶部 实现加急消息会话自动置顶：收到加急消息时，该会话自动移至列表顶部 建立会话列表预览优先级规则 现有的规则：【PRD-mac /iphone】会话列表的统一规则",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/L0Wtd9kWuoZ3GMxrj6hc4tKCn3f",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【iPhone/Mac】会话列表排序逻辑"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-7a68215b72917457",
+    "type": "article",
+    "source": "prd",
+    "title": "【Mac/iPhone】从不同地方进入消息里定位问题",
+    "summary": "✅ 用户\"没有明确指向消息\"进入会话 没有明确指向的入口：会话列表、置顶列表、共同群、个人名片、搜到某个联系人/群组进入会话、通讯录 没有明确指向消息： 自动跳转到最早未读消息 在第一条消息上方进行标记：最早未读消息 标记消失的逻辑： 10s后消失，但是位置不会向上移动 什么时候可以移动消息位置？",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/E6qBdiKTCoxO2sxBGsBcHpYJnze",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【Mac/iPhone】从不同地方进入消息里定位问题"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-0569972d4bcd47c9",
+    "type": "article",
+    "source": "prd",
+    "title": "【Mac/iPhone】会话删除功能（仅物理删除版本）",
+    "summary": "用户希望安全且彻底的删除一些敏感对话 需增加安全删除模式： “双方/全员删除”（服务端物理删除），覆盖私聊和群聊两种场景 选项根据 会话类型（私聊/群聊） 和 用户在该群聊中的身份 动态显示 作为用户，我希望能够彻底从服务器删除私聊或群聊会话，以便永久清除所有相关数据，且不可恢复 “前端在渲染‘永久删除’入口前，必须调用后端权限校验接口，仅当接口明确返回当前用户拥有对该会话的永久删除权限时，方可展示该入口 私聊：任意一方均可操作 群聊…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/RDi5dT9zvo3B88xZ5Y6cJoaGnLf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【Mac/iPhone】会话删除功能（仅物理删除版本）"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-3bb2faf47f240d90",
+    "type": "article",
+    "source": "prd",
+    "title": "【Mac/iPhone】已暂停/已离职人员在系统各页面的状态与交互逻辑",
+    "summary": "已暂停用户：被管理员手动“暂停”的账号。此状态是可逆的（可恢复为正常） 已离职用户：已从企业组织架构中设置为“离职”的账号。此状态是不可逆的 已暂停 已离职 已暂停 Mac 离职再入职不可以用相同的邮箱📮 如果用相同邮箱，需要提示：",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/DxXldnOv9ovSImxzc2lcxFSengh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【Mac/iPhone】已暂停/已离职人员在系统各页面的状态与交互逻辑"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-d2e90b5eeb0bbe62",
+    "type": "article",
+    "source": "prd",
+    "title": "【Mac/iPhone端】日历系统MVP版功能List",
+    "summary": "Mac端日历故事线、iPhone端日历故事线 【一期】： Mac端：查看、创建、编辑、删除、分享日程+消息通知 iPhone端：查看、创建、编辑、删除、分享日程+消息通知 【二期】： Mac端：订阅日历+邮件通知+非会议人加入审批+面试日程接入 iPhone端：订阅日历+邮件通知+非会议人加入审批+面试日程接入 【三期】：",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EfvFdt5mEozQhjxMiQ5csRdenma",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【Mac/iPhone端】日历系统MVP版功能List"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-e8e89e457a8cfbb4",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - mac 端】置顶与取消置顶会话",
+    "summary": "更新日期 参与人 更新内容 2025.09.18 作者ou_2ac331dd6f01cbc0544ff1abcf8543c9 评审 撰写PRD初稿 2025.11.10",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Q5bid6j3Tonyaxxq1RMcYvaNn7e",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - mac 端】置顶与取消置顶会话"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1b8b7e7f4620b838",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac 空间】当任务空间 Tab 筛选值不为空时，切换到其他 Tab 页后返回保持筛选状态",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026-03-14 创建文档 ou_40af152fb5d91d4b4ddfa39bd0f69172：新增“任务空间 Tab 筛选状态保持”需求 PRD，用于修复当前返回后筛选丢失问题 待确认 待评审",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/XZKPd0KDUoaUuJxZGfHckIiJnwd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac 空间】当任务空间 Tab 筛选值不为空时，切换到其他 Tab 页后返回保持筛选状态"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-45735267cb4adb3e",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac]通讯录功能",
+    "summary": "普通用户 用户可以通过通讯找人员和群，并发起沟通 取 【PRD--企业管理后台】组织架构可见范围文档中设置的组织架构权限范围 查询组织内部联系人 点击后可查看组织下全部人员（详细交互见后文，本章节主要描述权限范围） 若用户不能查看组织下的全部联系人整行热区不可点击 查询所属部门 点击后下钻到部门联系人列表",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/ThhVdEMsGoxzTkxERjtcyNPWn3d",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac]通讯录功能"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-f21730a2d0ab170b",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac]支持 @ 人员发送和回复消息",
+    "summary": "操作日期 操作内容 产品经理 2026.07.20 补充键盘操作交互逻辑：【PRD - Mac]支持 @ 人员发送和回复消息 ou_2ac331dd6f01cbc0544ff1abcf8543c9 普通用户 支持用户在发送和回复消息时 @ 人员",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/VfaqdF493oUUWixAnx4cyomnnJg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac]支持 @ 人员发送和回复消息"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-f997759a083308db",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac]支持解析站点 URL 并生成卡片",
+    "summary": "普通用户 当用户在 iHive 发送网站的 URL 后，系统能解析这个 URL 并生成一个使用体验更好的卡片，当用户（自己或他人）提查看这个信息时获得更多关于这个 URL 的信息 消息卡片竞品分析 原型流程图 设计稿：https://www.figma.com/design/oIyrNVRb0vu2xYtcxiFwFQ/i-Hive-%E7%A7%BB%E5%8A%A8%E7%AB%AF?node-id=795-5322&t=nBvlA…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/IaJedrzGwonGYuxCC6uclKq2nDf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac]支持解析站点 URL 并生成卡片"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-b3331c69caf20ee0",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac]支持用表情回复消息",
+    "summary": "普通用户 用户用表情直接回复消息 设计稿： 表情回复的一般逻辑（不区分单聊和群聊） 打开表情回复： 方式 1：Hover 聊天气泡出现表情回复按钮；继续 hover 在按钮上，出现表情包选择器 方式 2：聊天气泡区域鼠标右键单击，出现工具菜单，选择“表情回复”，出现表情包选择器 出现位置规则：当聊天气泡距离聊天框顶部大于特定值时，窗口向上延展；小于该值时，窗口向下延展",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/RM9GdEyDTo9kCpxRQG2c5EZynke",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac]支持用表情回复消息"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-666d58756bb06479",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】空间添加人员优化方案",
+    "summary": "更新日期 产品经理与更新内容 设计 2026.4.3 创建文档 普通用户 支持选择任务执行人时，优先从项目中选择人员；创建空间和项目的时候自动定位到所选择空间所属部门上并展开部门下的人员 参考流程图",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/IedTdMUv7oTkCbxEvbocRkfsnjd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】空间添加人员优化方案"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-04c5ccff59472dce",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】空间添加人员优化方案(完整版）",
+    "summary": "普通用户 用户在空间下添加人员时，支持其可见的最近选择的人、所在公司、所在空间和所在项目中选择。提高用户的选择效率 参考流程图 人员名称规则要支持备注名和原名都展示，并且支持搜索备注名和原名 创建空间时选人 用户在创建空间时，选人组件定位在公司 tab 下，并默认定位到该空间所属部门的组织架构下，部门名称后面显示：（空间所属部门） 公司 tab 组件可见范围 用户所在租户",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/OXoFdrtJJo06kKx25uOcntj2nEc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】空间添加人员优化方案(完整版）"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-5fb44fffbe90bd1c",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】空间下的项目和任务支持查看更新时间、创建时间、所属公司、所属部门和所属项目",
+    "summary": "普通用户 用户可以便捷的查看和筛选项目和任务的更新时间及筛选时间 用户可以查看项目和任务的所属公司、所属部门，以及可以查看任务的所属项目 项目详情页支持展示： 项目创建时间 项目更新时间 项目所属公司 项目所属部门",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/OnA8dTbRuowwZwx7u9ocwUYAn1b",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】空间下的项目和任务支持查看更新时间、创建时间、所属公司、所属部门和所属项目"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-c4b486211c354d2b",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】空间增加更多分类、任务视角、子任务以及支持对项目和任务评论",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.01.09 创建文档 普通用户、管理员 用户可以通过我创建、我执行的等分类更便捷的查看项目和任务",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/HSPNd0WTMoITyDxGnq5c6b0MnXP",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】空间增加更多分类、任务视角、子任务以及支持对项目和任务评论"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-75fc2f88938b0a7f",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】空间增加排序和分组功能",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 2026.01.12 创建文档 普通用户、管理员 支持用户可以通过排序查看空间下的任务和项目 支持用户对项目和任务分组查看",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/BL4xdAzqEo9ZwHxTd2IcaLAInhd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】空间增加排序和分组功能"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-fa73494c647d329e",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】空间支持看板模式",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 2026.01.14 创建文档 普通用户、管理员 支持用户可以通过看板模式查看项目和任务 蜂巢（空间功能）1月新增功能故事线",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/TzK1d9Zl6o0iiax8XQLckLZln1f",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】空间支持看板模式"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-82031f704111ef8b",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】快速创建任务和项目优化",
+    "summary": "普通用户 1、支持用户可以在聊天框中快速新建任务，提高效率 2、支持用户可以在任务空间任意界面都可以新建任务和项目，提高效率 无 在普通群聊中会话中右键增加「添加普通消息任务」和「添加空间任务」两个按钮 点击「添加任务」唤起新建普通消息任务弹窗 点击「添加空间任务」，跳转到任务空间全部下，并打开弹窗 新建弹窗中的其他字段，同线上不赘述",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/FZI2dxFykoRCPaxyXdqc5iMfnMd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】快速创建任务和项目优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-792b01e114c80236",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】任务空间支持自定义字段",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 2026.02.04 创建文档 空间和项目的管理者 支持对项目和任务进行自定义字段配置 角色",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/RG4TdAA7eocXenxkdy4cm8UTnec",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】任务空间支持自定义字段"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-f35e0c750b61a707",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】隐身查看群消息",
+    "summary": "管理员 1、支持有权限的用户群聊数据，并进入对应群聊 设计稿： 功能权限 权限管理中增加【隐身查看群消息】的功能权限，拥有此权限的用户获得如下权限点（具体方案由ou_3b06df03796b72297e66a2ba89f7520b产出）： 可以查看到 Invisible Cloak 的 tab 在 iPhone和 Mac 客户端可以看到自己权限范围下的群聊 支持设置会话标签",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/MqwNdtpjto2E5sxRnvHc3sAvnzf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】隐身查看群消息"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-5c09a2d938ee03f5",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】周报 AI 支持总结多人、追问和记住用户习惯",
+    "summary": "周报阅读者 阅读周报的用户可以选择多份周报一起总结 支持在阅读总结的过程中，继续基于内容追问 AI 会记住阅读用户的关注点和使用习惯，在下次生成总结时根据用户的特点生成专属该用户的周报总结内容 模块 产品经理 设计师 汇报 AI 增加追问功能",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QzCLdYIkvooNkYxPZ4wciDdXnmd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】周报 AI 支持总结多人、追问和记住用户习惯"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-dc02743ef57bbe11",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac】Mac上的基础截图功能",
+    "summary": "更新日期 参与人 更新内容 2025.09.16 作者 ou_2ac331dd6f01cbc0544ff1abcf8543c9 评审 撰写【截图功能】PRD 普通用户",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EceDdcPnnogk5ZxLAclccvovnfh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac】Mac上的基础截图功能"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-16ee3bf2a434e170",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac/iPhone端】全局搜索+会话内搜索",
+    "summary": "更新日期 参与人 更新内容 2025.09.10 作者 ou_b74bd1a8373bf58fc19abe19d164b474ou_2ac331dd6f01cbc0544ff1abcf8543c9 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写PRD模板初稿",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EPFHd4xtvoifLrxPmZmchoamnUg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac/iPhone端】全局搜索+会话内搜索"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-3abfd8239107e469",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac/iPhone端】群解散(但保留聊天记录)后的相关逻辑",
+    "summary": "更新日期 参与人 更新内容 2026.01.17 作者ou_b74bd1a8373bf58fc19abe19d164b474 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写PRD模板初稿 【PRD-Mac端】群创建与退出、解散(含普通群/部门群/全员群)",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/YLrBdrqIbosiocxBryLc5Zuknlh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac/iPhone端】群解散(但保留聊天记录)后的相关逻辑"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-7b5d2298dcec0137",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac/iPhone端】新设备登录需信任设备同意",
+    "summary": "更新日期 产品经理与 更新内容 2026.03.02 ou_2ac331dd6f01cbc0544ff1abcf8543c9ou_9beb2b073b20c7f01e50917d93464223ou_39ce30d7f274b97f67880cfc2a025b47 撰写初稿 2026.03.05 ou_b74bd1a8373bf58fc19abe19d164b474",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Rpdhd0HVeoR9zexMm49cGMBxnRc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac/iPhone端】新设备登录需信任设备同意"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-c7d16f3d8e96eb5c",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac+iPhone】空间下空间和项目的删除权限扩展",
+    "summary": "更新日期 产品经理与更新内容 设计 2026.3.27 创建文档 空间的管理员（高管、部门负责人）、项目的特殊管理人员（高管和部门负责人） 支持空间的管理人员和项目的管理人员删除项目 支持高管可以删除可见的空间和空间下的项目",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/BVWudOXCcotw5ax0PtXcAkPQnoc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac+iPhone】空间下空间和项目的删除权限扩展"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-bdffc07d800adf20",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac+iPhone】任务空间管理功能 - 第一期",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.11.30 创建文档 普通用户、管理员 用户可以在租户下创建空间和创建项目",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/FP4qdh1W5ot2aQxKUjHcw5rNnmd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac+iPhone】任务空间管理功能 - 第一期"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-e1c6119ad19c118e",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端】版本更新",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.10.08 ou_01fde6ff1e8cb52e0ee56914acb4f8be：撰写PRD模板初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/XS3sdyYmtoMi2sxNOojcqimQnbd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端】版本更新"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-ef25d344a55e3125",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端】版本更新自动启动",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260120 ou_01fde6ff1e8cb52e0ee56914acb4f8be 新建 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/OvrBd0CZZoGyUWxdXdBcWwSHnnd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端】版本更新自动启动"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-472fe57a357faf2c",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端】空间看板展示子任务优化",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.07.27 ou_70bcb8bc22e1ff86ff54d0a684c8c272 看板中增加展示子任务数据的功能 蜂巢用户",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/SQaxdKWTWoAGP2xETn3cjvUWnTg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端】空间看板展示子任务优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-ee0186a9d2077882",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端】水印功能",
+    "summary": "时间 版本号 变更人 主要变更内容 2026.3.10 V1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/AHOQdb54Sozq3Dxf5GMceW5znjd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端】水印功能"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-f48fafc3d54ac42c",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端】文件收发",
+    "summary": "更新日期 参与人 更新内容 2025.09.17 作者ou_b74bd1a8373bf58fc19abe19d164b474 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写PRD模板初稿 2025.10.27",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/FFHudr3lao9FiNxzLtQcEd6vnke",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端】文件收发"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-c3f3a9d93db57dfa",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】保留会话时支持清除全部消息",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260512 ou_01fde6ff1e8cb52e0ee56914acb4f8be 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/UTYsdBWfroVi0txmADvcCW7mn0f",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】保留会话时支持清除全部消息"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-b5b74ffa1798af59",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】单聊群聊设置页",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.10.10 ou_01fde6ff1e8cb52e0ee56914acb4f8be初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/BPN2dpFmjomiDlxEspkcRTDBnib",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】单聊群聊设置页"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-cadf4008a12590dc",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】后台改名字后群内历史消息中包含的人名及时更新",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260401 ou_01fde6ff1e8cb52e0ee56914acb4f8be 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/UNljdKINeo5twUxYIpJcHAftnLc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】后台改名字后群内历史消息中包含的人名及时更新"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-5e43be238c4ef169",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】清空聊天记录",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.10.08 ou_01fde6ff1e8cb52e0ee56914acb4f8be：撰写PRD模板初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/K3LUdFCzGowgI4xqINbc2dPxnUf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】清空聊天记录"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-54d6cf0d4fcf6e06",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】群成员权限：谁可以群内发言",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.10.08 ou_01fde6ff1e8cb52e0ee56914acb4f8be：撰写PRD模板初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/YUhKdRc1ToFlk0xRNnJcLFGcnah",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】群成员权限：谁可以群内发言"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1139f6f69adb9f12",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】群管理：查看成员进退群记录",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.10.08 ou_01fde6ff1e8cb52e0ee56914acb4f8be：撰写PRD模板初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/PgOIdsTT9oc8Sexgswnc18Fpnbg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】群管理：查看成员进退群记录"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-f2ba08d2de767ee1",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】群管理：添加、删除群管理员",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.10.08 ou_01fde6ff1e8cb52e0ee56914acb4f8be：撰写PRD模板初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Juoad3ttrol0FkxMLbBc8q7nnkf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】群管理：添加、删除群管理员"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-a21c5f4524574025",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】群里支持添加机器人（已上线）",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260706 ou_01fde6ff1e8cb52e0ee56914acb4f8be 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EzB7dZoeroZp22xrUnhcWq6Tndf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】群里支持添加机器人（已上线）"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-b8107cf80744c8ba",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】消息bot 简化版",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.10.08 ou_01fde6ff1e8cb52e0ee56914acb4f8be：撰写PRD模板初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Nn4zd5OcYotjHjxxNpUcv57enoh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】消息bot 简化版"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-ff701d9ad37444b5",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】增加个性签名",
+    "summary": "更新日期 产品经理 更新内容 评审 2026年7月3日 ou_30148a562250459965c50b5ada11602d 名片和个人面板上增加个性签名 ou_d2d400b1ec799462ef05d6e80e4d6f28",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Y5phdmOlPoP7m4xJ9oocay6DnuS",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】增加个性签名"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-514dd33f940af6b8",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】置顶可以看到更多内容",
+    "summary": "背景： 当前置顶只能单条，尤其有艾特的时候看不到重要信息，优化成可以下拉展示各种信息 方案调整： 1，默认展示两行信息 2，点击热区调整交互为下拉（原先是点击定位消息） 3，点击icon定位消息 权限控制：保持不变，参见【PRD - Mac端/iPhone端】置顶消息 设计稿：https://www.figma.com/design/aZJBYDlF6vqOqMZGrq9IB9/%E7%88%B1%E5%BE%B7%E7%9A%84%E…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/WGWQdawL6ouIjlxKtUicgpYmnHe",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】置顶可以看到更多内容"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-ff8e7c858d6bbd1b",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端/iPhone端】置顶消息",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.10.08 ou_01fde6ff1e8cb52e0ee56914acb4f8be：撰写PRD模板初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/AWgqdarYQokGcXxKphrcSP7ynsb",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD - Mac端/iPhone端】置顶消息"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-61e30f8ce5febde6",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- iPhone端】支持主管查看部门下属的考勤明细",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-08-19 艾禹 创建文档 ou_d2d400b1ec799462ef05d6e80e4d6f28",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/DxPldu67nodmD0xrnZ7cG7RPnje",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD- iPhone端】支持主管查看部门下属的考勤明细"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-87fe08537bb43712",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac】快捷密码登录",
+    "summary": "适配多人共用同一台电脑的办公场景，支持用户快速退出个人账户、切换登录，简化本机二次登录校验流程，兼顾安全与切换效率。 所有登录用户均可使用该功能，如用户开启双重验证，三维校验通过即可可快捷密码登录，如三重校验不通过则进入双重验证流程 登录密码设置：用户如需设置、修改登录密码，需进入登录密码页面完成配置 用户登录成功后，系统自动缓存可信登录信息，缓存维度包含：设备信息、IP地址、登录时间，固定缓存有效期为7天（一周）。 免二次验证规则（全…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/GjQzdt7f3oEZr9x4JAYcxEO6nmf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD- Mac】快捷密码登录"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-302748ab793c783a",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac/iPhone】下载的图片需打上水印",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.07.15 李静 完整迁移 Mac、iPhone 旧 PRD 内容与原型；各端旧逻辑和本期调整合并在同一 Story 中呈现 -",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QUwsdR7Gdosgm2x7yyZcNjpinlf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD- Mac/iPhone】下载的图片需打上水印"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-6ff3b38b31317319",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac/iPhone端】会话单独设置提醒",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-09-03 ou_50d7eb7b7f8ca4a9bf73577772060604 创建文档 待评审",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Vui4dzNXaoWyzfx6gmlcjHVPnVd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD- Mac/iPhone端】会话单独设置提醒"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-aabbfc7badc9b9cd",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac/iPhone端】日历功能",
+    "summary": "时间 版本号 变更人 主要变更内容 2026-05-18 V1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/OPyid8id9ojAVFx98mNcPNalnPf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD- Mac/iPhone端】日历功能"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1b097d142cbfbf5d",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac端】上下班打卡和请假功能",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-07-08 ou_50d7eb7b7f8ca4a9bf73577772060604 创建文档 ou_fc537e7ed5df7c7f9d41668fcadd96d9ou_d2d400b1ec799462ef05d6e80e4d6f28",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QLyQd70tKobhwNxHFQqcREi9ngg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD- Mac端】上下班打卡和请假功能"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-206b7844f7c63de1",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- PC&App】登录流程必须包含验证码方案 ",
+    "summary": "所有使用蜂巢的用户。 登录流程必须包含验证码验证 如果用户开启了两步验证，必须是验证码+密码或验证码+TOTP，不能密码+TOTP 如果用户没有开启两步验证，必须使用验证码登录 1 pc端登录流程 2 移动端登录流程",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/UKV8d2fgto0TMBxCAxCcE9m8nsh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD- PC&App】登录流程必须包含验证码方案 "
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-64157bfe3de06be0",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- PC&App】选人组件优化",
+    "summary": "所有使用蜂巢的用户。 用户在建群、群内加人时，选人弹窗里最近联系人列表总有一些群排序很靠前，影响用户选人的效率 用户在建群、群内加人、转发消息、转发名片等操作时，我所在的群的排序杂乱，对用户快速选择没有帮助 帮助用户更高效完成选人 1 调整建群、群内加人场景的选人组件最近联系人列表数据范围 2 调整所有场景选人组件的我所在的群的排序规则",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/MdaXdJoKtoyYwrxiwgbc2AWBnXc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD- PC&App】选人组件优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-4f4c8511986f9d8c",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac】标签双击两下就会触发修改的功能调整",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.6.9 创建文档 所有蜂巢用户。 去除当前双击自定义标签，触发的标签名称编辑功能。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QBFad5cRvoOBTyx2kvhcvO7Snpg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac】标签双击两下就会触发修改的功能调整"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-8722e0a58a0e908e",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac】空间查看人员组件优化",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.06.23 创建文档 所有蜂巢用户。 用户在使用空间时，可以方便地查看项目成员、项目执行人、任务执行人。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Xi64dis7Qox8MwxDo4McUviuncb",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac】空间查看人员组件优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-bf1490c587ed800f",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac】空间选人组件从项目切换到组织架构时，自动定位到我所在的部门",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.05.26 创建文档 所有蜂巢用户。 空间里，编辑项目、任务的执行人时，如果切换成组织架构选人的模式，会自动定位到我所在的部门。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EWGOdLf66oH7vUxbCsecPHfGnch",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac】空间选人组件从项目切换到组织架构时，自动定位到我所在的部门"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-dac8ad4fa07aa2b4",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac】视频会议主页",
+    "summary": "所有使用蜂巢的用户。 蜂巢内，在线会议缺乏一级入口，会议功能不易被发现；缺少历史会议记录功能，无法查看自己的历史会议记录；缺少预约会议功能，无法预订会议。 增加在线会议一级入口，便于用户使用；增加历史会议记录功能，便于用户查阅历史记录；增加预订会议功能，便于用户预约会议。 对用户的好处： 蜂巢的会议数据可在zoom账户内查看：在zoom账户里可以看到通过蜂巢参与的会议（在蜂巢不会看到在zoom里发起的会议的信息） 对用户的坏处： 增加了…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QoxNdBgOeo6qoBxn6PQcC1Fgnie",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac】视频会议主页"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-a9efdcf73cab47b2",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac】用户下载文件时支持选择下载目录",
+    "summary": "时间 版本号 变更人 主要变更内容 2026-03-24 v1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QmfDd94oKoxV28x8OeQcrlFvnqd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac】用户下载文件时支持选择下载目录"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1c2a0df8eced616d",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac】在线会议8月初对客前优化",
+    "summary": "蜂巢用户 在线会议内测中发现一些体验问题 对客前完成体验优化 无 设计稿：https://www.figma.com/design/4sO3Ue2xGeWGANReBCJyQA/%E9%9B%A8%E7%BA%AF%E7%9A%84%E8%8D%89%E7%A8%BF?node-id=8455-11594&p=f&t=ORy9eX169hi54v43-0 1 加人入会按钮优化 2",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/GiTPdFs06opVRfxMVq4cbYe2nCc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac】在线会议8月初对客前优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-b7109c8d5ad9cfc1",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-mac】在线会议支持绑定个人账号",
+    "summary": "使用蜂巢的所有用户 无法在蜂巢内开展在线会议 在蜂巢内发起在线会议，参与在线会议，同时支持通过zoom客户端、网页加入会议 设计稿：https://www.figma.com/design/XLABQA7r9kBNb3xS00jiiH/iHive-PC%E7%AB%AF?node-id=28442-109451&p=f&t=2A8KYGj5jttuKesq-0 主持人工具 设置 左上角会议名称及弹窗 右上角安全",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/TY5gduVQeoenLfxhz1hcggV5nKg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-mac】在线会议支持绑定个人账号"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-8e7a8159d308be03",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-mac】IM会话/任务空间会话独立窗口打开",
+    "summary": "所有使用蜂巢的用户。 用户需要反复在空间内群聊和IM会话列表切换，使用不便 通过独立窗口打开会话，让用户可以同时在IM会话和任务空间群开展沟通，而不用频繁切页面 无 设计稿：https://www.figma.com/design/XLABQA7r9kBNb3xS00jiiH/iHive-PC%E7%AB%AF?node-id=29899-12773 1 IM会话列表支持鼠标右键在独立窗口打开 2",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/UPgUdCesLoE2KXxXso1cduUUnyh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-mac】IM会话/任务空间会话独立窗口打开"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-043c729cf51c4b4d",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac】Pin支持分类、权限控制及降序排列",
+    "summary": "时间 版本号 变更人 主要变更内容 2026.3.17 V1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/C7QhdGAxFoYG56xmjEMcle47n0b",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac】Pin支持分类、权限控制及降序排列"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-5d3319a4860e063d",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone】分标签支持会话Pin功能和置顶功能迭代",
+    "summary": "若置顶会话我过多，第一屏会全被置顶内容占据，下方正常会话无法被看到，影响使用体验。 为了解决「会话很多时，重要会话易被新消息淹没、高频会话难找」的问题，通过标签分类 + 内部优先级置顶，实现 “快速定位、不丢失、不打扰” 的高效会话管理。 常见方案：Telegram是pin会话，与微信是会话置顶有类似， 时间 版本号 变更人 主要变更内容 2026-04-14",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/NdsldAg98o4vbrx04DFcJAC3nff",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone】分标签支持会话Pin功能和置顶功能迭代"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-42b573509c0f726f",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone】聊天窗口增加文件管理标签页",
+    "summary": "时间 版本号 变更人 主要变更内容 2026-08-31 v1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Yo6RdQyBRoC6PXxWU3ZcQpRonGf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone】聊天窗口增加文件管理标签页"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-c1ba9312f5d89f7e",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone】聊天窗口支持语音转文字",
+    "summary": "时间 版本号 变更人 主要变更内容 2026-03-22 v1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/HtFOd9zPdomEOHx1LuQcKYjEn4d",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone】聊天窗口支持语音转文字"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1f8e5317144ac0e2",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone】群里的图片支持编辑后直接转发",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-08-31 ou_50d7eb7b7f8ca4a9bf73577772060604 创建文档 待评审",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QtJ2d439Lo9cFLxPLhccgYQUnZc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone】群里的图片支持编辑后直接转发"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-651012141eeceb98",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone】收藏和添加表情包",
+    "summary": "时间 版本号 变更人 主要变更内容 2026-03-31 v1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/T36Xd0CdtopQ1PxZFIAcNzY2nnb",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone】收藏和添加表情包"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-b272d137a83cdbb7",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone】消息回复详情页——线程对话",
+    "summary": "更新时间 更新内容 产品 设计 2025.09.11 引用消息回复详情页——对话线程 ou_13121b563cd27b29fcfa45e364b4b9b9 ou_effcc0a1f1a0af9610b61880491e73aa",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/AemkdkV8loSPJOxJNDncBXk0n7d",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone】消息回复详情页——线程对话"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-5f6ffd1bff386172",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone】再次编辑聊天窗口已发出的消息",
+    "summary": "时间 版本号 变更人 主要变更内容 2026-03-24 V1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/JlpAdDpeeoB2lUxCWi7cuJW4nwh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone】再次编辑聊天窗口已发出的消息"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-7a7739bb957a5892",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone端】分组标签未读数字逻辑切换",
+    "summary": "时间 版本号 变更人 主要变更内容 2026.5.22 V1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/VAh0drLx5ogMeqxc6bXcJy35nob",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone端】分组标签未读数字逻辑切换"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-d5097189ca96a07d",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone端】个人统计页过往日期隐藏与异常补卡",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-08-24 艾禹 新增个人统计页过往日期展示规则，以及异常考勤补卡入口、工单跳转和状态收口逻辑。 ou_d2d400b1ec799462ef05d6e80e4d6f28",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/WghYd67NMojRNnxxLGJc22xNnhe",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone端】个人统计页过往日期隐藏与异常补卡"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-c53b1fd5242467e1",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone端】消息收藏功能",
+    "summary": "时间 版本号 变更人 主要变更内容 2026-05-18 v1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QSoGddvyloSEWExJO2RcdVdTnoP",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone端】消息收藏功能"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-fc64ce5f043fb941",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac/iPhone端】选人组件优化",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-07-06 艾禹 优化 Mac 与 iPhone 端选人组件的“按群选人”交互。 ou_d2d400b1ec799462ef05d6e80e4d6f28",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/CXrXdhChqoAUbZxGSTfcdOJDnAf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac/iPhone端】选人组件优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-88256c0399dff80c",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac+iPhone】空间下项目与任务列表的排序逻辑优化",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.07.06 创建文档 所有蜂巢用户。 优化空间下项目、任务列表的排序逻辑，让用户优先看到最想看到的项目和任务",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/CsgQdAuSHo8zkfx0J7CcAIpMnoe",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac+iPhone】空间下项目与任务列表的排序逻辑优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-e12253fb00147d48",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac+iPhone】筛选器人员组件显示优化",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.05.20 创建文档 所有蜂巢用户。 项目群的任务列表中的筛选条件，可以根据任务列表中包含的内容，反推可筛选的数据",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/CtIgdPrpjo8CZaxgAGPcTD5TnHH",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac+iPhone】筛选器人员组件显示优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-fd1dc005dded8daf",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac+iPhone】项目/任务详情中显示ID",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.05.20 创建文档 所有蜂巢用户。 用户在与后端沟通使用问题时，无法精准描述自己在操作哪一个项目/任务时出现的问题。系统需要提供一个功能，让用户能够在自己页面上看到项目/任务的ID编号，用户告知后端这个ID编号，那么双方在讨论同一个ID的情况下沟通的信息就对齐了。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Yd56deHMAoPNPoxIvsBcLHAznVf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac+iPhone】项目/任务详情中显示ID"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-5b00d7fa0069bce8",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac+iPhone】选择执行人时优先展示项目群的成员",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.05.20 创建文档 所有蜂巢用户。 用户在空间中查看项目执行人字段时，优先展示项目成员、其次展示空间成员、再展示其他用户。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/E61ZdD8AAogfKTx3wl5clL9LnRc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac+iPhone】选择执行人时优先展示项目群的成员"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-86413bf305115da3",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac+iPhone】在群里面说的东西，能添加到对应任务的评论中",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.06.02 创建文档 所有蜂巢用户。 用户可以在聊天中，选择聊天内容加入任务的评论。提升用户使用评论跟踪任务进展的使用体验。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/G0GGdJxqboOp4UxAk3xcIEKonqg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac+iPhone】在群里面说的东西，能添加到对应任务的评论中"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-baea133b0778ca57",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac+iPhone】转移任务空间也要支持单个转移（支持到空间/项目/任务颗粒度）",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.05.26 创建文档 所有蜂巢用户。 用户可以将自己的空间、项目、任务的创建人身份，转移给其他用户。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/WoPHdCZhUoSwkgxzutrcTH7znEf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac+iPhone】转移任务空间也要支持单个转移（支持到空间/项目/任务颗粒度）"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1b08996e2ee5b920",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】24-12小时切换、对话展示我的头像",
+    "summary": "用户：企业员工 体验偏好不一：不同用户习惯不同，导致信息读取效率降低 存储空间与性能担忧： App在使用过程中会产生缓存数据（如临时图片、视频、历史记录等）。用户无法便捷地清理这些数据，可能导致App占用存储空间过大、卡顿..问题 提升个性化体验： 让用户能根据自己的偏好选择时间显示格式、对话头像 赋予用户控制权：让用户可以自主清理应用缓存，有效释放设备存储空间 点用户头像 -> 设置 -> 点时间与时区 -> 在对话框展示我的头像 步…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/ZenNdqnilo3jsFx4DIVcvXvCnic",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】24-12小时切换、对话展示我的头像"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1116ef93f541a794",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】标签、分组支持拖拽",
+    "summary": "用户（尤其是老板、财务等多公司角色）可能同时管理大量自定义标签，需要对标签进行分类整理，以快速定位目标会话 当前分组逻辑的核心问题： 1）Mac固定位置，无法移动分组 2）标签移动很麻烦 3）无法多端同步 支持拖拽排序与跨组移动 1）标签支持拖拽移动 2）分组支持拖拽移动（自定义、固定）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/S5WadOnMSoJhjbxPaYUcGY3jnhh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】标签、分组支持拖拽"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-0ada0e07ea43ade6",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-mac端】从蜂巢拖拽图片/视频/文件到目标落点",
+    "summary": "所有使用蜂巢IM的用户。 办公 IM 用户无法从会话消息、搜索结果（图片 / 视频 / 文件 tab）、pin 列表、合并转发消息盒子中，直接将文件 / 图片 / 视频拖拽至本地文件夹，对于习惯使用拖拽操作文件的用户，目前的保存 / 拷贝资源操作不方便。 实现上述场景下的文件 / 图片 / 视频拖拽至本地文件夹功能，满足用户习惯使用拖拽完成文件操作的需求。 一类 拖拽触发源位置 拖拽目标落点 文件类型 不同状态是否可拖拽",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Z7mgdC2sMonOeKxFdh3cTTjYnMc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-mac端】从蜂巢拖拽图片/视频/文件到目标落点"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-50d5fbcd004c88e4",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-mac端】会话和消息分组",
+    "summary": "更新时间 参与人 更新内容 2025.10.11 作者ou_2ac331dd6f01cbc0544ff1abcf8543c9 新建文档 2025.10.13 作者ou_2ac331dd6f01cbc0544ff1abcf8543c9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/UKDBdu6Qfoi9IIxWujMcsvOAnhe",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-mac端】会话和消息分组"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-0a6203381ba2bd7a",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】记录登录记录",
+    "summary": "企业员工 账号安全的考虑，希望能够查看自己账号的登录情况，以确认是否存在被盗用的风险 系统自动记录： 用户每一次登录成功/失败时，系统自动记录关键的登录信息。 用户端查询： 普通用户可以在客户端查看自己的登录记录 管理端在管理后台查询与导出： ou_3b06df03796b72297e66a2ba89f7520b 调研对象 飞书 钉钉",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/L5nXdsfCeoPAPmxPJAyciCo8nph",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】记录登录记录"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-c421fed6dcd3a27f",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】进群验证",
+    "summary": "主要内容：进群验证、新成员查看群历史消息、群聊可搜索性 版本号：1.0 创建日期：20250904 审核人 时间 版本号 变更人 主要变更内容",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/XylLd3Q8EoMPJtx3XHpc2oSDnpe",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】进群验证"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1e83852948e029c8",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】群成员管理（搜索/查看成员，添加/移除成员，分享群）",
+    "summary": "版本号 产品 设计 主要变更内容 2025.09.03 dengteng 郑顺展 初稿撰写",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/FvtUdzaxfoe4qQxgdxZcc4stnzI",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】群成员管理（搜索/查看成员，添加/移除成员，分享群）"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-7c4223df0107f639",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】群成员权限管理（本期不做群公告）",
+    "summary": "更新日期 参与人 更新内容 2025.09.15 作者ou_01fde6ff1e8cb52e0ee56914acb4f8be 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写PRD模板初稿 2025.09.17",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/NO8kd9aYooP002xeaNgcXsRvnux",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】群成员权限管理（本期不做群公告）"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-34b45f1f8f930239",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】群创建与退出、解散(含普通群/部门群/全员群)",
+    "summary": "版本号 产品 设计 主要变更内容 2025.08.18 邓腾 郑顺展 群创建与解散功能初稿",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/PyULdvm1QoYfaGxXPgRc7kRKnmf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】群创建与退出、解散(含普通群/部门群/全员群)"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-909da03dd4f3d1ca",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】任务空间-筛选器可以影响看板数据/空间列表支持拖拽",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.04.17 1、筛选器筛选后可以影响看板数据的方案 2、空间列表支持拖拽的方案 所有蜂巢用户。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EFU9dX39Woh5ftx6zzectztLnLe",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】任务空间-筛选器可以影响看板数据/空间列表支持拖拽"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1cb946af35918b42",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】日历4期迭代优化",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-08-17 艾禹 新增Mac端日历四期的功能和体验验优化。 在 Mac 端创建、编辑、分享和参与日程的用户，以及通过日历助手接收日程变化和日程提醒的用户。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/HAHQd25BSoWA1HxnA9RcGe2an3b",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】日历4期迭代优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-2e920f31fe0e2ad0",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】时区设置与展示",
+    "summary": "企业员工（特别是在跨国企业、有远程办公团队或需要与海外客户、合作伙伴进行沟通的员工） 在跨时区协作和沟通中，他们无法直观地知道沟通对象的当前时间，导致打扰到对方、对对方的响应时间有错误的预期、设置会议的时候需要反复的换算（会议本期不考虑） 清晰展示：在对话界面和名片中，为用户清晰、无歧义地展示对方的时区信息 尊重隐私：允许用户自主选择是否对外展示以及展示哪个时区 设置页面调研 调研对象 PC端 移动端",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/K6OUdFtX5oQwGXxJysRcjpmqnae",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】时区设置与展示"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-258244d5c521ce05",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】图片/文件发送二次确认（九宫格）",
+    "summary": "版本 V1.0 负责人 ou_30148a562250459965c50b5ada11602d 依赖模块 IM会话 需求背景 当前客户端在日常使用中，误发送操作会造成用户隐私泄露、无效消息刷屏、沟通信息错乱等问题，严重影响用户使用体验。本次需求为自有IM客户端新增图片、视频、各类文件发送二次确认功能，在不影响正常高效沟通的前提下，拦截误发送操作，提升产品易用性、隐私安全性与用户体验。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/AEModgwVxo6A8wx0nzUcxy11ncd",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】图片/文件发送二次确认（九宫格）"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-3550cd99774114a6",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】消息加急",
+    "summary": "版本号 产品 后端 客户端 设计 主要变更内容 20250814 dengteng",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Eis0dgRgWoj6f4xqbPBcjQ5ondc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】消息加急"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-6b077a9c0c6c9e0d",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】消息通知配置（闭环3）",
+    "summary": "用户：企业员工 企业管理者 消息太多：需要分级避免被不必要的推送所打扰 消息重复：在不同设备可能收到重复的消息 确保重要信息绝不遗漏，同时最大限度减少不必要的干扰，提升工作效率和专注度 MAC端通知设置竞品 相关PRD【PRD-移动端】消息通知的位置整理 所有的设置，电脑和手机同步，没有的除外，比如：mac没有移动的震动",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EpNydN5V0opOqfxpMsgcODnGn7b",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】消息通知配置（闭环3）"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-3c3bcfeb563125ad",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】消息阅读状态（群消息、被@、被加急）",
+    "summary": "更新日期 参与人 更新内容 2025.09.10 作者ou_b74bd1a8373bf58fc19abe19d164b474 评审ou_81afba15a5e2a4448a5ab67d471c9287ou_fc537e7ed5df7c7f9d41668fcadd96d9 撰写PRD模板初稿 2025.09.14",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/J3WOdEXRDoK778xbZ9ZcoObtnpg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】消息阅读状态（群消息、被@、被加急）"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1dd814a64e75f458",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】新成员查看历史消息",
+    "summary": "更新日期 参与人 更新内容 2025.09.18 作者ou_01fde6ff1e8cb52e0ee56914acb4f8be 评审 撰写PRD模板初稿 【PRD-移动端】新成员查看历史消息（更新ing）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Ps5CdOpujoWuqbxh2MScB5OKngg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】新成员查看历史消息"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-cdef293da5fe8917",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】新消息通知（应用内/外）的位置整理和设计规范",
+    "summary": "用户：企业员工 产品：写prd的时候统一规则 不同消息在不同产品人员定义不同，统一标准 统一消息展示的规则和样式 原则一：重要性优先级 加急 (⚡️) > @我 = @所有人 > 普通未读消息 此优先级适用于所有tab角标、置顶角标、对话预览、推送的展示 原则二：全局设置优先原则 应用外推送（Push Notification）的总开关优先级最高。 如果用户在手机系统设置或App全局设置中关闭了推送，则任何消息（包括加急）都不能应用外推…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/I5Hwdnhv9oAORFx1ORjcSYmPnNh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】新消息通知（应用内/外）的位置整理和设计规范"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-24dfa792fa83f405",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】引用回复、点击引用回复信息后一键定位跳转",
+    "summary": "企业员工 上下文丢失： 在快节奏的群聊里，当有人回复一条很早以前的消息时，其他用户很难快速找到并理解原始消息的内容，导致上下文对话脱节，体验割裂。 信息碎片化： 对话被割裂成一个个孤立的点，缺乏串联。用户需要手动向上滚动屏幕费力地寻找原始消息 回复：支持某个消息回复 便利阅读： 一键定位上下文，快速理解对话背景 调研对象 企业微信 飞书",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/WuMCd8euEor3jvxro05ccyKrngY",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】引用回复、点击引用回复信息后一键定位跳转"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-94f6e564947eff53",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】展示我的数据驻留地",
+    "summary": "企业员工 信息安全 1.后台支持是否展示数据驻留地 2.如果展示前台需要有一个地方展示出来 管理员在管理后台可以为成员选择数据驻留地。 成员：在点头像 > 我的数据驻留地 中查看自己的数据驻留地 一行小字，展示数据储存地 服务器端给出一个数据存储地点，前端显示出来即可，比如：新加坡",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/CaOfdneQPoqWPgxV8dSc25l4nVK",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】展示我的数据驻留地"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-38828cd2a3977a9f",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】支持查看、下载、转发拍照的图&视频",
+    "summary": "企业员工 只能发已有的照片、视频 支持用户在Mac端查看别人拍照发来的视频&图片 支持查看、下载、转发 看视频 调研对象 飞书 钉钉",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/APfkdQA0bouqfWxcdHWcenNJnMf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】支持查看、下载、转发拍照的图&视频"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-6444afdb5c5969b4",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】支持换邮箱&设置/修改密码&手机号绑定/修改&TOTP双要素认证/双重验证登录",
+    "summary": "核心用户：企业员工 次要用户：租户的管理员，他们负责制定和执行企业的安全策略，监控认证状态，并确保组织整体的账号安全合规 体验偏好不一：有的用户习惯密码，有的依赖手机验证码，有的追求高安全性的TOTP，系统无法满足所有用户的偏好 应急访问需求：用户在某些场景下（如无手机信号无法接收验证码、忘记密码）需要备用的登录方式以保证正常工作 账号安全考虑：担心仅凭“验证码”单一因素无法充分保障账号安全 提供密码、邮箱/手机验证码、TOTP动态码三…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QdHZd1sFJoL2z5x2lp3cTbINnwh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】支持换邮箱&设置/修改密码&手机号绑定/修改&TOTP双要素认证/双重验证登录"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-c6cdebbaebb83248",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】自定义标签&分组优化",
+    "summary": "用户（尤其是老板、财务等多公司角色）可能同时管理大量自定义标签，需要对标签进行分类整理，以快速定位目标会话 当前分组逻辑的核心问题： 提供清晰、可预期的标签分组能力 支持拖拽排序与跨组移动 概念 定义 备注 会话",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/SAqGdHSeCoHXYfx1q8Hc0N5Wnyb",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】自定义标签&分组优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-bb6d264766c7a7e7",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】PIN取消分组入口&功能改为“钉”",
+    "summary": "时间 版本号 变更人 主要变更内容 2026.5.18 V1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/HoyqdQ8F6oMExPxfuElcgeMFnWe",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-Mac端】PIN取消分组入口&功能改为“钉”"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-48471895e9e28545",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-PC 端】单聊查看消息的发送和阅读状态、撤回功能",
+    "summary": "功能设计_单聊查看消息的发送和阅读状态、撤回功能 版本号 产品 前端 后端 设计 主要变更内容 20250815",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/R5WBdZab3owZUnx69xmcKjbwn5f",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-PC 端】单聊查看消息的发送和阅读状态、撤回功能"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-bd52c5267b33e547",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-PC 端】单聊基础常规功能",
+    "summary": "功能设计_常规功能 版本号 产品 前端 后端 设计 主要变更内容 20250815",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/PpNOdaJSyoWeuDxZcXnc6IBunof",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-PC 端】单聊基础常规功能"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-72a68bf10ee5a9d5",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-PC 端】Unicode Emoji 表情 选择",
+    "summary": "Unicode Emoji 表情 选择 版本号 产品 前端 设计 主要变更内容 20250820 高远",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/ZFo8d6eXso4Ykox1gQ0clBQwn9a",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-PC 端】Unicode Emoji 表情 选择"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-f345776f4bfa9824",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-PC端】首页多租户切换功能优化",
+    "summary": "版本号 产品 前端 后端 设计 主要变更内容 20250827 邓腾",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/H9KbdcT2RoqrdYxbo3dcz4ZpnKI",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD-PC端】首页多租户切换功能优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-b0d697db0aa20c5d",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD】@选人逻辑优化",
+    "summary": "在输入框输入@符号后，输入搜索词之前，展示的成员列表： 增加“可能想@的人”分组 取值逻辑：展示最近在群内@过的人，最多展示5个人（新增规则） 排序逻辑：根据该成员被@的时间排序，最近@的排在最上面 下方展示“会话内成员”分组 取值逻辑：当前会话内的所有成员 排序逻辑： 首字为中文或英文：按照首字母排序。如果首字母相同，中文排在英文前面(iphone端需展示字母索引，并可点击跳转）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/CCFMdTkJgoFFxdxA0gYcgFh4npf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD】@选人逻辑优化"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-1c63dec0308e7393",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD】会后通过bot向会议发起人推送智能纪要",
+    "summary": "所有使用蜂巢的用户 智能纪要生成后需要自己去历史记录找，没有自动的触达，不方便 智能纪要生成后自动推送给发起人，让发起人更方便、及时获取到纪要 无 设计稿：https://www.figma.com/design/4sO3Ue2xGeWGANReBCJyQA/%E9%9B%A8%E7%BA%AF%E7%9A%84%E8%8D%89%E7%A8%BF?node-id=8888-21232&p=f&t=p2DDJ1BbHjyV9Gjx-0…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/OKDxdq2omoXdDRxmYOccdZSpnOt",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD】会后通过bot向会议发起人推送智能纪要"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-d5f5a857e3c17951",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD】日程上的视频会议开始时主动发送站外入会通知",
+    "summary": "所有使用蜂巢的用户 日程上的会，当有人发起会议后，其他参会人不能立即感知到 日程上的会，当有人发起会议后，让其他参会人立即感知到，并快速加入会议 设计稿：https://www.figma.com/design/4sO3Ue2xGeWGANReBCJyQA/%E9%9B%A8%E7%BA%AF%E7%9A%84%E8%8D%89%E7%A8%BF?node-id=8925-46963&t=p2DDJ1BbHjyV9Gjx-0 1 日程上…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QOJRdjRESoLqnCxXk5OcswPznkc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD】日程上的视频会议开始时主动发送站外入会通知"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-a22715d53101abe9",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD】手机号不可用期间过渡方案",
+    "summary": "更新日期 参与人 更新内容 2025.12.12 ou_b74bd1a8373bf58fc19abe19d164b474ou_3b06df03796b72297e66a2ba89f7520bou_13121b563cd27b29fcfa45e364b4b9b9 撰写PRD模板初稿 模块 需求整体负责",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/ACfwdgKJOorwogxq2EQcKDIXnlc",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "【PRD】手机号不可用期间过渡方案"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-4226f0780b6cc020",
+    "type": "article",
+    "source": "prd",
+    "title": "1.【PRD-PC 端】IM主界面",
+    "summary": "1.功能设计_PC 端应用IM主界面 版本号 产品 设计 Web 前端 后端 测试 概述",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/HI2adSuogofX0JxwIW8c9URNnhf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "1.【PRD-PC 端】IM主界面"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-dee0f57faf5436ad",
+    "type": "article",
+    "source": "prd",
+    "title": "2.【PRD-PC 端】用户注册、登录、退出",
+    "summary": "功能设计_用户注册、登录、退出 版本号 产品 前端 后端 设计 主要变更内容 20250630001",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/W3Z0dEQ7hof4zSx0FwjcG9SZnuh",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "2.【PRD-PC 端】用户注册、登录、退出"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-f1cb15e872cc7e91",
+    "type": "article",
+    "source": "prd",
+    "title": "功能设计_离线消息推送_0730",
+    "summary": "功能设计_离线消息推送_0730 版本号 产品 后端 设计 主要变更内容 20250731 高远",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/DjKAd129HoNegRx9rM0cU00snah",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "功能设计_离线消息推送_0730"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-c41033dbd02e8e8e",
+    "type": "article",
+    "source": "prd",
+    "title": "空间权限范围表",
+    "summary": "黄色色块和文字的含义是已经确定但是待开发的逻辑",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/VCV3dTn1Josvnvx080ucwVIhngg",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "空间权限范围表"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-e93500eebf6212df",
+    "type": "article",
+    "source": "prd",
+    "title": "群聊成员排序方案",
+    "summary": "方案： 排序原则：角色/权限分组>语种/地区（暂定中日英）> 各自语言发音排序 第一层级：优先按 群主-管理员-普通成员-暂停成员 等角色排序 第二层级：在同一角色内，按中>英>日>数字>其他语言顺序排列 第三层级：在同语种下，分别按中（首字母拼音），英（字母顺序，忽略大小写），日（五十音图顺序） 如何区分中、日、英语种名称： 简单方案：靠姓名序的字识别 中日相同：张本智和， 默认是中文",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/RLy1dOqeSoLCDWxt9dYcXYujnte",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "群聊成员排序方案"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-b069d065ed11766b",
+    "type": "article",
+    "source": "prd",
+    "title": "日历系统故事线",
+    "summary": "方案选型： 自研 通过我们的API接Google 日历，用他们基础能力上开发，Google 日历本来天然集成很多软件，可能会方便一点 核心目标：兼顾数据安全和用户操作的便捷性 考虑点： 若接google日历，有没有安全的风险，比如：客户在上面创建任务会不会数据泄漏 结论：数据有风险，对接 Google 日历 API 存在跨境数据不合规、数据上传美国谷歌服务器、日程任务泄露、数据失控、权限审计不可控等高等级安全风险，不符合日本本土数据安全…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/JyBgdFas1owARnxCkyPcYMiCnab",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "日历系统故事线"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "article-5b6ac34f0e3bf1d5",
+    "type": "article",
+    "source": "prd",
+    "title": "Mac端日历故事线",
+    "summary": "用户实际场景演示 场景1：我要新建一个会议日程，并通知参会人 场景2：我当天同时段有多个冲突会议，想查看详情 场景3：我如何在会议日程里创建/添加一个zoom会议链接 场景4：我需要订阅他人的日历，查看对方的忙闲 场景5：我创建日程后，需要对日程进行编辑 场景6：我想取消 某个日程 场景7：我想创建一个\"不能分享\"的私密日程 场景8：我想将日程分享给同事 场景9：我作为参会人，我想邀请其他几个同学也参加 场景10：我作为参会人，我可以选…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/ML02duvqpoJQ3dxe7DIchwDMnwf",
+    "path": [
+      "PRD",
+      " 1.客户端-Mac（PRD）",
+      "Mac端日历故事线"
+    ],
+    "parentId": "directory-1808f1d41f6a08a3"
+  },
+  {
+    "id": "directory-5fd8e2af7a160e86",
+    "type": "directory",
+    "source": "prd",
+    "title": " 2.客户端-iPhone（PRD）",
+    "summary": "54 篇内容，涵盖：【Mac/iPhone】推送通知展现样式规范、【PRD - iPhone 端】置顶与取消置顶会话、【PRD - iPhone]单聊和群聊基础功能、【PRD - iPhone]支持解析站点 URL 并生成卡片、【PRD - iPhone]支持用表情回复消息、【PRD - iPhone]支持转发消息、【PRD - iPhone】通讯录功能、【PRD - iPhone】隐身查看群消息、【PRD - iPhone端】版本更新、【PRD - iPhone端】对项目和任务评论支持添加图片等",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "article-7518a6b37e3ffed0",
+    "type": "article",
+    "source": "prd",
+    "title": "【Mac/iPhone】推送通知展现样式规范",
+    "summary": "Mac Push样式 当前租户 其他租户",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/GLESdJ0AIoqSivxhCxdczXuMn8D",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【Mac/iPhone】推送通知展现样式规范"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-c708497b13e83432",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone 端】置顶与取消置顶会话",
+    "summary": "会议主题：需求评审 会议时间：Oct 16 (Thu) 13:59 - 14:55 (GMT+08) 参会人：ou_2ac331dd6f01cbc0544ff1abcf8543c9ou_0409f1f4525c1b3bb9bba596f0d7a82fou_5f868d52abf12f054ff078986b84ec20ou_953c471866c16cfbeeb30e88f3549bc8ou_39182d267c9c1164feb7cf…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QjNWdn112oedOwxXeoacCQztngd",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone 端】置顶与取消置顶会话"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-561169772e5d83f7",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone]单聊和群聊基础功能",
+    "summary": "普通用户 1、支持用户在 IM 中进行 1 对 1 的文字沟通，并支持一些基础功能，比如发送表情等（详见 PRD） 2、支持用户在 IM 的群中进行文字沟通，并支持一些基础功能（同单聊） 本期实现的产品框架 布局框架 释例： 本期实现的功能 Story 1：用户可以向另一个用户发起私聊（需要预制数据）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/NpQldCtNjorhoixv4xScQoxAnle",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone]单聊和群聊基础功能"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-2c81b7416843d474",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone]支持解析站点 URL 并生成卡片",
+    "summary": "普通用户 当用户在 iHive 发送网站的 URL 后，系统能解析这个 URL 并生成一个使用体验更好的卡片，当用户（自己或他人）提查看这个信息时获得更多关于这个 URL 的信息 消息卡片竞品分析 设计稿： https://www.figma.com/design/oIyrNVRb0vu2xYtcxiFwFQ/i-Hive-%E7%A7%BB%E5%8A%A8%E7%AB%AF?node-id=795-5322&t=nBvlAZTjO4…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/OSqfdai1ToxUlGxGrGGcKNUanGd",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone]支持解析站点 URL 并生成卡片"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-8a27e2f82843d463",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone]支持用表情回复消息",
+    "summary": "普通用户 用户用表情直接回复消息 UI 链接：https://www.figma.com/design/oIyrNVRb0vu2xYtcxiFwFQ/i-Hive-%E7%A7%BB%E5%8A%A8%E7%AB%AF?node-id=611-19949&t=6F2WnxI4o4QOb3NV-1 表情包回复的一般逻辑（不区分单聊和群聊） 长按消息，弹出快捷工具栏 默认展示常用表情中的 7 个（最终以设计稿为准） 常用表情规则复用消息发送…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/MaJVdfe2roOzBhxuMJRcOifLn2g",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone]支持用表情回复消息"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-8a9b5952b2347bcd",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone]支持转发消息",
+    "summary": "普通用户 支持用户转发消息 设计稿：https://www.figma.com/design/oIyrNVRb0vu2xYtcxiFwFQ/i-Hive-%E7%A7%BB%E5%8A%A8%E7%AB%AF?node-id=518-37233&p=f&t=jZ8xRPcfU9VrXWSS-0 用户长按 0.8s 消息后，唤起操作工具条出现转发按钮 点击转发按钮后，消息进入复选状态，用户可上下滑动并进行多选操作 若用户未多选消息，则右下…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/RTpvdOCaqoZIjPxCmRSclQGWnic",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone]支持转发消息"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-2c79e755c12bdab4",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone】通讯录功能",
+    "summary": "普通用户 用户可以通过通讯找人员和群，并发起沟通 取 组织架构可见范围需求文档 文档中设置的组织架构权限范围 查询组织内部联系人 点击后可查看组织下全部人员（详细交互见后文，本章节主要i描述权限范围） 若用户不能查看组织下的全部联系人，则功能区域右侧无进入的按钮，整行热区不可点击 查询所属部门 点击后下钻到部门联系人列表",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QqNndKn26o5gn7xaayEcZ8aZnLh",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone】通讯录功能"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-64d95b7b75e10adb",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone】隐身查看群消息",
+    "summary": "管理员 1、支持有权限的用户群聊数据，并进入对应群聊 设计稿： 功能权限 权限管理中增加【隐身查看群消息】的功能权限，拥有此权限的用户获得如下权限点（具体方案由ou_3b06df03796b72297e66a2ba89f7520b产出）： 可以查看到 Invisible Cloak 的 tab 在 iPhone和 Mac 客户端可以看到自己权限范围下的群聊 支持设置会话标签",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/CVVMdXydloOI9Oxhdiic5lvonYc",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone】隐身查看群消息"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-5419ae96a7b9bca7",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】版本更新",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.10.08 ou_01fde6ff1e8cb52e0ee56914acb4f8be：撰写PRD模板初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Vxb6dmTedoWhpIx3VjIcfiRKnq0",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】版本更新"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-702546e23e61adbd",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】对项目和任务评论支持添加图片",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.07.29 ou_70bcb8bc22e1ff86ff54d0a684c8c272 iPhone端评论项目和任务时，增加了图片评论的功能 iPhone端评论的结果样式，进行了优化",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/JrWydRyyXoaRNvx0iLecBzRwnYf",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】对项目和任务评论支持添加图片"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-4b8ce11e428d2d89",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iphone端】会话标签",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.11.08 ou_2ac331dd6f01cbc0544ff1abcf8543c9：撰写PRD模板初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/IZSEdQE7ioST31x3TJQc4px9noc",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iphone端】会话标签"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-6c15362d1e33f220",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】空间：1、更多分类和筛选器增加更多维度；2、任务视角；3、支持对项目和任务评论",
+    "summary": "1. 【PRD - iPhone端】空间：增加更多分类和筛选器维度 更新日期 产品经理与更新内容 产品内部确认 最终评审 2026-03-17 @milo：撰写 iPhone 端空间任务管理界面增加更多分类和筛选器维度功能 PRD，基于现有界面优化，提升用户查找任务效率 待确认",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/L3uOdZxQZocE0Ux2sZJcgb0un0e",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】空间：1、更多分类和筛选器增加更多维度；2、任务视角；3、支持对项目和任务评论"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-4342b895c2236351",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】空间：展示和筛选更新时间/展示创建时间",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026-03-04 ou_40af152fb5d91d4b4ddfa39bd0f69172：撰写 iPhone 端空间时间展示与筛选功能 PRD，基于 Mac 端已实现功能适配 iPhone 端 待确认 待评审",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/HmnTdbbANoo0rjxVd0ocL4fSnMc",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】空间：展示和筛选更新时间/展示创建时间"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-bcf460236b977e35",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】空间列表支持拖拽排序",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.07.22 ou_70bcb8bc22e1ff86ff54d0a684c8c272 iPhone端的空间列表，增加了拖拽排序功能 蜂巢用户",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/J1NGdAdcZo9Cp4xZmkccdW21n3e",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】空间列表支持拖拽排序"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-94349107676792d5",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】空间下的分组显示功能增加数据统计的展示，优化了取消分组查看的交互",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.07.20 ou_70bcb8bc22e1ff86ff54d0a684c8c272 增加了空间分组显示下的数据统计，优化了取消分组查看的交互 蜂巢用户",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Uv2VdnBoRo8aDvxJQDucm0pfnXg",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】空间下的分组显示功能增加数据统计的展示，优化了取消分组查看的交互"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-10e51129831e20c0",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】水印功能",
+    "summary": "时间 版本号 变更人 主要变更内容 2026.3.10 V1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/VuOPdF9GNotnbWxyoSycPKgKngh",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】水印功能"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-5669d346dace99ab",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】添加项目/任务执行人时支持从项目成员中选择",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.07.28 ou_70bcb8bc22e1ff86ff54d0a684c8c272 iPhone端修改项目/任务执行人增加项目成员的选择入口 蜂巢用户",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/FkindWAAdoUkEEx5Jg1cuA4lnof",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】添加项目/任务执行人时支持从项目成员中选择"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-9b13bbeb41b2282a",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】文件收发",
+    "summary": "更新日期 参与人 更新内容 2025.09.17 作者ou_b74bd1a8373bf58fc19abe19d164b474 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写PRD模板初稿 2025.09.30",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/UvMKdzR8ZoCXElxfkCncH4OWn6f",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】文件收发"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-75c4de620b023b78",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】支持其他应用分享到蜂巢APP",
+    "summary": "更新日期 参与人 更新内容 2025.11.28 作者ou_b74bd1a8373bf58fc19abe19d164b474 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写PRD模板初稿 2026.01.09",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/PUP0dIX10oZI3Ix5HJvcYYyXnif",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】支持其他应用分享到蜂巢APP"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-78cfb9dbe6742ca7",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - iPhone端】PIN功能",
+    "summary": "时间 版本号 变更人 主要变更内容 2026.1.30 V1.0 李辰光 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/XcEMdWOSeoQ9OmxbfZjctmAcnde",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - iPhone端】PIN功能"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-7ff62bdb981bf33f",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - mac /iphone端】会话开启/关闭消息通知提醒",
+    "summary": "更新日期 参与人 更新内容 2025.10.25 作者ou_2ac331dd6f01cbc0544ff1abcf8543c9 评审 撰写PRD初稿 使用蜂巢软件的用户",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/YxOQdsqyeoP2KKxdJrsccpSOnme",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - mac /iphone端】会话开启/关闭消息通知提醒"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-932637bf844164ca",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - Mac端】对截图的图片进行编辑",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.01.06 ou_2ac331dd6f01cbc0544ff1abcf8543c9 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/MTA4ddKVMoCE29xcgUGcDu6xn2g",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD - Mac端】对截图的图片进行编辑"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-b93cee1550e2eef2",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- iPhone端】发送图片时支持编辑功能",
+    "summary": "时间 版本号 变更人 主要变更内容 2026-04-16 v1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/IeAAdd4PHo1M7lxBD5McWSdAnDg",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD- iPhone端】发送图片时支持编辑功能"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-c661c4e4905dc93b",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- iPhone端】上下班打卡和请假功能",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-07-06 ou_50d7eb7b7f8ca4a9bf73577772060604 创建文档 ou_fc537e7ed5df7c7f9d41668fcadd96d9ou_d2d400b1ec799462ef05d6e80e4d6f28",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/SCxud0GbwoIfD4x8ecPcL7Smnnd",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD- iPhone端】上下班打卡和请假功能"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-c8bde1a3ce6565c7",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac/iPhone 端】自定义表情包优化",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-07-20 艾禹 新增自定义表情入口提示，并优化回复消息时发送表情的展示样式。 待评审",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Sb9cdHBlHo6FCkxAtd0c4MQ2nIb",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD- Mac/iPhone 端】自定义表情包优化"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-519be2e0e8ad75ce",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac/iPhone端】单/多图文混合消息支持复制",
+    "summary": "时间 版本号 变更人 主要变更内容 2026-06-08 V1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/FgEodKbF5oCIPyxnm1KcODEFnge",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD- Mac/iPhone端】单/多图文混合消息支持复制"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-099ea76606209d85",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac/iPhone端】选取消息的关键字进行回复",
+    "summary": "时间 版本号 变更人 主要变更内容 2026-06-09 V1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/CgGudaO7do7m34xqMQLcXRxcn2c",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD- Mac/iPhone端】选取消息的关键字进行回复"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-180a1edad20e7ccd",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac/iPhone端】invisible支持系统分组和标签分组的能力",
+    "summary": "时间 版本号 变更人 主要变更内容 2026.5.19 V1.0 李静 创建文档",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/T4iRdJ5Llo9aRZxzlxBcoAMMneb",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD- Mac/iPhone端】invisible支持系统分组和标签分组的能力"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-a0065c56db281867",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac端】支持主管查看部门下属的考勤明细",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-08-19 艾禹 创建文档 ou_d2d400b1ec799462ef05d6e80e4d6f28",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/QKe2dl7N1odtogxe39Jc3Hmonzh",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD- Mac端】支持主管查看部门下属的考勤明细"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-b5fde9f0f93e0463",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone 端】拍照后支持对图片编辑",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-07-20 艾禹 新增 iPhone 端拍照打卡后图片编辑入口与拍照页视觉改版；复用发送前图片编辑能力。 待评审",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/HTX6doMbko5axBxnoXoc7M5knMe",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone 端】拍照后支持对图片编辑"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-83ec522ec4893578",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone】任务空间移动端首页改版",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.04.24 创建文档 蜂巢普通用户 用户访问自己的空间首页，可以查看重要消息的信息流",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/OaTPdx24noHkcux9tYFcRyxYnJp",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone】任务空间移动端首页改版"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-21915d0dc0b89542",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone】移动端筛选器选择部门组件优化",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.05.25 创建文档 所有蜂巢用户。 优化移动端部门筛选条件的部门展示样式，能够清晰看出部门间的层级。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/DKcLd3ASBoKg1vxufiIcnZ4dnMc",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone】移动端筛选器选择部门组件优化"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-c7262693a6a4390e",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iphone】iphone端卡顿/加载慢等问题优化",
+    "summary": "所有使用蜂巢的用户。 用户在使用蜂巢iphone时常遇到卡顿、加载慢等问题 优化卡顿、加载慢等问题，提升用户体验 无 描述 修复前录屏 修复后 优化目标",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/LqJ6dfnRGoe4kAxDi8AcdJP8n9g",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iphone】iphone端卡顿/加载慢等问题优化"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-4b40dfe367190002",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone/Mac端】引用消息优化",
+    "summary": "企业员工 引用体验的优化 输入连续性至上：用户的文字草稿应绝对保留，仅操作（引用、表情回复等）状态可变 引用清晰可靠：引用的内容、状态（是否被撤回）、跳转目标必须准确无误 交互符合直觉：操作反馈应与用户心理预期一致，避免突兀的跳转或清空 这类问题直接破坏用户的输入过程，导致挫败感最强。 【iPhone】【关键修复】清除引用时保留草稿（图中场景） 问题：点击输入框内引用内容旁的“x”按钮（如图中结构），会清空整个输入框",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/O0Ufd1Fy9ovt6uxFL2IcVKhVnMb",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone/Mac端】引用消息优化"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-28059e3616ebd649",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】24-12小时切换、清理缓存、对话展示我的头像",
+    "summary": "用户：企业员工 体验偏好不一：不同用户习惯不同，导致信息读取效率降低 存储空间与性能担忧： App在使用过程中会产生缓存数据（如临时图片、视频、历史记录等）。用户无法便捷地清理这些数据，可能导致App占用存储空间过大、卡顿..问题 提升个性化体验： 让用户能根据自己的偏好选择时间显示格式、对话头像 赋予用户控制权：让用户可以自主清理应用缓存，有效释放设备存储空间 入口： App首页 -> 点用户头像 -> 设置 -> 点时间与时区 ->…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Xkv2d8QuuozOrExT9HQcpKBTn4f",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】24-12小时切换、清理缓存、对话展示我的头像"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-13294cb31531dfc4",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】查看登录记录",
+    "summary": "企业员工 账号安全的考虑，希望能够查看自己账号的登录情况，以确认是否存在被盗用的风险 系统自动记录： 用户每一次登录成功/失败时，系统自动记录关键的登录信息。 用户端查询： 普通用户可以在客户端查看自己的登录记录 管理端在管理后台查询与导出： ou_3b06df03796b72297e66a2ba89f7520b 【安全审计】菜单下增加一个 调研对象 飞书 钉钉",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/WHNPdLmEGoHfvlxbVGece0YAndd",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】查看登录记录"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-1e935284b97068a8",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】激活、登录、退出流程",
+    "summary": "普通用户 1.用户需要通过邀请邮件来完成下载激活的步骤 2.用户可以完成登录、退出等步骤 支持用户通过邮箱顺利完成账户激活，并成功加入企业 支持已加入用户通过手机/邮箱验证码安全快捷地登录账户，管理信任设备 支持用户安全地退出当前账户，以保护隐私 https://www.figma.com/design/ld9bd0dGt4t17eAsI9Snk5/%E7%A7%BB%E5%8A%A8%E7%AB%AF-%E6%B3%A8%E5%86%…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/WynUd2sIJoORy2xmknLcTvO7nWe",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】激活、登录、退出流程"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-ce67156ead2e8747",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】激活、登录、退出流程优化",
+    "summary": "企业员工 多企业切换的时候展示企业加入状态 企业加入成功后，给出提示 支持多企业用户，了解自己的当前状态（正常、待加入、已暂停）同时在不同状态下的流程 支持用户在多企业切换的时候，激活待加入的企业 优化登录流程中的一些体验问题 内容： 企业logo",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/PZTCd2sQIoMod7xzl3scHQLcnBd",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】激活、登录、退出流程优化"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-bf5682e4cd5af4d4",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】进群验证",
+    "summary": "主要内容：进群验证、新成员查看群历史消息、群聊可搜索性 版本号：1.0 创建日期：20250904 审核人 时间 版本号 变更人 主要变更内容",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/HioBduQmsob6gqxvKDscC1Dxn9P",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】进群验证"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-821b55ab2a5cdc05",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】群成员管理（搜索/查看成员，添加/移除成员，分享群）",
+    "summary": "版本号 产品 设计 主要变更内容 2025.09.03 dengteng 郑顺展 初稿撰写",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/LKpmdWdhIold7Fx5xYjcA0ZjnBg",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】群成员管理（搜索/查看成员，添加/移除成员，分享群）"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-13d85870488d34e4",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】群成员权限管理（本期不做群公告）",
+    "summary": "更新日期 参与人 更新内容 2025.09.15 作者ou_01fde6ff1e8cb52e0ee56914acb4f8be 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写PRD模板初稿 2025.09.17",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/ChENdFjxUoAnJMxfzddc1nIjncg",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】群成员权限管理（本期不做群公告）"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-4854e0e7dab33a35",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】群创建与退出、解散(含普通群/部门群/外部群) ",
+    "summary": "版本号 产品 后端 前端 设计 主要变更内容 2025.08.29 邓腾",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/YibydPAeaopXZpxR3wvc2j2Tnof",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】群创建与退出、解散(含普通群/部门群/外部群) "
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-8624106e3b0c612d",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】日历4期迭代优化",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-08-06 艾禹 新增 iPhone 端日历四期的功能&用户体验优化。 待评审",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/O1yrdSVVmoM5E6xegKUcCItonHh",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】日历4期迭代优化"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-66ce039e4a4a1b50",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】时区设置与展示",
+    "summary": "企业员工（特别是在跨国企业、有远程办公团队或需要与海外客户、合作伙伴进行沟通的员工） 在跨时区协作和沟通中，他们无法直观地知道沟通对象的当前时间，导致打扰到对方、对对方的响应时间有错误的预期、设置会议的时候需要反复的换算（会议本期不考虑） 清晰展示：在对话界面和名片中，为用户清晰、无歧义地展示对方的时区信息 尊重隐私：允许用户自主选择是否对外展示以及展示哪个时区 设置页面调研 调研对象 PC端 iphone端",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/SGYRdBZ1NoF91wxD9J5ccgsvnAh",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】时区设置与展示"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-ec5d4602b4b2ae84",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】消息加急",
+    "summary": "版本号 产品 后端 设计 主要变更内容 20250829 邓腾 郑顺展",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/NjWwdA5eNo4AadxM8UbcYHIgnAf",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】消息加急"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-9754040ef9787d36",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】消息通知配置（闭环3） ",
+    "summary": "用户：企业员工 企业管理者 消息太多：需要分级避免被不必要的推送所打扰 消息重复：在不同设备可能收到重复的消息 确保重要信息绝不遗漏，同时最大限度减少不必要的干扰，提升工作效率和专注度 相关PRD【PRD-移动端】消息通知的位置整理 App首页 -> 点用户头像 -> 通知 用户进入“通知”设置页",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Bu2gdJiUmoFujVxmIR9c8KPcnmg",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】消息通知配置（闭环3） "
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-629f718b0d9ab233",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】消息优化—引用回复消息点击后跳转，双击快速回复表情",
+    "summary": "企业员工 上下文丢失： 在快节奏的群聊里，当有人回复一条很早以前的消息时，其他用户很难快速找到并理解原始消息的内容，导致上下文对话脱节，体验割裂。 信息碎片化： 对话被割裂成一个个孤立的点，缺乏串联。用户需要手动向上滚动屏幕费力地寻找原始消息 便利阅读： 一键定位上下文，快速理解对话背景 调研对象 企业微信 飞书 telegram",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/VZePdW9ljowKonx3M06cMNjzn3a",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】消息优化—引用回复消息点击后跳转，双击快速回复表情"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-da3a0ae07610b884",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】消息阅读状态（群消息、被@、被加急）",
+    "summary": "更新日期 参与人 更新内容 2025.09.10 作者ou_b74bd1a8373bf58fc19abe19d164b474 评审ou_81afba15a5e2a4448a5ab67d471c9287ou_fc537e7ed5df7c7f9d41668fcadd96d9 撰写PRD模板初稿 2025.09.14",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/CkludBXj8oZ00Dx2FYccY23rnZf",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】消息阅读状态（群消息、被@、被加急）"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-0d08c56c28b558c9",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】新成员查看历史消息",
+    "summary": "更新日期 参与人 更新内容 2025.09.18 作者ou_01fde6ff1e8cb52e0ee56914acb4f8be 评审 撰写PRD模板初稿 【PRD-PC端】新成员查看历史消息（待评审）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/V1q2dgZo0opZv2xaX7vcB9bFnme",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】新成员查看历史消息"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-7fde6bbbdb4ec63a",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】新消息通知（应用内/外）的位置整理和设计规范",
+    "summary": "用户：企业员工 产品：写prd的时候统一规则 不同消息在不同产品人员定义不同，统一标准 统一消息展示的规则和样式 移动端通知竞品调研 灵动岛显示原则： 只显示当前没有被任何端阅读的加急消息 默认展示最新的5个加急消息发送人的头像【在紧凑状态（Compact）】，超多的加上“。。。”（一条unique消息对应的发送人算一个）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/PB73diBDWosFF4x4lm9c8EY0nPx",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】新消息通知（应用内/外）的位置整理和设计规范"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-46d1f02281c0d461",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】展示我的数据驻留地",
+    "summary": "企业员工 信息安全 1.后台支持是否展示数据驻留地 2.如果展示前台需要有一个地方展示出来 管理员在管理后台可以为成员选择数据驻留地。 成员：在点头像 > 我的数据驻留地 中查看自己的数据驻留地 一行小字，展示数据储存地 服务器端给出一个数据存储地点，前端显示出来即可，比如：新加坡",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/KEt8dpCnRoDeZexA7gvcf91LnWP",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】展示我的数据驻留地"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-adcf7a90ed327e0e",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-iPhone端】支持换邮箱&设置/修改密码&手机号绑定/修改&TOTP双要素认证/双重验证登录",
+    "summary": "核心用户：企业员工 次要用户：租户的管理员，他们负责制定和执行企业的安全策略，监控认证状态，并确保组织整体的账号安全合规 体验偏好不一：有的用户习惯密码，有的依赖手机验证码，有的追求高安全性的TOTP，系统无法满足所有用户的偏好 应急访问需求：用户在某些场景下（如无手机信号无法接收验证码、忘记密码）需要备用的登录方式以保证正常工作 账号安全考虑：担心仅凭“验证码”单一因素无法充分保障账号安全 提供密码、邮箱/手机验证码、TOTP动态码三…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/NOsPdARNMobwK9xRhE9cg0N0nNc",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-iPhone端】支持换邮箱&设置/修改密码&手机号绑定/修改&TOTP双要素认证/双重验证登录"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-87f8650f8ea58f8b",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-Mac端】激活、登录、退出流程优化",
+    "summary": "企业员工 多企业切换的时候展示企业加入状态 企业加入成功后，给出提示 支持用户通过邮箱顺利完成账户激活，并成功加入企业 支持用户在多企业切换的时候，激活待加入的企业 优化登录流程中的一些体验问题 作为 多企业用户，当 在登录后的企业选择页面，我希望 能清晰区分正常、待加入、已暂停等不同状态的企业，以便于 我能直接加入要进的企业，并知晓无法操作“已暂停”企业的原因 登录页面，选择手机号登录",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/RTdndOQ94oMyoPxT6UScAlTMnKf",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "【PRD-Mac端】激活、登录、退出流程优化"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "article-a18a98f1c74f646b",
+    "type": "article",
+    "source": "prd",
+    "title": "iPhone端日历故事线",
+    "summary": "用户实际场景演示 场景1：【新建日程】我要新建一个会议日程，并通知参会人 场景2：【查看日程】我想按列表、日、三日等不同维度去查看日历 场景3：【查看日程】我在群聊/单聊里，找到“日历”入口查看大家的日程空闲及快捷创建日程 场景4：【查看日程】我要查看会议冲突的详情 场景5：【查看日程】我作为参与人，我想邀请其他同学一并加入 场景6：【分享日程】我作为发起人，创建日程后分享到对应群里去提醒大家 场景7：【取消日程】我作为发起人，因为会议…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Sfjtd6igRovJHzxWg4lcinOtnrh",
+    "path": [
+      "PRD",
+      " 2.客户端-iPhone（PRD）",
+      "iPhone端日历故事线"
+    ],
+    "parentId": "directory-5fd8e2af7a160e86"
+  },
+  {
+    "id": "directory-ac0b8487efa0f0ed",
+    "type": "directory",
+    "source": "prd",
+    "title": " 4.企业管理后台（PRD）",
+    "summary": "60 篇内容，涵盖：数据分析、【PRD - 管理后台】允许超级管理员授权子角色删除会话和清除消息、【PRD - 管理后台】转移成员的部门群、任务空间、【PRD - 后台】成员详情登录设备管理、【PRD - 后台】登录设备数量白名单、【PRD - 后台】后台新增主负责人tag、【PRD - 后台】驾驶舱权限与数据权限整合、【PRD - 后台】企业管理后台和SaaS支持切换语言、【PRD - 后台】实线和虚线上下级、【PRD - 后台】支持成员详情直接选择下一个人（已上线等",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "directory-a4572f2300358c8f",
+    "type": "directory",
+    "source": "prd",
+    "title": "数据分析",
+    "summary": "11 篇内容，涵盖：1.【PRD-企业管理后台】附录_部门数据指标定义、10.【PRD-{企业管理后台}】数据分析-个人数据、11.【PRD-{企业管理后台}】附录_ 公司数据指标定义、12.【PRD-{企业管理后台}】数据分析-部门数据、13.【PRD-{企业管理后台}】数据分析-公司数据、14.【PRD-{企业管理后台}】数据分析- 权限管理、18.【PRD-企业管理后台】 补充指标_消息查阅指标（包括概述、公司、部门、个人四个页面的展示）、2.【PRD-{企业管理后台}】附录_数据概览指标定义、3.【PRD-{企业管理后台}】 数据分析-竞品分析 、4.【PRD-{企业管理后台}】数据分析-数据概览等",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-7cf3afb7e251539a",
+    "type": "article",
+    "source": "prd",
+    "title": "1.【PRD-企业管理后台】附录_部门数据指标定义",
+    "summary": "附录_部门数据指标定义 更新日期 参与人 主要变更内容 20250826 作者 @高达 评审 @Bud 搭建部门数据指标定义（5 个）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/IKtidJS7Ko8r74xcmw0cJEpKnof",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "1.【PRD-企业管理后台】附录_部门数据指标定义"
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-3a1b2cd56780db41",
+    "type": "article",
+    "source": "prd",
+    "title": "10.【PRD-{企业管理后台}】数据分析-个人数据",
+    "summary": "更新日期 参与人 更新内容 2025.09.11 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 数据分析模块-个人数据的相关指标定义需求，围绕用户粘性、沟通参与度、协作效率4 类维度 8个指标进行指定日期（时间段）和指定人员（多选）的数据展示。 角色名称",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/VlqtdVqIXoODZZxIYMbcGmiMnig",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "10.【PRD-{企业管理后台}】数据分析-个人数据"
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-a9350fb2dc6fc955",
+    "type": "article",
+    "source": "prd",
+    "title": "11.【PRD-{企业管理后台}】附录_ 公司数据指标定义",
+    "summary": "附录_部门数据指标定义 更新日期 参与人 更新内容 2025.10.20 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 围绕 “公司类”“部门类” 2 大维度 13 个指标，按 “日期选择（时间段）+ 展示部门层级” 组合筛选条件，实现指定范围的数据展示。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/S8aOdifmwoUzORxwgvEcBqNWnXd",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "11.【PRD-{企业管理后台}】附录_ 公司数据指标定义"
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-8678d788404c3686",
+    "type": "article",
+    "source": "prd",
+    "title": "12.【PRD-{企业管理后台}】数据分析-部门数据",
+    "summary": "更新日期 参与人 更新内容 2025.10.23 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 数据分析模块 - 部门数据的相关需求，围绕 “部门类”“员工类” 2 大维度 15 个指标，按 “日期选择（时间段）+ 组织选择（单选，公司节点不可选）” 组合筛选条件，实现指定部门及下属员工的数据展示，最小时间维度为 “天” 角色名称",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/YrJ0dj2J7oxvj5x6aQTcB39Tnhh",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "12.【PRD-{企业管理后台}】数据分析-部门数据"
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-5f8b87628ca40336",
+    "type": "article",
+    "source": "prd",
+    "title": "13.【PRD-{企业管理后台}】数据分析-公司数据",
+    "summary": "更新日期 参与人 更新内容 2025.10.25 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 数据分析模块 - 公司数据的相关需求，围绕 “公司类”“部门类” 2 大维度 13 个指标，按 “日期选择（时间段）+ 展示部门层级” 组合筛选条件，实现全公司及指定层级部门的数据展示，最小时间维度为 “天” 角色名称",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/V3Q1dsglgoVwYPxBBo4cAOKXnpe",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "13.【PRD-{企业管理后台}】数据分析-公司数据"
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-d5b5c32f0aac30dd",
+    "type": "article",
+    "source": "prd",
+    "title": "14.【PRD-{企业管理后台}】数据分析- 权限管理",
+    "summary": "更新日期 参与人 更新内容 2025.10.27 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 基于 RBAC 模型设计数据分析模块权限管理功能，覆盖 “角色定义 - 权限分配 - 数据范围控制” ，支持按 “人员 + 权限项 + 数据范围” 关联授权，实现菜单访问与数据筛选的精细化管控 2025.12.23",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/W8uadzyYmoSmCDx7Mb2cbkrgn9c",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "14.【PRD-{企业管理后台}】数据分析- 权限管理"
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-aa100d385e6b7120",
+    "type": "article",
+    "source": "prd",
+    "title": "18.【PRD-企业管理后台】 补充指标_消息查阅指标（包括概述、公司、部门、个人四个页面的展示）",
+    "summary": "附录_部门数据指标定义 更新日期 参与人 主要变更内容 20251122 作者 @高达 评审 @Bud 补充消息查阅指标，覆盖 “概述、公司、部门、个人” 四个页面展示，按 “日期选择+ 组织 / 人员筛选” 组合条件，实现多层级数据监控，最小时间维度为 “天”（13 个）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/MbBYdF9ScoL4m2xpa5Bcj549n0g",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "18.【PRD-企业管理后台】 补充指标_消息查阅指标（包括概述、公司、部门、个人四个页面的展示）"
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-9f5adf0d60c9a89d",
+    "type": "article",
+    "source": "prd",
+    "title": "2.【PRD-{企业管理后台}】附录_数据概览指标定义",
+    "summary": "附录_部门数据指标定义 版本号 产品 后端 主要变更内容 202500904 高达 搭建数据概览指标定义（11 个）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/CoKEdQMFwoInSvxrclscXYH9nyg",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "2.【PRD-{企业管理后台}】附录_数据概览指标定义"
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-07e6ea8f8d5dcce5",
+    "type": "article",
+    "source": "prd",
+    "title": "3.【PRD-{企业管理后台}】 数据分析-竞品分析 ",
+    "summary": "版本号 产品 主要变更内容 20250909 高达 对标飞书、钉钉、企微的数据报表功能 功能维度 飞书管理后台数据报表",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/JZx9dvOEzoMAl2x524Ych0SMnXf",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "3.【PRD-{企业管理后台}】 数据分析-竞品分析 "
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-ca7108c5bda30609",
+    "type": "article",
+    "source": "prd",
+    "title": "4.【PRD-{企业管理后台}】数据分析-数据概览",
+    "summary": "更新日期 参与人 更新内容 2025.09.11 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 数据分析模块-个人数据的相关指标定义需求，围绕用户粘性、沟通参与度、协作效率4 类维度 8个指标进行指定日期（时间段）和指定人员（多选）的数据展示。 角色名称",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/TlKsd6jUgoVzPMxLXrfcYShlnZf",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "4.【PRD-{企业管理后台}】数据分析-数据概览"
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-6dcf25940e563667",
+    "type": "article",
+    "source": "prd",
+    "title": "9.【PRD-{企业管理后台}】附录_ 个人数据指标定义",
+    "summary": "附录_部门数据指标定义 更新日期 参与人 更新内容 2025.10.11 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 数据分析模块-数据概览的相关需求，围绕用户规模、用户粘性、沟通参与度、协作效率4个维度11个指标进行指定时间（时间段）和指定组织范围的数据展示。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Z9qmdiozfoVHxex8SSCcEs8Xnld",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "数据分析",
+      "9.【PRD-{企业管理后台}】附录_ 个人数据指标定义"
+    ],
+    "parentId": "directory-a4572f2300358c8f"
+  },
+  {
+    "id": "article-809d1bec04aa266d",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 管理后台】允许超级管理员授权子角色删除会话和清除消息",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.04.01 ou_2ac331dd6f01cbc0544ff1abcf8543c9撰写初稿 ou_81afba15a5e2a4448a5ab67d471c9287 超级管理员",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/FAkYdPQQWocT9PxDDgYc0ohmnGh",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 管理后台】允许超级管理员授权子角色删除会话和清除消息"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-32c1b8480d75f48d",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 管理后台】转移成员的部门群、任务空间",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026.03.28 ou_2ac331dd6f01cbc0544ff1abcf8543c9撰写初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/SIizdIEuqowm66xpLiLct6d1nBh",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 管理后台】转移成员的部门群、任务空间"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-5d8eaafd07f290e4",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】成员详情登录设备管理",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2026519 ou_01fde6ff1e8cb52e0ee56914acb4f8be 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/IvezdCts0oLG1Jxc9nUc0lpuntc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 后台】成员详情登录设备管理"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-d3ad7f5cd8a11a45",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】登录设备数量白名单",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260525 ou_01fde6ff1e8cb52e0ee56914acb4f8be 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/VdGTdAViXoxMkAxgkR4chTElnag",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 后台】登录设备数量白名单"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-ed3c5f3471e30032",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】后台新增主负责人tag",
+    "summary": "更新日期 参与人 更新内容 2026.04.17 @郭文博 撰写PRD模板初稿 后台管理员 1. 现有多负责人体系补充主次分级；2. 主负责人与部门群主彻底解绑，互不强制联动；3. 全核心页面统一展示主负责人标签，可视化区分身份",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Ie3edHM9Fov0w8xfl29clVEbnMg",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 后台】后台新增主负责人tag"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-45606b85dc49daa2",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】驾驶舱权限与数据权限整合",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260422 ou_01fde6ff1e8cb52e0ee56914acb4f8be 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/ZRnLdy2C4oKut6xian8cTUHgnDc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 后台】驾驶舱权限与数据权限整合"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-16bbfafc7b7a1719",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】企业管理后台和SaaS支持切换语言",
+    "summary": "更新日期 产品经理 更新内容 评审 20260708 ou_01fde6ff1e8cb52e0ee56914acb4f8be 撰写PRD模板初稿 ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/SiPndAMkbowtDRxxJVNcKSJCnsc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 后台】企业管理后台和SaaS支持切换语言"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-2fd42d279d638d76",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】实线和虚线上下级",
+    "summary": "更新日期 参与人 更新内容 2026.04.14 作者ou_01fde6ff1e8cb52e0ee56914acb4f8be 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写PRD模板初稿 0416",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/A2IPdQQ2UogX71xEjSGcFAA6nlb",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 后台】实线和虚线上下级"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-352e82744b6c30c4",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】支持成员详情直接选择下一个人（已上线",
+    "summary": "） 更新日期 产品经理与更新内容 产品内部确认 最终评审 20260512 ou_01fde6ff1e8cb52e0ee56914acb4f8be 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Rz3ZdcMVmoN5LoxFFkKc5RQmnAc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 后台】支持成员详情直接选择下一个人（已上线"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-91ef66563938b98e",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】支持未入职删除账号再次录入",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260512 ou_01fde6ff1e8cb52e0ee56914acb4f8be 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/YkaCdo61yoZl5Cxvio0cNmcxnnh",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 后台】支持未入职删除账号再次录入"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-ba7ec53c29e49b86",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】仅企业管理员指定人员可拥有邀请权限",
+    "summary": "更新日期 参与人 更新内容 2025.10.14 作者 ：Luka 评审 创建 超级管理员",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/WC2cdHZOCoQCf9x1NxzcrbgmnAg",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】仅企业管理员指定人员可拥有邀请权限"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-2f6fabdc885dfb05",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】企业信息录入与编辑",
+    "summary": "更新日期 参与人 更新内容 2025.09.22 作者 ：luka 评审 在企业管理后台可以维护企业的基础信息 2025.12.04",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Rne8davswoLTcJxUqLgcFyLBnKc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】企业信息录入与编辑"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-64eee901147c9b41",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】双要素验证",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.12.04 ou_2ac331dd6f01cbc0544ff1abcf8543c9撰写初稿 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/N8TldAdSGodOPAxS0S2cDmEFn7g",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】双要素验证"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-208d7a1613318eaf",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】双要素验证登录",
+    "summary": "更新日期 参与人 更新内容 2025.09.22 作者 ：luka 评审 后台添加对 企业成员 账号登录时 双重验证设置 企业管理员",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/TxTBdsFPRoWBgVx166rcsZ75nOc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】双要素验证登录"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-8976b111939fedfb",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】统一部门字段展示配置入口",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.07.08 ou_2ac331dd6f01cbc0544ff1abcf8543c9 撰写初稿 企业管理后台管理员（拥有\"字段管理\"配置权限的角色）。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/GCKIdh4XFoEmFax7eSzcAZrOnep",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】统一部门字段展示配置入口"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-b1df0098f9ad5b98",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】修改直属下级的上级关系",
+    "summary": "更新日期 产品经理与更新内容 最终评审 2026.05.13 ou_2ac331dd6f01cbc0544ff1abcf8543c9撰写初稿 ou_81afba15a5e2a4448a5ab67d471c9287 企业后台管理员 保障汇报链路完整性：当某成员离职或被调出当前部门时，若其存在直属下级，系统要求管理员为这些直属下级重新指定直属上级，避免汇报链路出现断裂或悬空。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/DH9PdocEroYKC9xe6ZEcwfEZnGb",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】修改直属下级的上级关系"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-09bcfc5e57fcbddd",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】邀请成员激活邮件触发流程优化",
+    "summary": "更新日期 参与人 更新内容 2025.09.10 作者 评审 后台添加成员触发条件的修改 拥有 “成员与部门管理” 权限的管理员",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/By99dC7Amov10ZxPeKpc1z8Rnpb",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】邀请成员激活邮件触发流程优化"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-153e1203ac1bf21b",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】支持按单个空间/项目/任务转移（离职/变更部门场景）",
+    "summary": "更新日期 产品经理与更新内容 最终评审 2026.05.25 ou_2ac331dd6f01cbc0544ff1abcf8543c9撰写初稿 企业管理后台拥有组织架构管理权限的管理员 用户可以将某个成员的任务空间、项目、任务转移给不同的成员。 模块",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Ggjqdx0QEovnaFxXRiAcOj6NnBf",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】支持按单个空间/项目/任务转移（离职/变更部门场景）"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-4937576add931496",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】支持按单个空间/项目/任务转移（直接转移场景）",
+    "summary": "更新日期 产品经理与更新内容 最终评审 2026.05.25 ou_2ac331dd6f01cbc0544ff1abcf8543c9撰写初稿 企业管理后台拥有组织架构管理权限的管理员 用户可以将某个成员的任务空间、项目、任务转移给不同的成员。 模块",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/AuBcdGOFPovAHUxZYz9cuacjnjg",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】支持按单个空间/项目/任务转移（直接转移场景）"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-0619b56bb7d26090",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】支持多个超级管理员",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.07.20 ou_2ac331dd6f01cbc0544ff1abcf8543c9 撰写PRD模板初稿 企业超级管理员：包含首位由 SaaS 运营后台开通的超级管理员，以及后续在企业管理后台内被设置成为超级管理员的成员",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/LK2TdQnlFoGS1AxbFt3cenaXncc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】支持多个超级管理员"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-beae38d4a04b094b",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】转移任务空间增加异步提醒",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.07.08 ou_2ac331dd6f01cbc0544ff1abcf8543c9 撰写初稿 2026.08.31",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/SXi4dCVqvonqKnxGCulcBgcJn3c",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】转移任务空间增加异步提醒"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-a74b0871e61cffce",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】自定义转移任务空间列表排序和筛选",
+    "summary": "更新日期 产品经理 更新内容 评审 2025.09.10 ou_2ac331dd6f01cbc0544ff1abcf8543c9 撰写PRD模板初稿 拥有\"转移任务空间\"操作权限的企业管理员。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/NtB4dZpkVoi5F0xZ3JSc6Q8xnxc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】自定义转移任务空间列表排序和筛选"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-04e2dc34d7d6bc74",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 企业管理后台】自定义字段使用场景 ",
+    "summary": "更新日期 参与人 更新内容 2025.09.10 作者：luka 评审 自定义字段 --- 使用场景 企业管理员",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/InAPdz2pmofs4KxGx7gcEDNlnfB",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD - 企业管理后台】自定义字段使用场景 "
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-8b520bf601a93b92",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD -企业管理后台】转移任务空间 —— 高管身份特殊处理",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.07.09 ou_2ac331dd6f01cbc0544ff1abcf8543c9 撰写PRD模板初稿 企业后台管理员：在企业管理后台发起转移操作",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/AoXzd493BoRxGXxt7nDcygnhnwf",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD -企业管理后台】转移任务空间 —— 高管身份特殊处理"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-cf4cbc159c4a6260",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD---企业管理后台】即时消息管控",
+    "summary": "管理后台对【即时消息】的管控 版本号：V1.0 创建日期：2025-08-19 审核人：luka 时间 版本号 变更人 主要变更内容",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/B2LQdxLeNorpI9x7JE5c3wWonCg",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD---企业管理后台】即时消息管控"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-5e58f8bcff9dc62c",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD--企业管理后台】部门管理 （组织架构）",
+    "summary": "版本号：v1.0 创建日期 审核人 :luka 时间 版本号 变更人 主要变更内容 2025-8-15",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/MKFdd59PzofcIQxEMhCcv6Jbnpc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD--企业管理后台】部门管理 （组织架构）"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-851309ec1b0cc7da",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD--企业管理后台】成员管理  ",
+    "summary": "版本号：v1.0 创建日期 审核人 : 时间 版本号 变更人 主要变更内容 2025-8-15",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/URCOdevlUomipyxqEbCcCGJlnFb",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD--企业管理后台】成员管理  "
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-206a3502a964df5a",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD--企业管理后台】成员字段可见范围",
+    "summary": "版本号：v1.0 创建日期:2025-08-14 审核人:luka 时间 版本号 变更人 主要变更内容 2025-08-14",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/C9qQd4J8CoomCixBzcvcgOQ6nHb",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD--企业管理后台】成员字段可见范围"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-9cb2ec62e490e9a8",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD--企业管理后台】管理员权限（组织架构）",
+    "summary": "版本号：v1.0 创建日期 审核人 :luka 时间 版本号 变更人 主要变更内容 2025-8-15",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EDX1dYBzfo05kxxmKuRcwv8SnJg",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD--企业管理后台】管理员权限（组织架构）"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-0bb32220efde3533",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD--企业管理后台】已离职成员",
+    "summary": "版本号：V1.0 创建日期 审核人 时间 版本号 变更人 主要变更内容 2025-07-07",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/OLD6dhfU1oEFT8xIqQ0cxJ3Bn3b",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD--企业管理后台】已离职成员"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-4bd13744c9950aef",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD--企业管理后台】用户 登录/退出",
+    "summary": "版本号：v1.0 创建日期 审核人 : 时间 版本号 变更人 主要变更内容 2025-8-15",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/A9EOd2sNIoLnS0xiQl3cm3bynhh",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD--企业管理后台】用户 登录/退出"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-0183c0fab3139474",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD--企业管理后台】职务管理",
+    "summary": "版本号：v1.0 创建日期：2025-07-07 审核人 时间 版本号 变更人 主要变更内容 2025-07-07",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/XteZd9qQwoUO7nxeHQWc6LmJnBg",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD--企业管理后台】职务管理"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-024e7cc8e0689d82",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD--企业管理后台】字段管理 ",
+    "summary": "版本号：v1.0 创建日期 2025-09-02 时间 版本号 变更人 主要变更内容 2025-09-02 v1.0",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/KGjjdFuJno1pasx3mglcGTXmnRb",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD--企业管理后台】字段管理 "
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-39d43f5fa94468f8",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD--企业管理后台】组织架构可见范围",
+    "summary": "设置成员在客户端通讯录页面可以看到的组织架构范围，提升企业组织架构信息的保密性。管理员设置的规则不同，成员在通讯录中看到的组织架构范围也不同。 版本号：V1.0 创建日期：2025.08.13 审核人：Luka 时间 版本号 变更人 主要变更内容",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EvCRdoncMoq8DxxcBndca8Aqn4g",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD--企业管理后台】组织架构可见范围"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-823df634dc9b3e81",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-{企业管理后台}】审计日志 ",
+    "summary": "日志审计需求是对【企业管理员】和【成员行为】的审计行为。 版本号：V1.0 创建日期 2025-8-6 审核人 罗 时间 版本号 变更人 主要变更内容",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Q9O7dSp0ZoWaNrxekaZcsabAn7e",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD-{企业管理后台}】审计日志 "
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-19f7f3a3345e56b5",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-管理后台】假勤管理系统需求List",
+    "summary": "拆期逻辑 模块 页面 功能点 拆期 假勤后台 班次管理 班次增删改查（固定班制 / 排班制）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/O3v9di6VJoh7W5xcnK6cwKLEnQf",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD-管理后台】假勤管理系统需求List"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-2edce8e6ab467026",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD-管理后台】假勤系统",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-07-01 ou_50d7eb7b7f8ca4a9bf73577772060604 创建文档 ou_fc537e7ed5df7c7f9d41668fcadd96d9ou_d2d400b1ec799462ef05d6e80e4d6f28",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/OaJBdYBc0oUWKcxrJtrcVPeOnud",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "【PRD-管理后台】假勤系统"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-51ae7b3b2f411da9",
+    "type": "article",
+    "source": "prd",
+    "title": "20.【PRD-{企业管理后台}】权限管理- 项目空间继承权限",
+    "summary": "更新日期 参与人 更新内容 2025.12.02 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 权限管理 - 项目空间权限新增两项权限的保留规则配置开关（单选，默认均为 “不保留”） 创作者的项目空间查阅权限保留开关：成员部门变更 / 高管身份移除时，控制是否保留其作为创建者的项目空间权限",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/YJwQdCqT2ou49YxySIpcdgCknuf",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "20.【PRD-{企业管理后台}】权限管理- 项目空间继承权限"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-91563f1d992ad828",
+    "type": "article",
+    "source": "prd",
+    "title": "21.【PRD-{企业管理后台}】16个国家手机号校验规则",
+    "summary": "更新日期 参与人 更新内容 2025.12.08 作者ou_3b06df03796b72297e66a2ba89f7520b 16个国家的具体手机区号校验规则 手机区号规则 美国",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/APrIdbdGwoS6JxxVeaqcSmGRnVd",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "21.【PRD-{企业管理后台}】16个国家手机号校验规则"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-eb4e62223c0fd216",
+    "type": "article",
+    "source": "prd",
+    "title": "5.【权限设计】三端权限整体设计（OA SaaS 管理平台 - 企业管理后台 - 客户端）",
+    "summary": "更新日期 参与人 更新内容 2025.09.17 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 OA SaaS 管理平台 - 企业管理后台 - 客户端的关系梳理、权限整体设计与权限联动架构 OA Saas管理平台、蜂巢企业管理后台、蜂巢客户端（Mac/iPhone）三端构成 “管控租户（应用分配） - 租户配置（应用内管控） - 终…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/VLNKdkvlSoVjaaxYJoqc4EeVnxc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "5.【权限设计】三端权限整体设计（OA SaaS 管理平台 - 企业管理后台 - 客户端）"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-4ed127bc74d6cd58",
+    "type": "article",
+    "source": "prd",
+    "title": "6.【PRD-{企业管理后台}】管理员任务中心-成员准入",
+    "summary": "更新日期 参与人 更新内容 2025.09.22 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写管理员任务中心相关需求，任务中心是企业管理员在企业管理后台集中办理和查询任务的页面。 （管理员自己在客户端邀请外部成员时，不需要再审批，需要做权限校验）",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/XRBFdJbK3oqtD5xYgThc7E29nXd",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "6.【PRD-{企业管理后台}】管理员任务中心-成员准入"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-04b5a1b10c220db6",
+    "type": "article",
+    "source": "prd",
+    "title": "7.【PRD-企业管理后台】  管理员任务中心-竞品分析",
+    "summary": "版本号 产品 主要变更内容 20250923 高达 对标飞书、钉钉、企微、welink的管理员任务中心功能 核心需求场景 对比维度",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EXbjdVDdzoL56Jxb6T4cgwzanye",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "7.【PRD-企业管理后台】  管理员任务中心-竞品分析"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-4335af5fa053de77",
+    "type": "article",
+    "source": "prd",
+    "title": "8.【PRD-{企业管理后台}】 安全管控-访问域名管理",
+    "summary": "更新日期 参与人 更新内容 2025.09.27 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写安全管控-访问域名管理相关需求，访问域名列表中相关地址时不弹出安全提示，访问其他地址时均弹出安全提示，具体客户端需求见以下： 【PRD - Mac]支持解析站点 URL 并生成卡片",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/SILFdlQc5oLN6Fxzv8dcxHFqnWb",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "8.【PRD-{企业管理后台}】 安全管控-访问域名管理"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-896a098e91296b7d",
+    "type": "article",
+    "source": "prd",
+    "title": "管理后台-支持通过拖拽调整部门顺序",
+    "summary": "更新日期 产品经理 更新内容 评审 2026.08.03 ou_457aea44ab2a75dea5af7cab16111ca3 撰写PRD模板初稿 ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Mctmdqkc7ognNAxMi0RcqqUmnxl",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "管理后台-支持通过拖拽调整部门顺序"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-4b320de0b8b06a4e",
+    "type": "article",
+    "source": "prd",
+    "title": "空间管理及管理员任务中心权限项",
+    "summary": "功能 功能详细说明 交互图 空间权限 空间权限作为管理员权限中的一个权限项： 有该权限则在客户端可见空间的菜单并能点击进入空间； 没有该权限在客户端不可见空间的菜单。 管理员任务中心权限",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/AGrAd7BRHocZyrx4PmwcTzojnph",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "空间管理及管理员任务中心权限项"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-bdd42650822c4cda",
+    "type": "article",
+    "source": "prd",
+    "title": "企业（租户）权限文档   ",
+    "summary": "企业管理后台的权限文档内容 时间 版本号 变更人 主要变更内容 2025-07-28 V1.0 罗",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/ZQYNdBKgVoJcx4xqivXczGSVnBd",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "企业（租户）权限文档   "
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-e7e4599fdc4aa35e",
+    "type": "article",
+    "source": "prd",
+    "title": "系统全量角色与身份标识",
+    "summary": "此表是记录系统对应有的角色名称 版本号：v1.0 创建日期:2025-08-26 审核人:Luka 平台 名称 说明 SaaS管理平台",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/FeJvdWpjroTlJgxIn1VcomqdnTc",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "系统全量角色与身份标识"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-5d6ccfb48013b8a6",
+    "type": "article",
+    "source": "prd",
+    "title": "员工变更部门、离职，转移任务空间增加后台提醒文字",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260608 ou_457aea44ab2a75dea5af7cab16111ca3 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9 已阅读并确认ou_01fde6ff1e8cb52e0ee56914acb4f8be",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EOd7dEjDZoEwClx5sHgcXlEtnrh",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "员工变更部门、离职，转移任务空间增加后台提醒文字"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "article-f3fb015751fa3be9",
+    "type": "article",
+    "source": "prd",
+    "title": "组织架构需求文档 （历史）",
+    "summary": "此需求文档是企业管理后台的需求文档，租户登录的后台，对企业的组织架构、成员、权限的管理。 版本号：V1.0 创建日期 审核人 时间 版本号 变更人 主要变更内容",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/XoPUdogq0ovI6ZxxlIYc0ucCnAK",
+    "path": [
+      "PRD",
+      " 4.企业管理后台（PRD）",
+      "组织架构需求文档 （历史）"
+    ],
+    "parentId": "directory-ac0b8487efa0f0ed"
+  },
+  {
+    "id": "directory-11651b53b0f146aa",
+    "type": "directory",
+    "source": "prd",
+    "title": "5.应用管理后台（PRD）-OPS",
+    "summary": "5 篇内容，涵盖：【PRD - 后台】版本更新策略、【PRD - 后台】官网版本发布日期取值调整、【PRD - 后台】已发布版本支持编辑官网展示内容、【PRD - 后台】应用版本管理后台、【PRD - 后台】OPS后台支持多语言文件上传",
+    "path": [
+      "PRD",
+      "5.应用管理后台（PRD）-OPS"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "article-f68808627219cec6",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】版本更新策略",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260706 ou_01fde6ff1e8cb52e0ee56914acb4f8be新建 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9 ou_81afba15a5e2a4448a5ab67d471c9287",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/IUn6dTnH9oLGSgxuUrwcgGWMnCg",
+    "path": [
+      "PRD",
+      "5.应用管理后台（PRD）-OPS",
+      "【PRD - 后台】版本更新策略"
+    ],
+    "parentId": "directory-11651b53b0f146aa"
+  },
+  {
+    "id": "article-86faf1466034d833",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】官网版本发布日期取值调整",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260610 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9 已阅读并确认ou_2ac331dd6f01cbc0544ff1abcf8543c9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Sh4ddOCyioVPvixrkIDcfm8nnNh",
+    "path": [
+      "PRD",
+      "5.应用管理后台（PRD）-OPS",
+      "【PRD - 后台】官网版本发布日期取值调整"
+    ],
+    "parentId": "directory-11651b53b0f146aa"
+  },
+  {
+    "id": "article-11b3129a20095fee",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】已发布版本支持编辑官网展示内容",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260623 ou_01fde6ff1e8cb52e0ee56914acb4f8be 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Ut0vdH510osCnYx1ks4ck2lYnhf",
+    "path": [
+      "PRD",
+      "5.应用管理后台（PRD）-OPS",
+      "【PRD - 后台】已发布版本支持编辑官网展示内容"
+    ],
+    "parentId": "directory-11651b53b0f146aa"
+  },
+  {
+    "id": "article-eaf04dcde920b5dd",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】应用版本管理后台",
+    "summary": "更新日期 参与人 更新内容 2026.03.24 作者ou_01fde6ff1e8cb52e0ee56914acb4f8be 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写PRD初稿 2026.03.30",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/P8UDd0eP3ogetuxcsTKcyDWznDd",
+    "path": [
+      "PRD",
+      "5.应用管理后台（PRD）-OPS",
+      "【PRD - 后台】应用版本管理后台"
+    ],
+    "parentId": "directory-11651b53b0f146aa"
+  },
+  {
+    "id": "article-62a5529cb91769f3",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】OPS后台支持多语言文件上传",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260701 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9 已阅读并确认ou_2ac331dd6f01cbc0544ff1abcf8543c9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/B8FzdNgqroU08SxDr9Yc6jN2nKb",
+    "path": [
+      "PRD",
+      "5.应用管理后台（PRD）-OPS",
+      "【PRD - 后台】OPS后台支持多语言文件上传"
+    ],
+    "parentId": "directory-11651b53b0f146aa"
+  },
+  {
+    "id": "directory-31ecf108020c05ea",
+    "type": "directory",
+    "source": "prd",
+    "title": " 3. SaaS 管理平台（PRD）",
+    "summary": "5 篇内容，涵盖：【PRD - 后台】SaaS后台创建租户去掉手机号校验、【PRD - 后台】SaaS后台支持修改企业负责人、【SaaS平台】租户管理需求文档  、15.【PRD-{Saas 租户平台}】版本升级提醒功能、19.【PRD-{Saas 租户平台}】 租户设置-租户邮箱管理",
+    "path": [
+      "PRD",
+      " 3. SaaS 管理平台（PRD）"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "article-2e2cfb1b0555c74a",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】SaaS后台创建租户去掉手机号校验",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260610 已阅读并确认ou_b74bd1a8373bf58fc19abe19d164b474 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9 已阅读并确认ou_2ac331dd6f01cbc0544ff1abcf8543c9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/GDeidTRm0oUhocxXbIkcxJbhnOg",
+    "path": [
+      "PRD",
+      " 3. SaaS 管理平台（PRD）",
+      "【PRD - 后台】SaaS后台创建租户去掉手机号校验"
+    ],
+    "parentId": "directory-31ecf108020c05ea"
+  },
+  {
+    "id": "article-a4ce73d063382b52",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD - 后台】SaaS后台支持修改企业负责人",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 20260707 ou_01fde6ff1e8cb52e0ee56914acb4f8be 已阅读并确认ou_fc537e7ed5df7c7f9d41668fcadd96d9 ou_81afba15a5e2a4448a5ab67d471c9287",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Vw77dUXFwof8UfxMSxfcywRAnhd",
+    "path": [
+      "PRD",
+      " 3. SaaS 管理平台（PRD）",
+      "【PRD - 后台】SaaS后台支持修改企业负责人"
+    ],
+    "parentId": "directory-31ecf108020c05ea"
+  },
+  {
+    "id": "article-fcb88de06f524b07",
+    "type": "article",
+    "source": "prd",
+    "title": "【SaaS平台】租户管理需求文档  ",
+    "summary": "此需求文档是SaaS管理后台的需求文档，描述的是SaaS平台里admin账号对租户的管理 版本号：V1.0 创建日期 审核人 时间 版本号 变更人 主要变更内容",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/LcLbdGfrnoRAf1xYvSIccyZOn6c",
+    "path": [
+      "PRD",
+      " 3. SaaS 管理平台（PRD）",
+      "【SaaS平台】租户管理需求文档  "
+    ],
+    "parentId": "directory-31ecf108020c05ea"
+  },
+  {
+    "id": "article-eee3abe3d3294854",
+    "type": "article",
+    "source": "prd",
+    "title": "15.【PRD-{Saas 租户平台}】版本升级提醒功能",
+    "summary": "更新日期 参与人 更新内容 2025.10.29 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 租户管理 - 版本升级管理，聚焦超级管理员对多租户的版本升级提醒配置，包含租户选择、版本指定、设备定向、安装包上传，提醒方式及图片剪裁处理等功能 客户端用户收到升级提醒及更新对应安装包",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/LsaKdLcGroXCqtxDWLxclImGn5g",
+    "path": [
+      "PRD",
+      " 3. SaaS 管理平台（PRD）",
+      "15.【PRD-{Saas 租户平台}】版本升级提醒功能"
+    ],
+    "parentId": "directory-31ecf108020c05ea"
+  },
+  {
+    "id": "article-d00ed061a4461553",
+    "type": "article",
+    "source": "prd",
+    "title": "19.【PRD-{Saas 租户平台}】 租户设置-租户邮箱管理",
+    "summary": "更新日期 参与人 更新内容 2025.11.24 作者ou_3b06df03796b72297e66a2ba89f7520b 评审ou_81afba15a5e2a4448a5ab67d471c9287 1. 核心规则定义：仅登记的邮箱地址（精确匹配）或邮箱域名（后缀匹配）可录入成员列表，接收蜂巢系统发出的邮件，未登记则录入校验报错登录时邮箱校验白名单，不匹配时报错； 2. 支持两种登记模式：邮箱全称（单邮箱精准管控）、邮箱域名（同域名批…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/CNIEdkHiDojKYUxfhQVcdtBKnwd",
+    "path": [
+      "PRD",
+      " 3. SaaS 管理平台（PRD）",
+      "19.【PRD-{Saas 租户平台}】 租户设置-租户邮箱管理"
+    ],
+    "parentId": "directory-31ecf108020c05ea"
+  },
+  {
+    "id": "directory-ee8df82deeb2e070",
+    "type": "directory",
+    "source": "prd",
+    "title": "5.基础功能",
+    "summary": "3 篇内容，涵盖：【PRD】增加手机号输入引导与规则校验、默认头像、名称生成规则、选人组件优化",
+    "path": [
+      "PRD",
+      "5.基础功能"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "article-7c7f007408f544fe",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD】增加手机号输入引导与规则校验",
+    "summary": "相关文档与资料： https://github.com/google/libphonenumber 【PRD--企业管理后台】成员管理 【PRD】手机号不可用期间过渡方案 手机号格式：[+][国家代码][用户号码] 需要支持的国家：日本，美国、加拿大、澳大利亚、德国、英国、法国、意大利、以色列、印度尼西亚、泰国、马来西亚，阿联酋，荷兰，土耳其，香港（中国） 国家 国家代码",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/MGpmdOy1xocLOkxp4Mwc1Dfuntf",
+    "path": [
+      "PRD",
+      "5.基础功能",
+      "【PRD】增加手机号输入引导与规则校验"
+    ],
+    "parentId": "directory-ee8df82deeb2e070"
+  },
+  {
+    "id": "article-a2d227c1ded483a0",
+    "type": "article",
+    "source": "prd",
+    "title": "默认头像、名称生成规则",
+    "summary": "更新日期 产品经理与更新内容 产品内部确认 最终评审 2025.10.09 ou_b74bd1a8373bf58fc19abe19d164b474：撰写PRD模板初稿 2025.10.11 ou_b74bd1a8373bf58fc19abe19d164b474：群默认头像去掉九宫格拼接的逻辑，改为默认图或图片叠加文字",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Ux8CdHIctoLMx6xKZEYcpePrnmg",
+    "path": [
+      "PRD",
+      "5.基础功能",
+      "默认头像、名称生成规则"
+    ],
+    "parentId": "directory-ee8df82deeb2e070"
+  },
+  {
+    "id": "article-9eebf4b716edc433",
+    "type": "article",
+    "source": "prd",
+    "title": "选人组件优化",
+    "summary": "更新日期 参与人 更新内容 2025.10.25 作者ou_b74bd1a8373bf58fc19abe19d164b474 评审ou_81afba15a5e2a4448a5ab67d471c9287 撰写优化版选人组件方案，解决用户理解上的困惑 2026.01.09",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/TzGqdffEVomvZ5xjPhgczPLJnne",
+    "path": [
+      "PRD",
+      "5.基础功能",
+      "选人组件优化"
+    ],
+    "parentId": "directory-ee8df82deeb2e070"
+  },
+  {
+    "id": "directory-967ae3df02728b5c",
+    "type": "directory",
+    "source": "prd",
+    "title": "故事线",
+    "summary": "1 篇内容，涵盖：故事线进度",
+    "path": [
+      "PRD",
+      "故事线"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "article-3670051dd169c932",
+    "type": "article",
+    "source": "prd",
+    "title": "故事线进度",
+    "summary": "bud有空的时间（东京时间） 要过的故事线（） 5.26 15:00-16:00 绩效和okr ou_39ce30d7f274b97f67880cfc2a025b47 5.26 16:00-17:00 报表ou_39ce30d7f274b97f67880cfc2a025b47 5.26 17:00-18:00 日历MVP版本+日程管理思路ou_50d7eb7b7f8ca4a9bf73577772060604",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/BFJvd1N7LoC9bexwpMNcXli5nue",
+    "path": [
+      "PRD",
+      "故事线",
+      "故事线进度"
+    ],
+    "parentId": "directory-967ae3df02728b5c"
+  },
+  {
+    "id": "directory-c330983fdf1184c6",
+    "type": "directory",
+    "source": "prd",
+    "title": "6.流程",
+    "summary": "6 篇内容，涵盖：OKR、权限知识库体系、如何开好会、如何提升效率、数据加密实施及功能影响、App Store上架成功后 Checklist",
+    "path": [
+      "PRD",
+      "6.流程"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "directory-cce5e30703e8d58e",
+    "type": "directory",
+    "source": "prd",
+    "title": "OKR",
+    "summary": "1 篇内容，涵盖：6月OKR初版",
+    "path": [
+      "PRD",
+      "6.流程",
+      "OKR"
+    ],
+    "parentId": "directory-c330983fdf1184c6"
+  },
+  {
+    "id": "article-d2c8779249f1d975",
+    "type": "article",
+    "source": "prd",
+    "title": "6月OKR初版",
+    "summary": "OKR（Objective & Key Results），“目标与关键结果”，是一个目标管理工具。 Objectives 是目标（O），回答的是“我和我的团队想要完成什么”。 Key Results 是一系列可衡量的关键结果（KR），回答的是“我如何知道自己是否达成了目标” 。 如何写好 OKR：参考链接 如何写好 O？参考 目标（O）制定的基本原则 如何写好 KR？参考 关键结果（KR）制定的基本原则 内容 思考指引",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/UP4sdAk0loqa3pxvCTocqnuYn8g",
+    "path": [
+      "PRD",
+      "6.流程",
+      "OKR",
+      "6月OKR初版"
+    ],
+    "parentId": "directory-cce5e30703e8d58e"
+  },
+  {
+    "id": "article-57f5d09b5d94e032",
+    "type": "article",
+    "source": "prd",
+    "title": "权限知识库体系",
+    "summary": "目标： 建立一个团队唯一认可的“权限事实源”，使任何人能快速确认：谁能对什么对象做什么、在什么条件下、系统实际上如何表现，以及该结论何时被验证。 成功标准： 拿到最新资料：每项已上线的关键权限，主文档都有当前结论、证据链接、最后验证日期。 资料持续更新：任何线上权限行为变更都必须触发主文档更新；没有更新，事情不算完成。 更新日志 把更新作为发布流程一个环节 每周做一次反向核对，记录缺失行为 得到准确回答：使用者能在主文档中检索，或用 R…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/Ocyqd0SGxowJDJxsvuBcwXFInt4",
+    "path": [
+      "PRD",
+      "6.流程",
+      "权限知识库体系"
+    ],
+    "parentId": "directory-c330983fdf1184c6"
+  },
+  {
+    "id": "article-fd3763024fcd735f",
+    "type": "article",
+    "source": "prd",
+    "title": "如何开好会",
+    "summary": "目的：为提升会议效率，规范会议行为，确保决策质量和执行落地，特制定本规定。 适用范围：适用于公司所有现场、远程及混合形式的正式会议。非正式沟通、临时站会等不在此限，但可参照执行。 基本原则：坚持“三不召开”原则——无明确议题不召开、无核心解决问题不召开、无必要参与人不召开。 会议组织者应于会前发送日历邀约，明确会议议题、会议时间、决策要求，最好约日历时提前准备文档或简要描述。 参会人员须提前阅读背景材料（如有），做好讨论准备。 远程会议…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/FxODdunsZoyyKoxDcbxcgZHHnEg",
+    "path": [
+      "PRD",
+      "6.流程",
+      "如何开好会"
+    ],
+    "parentId": "directory-c330983fdf1184c6"
+  },
+  {
+    "id": "article-2f89708142241f37",
+    "type": "article",
+    "source": "prd",
+    "title": "如何提升效率",
+    "summary": "问题 根源 方案",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/X4gudf8duoS809xSLDUcbhpRnSe",
+    "path": [
+      "PRD",
+      "6.流程",
+      "如何提升效率"
+    ],
+    "parentId": "directory-c330983fdf1184c6"
+  },
+  {
+    "id": "article-a213c49826acf95b",
+    "type": "article",
+    "source": "prd",
+    "title": "数据加密实施及功能影响",
+    "summary": "上线时间：服务器加密与下掉公开群3.16（本周一）已上线；搜索链路变更ES数据清除3.20（本周五）将下线 公司老板出于安全考量，为防止组织架构、群名、项目名等核心信息被泄露或攻击，要求对底层数据做加密处理；该要求优先保障安全，即便砍掉冲突功能也不妥协。 核心在服务器端完成全链路加密，和本地数据存储无关； IM加密的范围覆盖群名称、项目名称； 平台加密的范围覆盖任务名称、任务描述、组织架构的部门名称、公司名称； 本地仅同步用户自己加入的…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/EsgEdWAdwopS7NxbuZhcM8Fjn9g",
+    "path": [
+      "PRD",
+      "6.流程",
+      "数据加密实施及功能影响"
+    ],
+    "parentId": "directory-c330983fdf1184c6"
+  },
+  {
+    "id": "article-3e7cb06dc053be66",
+    "type": "article",
+    "source": "prd",
+    "title": "App Store上架成功后 Checklist",
+    "summary": "APP 上线流程： 打包环节：开发可使用打包机进行打包，测试环境验证internal包，通过后打线上环境test flight包，产品在此验证主流程后，发布 APP Store 包。 发布环节：ToB 企业 APP store 提审文案不宜复杂，可将更新内容放更新弹窗等位置，避免增大被拒审概率。 测试环节：产品和设计可按需选择测试环境，上线前需测 test flight 包全流程，测试完成后通知研发打包上线。 功能排期：研发负责提测，上…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/ObnYdjyFSoFGN5xFSiRcxeVhnDh",
+    "path": [
+      "PRD",
+      "6.流程",
+      "App Store上架成功后 Checklist"
+    ],
+    "parentId": "directory-c330983fdf1184c6"
+  },
+  {
+    "id": "article-62871698a177e462",
+    "type": "article",
+    "source": "prd",
+    "title": "",
+    "summary": "所有部门 全部下属 产品部 a，b，c 直属（-1） a，b，c h（客服组） 技术部",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/FugUdnqsFouV0sxP4oqcNNDnnTh",
+    "path": [
+      "PRD",
+      ""
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "article-9acb8835615f943a",
+    "type": "article",
+    "source": "prd",
+    "title": "【PRD- Mac/iPhone端】假勤管理独立产品创建流程",
+    "summary": "更新日期 产品经理 更新内容 评审 2026-09-07 ou_50d7eb7b7f8ca4a9bf73577772060604 创建文档 ou_fc537e7ed5df7c7f9d41668fcadd96d9",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/STSedRUW7o3wlExO2qKcvJXMn0d",
+    "path": [
+      "PRD",
+      "【PRD- Mac/iPhone端】假勤管理独立产品创建流程"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "article-87b6bdf394e4eec4",
+    "type": "article",
+    "source": "prd",
+    "title": "蜂巢软件内安全、隐私相关功能",
+    "summary": "邮箱验证码登录：通过邮箱验证码完成身份验证，适用于首次登录或密码重置场景 密码登录：结合双重验证，提供基础安全保障 登录双重验证机制：登录时采用密码与验证码（邮箱/手机号/TOTP）的双重验证机制，保障登录安全。开启双重验证后，系统将强制退出该账号在其他设备上的登录状态，防止未经验证的设备继续访问 手机号验证码登录（to do）：通过短信验证码实现快捷登录 PASSKEY登录（to do）：基于公私钥机制的新型登录认证方式，告别繁琐的密…",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/UlJbdTMyroJf2kxGYjicuxjWnkg",
+    "path": [
+      "PRD",
+      "蜂巢软件内安全、隐私相关功能"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "article-d71aa255a969c72c",
+    "type": "article",
+    "source": "prd",
+    "title": "假勤管理与企业后台的关联的页面与字段",
+    "summary": "模块 菜单 假勤相关的页面 组织架构 成员管理 保留：假期余额 - 假期余额的：已发放、已使用、剩余额度 保留：基础信息 保留：工作信息",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/OjdQdYGRJoMf5WxK1fmcR7drnIg",
+    "path": [
+      "PRD",
+      "假勤管理与企业后台的关联的页面与字段"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
+  },
+  {
+    "id": "article-a5c26744ed82da20",
+    "type": "article",
+    "source": "prd",
+    "title": "ISMS认证",
+    "summary": "Zelto公司的核心服务是提供企业级 SaaS 软件解决方案，其主打产品为 蜂巢（iHive）协同办公平台 。该平台通过整合即时通讯、项目管理、在线会议、日程管理等功能，为各类规模的企业提供高效、安全的一站式办公协同体验。",
+    "url": "https://pcnpuds47gj5.feishu.cn/docx/KTSBd2OnMoiV5wxxyVTcyNsvn8c",
+    "path": [
+      "PRD",
+      "ISMS认证"
+    ],
+    "parentId": "directory-08cb4e77b4a31adc"
   },
   {
     "id": "directory-df7825d34afddcfd",

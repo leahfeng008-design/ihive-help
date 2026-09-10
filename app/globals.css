@@ -183,11 +183,27 @@ main {
 .answer-copy .answer-heading { font-weight: 650; line-height: 1.5; }
 .answer-copy p + .answer-heading { margin-top: 16px; }
 .answer-copy strong { font-weight: 650; }
+.answer-code {
+  margin: 12px 0;
+  padding: 13px 15px;
+  overflow-x: auto;
+  border: 1px solid #d8deea;
+  border-radius: 10px;
+  color: #e9eef8;
+  background: #172033;
+  font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  tab-size: 2;
+  white-space: pre;
+}
+.answer-code code { font: inherit; }
 .assistant .bubble { min-width: 0; white-space: normal; }
 .references { white-space: normal; }
 .inline-help-image { margin: 14px 0 16px; white-space: normal; }
 .inline-help-image img { display: block; width: 100%; max-height: 520px; object-fit: contain; border: 1px solid var(--line); border-radius: 12px; background: #f7f8fa; }
 .inline-help-image figcaption { margin-top: 6px; color: var(--muted); font-size: 12px; text-align: center; }
+.inline-help-video { margin: 14px 0 16px; white-space: normal; }
+.inline-help-video video { display: block; width: 100%; max-height: 520px; border: 1px solid var(--line); border-radius: 12px; background: #111827; }
+.inline-help-video figcaption { margin-top: 6px; color: var(--muted); font-size: 12px; text-align: center; }
 .references { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
 .references h2 { margin: 0 0 9px; color: var(--muted); font-size: 13px; font-weight: 600; }
 .references a { display: flex; align-items: center; gap: 9px; padding: 8px 0; color: #334269; text-decoration: none; font-size: 14px; }

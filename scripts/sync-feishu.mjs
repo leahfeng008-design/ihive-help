@@ -153,6 +153,21 @@ function richText(block) {
   ).join('').replace(/\u200b/g, '').trim();
 }
 
+const videoExtensions = new Set(['.mp4', '.m4v', '.mov', '.webm', '.ogv']);
+
+function videoFromFile(file, documentTitle) {
+  const extension = path.extname(file?.name || '').toLowerCase();
+  if (!file?.token || !videoExtensions.has(extension)) return null;
+  const videoId = `video-${crypto.createHash('sha1').update(file.token).digest('hex').slice(0, 12)}`;
+  return {
+    videoId,
+    token: file.token,
+    src: `/api/media/${videoId}`,
+    name: file.name,
+    alt: `${documentTitle} 操作视频`,
+  };
+}
+
 function stableId(prefix, value) {
   return `${prefix}-${crypto.createHash('sha1').update(value).digest('hex').slice(0, 16)}`;
 }
@@ -206,7 +221,7 @@ function annotateParagraphs(paragraphs, defaultSection = '') {
     const isMetadata = paragraph.order < 10 && /^(更新时间|文档负责人|产品经理|更新版本|适用客户端)[：:]/.test(paragraph.text);
     const section = sectionPath.join(' / ');
     const isInstruction = !isMetadata && (
-      paragraph.images.length > 0 ||
+      paragraph.images.length > 0 || paragraph.videos.length > 0 ||
       /使用过程|操作流程|操作步骤|操作方法|具体步骤|配置步骤/.test(section) ||
       /^(打开|进入|点击|选择|填写|输入|设置|确认|保存|返回|勾选|搜索|长按|滑动)/.test(paragraph.text)
     );
@@ -235,7 +250,7 @@ async function loadDocx(meta) {
         activeParagraph = {
           id: stableId('paragraph', `${meta.url}:${block.block_id || paragraphs.length}:${part}`),
           type: 'paragraph', kind: paragraphKind(block), order: paragraphs.length,
-          text: part, images: [],
+          text: part, images: [], videos: [],
         };
         paragraphs.push(activeParagraph);
       }
@@ -243,10 +258,19 @@ async function loadDocx(meta) {
     if (meta.sourceType === 'help' && block.image?.token) {
       const image = await downloadImage(block.image.token, meta.title);
       if (!activeParagraph) {
-        activeParagraph = { id: stableId('paragraph', `${meta.url}:lead`), type: 'paragraph', kind: 'text', order: 0, text: meta.title, images: [] };
+        activeParagraph = { id: stableId('paragraph', `${meta.url}:lead`), type: 'paragraph', kind: 'text', order: 0, text: meta.title, images: [], videos: [] };
         paragraphs.push(activeParagraph);
       }
       activeParagraph.images.push(image);
+    }
+    if (meta.sourceType === 'help' && block.file) {
+      const video = videoFromFile(block.file, meta.title);
+      if (!video) continue;
+      if (!activeParagraph) {
+        activeParagraph = { id: stableId('paragraph', `${meta.url}:lead`), type: 'paragraph', kind: 'text', order: 0, text: meta.title, images: [], videos: [] };
+        paragraphs.push(activeParagraph);
+      }
+      activeParagraph.videos.push(video);
     }
   }
   const text = paragraphs.map(paragraph => paragraph.text).join('\n').trim();
@@ -278,7 +302,7 @@ async function loadAssignmentTable(tableId = assignmentTableId, moduleOwners = f
   } while (pageToken);
   if (!rows.length) throw new Error('分工表没有有效模块记录，保留上次完整内容');
   const paragraphs = annotateParagraphs(rows.map((row, index) => ({
-    id: stableId('paragraph', `assignment:${assignmentAppToken}:${tableId}:${row.id}`), type: 'paragraph', kind: 'record', order: index, text: row.text, images: [],
+    id: stableId('paragraph', `assignment:${assignmentAppToken}:${tableId}:${row.id}`), type: 'paragraph', kind: 'record', order: index, text: row.text, images: [], videos: [],
   })), '模块分工');
   return {
     sourceType: 'assignment', category: '模块分工', path: ['分工表', moduleOwners ? '按照模块分' : '帮助文档维护分工表'], title: moduleOwners ? '按照模块分' : '帮助文档维护分工表',
@@ -382,7 +406,7 @@ function flattenKnowledge(roots) {
     const nextArticleIds = [...articleIds, article.id];
     entries.push({ id: article.id, nodeType: 'article', sourceType: article.sourceType, title: article.title, path: article.path, summary: article.summary, url: article.url, directoryIds, articleIds: nextArticleIds });
     for (const directory of article.directories || []) visitDirectory(directory, directoryIds, nextArticleIds);
-    for (const paragraph of article.paragraphs) entries.push({ id: paragraph.id, nodeType: 'paragraph', sourceType: article.sourceType, title: article.title, path: article.path, text: paragraph.text, kind: paragraph.kind, order: paragraph.order, sectionPath: paragraph.sectionPath, role: paragraph.role, isMetadata: paragraph.isMetadata, url: article.url, images: paragraph.images, directoryIds, articleIds: nextArticleIds });
+    for (const paragraph of article.paragraphs) entries.push({ id: paragraph.id, nodeType: 'paragraph', sourceType: article.sourceType, title: article.title, path: article.path, text: paragraph.text, kind: paragraph.kind, order: paragraph.order, sectionPath: paragraph.sectionPath, role: paragraph.role, isMetadata: paragraph.isMetadata, url: article.url, images: paragraph.images, videos: paragraph.videos, directoryIds, articleIds: nextArticleIds });
     for (const child of article.articles) visitArticle(child, directoryIds, nextArticleIds);
   };
   for (const root of roots) visitDirectory(root);
@@ -502,5 +526,6 @@ console.log(JSON.stringify({
   vectors: vectorIndex.entries.filter(entry => entry.embedding).length,
   reusedVectors: indexEntries.filter(entry => previousEmbeddings.get(entry.id)?.embedding === entry.embedding).length,
   images: flatEntries.filter(entry => entry.nodeType === 'paragraph').reduce((sum, entry) => sum + (entry.images?.length || 0), 0),
+  videos: flatEntries.filter(entry => entry.nodeType === 'paragraph').reduce((sum, entry) => sum + (entry.videos?.length || 0), 0),
   sources: documents.reduce((result, doc) => ({ ...result, [doc.sourceType]: (result[doc.sourceType] || 0) + 1 }), {}),
 }));

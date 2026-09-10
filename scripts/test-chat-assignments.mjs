@@ -2,14 +2,17 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
 import ts from 'typescript';
+import {cases as moduleCases} from './module-selftest-cases.mjs';
+import {prdCases} from './module-selftest-prd.mjs';
 const knowledgeJson = JSON.parse(fs.readFileSync('data/knowledge.json'));
 const source = fs.readFileSync('app/api/chat/route.ts', 'utf8').replace(/^import .*;$/gm, '').replace('export async function POST', 'async function POST');
 const context = vm.createContext({ knowledgeJson, imageContextJson: {}, vectorIndexJson: { entries: [] }, process: { env: {} }, console, Response, isFeishuAuthRequired: () => false, readFeishuSession: async () => null });
 vm.runInContext(ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None }), context);
-const ask = async messages => {
-  context.body = { messages: messages.map(content => ({role: 'user', content})) };
+const askMessages = async messages => {
+  context.body = { messages };
   return vm.runInContext('POST({json: async () => body}).then(r => r.json())', context);
 };
+const ask = messages => askMessages(messages.map(content => ({role: 'user', content})));
 const root = knowledgeJson.roots.find(root => root.sourceType === 'assignment');
 const allRows = root.articles.flatMap(article => article.paragraphs);
 const rows = allRows.filter(row => row.text.includes('帮助文档负责人：'));
@@ -106,3 +109,22 @@ for (const module of firstLevelModules) {
   for (const id of expectedIds) assert.ok(result.retrieval.paragraphIds.includes(id), `${module} should include ${id}`);
 }
 console.log(`PASS: all ${firstLevelModules.length} first-level modules return every matching row from both tables.`);
+
+for (const scenario of moduleCases) {
+  const prd = prdCases[scenario.id];
+  const owner = prd?.owner || scenario.owner;
+  const expectedRows = allRows.filter(row => parseFields(row)['二级模块'] === owner);
+  const userQuestions = [...scenario.turns.slice(0, 3), ...(prd ? [prd.question] : [])];
+  const history = userQuestions.flatMap(content => [
+    {role: 'user', content},
+    {role: 'assistant', content: '已根据当前资料回答。'},
+  ]);
+  history.push({role: 'user', content: '这个问题找谁负责？'});
+  const ownerResult = await askMessages(history);
+  assert.deepEqual(new Set(ownerResult.retrieval?.paragraphIds), new Set(expectedRows.map(row => row.id)), `${scenario.id} should restore ${owner}`);
+  history.push({role: 'assistant', content: ownerResult.answer});
+  history.push({role: 'user', content: '那设计师和帮助文档维护人呢？'});
+  const roleResult = await askMessages(history);
+  assert.deepEqual(new Set(roleResult.retrieval?.paragraphIds), new Set(expectedRows.map(row => row.id)), `${scenario.id} role follow-up should retain ${owner}`);
+}
+console.log(`PASS: all ${moduleCases.length} simulated topic → image → owner → role chains retain the expected module.`);

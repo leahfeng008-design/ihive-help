@@ -160,3 +160,43 @@ for (const question of ['怎么添加群管理员？', '群管理员怎么添加
   assert.ok(!/^(是|否)[。！!]/.test(payload.answer), question);
 }
 console.log('PASS: group-admin wording selects the group settings article, returns both setup methods, and never starts procedural answers with yes/no.');
+
+for (const question of ['群机器人怎么添加？', '怎么添加群机器人？']) {
+  context.testQuestion = question;
+  const response = await vm.runInContext(`POST({ json: async () => ({ messages: [{role: 'user', content: testQuestion}] }) })`, context);
+  const payload = await response.json();
+  assert.equal(payload.sources.length, 1, question);
+  assert.equal(payload.sources[0].title, '在群组中使用机器人', question);
+  assert.ok(payload.answer.includes('添加机器人页面'), question);
+  assert.ok(!payload.answer.includes('calSignature'), question);
+  assert.ok(!payload.answer.includes('移除群机器人'), question);
+  assert.ok(payload.images.length >= 1, question);
+  assert.ok(vm.runInContext(`hasCompleteMediaMarkers(${JSON.stringify(payload.answer)}, ${JSON.stringify(payload.images)}, [])`, context), question);
+}
+console.log('PASS: group-bot setup stays in the add-bot section, keeps screenshots, and excludes unrelated signature/removal content.');
+
+context.testQuestion = '审批流怎么配？';
+let response = await vm.runInContext(`POST({ json: async () => ({ messages: [{role: 'user', content: testQuestion}] }) })`, context);
+let payload = await response.json();
+assert.equal(payload.sources[0].title, '管理员设计审批流程');
+assert.ok(payload.answer.includes('流程设计'));
+assert.ok(payload.images.length >= 2);
+assert.ok(vm.runInContext(`hasCompleteMediaMarkers(${JSON.stringify(payload.answer)}, ${JSON.stringify(payload.images)}, [])`, context));
+console.log('PASS: approval-flow configuration selects the visual flow-design guide and returns its screenshots inline.');
+
+context.testQuestion = '怎么转移任务空间？';
+response = await vm.runInContext(`POST({ json: async () => ({ messages: [{role: 'user', content: testQuestion}] }) })`, context);
+payload = await response.json();
+assert.equal(payload.sources[0].title, '如何转移任务空间');
+assert.equal(payload.videos.length, 1);
+assert.equal(payload.videos[0].videoId, 'video-227ccd3077b0');
+assert.ok(!('token' in payload.videos[0]));
+assert.ok(payload.answer.includes('[[VIDEO:video-227ccd3077b0]]'));
+assert.ok(vm.runInContext(`hasCompleteMediaMarkers(${JSON.stringify(payload.answer)}, ${JSON.stringify(payload.images)}, ${JSON.stringify(payload.videos)})`, context));
+console.log('PASS: task-space transfer includes the source video inline without exposing its Feishu file token.');
+
+const codeMatch = vm.runInContext(`searchNodes.find(node => node.nodeType === 'paragraph' && node.kind === 'code' && (node.text || '').includes('calSignature'))`, context);
+const codeRendered = render(JSON.stringify({ blocks: [{ text: 'unformatted model output', paragraphIds: [codeMatch.id] }] }), [{ node: codeMatch }], false, true);
+assert.ok(codeRendered.startsWith('```go\n'));
+assert.ok(codeRendered.includes('\n```'));
+console.log('PASS: source code is rendered as a fenced, language-labelled block instead of flattened answer text.');
