@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "sourceHash": "5142607769be91060a70987793ebe1bcdab7d35385c7af562c0dbfcf46d895be",
+  "sourceHash": "f5739e017e54d92e6643f34e3bd64a8bc211a88071eba4a265c0dd43c2909812",
   "encoding": "int16-base64",
   "scale": 32767,
   "model": "openai/text-embedding-3-small",
