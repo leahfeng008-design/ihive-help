@@ -53,7 +53,7 @@ for(const scenario of scenarios.filter(s=>!selection||selection.includes(s.name)
     const markers=[...(body.answer||'').matchAll(/\[\[IMAGE:([^\]]+)\]\]/g)].map(m=>m[1]);
     const noticeExpected = scenario.clarify ||
       (scenario.name==='密码-验证码' && index===2) || (scenario.name==='备注-追问' && index===2) ||
-      (scenario.name==='主题-追问' && index>0) || (scenario.name==='免打扰-不存在的方法' && index===1) ||
+      (scenario.name==='免打扰-不存在的方法' && index===1) ||
       (scenario.name==='免打扰-未知客户端' && index===1);
     const expectedImages = {
       '免打扰-切换客户端': [['img-c795f4ce174c','img-2de03b5336cd'],['img-2de03b5336cd'],['img-c795f4ce174c']],

@@ -1,0 +1,705 @@
+{
+  "version": 1,
+  "description": "100 轮客户口语化多轮追问评测集。每组 4 轮，重点验证省略主题、简化表达、操作追问、平台切换和故障追问。",
+  "turnCount": 100,
+  "cases": [
+    {
+      "id": "C01",
+      "topic": "消息免打扰",
+      "turns": [
+        {
+          "user": "怎么给一个群设置免打扰？",
+          "expect": { "topic": "消息免打扰" }
+        },
+        {
+          "user": "怎么用？",
+          "expect": { "followup": "怎么用", "topic": "消息免打扰" }
+        },
+        {
+          "user": "简单点，我看不懂。",
+          "expect": {
+            "followup": "简单点，我看不懂。",
+            "topic": "消息免打扰",
+            "brief": true
+          }
+        },
+        {
+          "user": "手机上怎么用？",
+          "expect": {
+            "followup": "手机上怎么用？",
+            "topic": "消息免打扰",
+            "platform": "手机"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "topic": "修改登录密码",
+      "turns": [
+        {
+          "user": "忘记登录密码了怎么办？",
+          "expect": { "topic": "忘记登录密码" }
+        },
+        {
+          "user": "收不到验证码。",
+          "expect": { "followup": "收不到验证码。", "topic": "忘记登录密码" }
+        },
+        {
+          "user": "没看懂，简单点。",
+          "expect": {
+            "followup": "没看懂，简单点。",
+            "topic": "忘记登录密码",
+            "brief": true
+          }
+        },
+        {
+          "user": "具体怎么弄？",
+          "expect": {
+            "followup": "具体怎么弄？",
+            "topic": "忘记登录密码",
+            "detailed": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "topic": "联系人备注",
+      "turns": [
+        {
+          "user": "联系人备注名在哪里改？",
+          "expect": { "topic": "联系人备注" }
+        },
+        {
+          "user": "在哪儿？",
+          "expect": { "followup": "在哪儿？", "topic": "联系人备注" }
+        },
+        {
+          "user": "这个怎么用，简单点。",
+          "expect": {
+            "followup": "这个怎么用，简单点。",
+            "topic": "联系人备注",
+            "brief": true
+          }
+        },
+        {
+          "user": "对方能看到吗？",
+          "expect": { "followup": "对方能看到吗？", "topic": "联系人备注" }
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "topic": "更换主题",
+      "turns": [
+        { "user": "软件主题怎么换？", "expect": { "topic": "软件主题" } },
+        {
+          "user": "电脑上怎么用？",
+          "expect": {
+            "followup": "电脑上怎么用？",
+            "topic": "软件主题",
+            "platform": "电脑"
+          }
+        },
+        {
+          "user": "手机呢？",
+          "expect": {
+            "followup": "手机呢？",
+            "topic": "软件主题",
+            "platform": "手机"
+          }
+        },
+        {
+          "user": "太复杂了，看不懂。",
+          "expect": {
+            "followup": "太复杂了，看不懂。",
+            "topic": "软件主题",
+            "brief": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "topic": "收藏消息",
+      "turns": [
+        { "user": "聊天里的消息怎么收藏？", "expect": { "topic": "消息收藏" } },
+        {
+          "user": "怎么用？",
+          "expect": { "followup": "怎么用？", "topic": "消息收藏" }
+        },
+        {
+          "user": "这个收藏能取消吗？",
+          "expect": { "followup": "这个收藏能取消吗？", "topic": "消息收藏" }
+        },
+        {
+          "user": "给我对应的图，简单点。",
+          "expect": {
+            "followup": "给我对应的图，简单点。",
+            "topic": "消息收藏",
+            "brief": true,
+            "imageRequest": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "topic": "添加群管理员",
+      "turns": [
+        { "user": "群管理员怎么添加？", "expect": { "topic": "群管理员" } },
+        {
+          "user": "具体怎么用？",
+          "expect": {
+            "followup": "具体怎么用？",
+            "topic": "群管理员",
+            "detailed": true
+          }
+        },
+        {
+          "user": "看不明白，简单说。",
+          "expect": {
+            "followup": "看不明白，简单说。",
+            "topic": "群管理员",
+            "brief": true
+          }
+        },
+        {
+          "user": "手机端也能弄吗？",
+          "expect": {
+            "followup": "手机端也能弄吗？",
+            "topic": "群管理员",
+            "platform": "手机"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "topic": "创建群组",
+      "turns": [
+        { "user": "怎么新建一个群聊？", "expect": { "topic": "新建群聊" } },
+        {
+          "user": "这个怎么用？",
+          "expect": { "followup": "这个怎么用？", "topic": "新建群聊" }
+        },
+        {
+          "user": "一步一步说，别太复杂。",
+          "expect": {
+            "followup": "一步一步说，别太复杂。",
+            "topic": "新建群聊"
+          }
+        },
+        {
+          "user": "有截图吗？",
+          "expect": {
+            "followup": "有截图吗？",
+            "topic": "新建群聊",
+            "imageRequest": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "topic": "会话内搜索历史消息",
+      "turns": [
+        {
+          "user": "我想找聊天记录，怎么搜？",
+          "expect": { "topic": "聊天记录" }
+        },
+        {
+          "user": "怎么用，简单点。",
+          "expect": {
+            "followup": "怎么用，简单点。",
+            "topic": "聊天记录",
+            "brief": true
+          }
+        },
+        {
+          "user": "这两个端一样吗？",
+          "expect": { "followup": "这两个端一样吗？", "topic": "聊天记录" }
+        },
+        {
+          "user": "还是找不到。",
+          "expect": { "followup": "还是找不到。", "topic": "聊天记录" }
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "topic": "收发文件",
+      "turns": [
+        { "user": "聊天里怎么发文件？", "expect": { "topic": "发文件" } },
+        {
+          "user": "看不懂，怎么用？",
+          "expect": {
+            "followup": "看不懂，怎么用？",
+            "topic": "发文件",
+            "brief": true
+          }
+        },
+        {
+          "user": "手机上呢？",
+          "expect": {
+            "followup": "手机上呢？",
+            "topic": "发文件",
+            "platform": "手机"
+          }
+        },
+        {
+          "user": "这个也能发图片吗？",
+          "expect": { "followup": "这个也能发图片吗？", "topic": "发文件" }
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "topic": "截图并标注图片",
+      "turns": [
+        {
+          "user": "截图后怎么在图片上标注？",
+          "expect": { "topic": "截图标注" }
+        },
+        {
+          "user": "怎么用？",
+          "expect": { "followup": "怎么用？", "topic": "截图标注" }
+        },
+        {
+          "user": "说简单点，我没看懂。",
+          "expect": {
+            "followup": "说简单点，我没看懂。",
+            "topic": "截图标注",
+            "brief": true
+          }
+        },
+        {
+          "user": "Mac上怎么弄？",
+          "expect": {
+            "followup": "Mac上怎么弄？",
+            "topic": "截图标注",
+            "platform": "Mac"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "topic": "查看同事时区",
+      "turns": [
+        { "user": "怎么看同事所在的时区？", "expect": { "topic": "同事时区" } },
+        {
+          "user": "具体在哪里？",
+          "expect": {
+            "followup": "具体在哪里？",
+            "topic": "同事时区",
+            "detailed": true
+          }
+        },
+        {
+          "user": "还是看不懂。",
+          "expect": {
+            "followup": "还是看不懂。",
+            "topic": "同事时区",
+            "brief": true
+          }
+        },
+        {
+          "user": "手机上怎么用？",
+          "expect": {
+            "followup": "手机上怎么用？",
+            "topic": "同事时区",
+            "platform": "手机"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "topic": "使用快捷键",
+      "turns": [
+        { "user": "快捷键怎么用？", "expect": { "topic": "快捷键" } },
+        {
+          "user": "简单点说。",
+          "expect": {
+            "followup": "简单点说。",
+            "topic": "快捷键",
+            "brief": true
+          }
+        },
+        {
+          "user": "有没有第二种？",
+          "expect": { "followup": "有没有第二种？", "topic": "快捷键" }
+        },
+        {
+          "user": "Windows呢？",
+          "expect": {
+            "followup": "Windows呢？",
+            "topic": "快捷键",
+            "platform": "Windows"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C13",
+      "topic": "填写汇报",
+      "turns": [
+        { "user": "周报怎么填写和提交？", "expect": { "topic": "周报填写" } },
+        {
+          "user": "怎么用，越简单越好。",
+          "expect": {
+            "followup": "怎么用，越简单越好。",
+            "topic": "周报填写",
+            "brief": true
+          }
+        },
+        {
+          "user": "我看不懂，具体一点。",
+          "expect": {
+            "followup": "我看不懂，具体一点。",
+            "topic": "周报填写",
+            "detailed": true
+          }
+        },
+        {
+          "user": "这个草稿会保存吗？",
+          "expect": { "followup": "这个草稿会保存吗？", "topic": "周报填写" }
+        }
+      ]
+    },
+    {
+      "id": "C14",
+      "topic": "AI总结和追问汇报",
+      "turns": [
+        {
+          "user": "怎么用AI一次总结多份周报？",
+          "expect": { "topic": "AI总结" }
+        },
+        {
+          "user": "看不懂，怎么用？",
+          "expect": {
+            "followup": "看不懂，怎么用？",
+            "topic": "AI总结",
+            "brief": true
+          }
+        },
+        {
+          "user": "能选别的公司的汇报吗？",
+          "expect": { "followup": "能选别的公司的汇报吗？", "topic": "AI总结" }
+        },
+        {
+          "user": "给我一张对应的图。",
+          "expect": {
+            "followup": "给我一张对应的图。",
+            "topic": "AI总结",
+            "imageRequest": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "topic": "转移任务空间",
+      "turns": [
+        {
+          "user": "任务空间怎么转给别人？",
+          "expect": { "topic": "任务空间转移" }
+        },
+        {
+          "user": "怎么用？简单点。",
+          "expect": {
+            "followup": "怎么用？简单点。",
+            "topic": "任务空间转移",
+            "brief": true
+          }
+        },
+        {
+          "user": "电脑端怎么操作？",
+          "expect": {
+            "followup": "电脑端怎么操作？",
+            "topic": "任务空间转移",
+            "platform": "电脑"
+          }
+        },
+        {
+          "user": "这个转移能撤回吗？",
+          "expect": {
+            "followup": "这个转移能撤回吗？",
+            "topic": "任务空间转移"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "topic": "管理已创建的提醒",
+      "turns": [
+        {
+          "user": "已经建好的提醒在哪里管理？",
+          "expect": { "topic": "提醒管理" }
+        },
+        {
+          "user": "在哪里？",
+          "expect": { "followup": "在哪里？", "topic": "提醒管理" }
+        },
+        {
+          "user": "简单说，我看不懂。",
+          "expect": {
+            "followup": "简单说，我看不懂。",
+            "topic": "提醒管理",
+            "brief": true
+          }
+        },
+        {
+          "user": "这个提醒怎么取消？",
+          "expect": { "followup": "这个提醒怎么取消？", "topic": "提醒管理" }
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "topic": "群机器人",
+      "turns": [
+        { "user": "群里怎么添加机器人？", "expect": { "topic": "群机器人" } },
+        {
+          "user": "具体怎么用？",
+          "expect": {
+            "followup": "具体怎么用？",
+            "topic": "群机器人",
+            "detailed": true
+          }
+        },
+        {
+          "user": "太复杂了，简单一点。",
+          "expect": {
+            "followup": "太复杂了，简单一点。",
+            "topic": "群机器人",
+            "brief": true
+          }
+        },
+        {
+          "user": "有图吗？",
+          "expect": {
+            "followup": "有图吗？",
+            "topic": "群机器人",
+            "imageRequest": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C18",
+      "topic": "登录设备信息",
+      "turns": [
+        {
+          "user": "怎么看账号在哪些设备登录过？",
+          "expect": { "topic": "登录设备" }
+        },
+        {
+          "user": "怎么用？",
+          "expect": { "followup": "怎么用？", "topic": "登录设备" }
+        },
+        {
+          "user": "看不明白，再简单点。",
+          "expect": {
+            "followup": "看不明白，再简单点。",
+            "topic": "登录设备",
+            "brief": true
+          }
+        },
+        {
+          "user": "能把旧设备移除吗？",
+          "expect": { "followup": "能把旧设备移除吗？", "topic": "登录设备" }
+        }
+      ]
+    },
+    {
+      "id": "C19",
+      "topic": "变更成员部门",
+      "turns": [
+        { "user": "员工换部门怎么操作？", "expect": { "topic": "成员部门" } },
+        {
+          "user": "怎么用，简单点。",
+          "expect": {
+            "followup": "怎么用，简单点。",
+            "topic": "成员部门",
+            "brief": true
+          }
+        },
+        {
+          "user": "这个后台在哪儿？",
+          "expect": { "followup": "这个后台在哪儿？", "topic": "成员部门" }
+        },
+        {
+          "user": "还是不行，怎么办？",
+          "expect": { "followup": "还是不行，怎么办？", "topic": "成员部门" }
+        }
+      ]
+    },
+    {
+      "id": "C20",
+      "topic": "成员离职",
+      "turns": [
+        {
+          "user": "员工离职后账号怎么处理？",
+          "expect": { "topic": "成员离职" }
+        },
+        {
+          "user": "具体怎么弄？",
+          "expect": {
+            "followup": "具体怎么弄？",
+            "topic": "成员离职",
+            "detailed": true
+          }
+        },
+        {
+          "user": "简单点，我看不懂。",
+          "expect": {
+            "followup": "简单点，我看不懂。",
+            "topic": "成员离职",
+            "brief": true
+          }
+        },
+        {
+          "user": "这个还能恢复在职吗？",
+          "expect": { "followup": "这个还能恢复在职吗？", "topic": "成员离职" }
+        }
+      ]
+    },
+    {
+      "id": "C21",
+      "topic": "企业管理后台操作日志",
+      "turns": [
+        {
+          "user": "管理员操作日志在哪里看？",
+          "expect": { "topic": "管理员日志" }
+        },
+        {
+          "user": "怎么用？",
+          "expect": { "followup": "怎么用？", "topic": "管理员日志" }
+        },
+        {
+          "user": "说人话，太复杂了。",
+          "expect": {
+            "followup": "说人话，太复杂了。",
+            "topic": "管理员日志",
+            "brief": true
+          }
+        },
+        {
+          "user": "能查当天的吗？",
+          "expect": { "followup": "能查当天的吗？", "topic": "管理员日志" }
+        }
+      ]
+    },
+    {
+      "id": "C22",
+      "topic": "管理员设计审批流程",
+      "turns": [
+        { "user": "审批流程怎么配置？", "expect": { "topic": "审批流程" } },
+        {
+          "user": "怎么用，简单点。",
+          "expect": {
+            "followup": "怎么用，简单点。",
+            "topic": "审批流程",
+            "brief": true
+          }
+        },
+        {
+          "user": "这个会签怎么弄？",
+          "expect": { "followup": "这个会签怎么弄？", "topic": "审批流程" }
+        },
+        {
+          "user": "看不懂，给我具体步骤。",
+          "expect": {
+            "followup": "看不懂，给我具体步骤。",
+            "topic": "审批流程",
+            "detailed": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C23",
+      "topic": "管理员设计审批表单",
+      "turns": [
+        { "user": "审批表单怎么设计？", "expect": { "topic": "审批表单" } },
+        {
+          "user": "这个怎么用？",
+          "expect": { "followup": "这个怎么用？", "topic": "审批表单" }
+        },
+        {
+          "user": "简单说一下，我没看懂。",
+          "expect": {
+            "followup": "简单说一下，我没看懂。",
+            "topic": "审批表单",
+            "brief": true
+          }
+        },
+        {
+          "user": "这个控件在哪？",
+          "expect": { "followup": "这个控件在哪？", "topic": "审批表单" }
+        }
+      ]
+    },
+    {
+      "id": "C24",
+      "topic": "视频会议",
+      "turns": [
+        { "user": "怎么发起视频会议？", "expect": { "topic": "视频会议" } },
+        {
+          "user": "怎么用？看不懂。",
+          "expect": {
+            "followup": "怎么用？看不懂。",
+            "topic": "视频会议",
+            "brief": true
+          }
+        },
+        {
+          "user": "手机上能操作吗？",
+          "expect": {
+            "followup": "手机上能操作吗？",
+            "topic": "视频会议",
+            "platform": "手机"
+          }
+        },
+        {
+          "user": "这个会议怎么结束？",
+          "expect": { "followup": "这个会议怎么结束？", "topic": "视频会议" }
+        }
+      ]
+    },
+    {
+      "id": "C25",
+      "topic": "考勤和请假",
+      "turns": [
+        { "user": "员工怎么打卡和请假？", "expect": { "topic": "打卡请假" } },
+        {
+          "user": "具体怎么用？",
+          "expect": {
+            "followup": "具体怎么用？",
+            "topic": "打卡请假",
+            "detailed": true
+          }
+        },
+        {
+          "user": "太复杂了，简单点。",
+          "expect": {
+            "followup": "太复杂了，简单点。",
+            "topic": "打卡请假",
+            "brief": true
+          }
+        },
+        {
+          "user": "这个请假提交错了能取消吗？",
+          "expect": {
+            "followup": "这个请假提交错了能取消吗？",
+            "topic": "打卡请假"
+          }
+        }
+      ]
+    }
+  ]
+}
