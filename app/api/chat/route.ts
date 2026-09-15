@@ -1862,6 +1862,29 @@ function cleanSourceText(text: string) {
     .trim();
 }
 
+function briefSourceSummary(matches: RankedNode[], maxLength = 100) {
+  const clauses = matches
+    .flatMap((match) =>
+      cleanSourceText(match.node.text || '')
+        .split(/[；。\n]+/)
+        .map((clause) => clause.trim()),
+    )
+    .filter(
+      (clause) =>
+        clause &&
+        !/^(注|注意|PS|提示|说明|创建说明|删除说明)[：:]?/i.test(clause),
+    );
+  const selected: string[] = [];
+  for (const clause of clauses) {
+    const nextLength = selected.join('；').length + clause.length + 1;
+    if (nextLength <= maxLength) selected.push(clause);
+    else if (!selected.length)
+      selected.push(`${clause.slice(0, maxLength - 1)}…`);
+    else break;
+  }
+  return selected.length ? `${selected.join('；')}。` : '';
+}
+
 function fallbackAnswer(
   retrieval: Awaited<ReturnType<typeof retrieve>>,
   brief = false,
@@ -1883,6 +1906,7 @@ function fallbackAnswer(
   const output: string[] = [];
   const seenImages = new Set<string>();
   const seenVideos = new Set<string>();
+  let briefGroupCount = 0;
   for (const group of groups.values()) {
     const label = (group[0].node.sectionPath?.at(-1) || '').replace(
       /^\d+(\.\d+)*[.、\s]+/,
@@ -1901,6 +1925,8 @@ function fallbackAnswer(
         ),
     );
     if (!usefulSteps.length) continue;
+    if (brief && briefGroupCount >= 2) continue;
+    if (brief) briefGroupCount += 1;
     if (!brief && /^通过/.test(label))
       output.push(`可以${label.replace(/[（(].*?[）)]/g, '')}。`);
     else if (
@@ -1918,19 +1944,11 @@ function fallbackAnswer(
       .filter((match) => match.node.role === 'heading')
       .flatMap((match) => match.node.videos);
     if (brief) {
-      const text = usefulSteps
-        .filter((match) => !/^方法\s*\d+[：:]/.test(match.node.text || ''))
-        .map((match) =>
-          cleanSourceText(match.node.text || '')
-            .replace(
-              /即可|你需要|需要操作的|目标|然后|继续|你可以|软件界面|单击鼠标|在弹出的菜单中，/g,
-              '',
-            )
-            .replace(/[。；]$/, '')
-            .trim(),
-        )
-        .filter(Boolean)
-        .join('；');
+      const text = briefSourceSummary(
+        usefulSteps.filter(
+          (match) => !/^方法\s*\d+[：:]/.test(match.node.text || ''),
+        ),
+      );
       output.push(text);
       for (const image of [
         ...usefulSteps.flatMap((match) => match.node.images),

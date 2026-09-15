@@ -1,0 +1,4043 @@
+{
+  "generatedAt": "2026-09-15T02:20:39.202Z",
+  "total": 100,
+  "passed": 100,
+  "failed": 0,
+  "accuracy": 1,
+  "phraseCounts": {
+    "这个怎么用？": 25,
+    "简单点": 25,
+    "看不懂": 25,
+    "说人话": 25
+  },
+  "results": [
+    {
+      "id": "IM端-01-这个怎么用？",
+      "module": "IM端",
+      "title": "如何为单个会话设置消息免打扰",
+      "initialQuestion": "怎么设置消息免打扰？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么设置消息免打扰？；追问：这个怎么用？",
+        "baseQuestion": "怎么设置消息免打扰？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 当你希望暂时屏蔽某个会话的非紧急消息提醒，避免频繁打扰，但又不想错过其可能的加急信息时，可以为此会话单独设置“关闭消息通知提醒”。设置后，你将不再收到该会话的常规消息通知，但重要的加急消息仍可送达\n\n**Mac 客户端操作**\n\n- 方法1：在消息列表中右键设置\n\n- 在消息列表中找到目标会话\n\n- 在该会话上单击鼠标右键，在菜单中选择 “关闭/开启消息通知提醒”\n\n[[IMAGE:img-c795f4ce174c]]\n\n**iPhone 客户端操作**\n\n- 方法1：在消息列表中长按设置\n\n- 在消息列表界面，长按你需要设置的会话\n\n- 在弹出的菜单中，点击 “关闭消息通知提醒” 或 “开启消息通知提醒”\n\n[[IMAGE:img-2de03b5336cd]]",
+      "sources": [
+        {
+          "title": "如何为单个会话设置消息免打扰",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/NLhKwKwYhibgY8kfY16cOPkznof",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "如何为单个会话设置消息免打扰"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-01-简单点",
+      "module": "IM端",
+      "title": "如何为单个会话设置消息免打扰",
+      "initialQuestion": "怎么设置消息免打扰？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么设置消息免打扰？",
+        "baseQuestion": "怎么设置消息免打扰？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "**Mac 客户端操作**\n\n在消息列表中找到目标会话；在该会话上单击鼠标右键，在菜单中选择 “关闭/开启消息通知提醒”。\n\n[[IMAGE:img-c795f4ce174c]]\n\n**iPhone 客户端操作**\n\n在消息列表界面，长按你需要设置的会话；在弹出的菜单中，点击 “关闭消息通知提醒” 或 “开启消息通知提醒”。\n\n[[IMAGE:img-2de03b5336cd]]",
+      "sources": [
+        {
+          "title": "如何为单个会话设置消息免打扰",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/NLhKwKwYhibgY8kfY16cOPkznof",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "如何为单个会话设置消息免打扰"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-01-看不懂",
+      "module": "IM端",
+      "title": "如何为单个会话设置消息免打扰",
+      "initialQuestion": "怎么设置消息免打扰？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么设置消息免打扰？",
+        "baseQuestion": "怎么设置消息免打扰？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "**Mac 客户端操作**\n\n在消息列表中找到目标会话；在该会话上单击鼠标右键，在菜单中选择 “关闭/开启消息通知提醒”。\n\n[[IMAGE:img-c795f4ce174c]]\n\n**iPhone 客户端操作**\n\n在消息列表界面，长按你需要设置的会话；在弹出的菜单中，点击 “关闭消息通知提醒” 或 “开启消息通知提醒”。\n\n[[IMAGE:img-2de03b5336cd]]",
+      "sources": [
+        {
+          "title": "如何为单个会话设置消息免打扰",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/NLhKwKwYhibgY8kfY16cOPkznof",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "如何为单个会话设置消息免打扰"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-01-说人话",
+      "module": "IM端",
+      "title": "如何为单个会话设置消息免打扰",
+      "initialQuestion": "怎么设置消息免打扰？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么设置消息免打扰？",
+        "baseQuestion": "怎么设置消息免打扰？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "**Mac 客户端操作**\n\n在消息列表中找到目标会话；在该会话上单击鼠标右键，在菜单中选择 “关闭/开启消息通知提醒”。\n\n[[IMAGE:img-c795f4ce174c]]\n\n**iPhone 客户端操作**\n\n在消息列表界面，长按你需要设置的会话；在弹出的菜单中，点击 “关闭消息通知提醒” 或 “开启消息通知提醒”。\n\n[[IMAGE:img-2de03b5336cd]]",
+      "sources": [
+        {
+          "title": "如何为单个会话设置消息免打扰",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/NLhKwKwYhibgY8kfY16cOPkznof",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "如何为单个会话设置消息免打扰"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-02-这个怎么用？",
+      "module": "IM端",
+      "title": "如何收藏消息",
+      "initialQuestion": "重要消息怎么收藏？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "重要消息怎么收藏？；追问：这个怎么用？",
+        "baseQuestion": "重要消息怎么收藏？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "**聊天窗口收藏/取消收藏消息**\n\n- 找到单聊或群聊会话中需要留存的目标消息，支持多种操作入口完成收藏：\n\n- Mac端：鼠标悬浮至消息卡片，操作栏出现星形「收藏」图标，点击即可收藏；也可右键单击消息卡片，选择「收藏」选项。\n\n[[IMAGE:img-93df4256f353]]\n\n- iPhone端：长按目标消息卡片，在弹出操作菜单中选择「收藏」。\n\n[[IMAGE:img-b77dbd72398d]]\n\n- 收藏成功后，消息卡片自动高亮底色，消息右侧常驻展示星形收藏标识，页面弹出提示「已收藏」。",
+      "sources": [
+        {
+          "title": "如何收藏消息",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/PSGNwnJYeiVigqk2uzacZvXOnfe",
+          "path": [
+            "消息分组，PIN，收藏 @李静",
+            "如何收藏消息"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-02-简单点",
+      "module": "IM端",
+      "title": "如何收藏消息",
+      "initialQuestion": "重要消息怎么收藏？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "重要消息怎么收藏？",
+        "baseQuestion": "重要消息怎么收藏？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "找到单聊或群聊会话中需要留存的目标消息，支持多种操作入口完成收藏：；Mac端：鼠标悬浮至消息卡片，操作栏出现星形「收藏」图标，点击即可收藏；也可右键单击消息卡片，选择「收藏」选项。\n\n[[IMAGE:img-93df4256f353]]\n\n[[IMAGE:img-b77dbd72398d]]",
+      "sources": [
+        {
+          "title": "如何收藏消息",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/PSGNwnJYeiVigqk2uzacZvXOnfe",
+          "path": [
+            "消息分组，PIN，收藏 @李静",
+            "如何收藏消息"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-02-看不懂",
+      "module": "IM端",
+      "title": "如何收藏消息",
+      "initialQuestion": "重要消息怎么收藏？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "重要消息怎么收藏？",
+        "baseQuestion": "重要消息怎么收藏？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "找到单聊或群聊会话中需要留存的目标消息，支持多种操作入口完成收藏：；Mac端：鼠标悬浮至消息卡片，操作栏出现星形「收藏」图标，点击即可收藏；也可右键单击消息卡片，选择「收藏」选项。\n\n[[IMAGE:img-93df4256f353]]\n\n[[IMAGE:img-b77dbd72398d]]",
+      "sources": [
+        {
+          "title": "如何收藏消息",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/PSGNwnJYeiVigqk2uzacZvXOnfe",
+          "path": [
+            "消息分组，PIN，收藏 @李静",
+            "如何收藏消息"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-02-说人话",
+      "module": "IM端",
+      "title": "如何收藏消息",
+      "initialQuestion": "重要消息怎么收藏？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "重要消息怎么收藏？",
+        "baseQuestion": "重要消息怎么收藏？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "找到单聊或群聊会话中需要留存的目标消息，支持多种操作入口完成收藏：；Mac端：鼠标悬浮至消息卡片，操作栏出现星形「收藏」图标，点击即可收藏；也可右键单击消息卡片，选择「收藏」选项。\n\n[[IMAGE:img-93df4256f353]]\n\n[[IMAGE:img-b77dbd72398d]]",
+      "sources": [
+        {
+          "title": "如何收藏消息",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/PSGNwnJYeiVigqk2uzacZvXOnfe",
+          "path": [
+            "消息分组，PIN，收藏 @李静",
+            "如何收藏消息"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-03-这个怎么用？",
+      "module": "IM端",
+      "title": "如何给联系人修改备注",
+      "initialQuestion": "怎么给联系人修改备注？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么给联系人修改备注？；追问：这个怎么用？",
+        "baseQuestion": "怎么给联系人修改备注？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 你需要给频繁协作的同事、客户设置个性化备注名（如 “产品经理 - 小李”），或添加描述信息（如 “8.30 入职东京团队”），方便快速识别和查找，提升沟通效率。\n\n- 备注功能支持自定义命名及搜索。\n\n**进入备注设置**\n\n- 打开名片页，点击备注名/编辑icon即可编辑\n\n[[IMAGE:img-ae67d499d07f]]\n\n**填写并保存备注信息**\n\n- 最多输入 16 字，支持中英文、数字、符号、emoji，回车或点击页面其他位置后自动保存\n\n[[IMAGE:img-2655c807ca64]]",
+      "sources": [
+        {
+          "title": "如何给联系人修改备注",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/ZGa2wMCKJinp5MkGxEIcSSCFnmm",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "如何给联系人修改备注"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-03-简单点",
+      "module": "IM端",
+      "title": "如何给联系人修改备注",
+      "initialQuestion": "怎么给联系人修改备注？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么给联系人修改备注？",
+        "baseQuestion": "怎么给联系人修改备注？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "打开名片页，点击备注名/编辑icon即可编辑。\n\n[[IMAGE:img-ae67d499d07f]]\n\n最多输入 16 字，支持中英文、数字、符号、emoji，回车或点击页面其他位置后自动保存。\n\n[[IMAGE:img-2655c807ca64]]",
+      "sources": [
+        {
+          "title": "如何给联系人修改备注",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/ZGa2wMCKJinp5MkGxEIcSSCFnmm",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "如何给联系人修改备注"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-03-看不懂",
+      "module": "IM端",
+      "title": "如何给联系人修改备注",
+      "initialQuestion": "怎么给联系人修改备注？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么给联系人修改备注？",
+        "baseQuestion": "怎么给联系人修改备注？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "打开名片页，点击备注名/编辑icon即可编辑。\n\n[[IMAGE:img-ae67d499d07f]]\n\n最多输入 16 字，支持中英文、数字、符号、emoji，回车或点击页面其他位置后自动保存。\n\n[[IMAGE:img-2655c807ca64]]",
+      "sources": [
+        {
+          "title": "如何给联系人修改备注",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/ZGa2wMCKJinp5MkGxEIcSSCFnmm",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "如何给联系人修改备注"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-03-说人话",
+      "module": "IM端",
+      "title": "如何给联系人修改备注",
+      "initialQuestion": "怎么给联系人修改备注？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么给联系人修改备注？",
+        "baseQuestion": "怎么给联系人修改备注？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "打开名片页，点击备注名/编辑icon即可编辑。\n\n[[IMAGE:img-ae67d499d07f]]\n\n最多输入 16 字，支持中英文、数字、符号、emoji，回车或点击页面其他位置后自动保存。\n\n[[IMAGE:img-2655c807ca64]]",
+      "sources": [
+        {
+          "title": "如何给联系人修改备注",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/ZGa2wMCKJinp5MkGxEIcSSCFnmm",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "如何给联系人修改备注"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-04-这个怎么用？",
+      "module": "IM端",
+      "title": "创建群组",
+      "initialQuestion": "怎么创建一个群聊？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么创建一个群聊？；追问：这个怎么用？",
+        "baseQuestion": "怎么创建一个群聊？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 当你需要和多人讨论某些事宜并同步信息时，你可以创建群组并邀请相关人员进群讨论。群组根据不同的分类标准可以分为普通群、部门群、全员群等。\n\n- 注：企业管理员和成员均可创建群组。\n\n**在消息首页创建群组**\n\n- 在客户端找到个人头像，在头像右侧点击+图标，选择 创建群组。\n\n[[IMAGE:img-021620121a41]]\n\n- 在创建群组页面选择要添加的群成员，按需填写群名称和群描述、群设置。\n\n[[IMAGE:img-e86eec3df4c0]]\n\n- 注：群组创建后，你也可修改群名称及群头像。具体信息请参考编辑群信息。\n\n- 你可以通过以下方式添加群成员。如果群成员中包含外部用户，该群就会自动变成外部群。\n\n- 点击 组织内联系人、外部联系人或 我管理的群组，选择对应的人员或群组。\n\n- 搜索联系人、部门或群组，添加对应的人员、整个部门或群组。\n\n[[IMAGE:img-4401d4c8cb75]]\n\n- 注：即使添加了部门下全部成员，最终创建的也是普通的非部门群。只有部门负责人和企业管理员可创建部门群。\n\n- 点击 创建群组 ，建群成功\n\n[[IMAGE:img-cac30979168e]]\n\n**在单聊中创建群组**\n\n- 在进行一对一沟通并需要引入其他成员进行讨论时，你可以在单聊中创建群组。你可将一对一单聊的聊天记录同步至新创建的群，使后加入的成员更快了解讨论主题。\n\n- 打开会话，点击右上角的 加人建群。\n\n[[IMAGE:img-f5d15bb352b6]]\n\n- 通过以下方式添加群成员。如果群成员中包含外部用户，该群就会自动变成外部群。\n\n- 点击 最近联系人、企业联系人或 我管理的群组，选择对应的人员或群组。\n\n- 搜索联系人、部门或群组，添加对应的人员、整个部门或群组。\n\n- 注：即使添加了部门下全部成员，最终创建的也是普通的非部门群。只有部门负责人和企业管理员可创建部门群。\n\n- （可选）填写群名称，群名称至多输入 60 个字符，若没有填写群名称，系统会自动选取 4 个群成员的姓名，拼接成群名。\n\n- 确认是否需要将单聊的聊天记录同步到新群组中。默认已勾选 选择聊天记录并同步。如无需同步取消勾选即可。\n\n[[IMAGE:img-019d436a4866]]\n\n- 点击 创建群组 ，建群成功\n\n[[IMAGE:img-d1b4acf88fa3]]",
+      "sources": [
+        {
+          "title": "创建群组",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/C5pCw2V95iefEVkADuVcPfcxnlc",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "群设置 @Webb@Yv",
+            "创建群组"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-04-简单点",
+      "module": "IM端",
+      "title": "创建群组",
+      "initialQuestion": "怎么创建一个群聊？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么创建一个群聊？",
+        "baseQuestion": "怎么创建一个群聊？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "在客户端找到个人头像，在头像右侧点击+图标，选择 创建群组；在创建群组页面选择要添加的群成员，按需填写群名称和群描述、群设置；具体信息请参考编辑群信息；你可以通过以下方式添加群成员。\n\n[[IMAGE:img-021620121a41]]\n\n[[IMAGE:img-e86eec3df4c0]]\n\n[[IMAGE:img-4401d4c8cb75]]\n\n[[IMAGE:img-cac30979168e]]\n\n在进行一对一沟通并需要引入其他成员进行讨论时，你可以在单聊中创建群组；你可将一对一单聊的聊天记录同步至新创建的群，使后加入的成员更快了解讨论主题；打开会话，点击右上角的 加人建群。\n\n[[IMAGE:img-f5d15bb352b6]]\n\n[[IMAGE:img-019d436a4866]]\n\n[[IMAGE:img-d1b4acf88fa3]]",
+      "sources": [
+        {
+          "title": "创建群组",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/C5pCw2V95iefEVkADuVcPfcxnlc",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "群设置 @Webb@Yv",
+            "创建群组"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-04-看不懂",
+      "module": "IM端",
+      "title": "创建群组",
+      "initialQuestion": "怎么创建一个群聊？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么创建一个群聊？",
+        "baseQuestion": "怎么创建一个群聊？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "在客户端找到个人头像，在头像右侧点击+图标，选择 创建群组；在创建群组页面选择要添加的群成员，按需填写群名称和群描述、群设置；具体信息请参考编辑群信息；你可以通过以下方式添加群成员。\n\n[[IMAGE:img-021620121a41]]\n\n[[IMAGE:img-e86eec3df4c0]]\n\n[[IMAGE:img-4401d4c8cb75]]\n\n[[IMAGE:img-cac30979168e]]\n\n在进行一对一沟通并需要引入其他成员进行讨论时，你可以在单聊中创建群组；你可将一对一单聊的聊天记录同步至新创建的群，使后加入的成员更快了解讨论主题；打开会话，点击右上角的 加人建群。\n\n[[IMAGE:img-f5d15bb352b6]]\n\n[[IMAGE:img-019d436a4866]]\n\n[[IMAGE:img-d1b4acf88fa3]]",
+      "sources": [
+        {
+          "title": "创建群组",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/C5pCw2V95iefEVkADuVcPfcxnlc",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "群设置 @Webb@Yv",
+            "创建群组"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-04-说人话",
+      "module": "IM端",
+      "title": "创建群组",
+      "initialQuestion": "怎么创建一个群聊？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么创建一个群聊？",
+        "baseQuestion": "怎么创建一个群聊？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "在客户端找到个人头像，在头像右侧点击+图标，选择 创建群组；在创建群组页面选择要添加的群成员，按需填写群名称和群描述、群设置；具体信息请参考编辑群信息；你可以通过以下方式添加群成员。\n\n[[IMAGE:img-021620121a41]]\n\n[[IMAGE:img-e86eec3df4c0]]\n\n[[IMAGE:img-4401d4c8cb75]]\n\n[[IMAGE:img-cac30979168e]]\n\n在进行一对一沟通并需要引入其他成员进行讨论时，你可以在单聊中创建群组；你可将一对一单聊的聊天记录同步至新创建的群，使后加入的成员更快了解讨论主题；打开会话，点击右上角的 加人建群。\n\n[[IMAGE:img-f5d15bb352b6]]\n\n[[IMAGE:img-019d436a4866]]\n\n[[IMAGE:img-d1b4acf88fa3]]",
+      "sources": [
+        {
+          "title": "创建群组",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/C5pCw2V95iefEVkADuVcPfcxnlc",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "群设置 @Webb@Yv",
+            "创建群组"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-05-这个怎么用？",
+      "module": "IM端",
+      "title": "添加管理员",
+      "initialQuestion": "怎么添加群管理员？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么添加群管理员？；追问：这个怎么用？",
+        "baseQuestion": "怎么添加群管理员？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 注：仅群主可进行此操作，群管理员与群成员均无法进行此操作。一个群组最多可以添加 20 个群管理员。\n\n- 点击群组右上角···图标 > 设置，进入设置页面。\n\n- 方式 1：点击 群管理 > 群管理员 下的 添加群管理员。选择你想添加为群管理员的成员后点击 确定。\n\n[[IMAGE:img-593e7dba702f]]\n\n- 方式 2：点击 群成员 展开群成员列表，将鼠标悬停在成员名称处，右键点击，在弹框中选择 设为群管理员 图标进行设置。\n\n[[IMAGE:img-1c0a2b9cc71b]]\n\n- PS：在 群管理 > 成员权限管理 页面下，你可设置群管理员权限，即设置某些操作仅群主或群管理员可进行。例如，编辑群信息、添加群成员、分享群、管理置顶消息、在群内发言等。\n\n- 群管理员变更后，会在群内进行消息通知\n\n[[IMAGE:img-596c2769c5e6]]",
+      "sources": [
+        {
+          "title": "添加管理员",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/HFoTw0imWikpKykGDGYcOMR7nTf",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "群设置 @Webb@Yv",
+            "添加管理员"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-05-简单点",
+      "module": "IM端",
+      "title": "添加管理员",
+      "initialQuestion": "怎么添加群管理员？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么添加群管理员？",
+        "baseQuestion": "怎么添加群管理员？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "点击群组右上角···图标 > 设置，进入设置页面；方式 1：点击 群管理 > 群管理员 下的 添加群管理员；选择你想添加为群管理员的成员后点击 确定。\n\n[[IMAGE:img-593e7dba702f]]\n\n[[IMAGE:img-1c0a2b9cc71b]]\n\n[[IMAGE:img-596c2769c5e6]]",
+      "sources": [
+        {
+          "title": "添加管理员",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/HFoTw0imWikpKykGDGYcOMR7nTf",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "群设置 @Webb@Yv",
+            "添加管理员"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-05-看不懂",
+      "module": "IM端",
+      "title": "添加管理员",
+      "initialQuestion": "怎么添加群管理员？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么添加群管理员？",
+        "baseQuestion": "怎么添加群管理员？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "点击群组右上角···图标 > 设置，进入设置页面；方式 1：点击 群管理 > 群管理员 下的 添加群管理员；选择你想添加为群管理员的成员后点击 确定。\n\n[[IMAGE:img-593e7dba702f]]\n\n[[IMAGE:img-1c0a2b9cc71b]]\n\n[[IMAGE:img-596c2769c5e6]]",
+      "sources": [
+        {
+          "title": "添加管理员",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/HFoTw0imWikpKykGDGYcOMR7nTf",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "群设置 @Webb@Yv",
+            "添加管理员"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "IM端-05-说人话",
+      "module": "IM端",
+      "title": "添加管理员",
+      "initialQuestion": "怎么添加群管理员？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么添加群管理员？",
+        "baseQuestion": "怎么添加群管理员？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "点击群组右上角···图标 > 设置，进入设置页面；方式 1：点击 群管理 > 群管理员 下的 添加群管理员；选择你想添加为群管理员的成员后点击 确定。\n\n[[IMAGE:img-593e7dba702f]]\n\n[[IMAGE:img-1c0a2b9cc71b]]\n\n[[IMAGE:img-596c2769c5e6]]",
+      "sources": [
+        {
+          "title": "添加管理员",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/HFoTw0imWikpKykGDGYcOMR7nTf",
+          "path": [
+            "全局设置和消息定位 @秦汉 @爱德 @Yv @Webb",
+            "群设置 @Webb@Yv",
+            "添加管理员"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-01-这个怎么用？",
+      "module": "后台",
+      "title": "如何变更成员的部门",
+      "initialQuestion": "后台怎么把成员调到其他部门？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "后台怎么把成员调到其他部门？；追问：这个怎么用？",
+        "baseQuestion": "后台怎么把成员调到其他部门？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 当成员岗位调整、组织结构变更或部门重组时，管理员需要将成员调整到新的部门。\n\n**变更成员部门**\n\n- 进入企业管理后台\n\n- 打开【组织架构】模块，并切换到【成员】页面\n\n- 在成员列表中选择目标成员\n\n- 点击操作栏的【...】\n\n- 点击【变更部门】\n\n- 修改成员所属部门\n\n- 如果该成员是部门群群主，则在弹出的抽屉中需要选择新的部门群群主\n\n- 在弹出的抽屉中选择部门空间和个人空间的接收人\n\n- 点击确认，保存修改\n\n- 修改后，成员将归属到新的部门，从原来的部门群中移出，进入新的部门群，相关展示将同步更新。\n\n[[IMAGE:img-891adb36c87d]]",
+      "sources": [
+        {
+          "title": "如何变更成员的部门",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/KSABwEL2qiuCNrkmzxncYi5Ondc",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何变更成员的部门"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-01-简单点",
+      "module": "后台",
+      "title": "如何变更成员的部门",
+      "initialQuestion": "后台怎么把成员调到其他部门？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台怎么把成员调到其他部门？",
+        "baseQuestion": "后台怎么把成员调到其他部门？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入企业管理后台；打开【组织架构】模块，并切换到【成员】页面；在成员列表中选择目标成员；点击操作栏的【...】；点击【变更部门】；修改成员所属部门。\n\n[[IMAGE:img-891adb36c87d]]",
+      "sources": [
+        {
+          "title": "如何变更成员的部门",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/KSABwEL2qiuCNrkmzxncYi5Ondc",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何变更成员的部门"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-01-看不懂",
+      "module": "后台",
+      "title": "如何变更成员的部门",
+      "initialQuestion": "后台怎么把成员调到其他部门？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台怎么把成员调到其他部门？",
+        "baseQuestion": "后台怎么把成员调到其他部门？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入企业管理后台；打开【组织架构】模块，并切换到【成员】页面；在成员列表中选择目标成员；点击操作栏的【...】；点击【变更部门】；修改成员所属部门。\n\n[[IMAGE:img-891adb36c87d]]",
+      "sources": [
+        {
+          "title": "如何变更成员的部门",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/KSABwEL2qiuCNrkmzxncYi5Ondc",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何变更成员的部门"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-01-说人话",
+      "module": "后台",
+      "title": "如何变更成员的部门",
+      "initialQuestion": "后台怎么把成员调到其他部门？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台怎么把成员调到其他部门？",
+        "baseQuestion": "后台怎么把成员调到其他部门？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入企业管理后台；打开【组织架构】模块，并切换到【成员】页面；在成员列表中选择目标成员；点击操作栏的【...】；点击【变更部门】；修改成员所属部门。\n\n[[IMAGE:img-891adb36c87d]]",
+      "sources": [
+        {
+          "title": "如何变更成员的部门",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/KSABwEL2qiuCNrkmzxncYi5Ondc",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何变更成员的部门"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-02-这个怎么用？",
+      "module": "后台",
+      "title": "如何操作成员离职",
+      "initialQuestion": "后台如何办理成员离职？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "后台如何办理成员离职？；追问：这个怎么用？",
+        "baseQuestion": "后台如何办理成员离职？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 当员工正式离职时，管理员需要通过“操作离职”功能，将该成员从企业组织中彻底移除。\n\n- 成员离职后：\n\n- 账号将从当前企业中永久移除\n\n- 该功能适用于正式员工离职、外包人员结束合作等需要永久注销企业身份的场景。\n\n**进入成员管理页面**\n\n- 登录管理后台\n\n- 进入菜单：\n组织架构 → 成员与部门 → 成员\n\n**操作成员离职**\n\n- 在目标成员所在行的【操作】栏中\n\n- 点击【操作离职】\n\n- 阅读系统风险提示并勾选【我已阅读并知晓以上风险】\n\n- 选择部门群的接收人（该成员是部门群群主才会出现）\n\n- 选择该成员的任务空间接收人，包括部门空间和个人空间\n\n- 点击确认离职按钮\n\n**确认离职结果**\n\n- 成员将从在职成员列表中移除\n\n- 进入【已离职成员】列表\n\n- 状态不可恢复",
+      "sources": [
+        {
+          "title": "如何操作成员离职",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/TzlqwMUz0iLc67k3yFzcxyzEnLt",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何操作成员离职"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-02-简单点",
+      "module": "后台",
+      "title": "如何操作成员离职",
+      "initialQuestion": "后台如何办理成员离职？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台如何办理成员离职？",
+        "baseQuestion": "后台如何办理成员离职？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "登录管理后台；进入菜单：；组织架构 → 成员与部门 → 成员。\n\n在目标成员所在行的【操作】栏中；点击【操作离职】；阅读系统风险提示并勾选【我已阅读并知晓以上风险】；选择部门群的接收人（该成员是部门群群主才会出现）；选择该成员的任务空间接收人，包括部门空间和个人空间。",
+      "sources": [
+        {
+          "title": "如何操作成员离职",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/TzlqwMUz0iLc67k3yFzcxyzEnLt",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何操作成员离职"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-02-看不懂",
+      "module": "后台",
+      "title": "如何操作成员离职",
+      "initialQuestion": "后台如何办理成员离职？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台如何办理成员离职？",
+        "baseQuestion": "后台如何办理成员离职？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "登录管理后台；进入菜单：；组织架构 → 成员与部门 → 成员。\n\n在目标成员所在行的【操作】栏中；点击【操作离职】；阅读系统风险提示并勾选【我已阅读并知晓以上风险】；选择部门群的接收人（该成员是部门群群主才会出现）；选择该成员的任务空间接收人，包括部门空间和个人空间。",
+      "sources": [
+        {
+          "title": "如何操作成员离职",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/TzlqwMUz0iLc67k3yFzcxyzEnLt",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何操作成员离职"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-02-说人话",
+      "module": "后台",
+      "title": "如何操作成员离职",
+      "initialQuestion": "后台如何办理成员离职？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台如何办理成员离职？",
+        "baseQuestion": "后台如何办理成员离职？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "登录管理后台；进入菜单：；组织架构 → 成员与部门 → 成员。\n\n在目标成员所在行的【操作】栏中；点击【操作离职】；阅读系统风险提示并勾选【我已阅读并知晓以上风险】；选择部门群的接收人（该成员是部门群群主才会出现）；选择该成员的任务空间接收人，包括部门空间和个人空间。",
+      "sources": [
+        {
+          "title": "如何操作成员离职",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/TzlqwMUz0iLc67k3yFzcxyzEnLt",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何操作成员离职"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-03-这个怎么用？",
+      "module": "后台",
+      "title": "如何管理部门信息",
+      "initialQuestion": "后台怎么添加部门？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "后台怎么添加部门？；追问：这个怎么用？",
+        "baseQuestion": "后台怎么添加部门？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 部门用于描述企业内部的组织结构，帮助管理员对成员进行分组管理，并支撑客户端中的沟通与协作。\n管理员可在企业管理后台中创建、调整和维护部门信息，部门的变更将同步影响客户端展示及相关群组结构。\n\n**添加部门**\n\n- 进入企业管理后台\n\n- 打开【组织架构】模块\n\n- 将页面切换到【部门】\n\n- 点击【添加部门】\n\n- 填写部门基础信息\n\n- 确认创建\n\n- 创建说明\n\n- 创建部门后，系统将自动创建对应的部门群\n\n- 部门群会在客户端中展示，并出现在部门成员的会话列表中\n\n[[IMAGE:img-39b0b55a6c10]]\n\n**添加子部门**\n\n- 在部门列表中选择目标部门\n\n- 点击【添加子部门】\n\n- 填写子部门信息\n\n- 确认创建\n\n- 子部门将继承组织结构关系，并自动生成对应的部门群。\n\n[[IMAGE:img-99d510409d90]]\n\n**查看部门详情**\n\n- 在部门列表中选择目标部门\n\n- 点击【详情】弹出部门详情弹窗\n\n- 点击弹窗顶部的【基础信息】、【自定义信息】、【部门群】可查看该部门的：\n\n- 部门基础信息\n\n- 自定义信息\n\n- 部门群信息\n\n[[IMAGE:img-5965151118f5]]\n\n**编辑部门信息**\n\n- 编辑基础信息\n\n[[IMAGE:img-9f4e68428cdd]]\n\n- 进入部门详情弹窗\n\n- 点击【编辑基础信息】\n\n- 修改部门基础信息（如部门名称等）\n\n- 保存修改\n\n- 编辑自定义信息\n\n- 进入部门详情弹窗\n\n- 点击弹窗顶部的【自定义信息】，将页面切换到自定义信息页面\n\n- 点击【编辑自定义信息】\n\n- 修改部门自定义信息\n\n- 保存修改\n\n- 自定义信息字段由企业管理员统一配置，编辑内容将按字段规则展示。\n\n- 如果有字段管理权限的管理员，也可以点击【添加自定义字段】进行字段添加\n\n**删除部门**\n\n- 在部门列表中选择目标部门\n\n- 点击【删除部门】\n\n- 按提示确认删除操作\n\n- 删除说明\n\n- 删除部门前，请确认该部门下无需保留的成员或子部门\n\n- 部门删除后，对应的部门群及相关展示将同步处理\n\n[[IMAGE:img-fc2d4a422abd]]",
+      "sources": [
+        {
+          "title": "如何管理部门信息",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Tujhwy8eSi8DXzkuzFGcp5J3ncd",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何管理部门信息"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-03-简单点",
+      "module": "后台",
+      "title": "如何管理部门信息",
+      "initialQuestion": "后台怎么添加部门？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台怎么添加部门？",
+        "baseQuestion": "后台怎么添加部门？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入企业管理后台；打开【组织架构】模块；将页面切换到【部门】；点击【添加部门】；填写部门基础信息；确认创建；创建部门后，系统将自动创建对应的部门群；部门群会在客户端中展示，并出现在部门成员的会话列表中。\n\n[[IMAGE:img-39b0b55a6c10]]\n\n在部门列表中选择目标部门；点击【添加子部门】；填写子部门信息；确认创建；子部门将继承组织结构关系，并自动生成对应的部门群。\n\n[[IMAGE:img-99d510409d90]]\n\n**对应操作截图**\n\n[[IMAGE:img-5965151118f5]]\n\n[[IMAGE:img-9f4e68428cdd]]\n\n[[IMAGE:img-fc2d4a422abd]]",
+      "sources": [
+        {
+          "title": "如何管理部门信息",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Tujhwy8eSi8DXzkuzFGcp5J3ncd",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何管理部门信息"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-03-看不懂",
+      "module": "后台",
+      "title": "如何管理部门信息",
+      "initialQuestion": "后台怎么添加部门？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台怎么添加部门？",
+        "baseQuestion": "后台怎么添加部门？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入企业管理后台；打开【组织架构】模块；将页面切换到【部门】；点击【添加部门】；填写部门基础信息；确认创建；创建部门后，系统将自动创建对应的部门群；部门群会在客户端中展示，并出现在部门成员的会话列表中。\n\n[[IMAGE:img-39b0b55a6c10]]\n\n在部门列表中选择目标部门；点击【添加子部门】；填写子部门信息；确认创建；子部门将继承组织结构关系，并自动生成对应的部门群。\n\n[[IMAGE:img-99d510409d90]]\n\n**对应操作截图**\n\n[[IMAGE:img-5965151118f5]]\n\n[[IMAGE:img-9f4e68428cdd]]\n\n[[IMAGE:img-fc2d4a422abd]]",
+      "sources": [
+        {
+          "title": "如何管理部门信息",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Tujhwy8eSi8DXzkuzFGcp5J3ncd",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何管理部门信息"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-03-说人话",
+      "module": "后台",
+      "title": "如何管理部门信息",
+      "initialQuestion": "后台怎么添加部门？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台怎么添加部门？",
+        "baseQuestion": "后台怎么添加部门？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入企业管理后台；打开【组织架构】模块；将页面切换到【部门】；点击【添加部门】；填写部门基础信息；确认创建；创建部门后，系统将自动创建对应的部门群；部门群会在客户端中展示，并出现在部门成员的会话列表中。\n\n[[IMAGE:img-39b0b55a6c10]]\n\n在部门列表中选择目标部门；点击【添加子部门】；填写子部门信息；确认创建；子部门将继承组织结构关系，并自动生成对应的部门群。\n\n[[IMAGE:img-99d510409d90]]\n\n**对应操作截图**\n\n[[IMAGE:img-5965151118f5]]\n\n[[IMAGE:img-9f4e68428cdd]]\n\n[[IMAGE:img-fc2d4a422abd]]",
+      "sources": [
+        {
+          "title": "如何管理部门信息",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Tujhwy8eSi8DXzkuzFGcp5J3ncd",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何管理部门信息"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-04-这个怎么用？",
+      "module": "后台",
+      "title": "如何查看成员在客户端的操作日志",
+      "initialQuestion": "后台如何查看成员在客户端的操作日志？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "后台如何查看成员在客户端的操作日志？；追问：这个怎么用？",
+        "baseQuestion": "后台如何查看成员在客户端的操作日志？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 在企业日常协作中，成员会通过客户端进行沟通、任务处理及各类操作。\n\n- 为保障企业数据安全与行为可追溯性，本应用提供成员操作日志功能，用于记录成员在客户端的关键行为。\n\n- 成员操作日志主要用于：\n\n- 记录成员在客户端的关键操作行为\n\n- 支持安全审计与风险排查\n\n- 辅助分析成员使用情况与操作轨迹\n\n- 通过成员操作日志，企业可了解成员在客户端的关键行为记录，包括操作时间、操作类型及相关对象信息。\n\n**进入成员操作日志页面**\n\n- 登录管理后台\n\n- 进入菜单：\n审计日志 → 成员操作日志\n\n**查看日志列表**\n\n- 在成员操作日志页面中，查看日志列表信息\n\n[[IMAGE:img-7b46f27a2355]]\n\n- 日志按时间顺序展示成员在客户端的关键操作行为。\n\n**筛选与查询日志**\n\n- 为便于快速定位目标行为记录，可使用筛选与搜索功能：\n\n- 按事件类型筛选\n\n- 按成员筛选\n\n- 按时间范围筛选\n\n- 输入筛选条件后，点击【查询】按钮\n\n[[IMAGE:img-53b568fc52ea]]\n\n- 点击【重置】按钮重置筛选条件\n\n- 支持多条件组合筛选\n\n**查看日志详情**\n\n- 在日志列表中选择某条记录，点击【查看更多】\n\n[[IMAGE:img-235745b65bf8]]\n\n- 详情页用于还原成员的具体操作过程。",
+      "sources": [
+        {
+          "title": "如何查看成员在客户端的操作日志",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JHajwBDwLiiTs7koxcacEtb4nfb",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何查看成员在客户端的操作日志"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-04-简单点",
+      "module": "后台",
+      "title": "如何查看成员在客户端的操作日志",
+      "initialQuestion": "后台如何查看成员在客户端的操作日志？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台如何查看成员在客户端的操作日志？",
+        "baseQuestion": "后台如何查看成员在客户端的操作日志？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "登录管理后台；进入菜单：；审计日志 → 成员操作日志。\n\n在成员操作日志页面中，查看日志列表信息；日志按时间顺序展示成员在客户端的关键操作行为。\n\n[[IMAGE:img-7b46f27a2355]]\n\n**对应操作截图**\n\n[[IMAGE:img-53b568fc52ea]]\n\n[[IMAGE:img-235745b65bf8]]",
+      "sources": [
+        {
+          "title": "如何查看成员在客户端的操作日志",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JHajwBDwLiiTs7koxcacEtb4nfb",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何查看成员在客户端的操作日志"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-04-看不懂",
+      "module": "后台",
+      "title": "如何查看成员在客户端的操作日志",
+      "initialQuestion": "后台如何查看成员在客户端的操作日志？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台如何查看成员在客户端的操作日志？",
+        "baseQuestion": "后台如何查看成员在客户端的操作日志？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "登录管理后台；进入菜单：；审计日志 → 成员操作日志。\n\n在成员操作日志页面中，查看日志列表信息；日志按时间顺序展示成员在客户端的关键操作行为。\n\n[[IMAGE:img-7b46f27a2355]]\n\n**对应操作截图**\n\n[[IMAGE:img-53b568fc52ea]]\n\n[[IMAGE:img-235745b65bf8]]",
+      "sources": [
+        {
+          "title": "如何查看成员在客户端的操作日志",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JHajwBDwLiiTs7koxcacEtb4nfb",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何查看成员在客户端的操作日志"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-04-说人话",
+      "module": "后台",
+      "title": "如何查看成员在客户端的操作日志",
+      "initialQuestion": "后台如何查看成员在客户端的操作日志？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "后台如何查看成员在客户端的操作日志？",
+        "baseQuestion": "后台如何查看成员在客户端的操作日志？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "登录管理后台；进入菜单：；审计日志 → 成员操作日志。\n\n在成员操作日志页面中，查看日志列表信息；日志按时间顺序展示成员在客户端的关键操作行为。\n\n[[IMAGE:img-7b46f27a2355]]\n\n**对应操作截图**\n\n[[IMAGE:img-53b568fc52ea]]\n\n[[IMAGE:img-235745b65bf8]]",
+      "sources": [
+        {
+          "title": "如何查看成员在客户端的操作日志",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JHajwBDwLiiTs7koxcacEtb4nfb",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何查看成员在客户端的操作日志"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-05-这个怎么用？",
+      "module": "后台",
+      "title": "如何查看企业管理后台操作日志",
+      "initialQuestion": "如何查看管理后台的管理员操作日志？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "如何查看管理后台的管理员操作日志？；追问：这个怎么用？",
+        "baseQuestion": "如何查看管理后台的管理员操作日志？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 在企业管理过程中，管理员会对组织架构、成员信息、权限配置等进行多种操作。\n\n- 为保障操作可追溯性与系统安全，应用提供管理员日志功能，用于记录管理员在后台的关键操作行为。\n\n- 管理员日志主要用于：\n\n**进入管理员日志页面**\n\n- 登录管理后台\n\n- 进入菜单：\n审计日志 → 管理员日志\n\n**查看日志列表**\n\n- 在管理员日志页面中查看日志列表信息\n\n[[IMAGE:img-ac7a316e7a52]]\n\n- 日志记录系统内关键管理操作，按时间顺序展示，越新的数据越靠前\n\n**筛选与查询日志**\n\n- 为便于快速定位目标日志，可使用筛选功能，支持\n\n- 按事件类型筛选\n\n- 按操作人筛选\n\n- 按时间范围筛选\n\n- 输入筛选条件后，点击【查询】按钮\n\n[[IMAGE:img-fea756f6d5d7]]\n\n- 点击【重置】按钮重置筛选条件\n\n- 支持多条件组合筛选，提高查询效率\n\n**查看日志详情**\n\n- 在日志列表中选择某条记录，点击查看更多\n\n- 日志详情用于展示具体变更点，便于审计与问题排查。",
+      "sources": [
+        {
+          "title": "如何查看企业管理后台操作日志",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/NlJIwKvzbiXn9tkLxkocDGBTnKf",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何查看企业管理后台操作日志"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-05-简单点",
+      "module": "后台",
+      "title": "如何查看企业管理后台操作日志",
+      "initialQuestion": "如何查看管理后台的管理员操作日志？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "如何查看管理后台的管理员操作日志？",
+        "baseQuestion": "如何查看管理后台的管理员操作日志？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "登录管理后台；进入菜单：；审计日志 → 管理员日志。\n\n在管理员日志页面中查看日志列表信息；日志记录系统内关键管理操作，按时间顺序展示，越新的数据越靠前。\n\n[[IMAGE:img-ac7a316e7a52]]\n\n**对应操作截图**\n\n[[IMAGE:img-fea756f6d5d7]]",
+      "sources": [
+        {
+          "title": "如何查看企业管理后台操作日志",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/NlJIwKvzbiXn9tkLxkocDGBTnKf",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何查看企业管理后台操作日志"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-05-看不懂",
+      "module": "后台",
+      "title": "如何查看企业管理后台操作日志",
+      "initialQuestion": "如何查看管理后台的管理员操作日志？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "如何查看管理后台的管理员操作日志？",
+        "baseQuestion": "如何查看管理后台的管理员操作日志？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "登录管理后台；进入菜单：；审计日志 → 管理员日志。\n\n在管理员日志页面中查看日志列表信息；日志记录系统内关键管理操作，按时间顺序展示，越新的数据越靠前。\n\n[[IMAGE:img-ac7a316e7a52]]\n\n**对应操作截图**\n\n[[IMAGE:img-fea756f6d5d7]]",
+      "sources": [
+        {
+          "title": "如何查看企业管理后台操作日志",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/NlJIwKvzbiXn9tkLxkocDGBTnKf",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何查看企业管理后台操作日志"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "后台-05-说人话",
+      "module": "后台",
+      "title": "如何查看企业管理后台操作日志",
+      "initialQuestion": "如何查看管理后台的管理员操作日志？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "如何查看管理后台的管理员操作日志？",
+        "baseQuestion": "如何查看管理后台的管理员操作日志？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "登录管理后台；进入菜单：；审计日志 → 管理员日志。\n\n在管理员日志页面中查看日志列表信息；日志记录系统内关键管理操作，按时间顺序展示，越新的数据越靠前。\n\n[[IMAGE:img-ac7a316e7a52]]\n\n**对应操作截图**\n\n[[IMAGE:img-fea756f6d5d7]]",
+      "sources": [
+        {
+          "title": "如何查看企业管理后台操作日志",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/NlJIwKvzbiXn9tkLxkocDGBTnKf",
+          "path": [
+            "企业管理后台 @webb@tangwei",
+            "如何查看企业管理后台操作日志"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-01-这个怎么用？",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "怎么填写并提交周报？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么填写并提交周报？；追问：这个怎么用？",
+        "baseQuestion": "怎么填写并提交周报？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 当你需要向上级同步日常工作进展时，如果只用私信或群消息，内容容易散落在聊天记录里，既写得零散，事后也难以回溯。汇报应用提供标准化的日报、周报、月报模板：选好模板和周期，按提示补充内容，指定接收人后一键提交。汇报会通过汇报助手 Bot 准确送达每一位接收人，同时沉淀为可编辑的结构化记录。你还能把正在推进的项目/任务卡片直接嵌入正文，让上级看到进展的同时就能点开细节。\n\n**新建一份汇报**\n\n- 打开汇报应用主页面\n\n- 点击右上角的 「写汇报」\n\n[[IMAGE:img-f8604b862e59]]\n\n**选择模板**\n\n- 点击「写汇报」后会弹出模板选择面板，一期提供三种系统模板：\n\n- 系统会根据你选的模板，自动展示对应的周期选择组件：\n\n- 日报 → 日历选择（单日），示例：2025年3月10日\n\n- 周报 → 周选择器（按自然周，从周一开始），示例：2025年第10周（3.3 - 3.9）\n\n- 月报 → 月份选择器，示例：2025年3月\n\n- 周期默认选中当前所在周期。你可以手动切换到历史周期补写，但不能选择未来的周期。\n\n[[IMAGE:img-827e0d22b4a2]]\n\n**填写汇报内容**\n\n- 选好模板后，编辑区会自动带入模板预设的标题和分段，你可以在此基础上直接编辑，也可以全部清空重写。\n\n- 支持的格式： 字体大小、对齐方式、加粗 / 斜体 / 下划线 / 删除线、无序列表、有序列表、代码块、链接、图片、空行与缩进。\n\n- 列表小技巧：\n\n- 按 Enter 新增同级列表项\n\n- 按 Tab 增加一级缩进（最多 3 级）\n\n- 按 Shift + Tab 减少一级缩进\n\n- 列表项为空时按 Backspace 退出列表\n\n[[IMAGE:img-2bf45e4d110f]]\n\n**插入项目 / 任务与附件**\n\n- 唤起插入菜单，两种方式任选：\n\n- 鼠标移到任意行行首，点击出现的 「+」 图标\n\n- 在任意文字后输入 「/」\n\n- 可插入的内容：\n\n- ① 添加项目 / 任务\n\n- 弹出的面板会分类展示你在任务空间中能看到的所有项目和任务\n\n- 按最近更新时间降序排列，默认展示前 20 条，向下滑动加载更多\n\n- 支持按项目名称、任务名称模糊搜索\n\n- 支持多选，选中后以卡片形式嵌入正文对应位置\n\n- ② 添加附件（图片、视频、文档）\n\n- 单个文件大小：≤ 500MB\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n**选择接收人与抄送人**\n\n- 汇报接收人（必填，至少 1 人），提供三种方式，可叠加使用，系统会自动去重合并：\n\n- 直属上级：自动获取通讯录组织架构中你的直属上级\n\n- 虚线上级：自动获取虚线汇报关系对应的全部上级\n\n- 添加人员：打开人员选择器手动搜索添加，支持姓名、备注名及其全拼、首拼和多音字搜索\n\n- 汇报抄送人（非必填）：交互方式与接收人完全一致。\n\n- 选中的人员以「头像 + 姓名」标签展示，点击标签右侧 「×」 可单独移除。\n\n- 贴心设定：系统会按模板分别记住你上次提交时的接收人 / 抄送人，下次打开同类型汇报时自动回填，你可以随时手动增删。\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]\n\n**提交汇报**\n\n- 点击 「提交」\n\n- 页面顶部弹出提示 「汇报已提交」\n\n- 如果提交失败，会根据原因给出不同提示，此时已填内容会本地保存为草稿不会丢失，你可以留在填写页修改后重新提交。\n\n**管理自己的汇报记录**\n\n- 在 「我发送的」 列表中，你可以查看、编辑和删除自己的汇报。\n\n- 查看详情：点击任意一条已提交的记录，右侧展示汇报名称、提交时间、汇报原文、汇报对象的已读未读状态、点赞区域，以及编辑 / 删除 / 在独立窗口打开的入口。\n\n- 编辑：点击 「编辑」 进入编辑状态，按钮变为「取消」和「确认提交」。点击「取消」不保存任何修改；点击「确认提交」保存内容并将修改后的内容同步至接收对象，记录和消息卡片上会标识 「已编辑」。\n\n- 删除：点击 「删除」 后弹出二次确认 —— 「确认删除该汇报吗？删除后无法恢复」，确认后记录移除。\n\n- 查看谁读了：汇报卡片底部展示 「N 人已读」（不含你自己）。点击后弹出名单浮层，分「N 人已读」和「N 人未读」两个 Tab，已读列表还会显示每人的最近查阅时间。该名单仅你本人可见。\n\n[[IMAGE:img-df6f6e0cd20e]]\n\n**草稿**\n\n- 选完模板进入填写页后即开始实时保存，模板类型、周期、正文、接收人、抄送人的任何变化都会自动同步，无需手动保存\n\n- 最多同时保留 20 份草稿，达到上限后点击「写汇报」会提示：「草稿数量已达上限（20条），请先删除部分草稿后再新建」\n\n- 草稿在「我发送的」列表中带 「草稿」标签，仅支持「继续编辑」和「删除」两种操作\n\n- 草稿仅你自己可见，不会推送 Bot 通知，也不会出现在任何接收人的列表中\n\n**在独立窗口打开（Mac 端）**\n\n- 无论是新建 / 编辑草稿，还是查看已提交的汇报，都可以在独立窗口中打开\n\n- 编辑态可直接编辑并实时同步保存；查看态为只读展示\n\n- 编辑态下点击「提交汇报」或删除后，独立窗口会关闭，且不会自动重新调起原窗口\n\n- 窗口支持最大化、还原，也可以拖拽边缘自由调整宽高\n\n[[IMAGE:img-edf3cded6e7b]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-01-简单点",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "怎么填写并提交周报？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么填写并提交周报？",
+        "baseQuestion": "怎么填写并提交周报？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "打开汇报应用主页面；点击右上角的 「写汇报」。\n\n[[IMAGE:img-f8604b862e59]]\n\n点击「写汇报」后会弹出模板选择面板，一期提供三种系统模板：；系统会根据你选的模板，自动展示对应的周期选择组件：；日报 → 日历选择（单日），示例：2025年3月10日。\n\n[[IMAGE:img-827e0d22b4a2]]\n\n**对应操作截图**\n\n[[IMAGE:img-2bf45e4d110f]]\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]\n\n[[IMAGE:img-df6f6e0cd20e]]\n\n[[IMAGE:img-edf3cded6e7b]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-01-看不懂",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "怎么填写并提交周报？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么填写并提交周报？",
+        "baseQuestion": "怎么填写并提交周报？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "打开汇报应用主页面；点击右上角的 「写汇报」。\n\n[[IMAGE:img-f8604b862e59]]\n\n点击「写汇报」后会弹出模板选择面板，一期提供三种系统模板：；系统会根据你选的模板，自动展示对应的周期选择组件：；日报 → 日历选择（单日），示例：2025年3月10日。\n\n[[IMAGE:img-827e0d22b4a2]]\n\n**对应操作截图**\n\n[[IMAGE:img-2bf45e4d110f]]\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]\n\n[[IMAGE:img-df6f6e0cd20e]]\n\n[[IMAGE:img-edf3cded6e7b]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-01-说人话",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "怎么填写并提交周报？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么填写并提交周报？",
+        "baseQuestion": "怎么填写并提交周报？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "打开汇报应用主页面；点击右上角的 「写汇报」。\n\n[[IMAGE:img-f8604b862e59]]\n\n点击「写汇报」后会弹出模板选择面板，一期提供三种系统模板：；系统会根据你选的模板，自动展示对应的周期选择组件：；日报 → 日历选择（单日），示例：2025年3月10日。\n\n[[IMAGE:img-827e0d22b4a2]]\n\n**对应操作截图**\n\n[[IMAGE:img-2bf45e4d110f]]\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]\n\n[[IMAGE:img-df6f6e0cd20e]]\n\n[[IMAGE:img-edf3cded6e7b]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-02-这个怎么用？",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报写到一半离开会丢失吗？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "周报写到一半离开会丢失吗？；追问：这个怎么用？",
+        "baseQuestion": "周报写到一半离开会丢失吗？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 当你需要向上级同步日常工作进展时，如果只用私信或群消息，内容容易散落在聊天记录里，既写得零散，事后也难以回溯。汇报应用提供标准化的日报、周报、月报模板：选好模板和周期，按提示补充内容，指定接收人后一键提交。汇报会通过汇报助手 Bot 准确送达每一位接收人，同时沉淀为可编辑的结构化记录。你还能把正在推进的项目/任务卡片直接嵌入正文，让上级看到进展的同时就能点开细节。\n\n**选择模板**\n\n- 日报 → 日历选择（单日），示例：2025年3月10日\n\n- 周报 → 周选择器（按自然周，从周一开始），示例：2025年第10周（3.3 - 3.9）\n\n- 月报 → 月份选择器，示例：2025年3月\n\n**插入项目 / 任务与附件**\n\n- 支持多选，选中后以卡片形式嵌入正文对应位置\n\n- ② 添加附件（图片、视频、文档）\n\n- 单个文件大小：≤ 500MB\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n**提交汇报**\n\n- 页面顶部弹出提示 「汇报已提交」\n\n- 如果提交失败，会根据原因给出不同提示，此时已填内容会本地保存为草稿不会丢失，你可以留在填写页修改后重新提交。",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-02-简单点",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报写到一半离开会丢失吗？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "周报写到一半离开会丢失吗？",
+        "baseQuestion": "周报写到一半离开会丢失吗？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "日报 → 日历选择（单日），示例：2025年3月10日；周报 → 周选择器（按自然周，从周一开始），示例：2025年第10周（3.3 - 3.9）；月报 → 月份选择器，示例：2025年3月。\n\n支持多选，选中后以卡片形式嵌入正文对应位置；② 添加附件（图片、视频、文档）；单个文件大小：≤ 500MB。\n\n[[IMAGE:img-ddbdbcbdcbe3]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-02-看不懂",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报写到一半离开会丢失吗？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "周报写到一半离开会丢失吗？",
+        "baseQuestion": "周报写到一半离开会丢失吗？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "日报 → 日历选择（单日），示例：2025年3月10日；周报 → 周选择器（按自然周，从周一开始），示例：2025年第10周（3.3 - 3.9）；月报 → 月份选择器，示例：2025年3月。\n\n支持多选，选中后以卡片形式嵌入正文对应位置；② 添加附件（图片、视频、文档）；单个文件大小：≤ 500MB。\n\n[[IMAGE:img-ddbdbcbdcbe3]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-02-说人话",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报写到一半离开会丢失吗？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "周报写到一半离开会丢失吗？",
+        "baseQuestion": "周报写到一半离开会丢失吗？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "日报 → 日历选择（单日），示例：2025年3月10日；周报 → 周选择器（按自然周，从周一开始），示例：2025年第10周（3.3 - 3.9）；月报 → 月份选择器，示例：2025年3月。\n\n支持多选，选中后以卡片形式嵌入正文对应位置；② 添加附件（图片、视频、文档）；单个文件大小：≤ 500MB。\n\n[[IMAGE:img-ddbdbcbdcbe3]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-03-这个怎么用？",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报提交后还能修改吗？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "周报提交后还能修改吗？；追问：这个怎么用？",
+        "baseQuestion": "周报提交后还能修改吗？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 当你需要向上级同步日常工作进展时，如果只用私信或群消息，内容容易散落在聊天记录里，既写得零散，事后也难以回溯。汇报应用提供标准化的日报、周报、月报模板：选好模板和周期，按提示补充内容，指定接收人后一键提交。汇报会通过汇报助手 Bot 准确送达每一位接收人，同时沉淀为可编辑的结构化记录。你还能把正在推进的项目/任务卡片直接嵌入正文，让上级看到进展的同时就能点开细节。\n\n**新建一份汇报**\n\n- 打开汇报应用主页面\n\n- 点击右上角的 「写汇报」\n\n[[IMAGE:img-f8604b862e59]]\n\n**选择模板**\n\n- 点击「写汇报」后会弹出模板选择面板，一期提供三种系统模板：\n\n- 系统会根据你选的模板，自动展示对应的周期选择组件：\n\n- 日报 → 日历选择（单日），示例：2025年3月10日\n\n- 周报 → 周选择器（按自然周，从周一开始），示例：2025年第10周（3.3 - 3.9）\n\n- 月报 → 月份选择器，示例：2025年3月\n\n- 周期默认选中当前所在周期。你可以手动切换到历史周期补写，但不能选择未来的周期。\n\n[[IMAGE:img-827e0d22b4a2]]\n\n**填写汇报内容**\n\n- 选好模板后，编辑区会自动带入模板预设的标题和分段，你可以在此基础上直接编辑，也可以全部清空重写。\n\n- 支持的格式： 字体大小、对齐方式、加粗 / 斜体 / 下划线 / 删除线、无序列表、有序列表、代码块、链接、图片、空行与缩进。\n\n- 列表小技巧：\n\n- 按 Enter 新增同级列表项\n\n- 按 Tab 增加一级缩进（最多 3 级）\n\n- 按 Shift + Tab 减少一级缩进\n\n- 列表项为空时按 Backspace 退出列表\n\n[[IMAGE:img-2bf45e4d110f]]\n\n**插入项目 / 任务与附件**\n\n- 唤起插入菜单，两种方式任选：\n\n- 鼠标移到任意行行首，点击出现的 「+」 图标\n\n- 在任意文字后输入 「/」\n\n- 可插入的内容：\n\n- ① 添加项目 / 任务\n\n- 弹出的面板会分类展示你在任务空间中能看到的所有项目和任务\n\n- 按最近更新时间降序排列，默认展示前 20 条，向下滑动加载更多\n\n- 支持按项目名称、任务名称模糊搜索\n\n- 支持多选，选中后以卡片形式嵌入正文对应位置\n\n- ② 添加附件（图片、视频、文档）\n\n- 单个文件大小：≤ 500MB\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n**选择接收人与抄送人**\n\n- 汇报接收人（必填，至少 1 人），提供三种方式，可叠加使用，系统会自动去重合并：\n\n- 直属上级：自动获取通讯录组织架构中你的直属上级\n\n- 虚线上级：自动获取虚线汇报关系对应的全部上级\n\n- 添加人员：打开人员选择器手动搜索添加，支持姓名、备注名及其全拼、首拼和多音字搜索\n\n- 汇报抄送人（非必填）：交互方式与接收人完全一致。\n\n- 选中的人员以「头像 + 姓名」标签展示，点击标签右侧 「×」 可单独移除。\n\n- 贴心设定：系统会按模板分别记住你上次提交时的接收人 / 抄送人，下次打开同类型汇报时自动回填，你可以随时手动增删。\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]\n\n**提交汇报**\n\n- 点击 「提交」\n\n- 页面顶部弹出提示 「汇报已提交」\n\n- 如果提交失败，会根据原因给出不同提示，此时已填内容会本地保存为草稿不会丢失，你可以留在填写页修改后重新提交。\n\n**管理自己的汇报记录**\n\n- 在 「我发送的」 列表中，你可以查看、编辑和删除自己的汇报。\n\n- 查看详情：点击任意一条已提交的记录，右侧展示汇报名称、提交时间、汇报原文、汇报对象的已读未读状态、点赞区域，以及编辑 / 删除 / 在独立窗口打开的入口。\n\n- 编辑：点击 「编辑」 进入编辑状态，按钮变为「取消」和「确认提交」。点击「取消」不保存任何修改；点击「确认提交」保存内容并将修改后的内容同步至接收对象，记录和消息卡片上会标识 「已编辑」。\n\n- 删除：点击 「删除」 后弹出二次确认 —— 「确认删除该汇报吗？删除后无法恢复」，确认后记录移除。\n\n- 查看谁读了：汇报卡片底部展示 「N 人已读」（不含你自己）。点击后弹出名单浮层，分「N 人已读」和「N 人未读」两个 Tab，已读列表还会显示每人的最近查阅时间。该名单仅你本人可见。\n\n[[IMAGE:img-df6f6e0cd20e]]\n\n**草稿**\n\n- 选完模板进入填写页后即开始实时保存，模板类型、周期、正文、接收人、抄送人的任何变化都会自动同步，无需手动保存\n\n- 最多同时保留 20 份草稿，达到上限后点击「写汇报」会提示：「草稿数量已达上限（20条），请先删除部分草稿后再新建」\n\n- 草稿在「我发送的」列表中带 「草稿」标签，仅支持「继续编辑」和「删除」两种操作\n\n- 草稿仅你自己可见，不会推送 Bot 通知，也不会出现在任何接收人的列表中\n\n**在独立窗口打开（Mac 端）**\n\n- 无论是新建 / 编辑草稿，还是查看已提交的汇报，都可以在独立窗口中打开\n\n- 编辑态可直接编辑并实时同步保存；查看态为只读展示\n\n- 编辑态下点击「提交汇报」或删除后，独立窗口会关闭，且不会自动重新调起原窗口\n\n- 窗口支持最大化、还原，也可以拖拽边缘自由调整宽高\n\n[[IMAGE:img-edf3cded6e7b]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-03-简单点",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报提交后还能修改吗？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "周报提交后还能修改吗？",
+        "baseQuestion": "周报提交后还能修改吗？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "打开汇报应用主页面；点击右上角的 「写汇报」。\n\n[[IMAGE:img-f8604b862e59]]\n\n点击「写汇报」后会弹出模板选择面板，一期提供三种系统模板：；系统会根据你选的模板，自动展示对应的周期选择组件：；日报 → 日历选择（单日），示例：2025年3月10日。\n\n[[IMAGE:img-827e0d22b4a2]]\n\n**对应操作截图**\n\n[[IMAGE:img-2bf45e4d110f]]\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]\n\n[[IMAGE:img-df6f6e0cd20e]]\n\n[[IMAGE:img-edf3cded6e7b]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-03-看不懂",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报提交后还能修改吗？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "周报提交后还能修改吗？",
+        "baseQuestion": "周报提交后还能修改吗？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "打开汇报应用主页面；点击右上角的 「写汇报」。\n\n[[IMAGE:img-f8604b862e59]]\n\n点击「写汇报」后会弹出模板选择面板，一期提供三种系统模板：；系统会根据你选的模板，自动展示对应的周期选择组件：；日报 → 日历选择（单日），示例：2025年3月10日。\n\n[[IMAGE:img-827e0d22b4a2]]\n\n**对应操作截图**\n\n[[IMAGE:img-2bf45e4d110f]]\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]\n\n[[IMAGE:img-df6f6e0cd20e]]\n\n[[IMAGE:img-edf3cded6e7b]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-03-说人话",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报提交后还能修改吗？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "周报提交后还能修改吗？",
+        "baseQuestion": "周报提交后还能修改吗？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "打开汇报应用主页面；点击右上角的 「写汇报」。\n\n[[IMAGE:img-f8604b862e59]]\n\n点击「写汇报」后会弹出模板选择面板，一期提供三种系统模板：；系统会根据你选的模板，自动展示对应的周期选择组件：；日报 → 日历选择（单日），示例：2025年3月10日。\n\n[[IMAGE:img-827e0d22b4a2]]\n\n**对应操作截图**\n\n[[IMAGE:img-2bf45e4d110f]]\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]\n\n[[IMAGE:img-df6f6e0cd20e]]\n\n[[IMAGE:img-edf3cded6e7b]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-04-这个怎么用？",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "同一个周期能提交多份周报吗？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "同一个周期能提交多份周报吗？；追问：这个怎么用？",
+        "baseQuestion": "同一个周期能提交多份周报吗？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 已读状态不会重置，原有的已读记录保留\n\n- 可以，且不会覆盖，每次提交都生成一条独立记录。区分方式是在名称后追加序号：\n\n- 第一次提交：周报（3.3 - 3.9）\n\n- 第二次提交：周报（3.3 - 3.9）（2）\n\n- 后续依次 +1 递增\n\n- 删除操作无法恢复，请谨慎确认。\n\n**在独立窗口打开（Mac 端）**\n\n- 窗口支持最大化、还原，也可以拖拽边缘自由调整宽高\n\n[[IMAGE:img-edf3cded6e7b]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-04-简单点",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "同一个周期能提交多份周报吗？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "同一个周期能提交多份周报吗？",
+        "baseQuestion": "同一个周期能提交多份周报吗？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "已读状态不会重置，原有的已读记录保留；可以，且不会覆盖，每次提交都生成一条独立记录；区分方式是在名称后追加序号：；第一次提交：周报（3.3 - 3.9）；第二次提交：周报（3.3 - 3.9）（2）。\n\n贴心设定：系统会按模板分别记住你上次提交时的接收人 / 抄送人，下次打开同类型汇报时自动回填，你可以随时手动增删。\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-04-看不懂",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "同一个周期能提交多份周报吗？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "同一个周期能提交多份周报吗？",
+        "baseQuestion": "同一个周期能提交多份周报吗？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "已读状态不会重置，原有的已读记录保留；可以，且不会覆盖，每次提交都生成一条独立记录；区分方式是在名称后追加序号：；第一次提交：周报（3.3 - 3.9）；第二次提交：周报（3.3 - 3.9）（2）。\n\n贴心设定：系统会按模板分别记住你上次提交时的接收人 / 抄送人，下次打开同类型汇报时自动回填，你可以随时手动增删。\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-04-说人话",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "同一个周期能提交多份周报吗？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "同一个周期能提交多份周报吗？",
+        "baseQuestion": "同一个周期能提交多份周报吗？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "已读状态不会重置，原有的已读记录保留；可以，且不会覆盖，每次提交都生成一条独立记录；区分方式是在名称后追加序号：；第一次提交：周报（3.3 - 3.9）；第二次提交：周报（3.3 - 3.9）（2）。\n\n贴心设定：系统会按模板分别记住你上次提交时的接收人 / 抄送人，下次打开同类型汇报时自动回填，你可以随时手动增删。\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-05-这个怎么用？",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报的接收人和抄送人有什么区别？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "周报的接收人和抄送人有什么区别？；追问：这个怎么用？",
+        "baseQuestion": "周报的接收人和抄送人有什么区别？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "**插入项目 / 任务与附件**\n\n- 单个文件大小：≤ 500MB\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n**选择接收人与抄送人**\n\n- 汇报接收人（必填，至少 1 人），提供三种方式，可叠加使用，系统会自动去重合并：\n\n- 添加人员：打开人员选择器手动搜索添加，支持姓名、备注名及其全拼、首拼和多音字搜索\n\n- 汇报抄送人（非必填）：交互方式与接收人完全一致。\n\n- 选中的人员以「头像 + 姓名」标签展示，点击标签右侧 「×」 可单独移除。\n\n- 贴心设定：系统会按模板分别记住你上次提交时的接收人 / 抄送人，下次打开同类型汇报时自动回填，你可以随时手动增删。\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]\n\n- 不会。进入填写页后系统就开始实时保存草稿，正文、周期、接收人等任何改动都会自动同步，不需要你手动点保存。最多可同时保留 20 份草稿。",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-05-简单点",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报的接收人和抄送人有什么区别？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "周报的接收人和抄送人有什么区别？",
+        "baseQuestion": "周报的接收人和抄送人有什么区别？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "单个文件大小：≤ 500MB。\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n汇报接收人（必填，至少 1 人），提供三种方式，可叠加使用，系统会自动去重合并：；添加人员：打开人员选择器手动搜索添加，支持姓名、备注名及其全拼、首拼和多音字搜索。\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-05-看不懂",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报的接收人和抄送人有什么区别？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "周报的接收人和抄送人有什么区别？",
+        "baseQuestion": "周报的接收人和抄送人有什么区别？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "单个文件大小：≤ 500MB。\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n汇报接收人（必填，至少 1 人），提供三种方式，可叠加使用，系统会自动去重合并：；添加人员：打开人员选择器手动搜索添加，支持姓名、备注名及其全拼、首拼和多音字搜索。\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "汇报-05-说人话",
+      "module": "汇报",
+      "title": "如何填写汇报",
+      "initialQuestion": "周报的接收人和抄送人有什么区别？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "周报的接收人和抄送人有什么区别？",
+        "baseQuestion": "周报的接收人和抄送人有什么区别？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "单个文件大小：≤ 500MB。\n\n[[IMAGE:img-ddbdbcbdcbe3]]\n\n汇报接收人（必填，至少 1 人），提供三种方式，可叠加使用，系统会自动去重合并：；添加人员：打开人员选择器手动搜索添加，支持姓名、备注名及其全拼、首拼和多音字搜索。\n\n[[IMAGE:img-aef5ed5dcc8f]]\n\n[[IMAGE:img-9e6cfbf12df0]]",
+      "sources": [
+        {
+          "title": "如何填写汇报",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/Y76KwjBQ1iPvW3kTlF2cZnq1nph",
+          "path": [
+            "汇报 @tangwei",
+            "如何填写汇报"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-01-这个怎么用？",
+      "module": "审批",
+      "title": "管理员创建审批流",
+      "initialQuestion": "管理员怎么创建审批流？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "管理员怎么创建审批流？；追问：这个怎么用？",
+        "baseQuestion": "管理员怎么创建审批流？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "**一、功能简介**\n\n- 谁能操作：拥有审批管理权限的管理员\n\n- 审批支持管理员创建审批，同时提供了以下 2种创建方式，满足企业审批需求。\n\n- 创建方式\n\n- 使用模板创建\n\n- 通过使用现有模板，快速创建审批\n\n- 创建通用化程度较高的审批，如请假、出差等\n\n- 创建自定义审批\n\n- 根据企业需求，自行设计和配置审批\n\n**二、操作流程**\n\n- 进入企业管理后台 > 审批工作台 > 配置审批流 页面，点击 + 创建审批流。\n\n- 按需选择一种创建方式。\n\n- 使用模板创建\n\n- 模板库提供了考勤、财务、人事等审批模板，你可以通过左侧分类或顶部搜索进行查找。\n\n- 将鼠标悬停在某个模板上，点击 预览 预览模板效果，点击 使用 进入创建页面。你可以在模板基础上进行修改。\n\n[[IMAGE:img-1829299123d4]]\n\n- 创建自定义审批\n\n- 点击 + 创建自定义审批 进入创建页面，按需自行设计和配置审批内容。\n\n[[IMAGE:img-167caf9b2a8e]]\n\n- 跟随后续步骤，完成基础信息、表单设计、流程设计等设置，点击 发布 即创建完成。\n\n[[IMAGE:img-14a3f8cf65f4]]",
+      "sources": [
+        {
+          "title": "管理员创建审批流",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/K7wMwAOk8iU2s3kN8LucSTYnnac",
+          "path": [
+            "审批 @webb",
+            "管理员 · 创建审批流与基础设置",
+            "管理员创建审批流"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-01-简单点",
+      "module": "审批",
+      "title": "管理员创建审批流",
+      "initialQuestion": "管理员怎么创建审批流？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "管理员怎么创建审批流？",
+        "baseQuestion": "管理员怎么创建审批流？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入企业管理后台 > 审批工作台 > 配置审批流 页面，点击 + 创建审批流；按需选择一种创建方式；使用模板创建；模板库提供了考勤、财务、人事等审批模板，你可以通过左侧分类或顶部搜索进行查找。\n\n[[IMAGE:img-1829299123d4]]\n\n[[IMAGE:img-167caf9b2a8e]]\n\n[[IMAGE:img-14a3f8cf65f4]]",
+      "sources": [
+        {
+          "title": "管理员创建审批流",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/K7wMwAOk8iU2s3kN8LucSTYnnac",
+          "path": [
+            "审批 @webb",
+            "管理员 · 创建审批流与基础设置",
+            "管理员创建审批流"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-01-看不懂",
+      "module": "审批",
+      "title": "管理员创建审批流",
+      "initialQuestion": "管理员怎么创建审批流？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "管理员怎么创建审批流？",
+        "baseQuestion": "管理员怎么创建审批流？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入企业管理后台 > 审批工作台 > 配置审批流 页面，点击 + 创建审批流；按需选择一种创建方式；使用模板创建；模板库提供了考勤、财务、人事等审批模板，你可以通过左侧分类或顶部搜索进行查找。\n\n[[IMAGE:img-1829299123d4]]\n\n[[IMAGE:img-167caf9b2a8e]]\n\n[[IMAGE:img-14a3f8cf65f4]]",
+      "sources": [
+        {
+          "title": "管理员创建审批流",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/K7wMwAOk8iU2s3kN8LucSTYnnac",
+          "path": [
+            "审批 @webb",
+            "管理员 · 创建审批流与基础设置",
+            "管理员创建审批流"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-01-说人话",
+      "module": "审批",
+      "title": "管理员创建审批流",
+      "initialQuestion": "管理员怎么创建审批流？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "管理员怎么创建审批流？",
+        "baseQuestion": "管理员怎么创建审批流？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入企业管理后台 > 审批工作台 > 配置审批流 页面，点击 + 创建审批流；按需选择一种创建方式；使用模板创建；模板库提供了考勤、财务、人事等审批模板，你可以通过左侧分类或顶部搜索进行查找。\n\n[[IMAGE:img-1829299123d4]]\n\n[[IMAGE:img-167caf9b2a8e]]\n\n[[IMAGE:img-14a3f8cf65f4]]",
+      "sources": [
+        {
+          "title": "管理员创建审批流",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/K7wMwAOk8iU2s3kN8LucSTYnnac",
+          "path": [
+            "审批 @webb",
+            "管理员 · 创建审批流与基础设置",
+            "管理员创建审批流"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-02-这个怎么用？",
+      "module": "审批",
+      "title": "管理员将审批展示在工作台",
+      "initialQuestion": "怎么把审批应用展示在工作台？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么把审批应用展示在工作台？；追问：这个怎么用？",
+        "baseQuestion": "怎么把审批应用展示在工作台？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "**一、功能简介**\n\n- 谁能操作：拥有审批管理权限的管理员\n\n- 管理员可以将面向全员的常用审批直接添加到工作台，便于员工快速发起相关申请。比如将请假审批添加到工作台中的全部应用中，添加后，员工在工作台的全部应用中，即可便捷发起出差申请。\n\n[[IMAGE:img-68a6368edf26]]\n\n**二、操作流程**\n\n- 管理员进入企业管理后台 > 审批工作台 > 配置审批流  页面，创建新审批或编辑已有审批，进入 基础信息 页面。\n\n- 开启设置： 打开 将该审批展示在工作台 开关。\n\n- 选择分组： 点击选择框，会弹出工作台中已有分组，选择该审批所需展示的分组即可；你也可以点击分组的 x 号，设置该审批不展示在此分组中。\n\n[[IMAGE:img-fe5ec0cd7624]]\n\n- 在完成其它设置后，点击 发布 即可。\n\n- 注 ：只有当全员可以发起这个审批时，才可以将该审批展示在工作台中。",
+      "sources": [
+        {
+          "title": "管理员将审批展示在工作台",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/TBkrwXcpRi2pLZkQzyXcVPPNn7f",
+          "path": [
+            "审批 @webb",
+            "管理员 · 创建审批流与基础设置",
+            "管理员将审批展示在工作台"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-02-简单点",
+      "module": "审批",
+      "title": "管理员将审批展示在工作台",
+      "initialQuestion": "怎么把审批应用展示在工作台？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么把审批应用展示在工作台？",
+        "baseQuestion": "怎么把审批应用展示在工作台？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "管理员进入企业管理后台 > 审批工作台 > 配置审批流  页面，创建新审批或编辑已有审批，进入 基础信息 页面；开启设置： 打开 将该审批展示在工作台 开关。\n\n[[IMAGE:img-fe5ec0cd7624]]\n\n**对应操作截图**\n\n[[IMAGE:img-68a6368edf26]]",
+      "sources": [
+        {
+          "title": "管理员将审批展示在工作台",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/TBkrwXcpRi2pLZkQzyXcVPPNn7f",
+          "path": [
+            "审批 @webb",
+            "管理员 · 创建审批流与基础设置",
+            "管理员将审批展示在工作台"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-02-看不懂",
+      "module": "审批",
+      "title": "管理员将审批展示在工作台",
+      "initialQuestion": "怎么把审批应用展示在工作台？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么把审批应用展示在工作台？",
+        "baseQuestion": "怎么把审批应用展示在工作台？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "管理员进入企业管理后台 > 审批工作台 > 配置审批流  页面，创建新审批或编辑已有审批，进入 基础信息 页面；开启设置： 打开 将该审批展示在工作台 开关。\n\n[[IMAGE:img-fe5ec0cd7624]]\n\n**对应操作截图**\n\n[[IMAGE:img-68a6368edf26]]",
+      "sources": [
+        {
+          "title": "管理员将审批展示在工作台",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/TBkrwXcpRi2pLZkQzyXcVPPNn7f",
+          "path": [
+            "审批 @webb",
+            "管理员 · 创建审批流与基础设置",
+            "管理员将审批展示在工作台"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-02-说人话",
+      "module": "审批",
+      "title": "管理员将审批展示在工作台",
+      "initialQuestion": "怎么把审批应用展示在工作台？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么把审批应用展示在工作台？",
+        "baseQuestion": "怎么把审批应用展示在工作台？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "管理员进入企业管理后台 > 审批工作台 > 配置审批流  页面，创建新审批或编辑已有审批，进入 基础信息 页面；开启设置： 打开 将该审批展示在工作台 开关。\n\n[[IMAGE:img-fe5ec0cd7624]]\n\n**对应操作截图**\n\n[[IMAGE:img-68a6368edf26]]",
+      "sources": [
+        {
+          "title": "管理员将审批展示在工作台",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/TBkrwXcpRi2pLZkQzyXcVPPNn7f",
+          "path": [
+            "审批 @webb",
+            "管理员 · 创建审批流与基础设置",
+            "管理员将审批展示在工作台"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-03-这个怎么用？",
+      "module": "审批",
+      "title": "管理员设计审批表单",
+      "initialQuestion": "管理员怎么设计审批表单？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "管理员怎么设计审批表单？；追问：这个怎么用？",
+        "baseQuestion": "管理员怎么设计审批表单？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "**一、功能简介**\n\n- 谁能操作：拥有审批管理权限的管理员\n\n- 审批支持对审批表单进行个性化设计。当成员发起该审批时，需根据表单内容进行相应填写。\n\n**二、操作流程**\n\n- 进入 审批管理后台 ，点击  创建审批 或已有审批右侧的 编辑 图标，再点击 ② 表单设计 ，即可开始进行表单设计。\n\n[[IMAGE:img-d4e343e6c506]]\n\n- 注 ：若你在创建审批时使用了模板，系统会默认提供常见的表单设计，你可以根据需要继续添加或编辑相应控件。\n\n**三、常见问题**\n\n- 审批的表单设计不支持 Markdown 语法，也就是不能将表单中的文字设置为加粗、下划线、或者斜体等格式。\n\n- 如果修改了表单设计，仅对修改之后发起的新审批生效，修改之前发起的审批还是可以看到原来的表单字段数据。",
+      "sources": [
+        {
+          "title": "管理员设计审批表单",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JDrawf9Sziu25sk8FxqcKYBunLe",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员设计审批表单"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-03-简单点",
+      "module": "审批",
+      "title": "管理员设计审批表单",
+      "initialQuestion": "管理员怎么设计审批表单？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "管理员怎么设计审批表单？",
+        "baseQuestion": "管理员怎么设计审批表单？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入 审批管理后台 ，点击  创建审批 或已有审批右侧的 编辑 图标，再点击 ② 表单设计 ，即可开始进行表单设计。\n\n[[IMAGE:img-d4e343e6c506]]\n\n审批的表单设计不支持 Markdown 语法，也就是不能将表单中的文字设置为加粗、下划线、或者斜体等格式。",
+      "sources": [
+        {
+          "title": "管理员设计审批表单",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JDrawf9Sziu25sk8FxqcKYBunLe",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员设计审批表单"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-03-看不懂",
+      "module": "审批",
+      "title": "管理员设计审批表单",
+      "initialQuestion": "管理员怎么设计审批表单？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "管理员怎么设计审批表单？",
+        "baseQuestion": "管理员怎么设计审批表单？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入 审批管理后台 ，点击  创建审批 或已有审批右侧的 编辑 图标，再点击 ② 表单设计 ，即可开始进行表单设计。\n\n[[IMAGE:img-d4e343e6c506]]\n\n审批的表单设计不支持 Markdown 语法，也就是不能将表单中的文字设置为加粗、下划线、或者斜体等格式。",
+      "sources": [
+        {
+          "title": "管理员设计审批表单",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JDrawf9Sziu25sk8FxqcKYBunLe",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员设计审批表单"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-03-说人话",
+      "module": "审批",
+      "title": "管理员设计审批表单",
+      "initialQuestion": "管理员怎么设计审批表单？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "管理员怎么设计审批表单？",
+        "baseQuestion": "管理员怎么设计审批表单？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "进入 审批管理后台 ，点击  创建审批 或已有审批右侧的 编辑 图标，再点击 ② 表单设计 ，即可开始进行表单设计。\n\n[[IMAGE:img-d4e343e6c506]]\n\n审批的表单设计不支持 Markdown 语法，也就是不能将表单中的文字设置为加粗、下划线、或者斜体等格式。",
+      "sources": [
+        {
+          "title": "管理员设计审批表单",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JDrawf9Sziu25sk8FxqcKYBunLe",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员设计审批表单"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-04-这个怎么用？",
+      "module": "审批",
+      "title": "管理员使用明细/表格控件",
+      "initialQuestion": "审批表单怎么添加明细表格？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "审批表单怎么添加明细表格？；追问：这个怎么用？",
+        "baseQuestion": "审批表单怎么添加明细表格？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "**一、功能简介**\n\n- 谁能操作：拥有审批管理权限的管理员\n\n- 明细/表格控件是审批表单控件之一，可以将其他多个控件组合成明细/表格样式。管理员可在后台添加明细/表格控件。\n\n- 场景举例：\n\n**在后台配置明细/表格控件**\n\n- 管理员进入 审批管理后台 ，创建新审批或编辑已有审批，在 表单设计 中 添加 明细/表格 控件。\n\n- 之后 在明细/表格控件中添加文本、数值等所需控件 后，即可组合成完整的明细/表格。\n\n[[IMAGE:img-a0a0c19a3bbc]]\n\n**在申请中使用明细/表格控件**\n\n- 当管理员在表单中配置了明细/表格控件后，发起人在发起申请时，可按表单要求进行填写。\n\n- 可在桌面端，逐行填写表格内容。当一行信息填写完成后，点击 + 添加 添加另一行信息，同时支持按行进行 复制 和 删除 。\n\n[[IMAGE:img-ca31f16a60e5]]",
+      "sources": [
+        {
+          "title": "管理员使用明细/表格控件",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/FN5CwVRemiExPhk4XvDccfU8nwe",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员使用明细/表格控件"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-04-简单点",
+      "module": "审批",
+      "title": "管理员使用明细/表格控件",
+      "initialQuestion": "审批表单怎么添加明细表格？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "审批表单怎么添加明细表格？",
+        "baseQuestion": "审批表单怎么添加明细表格？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "管理员进入 审批管理后台 ，创建新审批或编辑已有审批，在 表单设计 中 添加 明细/表格 控件；之后 在明细/表格控件中添加文本、数值等所需控件 后，即可组合成完整的明细/表格。\n\n[[IMAGE:img-a0a0c19a3bbc]]\n\n当管理员在表单中配置了明细/表格控件后，发起人在发起申请时，可按表单要求进行填写；可在桌面端，逐行填写表格内容；当一行信息填写完成后，点击 + 添加 添加另一行信息，同时支持按行进行 复制 和 删除。\n\n[[IMAGE:img-ca31f16a60e5]]",
+      "sources": [
+        {
+          "title": "管理员使用明细/表格控件",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/FN5CwVRemiExPhk4XvDccfU8nwe",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员使用明细/表格控件"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-04-看不懂",
+      "module": "审批",
+      "title": "管理员使用明细/表格控件",
+      "initialQuestion": "审批表单怎么添加明细表格？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "审批表单怎么添加明细表格？",
+        "baseQuestion": "审批表单怎么添加明细表格？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "管理员进入 审批管理后台 ，创建新审批或编辑已有审批，在 表单设计 中 添加 明细/表格 控件；之后 在明细/表格控件中添加文本、数值等所需控件 后，即可组合成完整的明细/表格。\n\n[[IMAGE:img-a0a0c19a3bbc]]\n\n当管理员在表单中配置了明细/表格控件后，发起人在发起申请时，可按表单要求进行填写；可在桌面端，逐行填写表格内容；当一行信息填写完成后，点击 + 添加 添加另一行信息，同时支持按行进行 复制 和 删除。\n\n[[IMAGE:img-ca31f16a60e5]]",
+      "sources": [
+        {
+          "title": "管理员使用明细/表格控件",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/FN5CwVRemiExPhk4XvDccfU8nwe",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员使用明细/表格控件"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-04-说人话",
+      "module": "审批",
+      "title": "管理员使用明细/表格控件",
+      "initialQuestion": "审批表单怎么添加明细表格？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "审批表单怎么添加明细表格？",
+        "baseQuestion": "审批表单怎么添加明细表格？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "管理员进入 审批管理后台 ，创建新审批或编辑已有审批，在 表单设计 中 添加 明细/表格 控件；之后 在明细/表格控件中添加文本、数值等所需控件 后，即可组合成完整的明细/表格。\n\n[[IMAGE:img-a0a0c19a3bbc]]\n\n当管理员在表单中配置了明细/表格控件后，发起人在发起申请时，可按表单要求进行填写；可在桌面端，逐行填写表格内容；当一行信息填写完成后，点击 + 添加 添加另一行信息，同时支持按行进行 复制 和 删除。\n\n[[IMAGE:img-ca31f16a60e5]]",
+      "sources": [
+        {
+          "title": "管理员使用明细/表格控件",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/FN5CwVRemiExPhk4XvDccfU8nwe",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员使用明细/表格控件"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-05-这个怎么用？",
+      "module": "审批",
+      "title": "管理员使用收款账户控件",
+      "initialQuestion": "审批表单怎么添加收款账户控件？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "审批表单怎么添加收款账户控件？；追问：这个怎么用？",
+        "baseQuestion": "审批表单怎么添加收款账户控件？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "**一、功能简介**\n\n- 谁能操作：拥有审批管理权限的管理员\n\n- 收款账户控件是审批表单控件之一，支持管理员在后台进行添加。添加收款账户控件后， 发起人在发起申请时，可添加和保存账户信息，方便多次选择使用 。目前支持个人账户和对公账户。\n\n**在后台配置收款账户控件**\n\n- 管理员进入 审批管理后台 ，创建新审批或编辑已有审批，在 表单设计 中 添加收款账户控件 即可。\n\n- 注： 收款账户控件允许被多次添加，不支持被添加进明细控件， 不支持审批人编辑。\n\n[[IMAGE:img-26451192e5a4]]\n\n**在申请中使用收款账户**\n\n- 当管理员在表单中配置了收款账户控件后，发起人在发起申请时，可在下拉框中快捷选择和添加账户信息，无需重复填写方便多次使用 。\n\n[[IMAGE:img-2ad84bcd4af1]]\n\n**对应操作截图**\n\n[[IMAGE:img-7cbfaef7053f]]",
+      "sources": [
+        {
+          "title": "管理员使用收款账户控件",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/DuYNwyWY4iql4Ok9ilGcWBHvnB0",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员使用收款账户控件"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-05-简单点",
+      "module": "审批",
+      "title": "管理员使用收款账户控件",
+      "initialQuestion": "审批表单怎么添加收款账户控件？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "审批表单怎么添加收款账户控件？",
+        "baseQuestion": "审批表单怎么添加收款账户控件？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "管理员进入 审批管理后台 ，创建新审批或编辑已有审批，在 表单设计 中 添加收款账户控件 即可。\n\n[[IMAGE:img-26451192e5a4]]\n\n当管理员在表单中配置了收款账户控件后，发起人在发起申请时，可在下拉框中快捷选择和添加账户信息，无需重复填写方便多次使用。\n\n[[IMAGE:img-2ad84bcd4af1]]\n\n**对应操作截图**\n\n[[IMAGE:img-7cbfaef7053f]]",
+      "sources": [
+        {
+          "title": "管理员使用收款账户控件",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/DuYNwyWY4iql4Ok9ilGcWBHvnB0",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员使用收款账户控件"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-05-看不懂",
+      "module": "审批",
+      "title": "管理员使用收款账户控件",
+      "initialQuestion": "审批表单怎么添加收款账户控件？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "审批表单怎么添加收款账户控件？",
+        "baseQuestion": "审批表单怎么添加收款账户控件？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "管理员进入 审批管理后台 ，创建新审批或编辑已有审批，在 表单设计 中 添加收款账户控件 即可。\n\n[[IMAGE:img-26451192e5a4]]\n\n当管理员在表单中配置了收款账户控件后，发起人在发起申请时，可在下拉框中快捷选择和添加账户信息，无需重复填写方便多次使用。\n\n[[IMAGE:img-2ad84bcd4af1]]\n\n**对应操作截图**\n\n[[IMAGE:img-7cbfaef7053f]]",
+      "sources": [
+        {
+          "title": "管理员使用收款账户控件",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/DuYNwyWY4iql4Ok9ilGcWBHvnB0",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员使用收款账户控件"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "审批-05-说人话",
+      "module": "审批",
+      "title": "管理员使用收款账户控件",
+      "initialQuestion": "审批表单怎么添加收款账户控件？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "审批表单怎么添加收款账户控件？",
+        "baseQuestion": "审批表单怎么添加收款账户控件？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "管理员进入 审批管理后台 ，创建新审批或编辑已有审批，在 表单设计 中 添加收款账户控件 即可。\n\n[[IMAGE:img-26451192e5a4]]\n\n当管理员在表单中配置了收款账户控件后，发起人在发起申请时，可在下拉框中快捷选择和添加账户信息，无需重复填写方便多次使用。\n\n[[IMAGE:img-2ad84bcd4af1]]\n\n**对应操作截图**\n\n[[IMAGE:img-7cbfaef7053f]]",
+      "sources": [
+        {
+          "title": "管理员使用收款账户控件",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/DuYNwyWY4iql4Ok9ilGcWBHvnB0",
+          "path": [
+            "审批 @webb",
+            "管理员 · 表单设计",
+            "管理员使用收款账户控件"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-01-这个怎么用？",
+      "module": "空间",
+      "title": "如何创建个人空间",
+      "initialQuestion": "怎么创建个人任务空间？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么创建个人任务空间？；追问：这个怎么用？",
+        "baseQuestion": "怎么创建个人任务空间？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 同时，你也可能会被邀请加入他人的个人空间，用于处理只与少数人相关的事项。在这些情况下，你并不关心空间属于哪个公司或部门，而更关注事情本身是否清晰、是否方便推进。\n\n- 个人空间正是为此而存在的。它以“个人”为核心创建，不依赖公司或部门结构，帮助你灵活地组织个人或小范围协作的项目与任务。\n\n**创建空间时填写空间名称并在空间归属中选择个人空间**\n\n- 在空间列表中，点击【新建空间】按钮；\n\n- 打开创建空间页面，填写空间名称；\n\n- 空间归属字段，选择“个人”；\n\n- 点击【下一步】按钮。\n\n[[IMAGE:img-ac8b5fd1e26c]]\n\n**添加个人空间成员并确认**\n\n- 在添加空间成员弹窗左侧，选择公司中的成员；\n\n- 选择后的成员，会进入右侧已选择的列表。\n\n[[IMAGE:img-6814a4871d20]]\n\n**个人空间创建成功**\n\n- 点击【创建空间】按钮；\n\n- 完成了空间创建，提示“空间创建成功”。\n\n[[IMAGE:img-2cea996beab4]]\n\n**修改个人空间名称、归属、成员，以及查看空间日志、删除空间**\n\n- 修改个人空间名称、归属\n\n- 点击空间名称旁的设置按钮；\n\n- 在弹出菜单中点击【管理空间信息】；\n\n- 打开“管理空间信息”页面，修改名称、归属；\n\n- 点击【确认】按钮，完成空间信息修改。\n\n- 修改个人空间成员\n\n- 点击空间名称旁的设置按钮；\n\n- 在弹出菜单中点击【管理空间成员】；\n\n- 在“管理空间成员”页面，可以添加、移除空间成员，对空间成员进行管理。\n\n- 修改个人空间成员\n\n- 点击空间名称旁的设置按钮；\n\n- 在弹出菜单中点击【查看操作记录】；\n\n- 打开“空间操作记录”页面，可以查看空间操作记录。\n\n- 删除空间\n\n- 点击空间名称旁的设置按钮；\n\n- 在弹出菜单中点击【删除空间】；\n\n- 在二次确认弹窗中点击【确认】按钮，完成空间删除操作。\n\n[[IMAGE:img-345df4ab3510]]",
+      "sources": [
+        {
+          "title": "如何创建个人空间",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/QimQwI7AzitKaSk37LtcIFqonkg",
+          "path": [
+            "空间 @严光",
+            "如何创建个人空间"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-01-简单点",
+      "module": "空间",
+      "title": "如何创建个人空间",
+      "initialQuestion": "怎么创建个人任务空间？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么创建个人任务空间？",
+        "baseQuestion": "怎么创建个人任务空间？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "在空间列表中，点击【新建空间】按钮；打开创建空间页面，填写空间名称；空间归属字段，选择“个人”；点击【下一步】按钮。\n\n[[IMAGE:img-ac8b5fd1e26c]]\n\n在添加空间成员弹窗左侧，选择公司中的成员；选择后的成员，会进入右侧已选择的列表。\n\n[[IMAGE:img-6814a4871d20]]\n\n**对应操作截图**\n\n[[IMAGE:img-2cea996beab4]]\n\n[[IMAGE:img-345df4ab3510]]",
+      "sources": [
+        {
+          "title": "如何创建个人空间",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/QimQwI7AzitKaSk37LtcIFqonkg",
+          "path": [
+            "空间 @严光",
+            "如何创建个人空间"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-01-看不懂",
+      "module": "空间",
+      "title": "如何创建个人空间",
+      "initialQuestion": "怎么创建个人任务空间？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么创建个人任务空间？",
+        "baseQuestion": "怎么创建个人任务空间？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "在空间列表中，点击【新建空间】按钮；打开创建空间页面，填写空间名称；空间归属字段，选择“个人”；点击【下一步】按钮。\n\n[[IMAGE:img-ac8b5fd1e26c]]\n\n在添加空间成员弹窗左侧，选择公司中的成员；选择后的成员，会进入右侧已选择的列表。\n\n[[IMAGE:img-6814a4871d20]]\n\n**对应操作截图**\n\n[[IMAGE:img-2cea996beab4]]\n\n[[IMAGE:img-345df4ab3510]]",
+      "sources": [
+        {
+          "title": "如何创建个人空间",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/QimQwI7AzitKaSk37LtcIFqonkg",
+          "path": [
+            "空间 @严光",
+            "如何创建个人空间"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-01-说人话",
+      "module": "空间",
+      "title": "如何创建个人空间",
+      "initialQuestion": "怎么创建个人任务空间？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么创建个人任务空间？",
+        "baseQuestion": "怎么创建个人任务空间？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "在空间列表中，点击【新建空间】按钮；打开创建空间页面，填写空间名称；空间归属字段，选择“个人”；点击【下一步】按钮。\n\n[[IMAGE:img-ac8b5fd1e26c]]\n\n在添加空间成员弹窗左侧，选择公司中的成员；选择后的成员，会进入右侧已选择的列表。\n\n[[IMAGE:img-6814a4871d20]]\n\n**对应操作截图**\n\n[[IMAGE:img-2cea996beab4]]\n\n[[IMAGE:img-345df4ab3510]]",
+      "sources": [
+        {
+          "title": "如何创建个人空间",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/QimQwI7AzitKaSk37LtcIFqonkg",
+          "path": [
+            "空间 @严光",
+            "如何创建个人空间"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-02-这个怎么用？",
+      "module": "空间",
+      "title": "如何创建并管理空间",
+      "initialQuestion": "怎么创建和管理空间？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么创建和管理空间？；追问：这个怎么用？",
+        "baseQuestion": "怎么创建和管理空间？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 在这种情况下，你会希望先有一个稳定的协作范围，用来承载这些人和相关的工作，而不是每做一件事就重新拉群、重新组织成员。你需要一个地方，既能清楚地区分不同协作关系，又能长期复用，而不必关心参与方来自哪家公司或部门。\n\n- 空间正是用来解决这一问题的。它以“协作关系”为核心，把固定参与的人聚合在一起，并在其下统一管理项目和任务，帮助你在复杂协作中建立清晰、可持续的工作边界。\n\n**新建空间**\n\n- 从主导航进入任务空间；\n\n- 在空间菜单下，选择展开公司—部门，或个人节点，在列表中点击新建空间；\n\n[[IMAGE:img-db2338c07517]]\n\n[[IMAGE:img-2f9a47e27af8]]\n\n- 弹窗中填写空间名称，并选择空间归属，点击下一步；\n\n- 选择成员弹窗中，空间创建人及成员在右侧显示，也可以不选择其他成员直接创建空间，点击确认完成创建；\n\n- 创建空间完成后，提示创建成功，可在当停留页面的空间中管理项目\n\n[[IMAGE:img-8a365e264caa]]\n\n[[IMAGE:img-55e2ca9496cd]]\n\n[[IMAGE:img-bf09854d3179]]\n\n**修改空间名称、归属、成员，以及查看空间日志、删除空间**\n\n- 用户有空间管理权限时，可以点击空间右侧的设置按钮；\n\n- 在弹窗中，点击对应的按钮进行管理空间信息、管理空间成员、查看操作记录、删除空间的操作\n\n[[IMAGE:img-12c8762dfa72]]",
+      "sources": [
+        {
+          "title": "如何创建并管理空间",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/PDugwGql2im8adkH8x7ckHRtn8c",
+          "path": [
+            "空间 @严光",
+            "如何创建并管理空间"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-02-简单点",
+      "module": "空间",
+      "title": "如何创建并管理空间",
+      "initialQuestion": "怎么创建和管理空间？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么创建和管理空间？",
+        "baseQuestion": "怎么创建和管理空间？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "从主导航进入任务空间；在空间菜单下，选择展开公司—部门，或个人节点，在列表中点击新建空间；弹窗中填写空间名称，并选择空间归属，点击下一步。\n\n[[IMAGE:img-db2338c07517]]\n\n[[IMAGE:img-2f9a47e27af8]]\n\n[[IMAGE:img-8a365e264caa]]\n\n[[IMAGE:img-55e2ca9496cd]]\n\n[[IMAGE:img-bf09854d3179]]\n\n用户有空间管理权限时，可以点击空间右侧的设置按钮；在弹窗中，点击对应的按钮进行管理空间信息、管理空间成员、查看操作记录、删除空间的操作。\n\n[[IMAGE:img-12c8762dfa72]]",
+      "sources": [
+        {
+          "title": "如何创建并管理空间",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/PDugwGql2im8adkH8x7ckHRtn8c",
+          "path": [
+            "空间 @严光",
+            "如何创建并管理空间"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-02-看不懂",
+      "module": "空间",
+      "title": "如何创建并管理空间",
+      "initialQuestion": "怎么创建和管理空间？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么创建和管理空间？",
+        "baseQuestion": "怎么创建和管理空间？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "从主导航进入任务空间；在空间菜单下，选择展开公司—部门，或个人节点，在列表中点击新建空间；弹窗中填写空间名称，并选择空间归属，点击下一步。\n\n[[IMAGE:img-db2338c07517]]\n\n[[IMAGE:img-2f9a47e27af8]]\n\n[[IMAGE:img-8a365e264caa]]\n\n[[IMAGE:img-55e2ca9496cd]]\n\n[[IMAGE:img-bf09854d3179]]\n\n用户有空间管理权限时，可以点击空间右侧的设置按钮；在弹窗中，点击对应的按钮进行管理空间信息、管理空间成员、查看操作记录、删除空间的操作。\n\n[[IMAGE:img-12c8762dfa72]]",
+      "sources": [
+        {
+          "title": "如何创建并管理空间",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/PDugwGql2im8adkH8x7ckHRtn8c",
+          "path": [
+            "空间 @严光",
+            "如何创建并管理空间"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-02-说人话",
+      "module": "空间",
+      "title": "如何创建并管理空间",
+      "initialQuestion": "怎么创建和管理空间？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么创建和管理空间？",
+        "baseQuestion": "怎么创建和管理空间？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "从主导航进入任务空间；在空间菜单下，选择展开公司—部门，或个人节点，在列表中点击新建空间；弹窗中填写空间名称，并选择空间归属，点击下一步。\n\n[[IMAGE:img-db2338c07517]]\n\n[[IMAGE:img-2f9a47e27af8]]\n\n[[IMAGE:img-8a365e264caa]]\n\n[[IMAGE:img-55e2ca9496cd]]\n\n[[IMAGE:img-bf09854d3179]]\n\n用户有空间管理权限时，可以点击空间右侧的设置按钮；在弹窗中，点击对应的按钮进行管理空间信息、管理空间成员、查看操作记录、删除空间的操作。\n\n[[IMAGE:img-12c8762dfa72]]",
+      "sources": [
+        {
+          "title": "如何创建并管理空间",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/PDugwGql2im8adkH8x7ckHRtn8c",
+          "path": [
+            "空间 @严光",
+            "如何创建并管理空间"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-03-这个怎么用？",
+      "module": "空间",
+      "title": "如何在空间中创建并管理项目",
+      "initialQuestion": "怎么在任务空间中新建项目？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么在任务空间中新建项目？；追问：这个怎么用？",
+        "baseQuestion": "怎么在任务空间中新建项目？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 当空间中的协作逐渐展开后，你会发现不同工作往往有不同的目标和周期： 有些是阶段性的推进事项，有些是独立交付的结果，还有些需要并行推进、分别跟踪进度。\n\n- 如果所有工作都混在一起，你会很难判断当前关注的是哪一块内容，也不利于成员各自聚焦自己的职责。因此，你会希望在同一个协作空间内，把工作按目标拆分开来，分别管理。\n\n- 项目用于解决这一问题。它帮助你在不改变协作成员范围的前提下，将空间中的工作按目标或阶段进行组织，使每一项工作都有清晰的边界、成员和进度跟踪方式。\n\n**在空间中新建项目**\n\n- 选择空间后，点击右侧的添加新项目的“+”按钮\n\n[[IMAGE:img-9fdad1415661]]\n\n**添加项目成员**\n\n- 可以在公司下选择项目成员，也可以不选择直接创建\n\n[[IMAGE:img-66b12bf76a9c]]\n\n**管理项目**\n\n- 当有项目相关权限时，可以：\n\n- 进入项目详情页可修改项目管理员、执行人、项目成员、项目信息\n\n- 删除项目\n\n[[IMAGE:img-8a716c74e3da]]\n\n[[IMAGE:img-afa81686eb15]]\n\n**在项目群中与成员沟通**\n\n- 点击项目中的“消息”TAB，可以在该TAB下与项目成员聊天沟通\n\n[[IMAGE:img-71d24c1015f6]]\n\n**在消息列表中的项目群下与项目成员沟通**\n\n- 在消息列表中，可以选择项目群，在该聊天群中与项目成员聊天沟通\n\n[[IMAGE:img-7f20ef51a728]]\n\n**对应操作截图**\n\n[[IMAGE:img-4784b203f39a]]",
+      "sources": [
+        {
+          "title": "如何在空间中创建并管理项目",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/VlPVwjfGqiuGyXkESlscF8omnKf",
+          "path": [
+            "空间 @严光",
+            "如何在空间中创建并管理项目"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-03-简单点",
+      "module": "空间",
+      "title": "如何在空间中创建并管理项目",
+      "initialQuestion": "怎么在任务空间中新建项目？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么在任务空间中新建项目？",
+        "baseQuestion": "怎么在任务空间中新建项目？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "选择空间后，点击右侧的添加新项目的“+”按钮。\n\n[[IMAGE:img-9fdad1415661]]\n\n可以在公司下选择项目成员，也可以不选择直接创建。\n\n[[IMAGE:img-66b12bf76a9c]]\n\n**对应操作截图**\n\n[[IMAGE:img-4784b203f39a]]\n\n[[IMAGE:img-8a716c74e3da]]\n\n[[IMAGE:img-afa81686eb15]]\n\n[[IMAGE:img-71d24c1015f6]]\n\n[[IMAGE:img-7f20ef51a728]]",
+      "sources": [
+        {
+          "title": "如何在空间中创建并管理项目",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/VlPVwjfGqiuGyXkESlscF8omnKf",
+          "path": [
+            "空间 @严光",
+            "如何在空间中创建并管理项目"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-03-看不懂",
+      "module": "空间",
+      "title": "如何在空间中创建并管理项目",
+      "initialQuestion": "怎么在任务空间中新建项目？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么在任务空间中新建项目？",
+        "baseQuestion": "怎么在任务空间中新建项目？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "选择空间后，点击右侧的添加新项目的“+”按钮。\n\n[[IMAGE:img-9fdad1415661]]\n\n可以在公司下选择项目成员，也可以不选择直接创建。\n\n[[IMAGE:img-66b12bf76a9c]]\n\n**对应操作截图**\n\n[[IMAGE:img-4784b203f39a]]\n\n[[IMAGE:img-8a716c74e3da]]\n\n[[IMAGE:img-afa81686eb15]]\n\n[[IMAGE:img-71d24c1015f6]]\n\n[[IMAGE:img-7f20ef51a728]]",
+      "sources": [
+        {
+          "title": "如何在空间中创建并管理项目",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/VlPVwjfGqiuGyXkESlscF8omnKf",
+          "path": [
+            "空间 @严光",
+            "如何在空间中创建并管理项目"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-03-说人话",
+      "module": "空间",
+      "title": "如何在空间中创建并管理项目",
+      "initialQuestion": "怎么在任务空间中新建项目？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么在任务空间中新建项目？",
+        "baseQuestion": "怎么在任务空间中新建项目？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "选择空间后，点击右侧的添加新项目的“+”按钮。\n\n[[IMAGE:img-9fdad1415661]]\n\n可以在公司下选择项目成员，也可以不选择直接创建。\n\n[[IMAGE:img-66b12bf76a9c]]\n\n**对应操作截图**\n\n[[IMAGE:img-4784b203f39a]]\n\n[[IMAGE:img-8a716c74e3da]]\n\n[[IMAGE:img-afa81686eb15]]\n\n[[IMAGE:img-71d24c1015f6]]\n\n[[IMAGE:img-7f20ef51a728]]",
+      "sources": [
+        {
+          "title": "如何在空间中创建并管理项目",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/VlPVwjfGqiuGyXkESlscF8omnKf",
+          "path": [
+            "空间 @严光",
+            "如何在空间中创建并管理项目"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-04-这个怎么用？",
+      "module": "空间",
+      "title": "如何在项目中创建并管理任务",
+      "initialQuestion": "怎么在项目中新建任务？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么在项目中新建任务？；追问：这个怎么用？",
+        "baseQuestion": "怎么在项目中新建任务？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 在项目推进过程中，目标往往需要进一步拆解为可执行的具体事项： 谁来做、什么时候开始、什么时候完成，都会直接影响项目的整体进度。\n\n- 如果这些执行事项只存在于口头沟通或零散记录中，很容易出现遗漏、重复或进度不透明的问题。你会希望有一种方式，把这些具体工作明确记录下来，并能持续跟踪执行情况。\n\n- 任务正是为此而存在。它将项目目标拆分为清晰的执行单元，通过状态、时间和执行人的管理，帮助你和团队随时了解事情是否在按计划推进。\n\n**在项目中新建任务**\n\n- a）点击项目右侧的任务按钮，展开当前项目的任务列表\n\n[[IMAGE:img-09ac9d2ec818]]\n\n- b）点击任务列表下的新增任务按钮，填写任务相关信息，确认后完成任务的创建\n\n[[IMAGE:img-4288c46f8a2c]]\n\n**编辑任务信息**\n\n- 修改任务执行人\n\n- 修改任务信息（标题、开始时间、结束时间、状态、优先级、描述、附件等）\n\n- 删除任务\n\n[[IMAGE:img-2856c7ea49a7]]",
+      "sources": [
+        {
+          "title": "如何在项目中创建并管理任务",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/QWPiw9plmiD8ndk55Aac50D6n7b",
+          "path": [
+            "空间 @严光",
+            "如何在项目中创建并管理任务"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-04-简单点",
+      "module": "空间",
+      "title": "如何在项目中创建并管理任务",
+      "initialQuestion": "怎么在项目中新建任务？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么在项目中新建任务？",
+        "baseQuestion": "怎么在项目中新建任务？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "a）点击项目右侧的任务按钮，展开当前项目的任务列表；b）点击任务列表下的新增任务按钮，填写任务相关信息，确认后完成任务的创建。\n\n[[IMAGE:img-09ac9d2ec818]]\n\n[[IMAGE:img-4288c46f8a2c]]\n\n修改任务执行人；修改任务信息（标题、开始时间、结束时间、状态、优先级、描述、附件等）；删除任务。\n\n[[IMAGE:img-2856c7ea49a7]]",
+      "sources": [
+        {
+          "title": "如何在项目中创建并管理任务",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/QWPiw9plmiD8ndk55Aac50D6n7b",
+          "path": [
+            "空间 @严光",
+            "如何在项目中创建并管理任务"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-04-看不懂",
+      "module": "空间",
+      "title": "如何在项目中创建并管理任务",
+      "initialQuestion": "怎么在项目中新建任务？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么在项目中新建任务？",
+        "baseQuestion": "怎么在项目中新建任务？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "a）点击项目右侧的任务按钮，展开当前项目的任务列表；b）点击任务列表下的新增任务按钮，填写任务相关信息，确认后完成任务的创建。\n\n[[IMAGE:img-09ac9d2ec818]]\n\n[[IMAGE:img-4288c46f8a2c]]\n\n修改任务执行人；修改任务信息（标题、开始时间、结束时间、状态、优先级、描述、附件等）；删除任务。\n\n[[IMAGE:img-2856c7ea49a7]]",
+      "sources": [
+        {
+          "title": "如何在项目中创建并管理任务",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/QWPiw9plmiD8ndk55Aac50D6n7b",
+          "path": [
+            "空间 @严光",
+            "如何在项目中创建并管理任务"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-04-说人话",
+      "module": "空间",
+      "title": "如何在项目中创建并管理任务",
+      "initialQuestion": "怎么在项目中新建任务？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么在项目中新建任务？",
+        "baseQuestion": "怎么在项目中新建任务？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "a）点击项目右侧的任务按钮，展开当前项目的任务列表；b）点击任务列表下的新增任务按钮，填写任务相关信息，确认后完成任务的创建。\n\n[[IMAGE:img-09ac9d2ec818]]\n\n[[IMAGE:img-4288c46f8a2c]]\n\n修改任务执行人；修改任务信息（标题、开始时间、结束时间、状态、优先级、描述、附件等）；删除任务。\n\n[[IMAGE:img-2856c7ea49a7]]",
+      "sources": [
+        {
+          "title": "如何在项目中创建并管理任务",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/QWPiw9plmiD8ndk55Aac50D6n7b",
+          "path": [
+            "空间 @严光",
+            "如何在项目中创建并管理任务"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-05-这个怎么用？",
+      "module": "空间",
+      "title": "如何在任务空间中通过复制任务快速创建任务副本",
+      "initialQuestion": "怎么复制任务来创建副本？",
+      "followup": "这个怎么用？",
+      "intent": "operation",
+      "resolved": {
+        "question": "怎么复制任务来创建副本？；追问：这个怎么用？",
+        "baseQuestion": "怎么复制任务来创建副本？",
+        "followup": "这个怎么用？",
+        "platform": "",
+        "method": "",
+        "brief": false,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "- 当你需要快速创建周期性、标准化的相似任务，或是需要把已有任务快速迁移到其他项目下时，可以使用创建任务副本功能。可以连带该任务的子任务一起创建，提升任务创建效率。生成的副本为全新独立任务，新旧任务的修改互不干扰。\n\n**打开复制任务弹窗**\n\n- 任务列表入口：在任务列表，点击目标任务右侧「・・・」打开操作栏，选择创建任务副本。\n\n[[IMAGE:img-b5a69a3fb522]]\n\n- 任务详情页入口：打开任务详情页面，点击右上角「创建任务副本」按钮。\n\n[[IMAGE:img-c1b0ace09e8f]]\n\n**配置副本任务信息**\n\n- 状态、分组、优先级、执行人、开始时间、结束时间、描述，附件等任务信息默认继承原任务内容，均可手动修改\n\n- 任务名称：默认生成「原任务名称‑副本」，支持手动修改；任务名称不能为空\n\n- 所属项目：默认选中原任务所属项目；下拉列表只展示你有新建任务权限的项目，项目单选不可为空，不可跨租户\n\n- 如果原项目没有任务创建权限，所属项目默认为空，需要手动选择有权限项目。\n\n[[IMAGE:img-7688529e5bfe]]\n\n- 当源任务存在子任务时，默认选中【同时创建子任务副本】，没有子任务则不展示该选项\n\n- 勾选后保留完整父子任务层级\n\n- 子任务名称统一追加「‑副本」后缀\n\n- 子任务所有字段完整复制\n\n[[IMAGE:img-f68a26e2ba62]]\n\n**查看复制进度与结果**\n\n- 复制成功和失败均有toast提示\n\n[[IMAGE:img-bdad49de126b]]\n\n[[IMAGE:img-401f9ce7fe49]]\n\n- 当子任务过多时，会展示复制进度\n\n[[IMAGE:img-f9d1e06a865d]]\n\n- 复制成功后在提示上会有【查看任务】的跳转按钮，点击即可跳转至新任务详情页\n\n[[IMAGE:img-93076eb68ae5]]\n\n[[IMAGE:img-26c29901a8a0]]",
+      "sources": [
+        {
+          "title": "如何在任务空间中通过复制任务快速创建任务副本",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JxykwhtF9i3mHjkdaw6cLm2EnZf",
+          "path": [
+            "空间 @严光",
+            "如何在任务空间中通过复制任务快速创建任务副本"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-05-简单点",
+      "module": "空间",
+      "title": "如何在任务空间中通过复制任务快速创建任务副本",
+      "initialQuestion": "怎么复制任务来创建副本？",
+      "followup": "简单点",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么复制任务来创建副本？",
+        "baseQuestion": "怎么复制任务来创建副本？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "任务列表入口：在任务列表，点击目标任务右侧「・・・」打开操作栏，选择创建任务副本；任务详情页入口：打开任务详情页面，点击右上角「创建任务副本」按钮。\n\n[[IMAGE:img-b5a69a3fb522]]\n\n[[IMAGE:img-c1b0ace09e8f]]\n\n状态、分组、优先级、执行人、开始时间、结束时间、描述，附件等任务信息默认继承原任务内容，均可手动修改；任务名称：默认生成「原任务名称‑副本」，支持手动修改；任务名称不能为空。\n\n[[IMAGE:img-7688529e5bfe]]\n\n[[IMAGE:img-f68a26e2ba62]]\n\n**对应操作截图**\n\n[[IMAGE:img-bdad49de126b]]\n\n[[IMAGE:img-401f9ce7fe49]]\n\n[[IMAGE:img-f9d1e06a865d]]\n\n[[IMAGE:img-93076eb68ae5]]\n\n[[IMAGE:img-26c29901a8a0]]",
+      "sources": [
+        {
+          "title": "如何在任务空间中通过复制任务快速创建任务副本",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JxykwhtF9i3mHjkdaw6cLm2EnZf",
+          "path": [
+            "空间 @严光",
+            "如何在任务空间中通过复制任务快速创建任务副本"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-05-看不懂",
+      "module": "空间",
+      "title": "如何在任务空间中通过复制任务快速创建任务副本",
+      "initialQuestion": "怎么复制任务来创建副本？",
+      "followup": "看不懂",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么复制任务来创建副本？",
+        "baseQuestion": "怎么复制任务来创建副本？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "任务列表入口：在任务列表，点击目标任务右侧「・・・」打开操作栏，选择创建任务副本；任务详情页入口：打开任务详情页面，点击右上角「创建任务副本」按钮。\n\n[[IMAGE:img-b5a69a3fb522]]\n\n[[IMAGE:img-c1b0ace09e8f]]\n\n状态、分组、优先级、执行人、开始时间、结束时间、描述，附件等任务信息默认继承原任务内容，均可手动修改；任务名称：默认生成「原任务名称‑副本」，支持手动修改；任务名称不能为空。\n\n[[IMAGE:img-7688529e5bfe]]\n\n[[IMAGE:img-f68a26e2ba62]]\n\n**对应操作截图**\n\n[[IMAGE:img-bdad49de126b]]\n\n[[IMAGE:img-401f9ce7fe49]]\n\n[[IMAGE:img-f9d1e06a865d]]\n\n[[IMAGE:img-93076eb68ae5]]\n\n[[IMAGE:img-26c29901a8a0]]",
+      "sources": [
+        {
+          "title": "如何在任务空间中通过复制任务快速创建任务副本",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JxykwhtF9i3mHjkdaw6cLm2EnZf",
+          "path": [
+            "空间 @严光",
+            "如何在任务空间中通过复制任务快速创建任务副本"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    },
+    {
+      "id": "空间-05-说人话",
+      "module": "空间",
+      "title": "如何在任务空间中通过复制任务快速创建任务副本",
+      "initialQuestion": "怎么复制任务来创建副本？",
+      "followup": "说人话",
+      "intent": "brief",
+      "resolved": {
+        "question": "怎么复制任务来创建副本？",
+        "baseQuestion": "怎么复制任务来创建副本？",
+        "followup": "",
+        "platform": "",
+        "method": "",
+        "brief": true,
+        "detailed": false,
+        "imageRequest": false,
+        "needsContext": false,
+        "clarification": ""
+      },
+      "checks": {
+        "success": true,
+        "keepsTopic": true,
+        "understandsIntent": true,
+        "correctArticle": true,
+        "usefulAnswer": true,
+        "conciseWhenAsked": true
+      },
+      "answer": "任务列表入口：在任务列表，点击目标任务右侧「・・・」打开操作栏，选择创建任务副本；任务详情页入口：打开任务详情页面，点击右上角「创建任务副本」按钮。\n\n[[IMAGE:img-b5a69a3fb522]]\n\n[[IMAGE:img-c1b0ace09e8f]]\n\n状态、分组、优先级、执行人、开始时间、结束时间、描述，附件等任务信息默认继承原任务内容，均可手动修改；任务名称：默认生成「原任务名称‑副本」，支持手动修改；任务名称不能为空。\n\n[[IMAGE:img-7688529e5bfe]]\n\n[[IMAGE:img-f68a26e2ba62]]\n\n**对应操作截图**\n\n[[IMAGE:img-bdad49de126b]]\n\n[[IMAGE:img-401f9ce7fe49]]\n\n[[IMAGE:img-f9d1e06a865d]]\n\n[[IMAGE:img-93076eb68ae5]]\n\n[[IMAGE:img-26c29901a8a0]]",
+      "sources": [
+        {
+          "title": "如何在任务空间中通过复制任务快速创建任务副本",
+          "url": "https://pcnpuds47gj5.feishu.cn/wiki/JxykwhtF9i3mHjkdaw6cLm2EnZf",
+          "path": [
+            "空间 @严光",
+            "如何在任务空间中通过复制任务快速创建任务副本"
+          ],
+          "sourceType": "help"
+        }
+      ]
+    }
+  ]
+}
