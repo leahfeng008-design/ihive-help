@@ -62,6 +62,10 @@ for (const table of ['tblG1Pi9DMfjY97O', 'tblinkja1AwTvKno']) assert.ok(files.so
 const quiet = await ask(['消息免打扰谁负责？']);
 assert.ok(quiet.answer.includes('帮助文档维护人：Yvonne'));
 assert.ok(quiet.answer.includes('问题负责人：爱德'));
+const activeOwner = await ask(['关闭消息通知谁在负责']);
+assert.equal(activeOwner.retrieval.method, 'assignment-exact');
+assert.ok(activeOwner.answer.includes('问题负责人：爱德'));
+assert.ok(!activeOwner.answer.includes('Mac 客户端操作'));
 console.log('PASS: file transfer returns all four roles and both sources; different documentation and issue owners stay distinct.');
 
 for (const question of ['谁负责登录注册', '注册登录找谁', '账号注册/登录谁负责']) {

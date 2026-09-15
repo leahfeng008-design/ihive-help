@@ -2013,7 +2013,7 @@ function fallbackAnswer(
 function assignmentAnswer(messages: Message[]) {
   const latest = messages.at(-1)?.content || '';
   const ownership =
-    /负责人|谁负责|谁来负责|谁维护|维护人|维护者|产品经理|设计师|设计人|找谁|分工|谁.{0,4}(设计|产品|维护)|(?:产品|设计|维护).{0,4}(是谁|是哪个|找哪位)/;
+    /负责人|(?:由)?谁(?:现在|目前|当前)?(?:在|来)?负责|负责.{0,4}是谁|谁维护|维护人|维护者|产品经理|设计师|设计人|找谁|分工|谁.{0,4}(设计|产品|维护)|(?:产品|设计|维护).{0,4}(是谁|是哪个|找哪位)/;
   const sourceFollowup =
     /哪个文档|哪里找到|依据|来源|证明/.test(latest) &&
     messages
