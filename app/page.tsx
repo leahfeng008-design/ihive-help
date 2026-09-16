@@ -83,11 +83,39 @@ export default function Home() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  const endRef = useRef<HTMLDivElement>(null);
+  const chatRef = useRef<HTMLElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const controllerRef = useRef<AbortController | null>(null);
   const [auth, setAuth] = useState<AuthState>({ status: 'checking' });
-  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' }); }, [messages]);
+
+  function scrollToLatest(behavior: ScrollBehavior) {
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior });
+    });
+  }
+
+  useEffect(() => {
+    scrollToLatest('smooth');
+    const settle = window.setTimeout(() => scrollToLatest('auto'), 160);
+    return () => window.clearTimeout(settle);
+  }, [messages]);
+
+  useEffect(() => {
+    const chat = chatRef.current;
+    if (!chat || typeof ResizeObserver === 'undefined') return;
+    let frame = 0;
+    const observer = new ResizeObserver(() => {
+      window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(() => {
+        window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'auto' });
+      });
+    });
+    observer.observe(chat);
+    return () => {
+      observer.disconnect();
+      window.cancelAnimationFrame(frame);
+    };
+  }, []);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -166,7 +194,7 @@ export default function Home() {
     <header className="topbar"><div className="brand"><img src="/bee-assistant.png" alt="iHive 助手" /><span>iHive 帮助助手</span></div><nav aria-label="页面操作">{auth.user?.name && <span className="account-name">{auth.user.avatarUrl && <img src={auth.user.avatarUrl} alt="" />}{auth.user.name}</span>}<button type="button" onClick={reset}><Plus size={17} />新建对话</button><a href="https://pcnpuds47gj5.feishu.cn/wiki/" target="_blank" rel="noreferrer">飞书知识库 <ExternalLink size={15} /></a><a href="/api/auth/feishu/logout"><LogOut size={15} />退出</a></nav></header>
     <main>
       <section className={messages.length ? 'hero condensed' : 'hero'}><div className="hero-title"><img src="/bee-assistant.png" alt="iHive 蜜蜂机器人助手" /><h1>iHive 帮助助手</h1></div><p>你好，我是 iHive 专属知识库问答助手。<br />我只基于飞书知识库回答，有问题请直接提问。</p></section>
-      <section className="chat" aria-live="polite">{!messages.length && <SuggestionGrid onSelect={ask} />}{messages.map((message, index) => <article className={`message ${message.role}`} key={`${message.role}-${index}`}>{message.role === 'assistant' && <img src="/bee-assistant.png" alt="" />}<div className={message.pending ? 'bubble pending' : 'bubble'}>{message.role === 'assistant' && !message.pending ? <Answer message={message} /> : message.content}</div></article>)}<div ref={endRef} /></section>
+      <section ref={chatRef} className="chat" aria-live="polite">{!messages.length && <SuggestionGrid onSelect={ask} />}{messages.map((message, index) => <article className={`message ${message.role}`} key={`${message.role}-${index}`}>{message.role === 'assistant' && <img src="/bee-assistant.png" alt="" />}<div className={message.pending ? 'bubble pending' : 'bubble'}>{message.role === 'assistant' && !message.pending ? <Answer message={message} /> : message.content}</div></article>)}</section>
       <form onSubmit={submit}>{messages.some((m) => m.role === 'assistant' && !m.pending) && <SuggestionGrid compact onSelect={ask} />}<div className="composer"><textarea ref={inputRef} rows={1} value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={keyDown} placeholder="输入你的问题…" aria-label="输入你的问题" /><button type="button" onClick={(event) => { event.preventDefault(); if (controllerRef.current) stop(); else void ask(input); }} aria-label={loading ? "停止思考" : "发送"} title={loading ? "停止思考，修改后重新发送" : "发送"} disabled={!loading && !input.trim()}>{loading ? <Square size={20} fill="currentColor" /> : <img src="/send-icon.png" alt="" />}</button></div><p className="hint">AI 可能会出错，重要信息请以飞书原文为准</p></form>
     </main>
   </div>;
